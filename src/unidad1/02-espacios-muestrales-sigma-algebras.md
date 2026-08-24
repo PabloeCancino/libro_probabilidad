@@ -1,4 +1,4 @@
-# 1.2 Espacios muestrales, álgebra de eventos y $\sigma$-álgebras
+# 1.2 Espacios muestrales, álgebra de eventos y σ-álgebras
 
 ## 1.2.1 Espacios muestrales
 
@@ -38,16 +38,16 @@ Sean \\(A, B \subseteq \Omega\\) dos eventos:
 
 ---
 
-## 1.2.3 Álgebras y $\sigma$-álgebras de eventos
+## 1.2.3 Álgebras y σ-álgebras de eventos
 
-En espacios finitos podemos considerar que *cualquier* subconjunto de \\(\Omega\\) es un evento legítimo, es decir, la familia de eventos es el conjunto potencia \\(\mathcal{P}(\Omega)\\). Sin embargo, cuando \\(\Omega\\) es un espacio continuo (como \\(\mathbb{R}\\) o \\(\mathbb{R}^n\\)), la paradoja de Banach-Tarski y la existencia de conjuntos no medibles de Vitali demuestran que es matemáticamente imposible asignar una medida de probabilidad coherente a *todos* los subconjuntos de \\(\mathcal{P}(\Omega)\\). Por ello, debemos restringir los eventos admisibles a una estructura algebraica adecuada: una **\\(\sigma\\)-álgebra**.
+En espacios finitos podemos considerar que *cualquier* subconjunto de \\(\Omega\\) es un evento legítimo, es decir, la familia de eventos es el conjunto potencia \\(\mathcal{P}(\Omega)\\). Sin embargo, cuando \\(\Omega\\) es un espacio continuo (como \\(\mathbb{R}\\) o \\(\mathbb{R}^n\\)), la paradoja de Banach-Tarski y la existencia de conjuntos no medibles de Vitali demuestran que es matemáticamente imposible asignar una medida de probabilidad coherente a *todos* los subconjuntos de \\(\mathcal{P}(\Omega)\\). Por ello, debemos restringir los eventos admisibles a una estructura algebraica adecuada: una **σ-álgebra**.
 
 **Definición 1.12 (Álgebra de conjuntos).** Sea \\(\Omega\\) un conjunto no vacío. Una familia \\(\mathcal{A} \subseteq \mathcal{P}(\Omega)\\) es un **álgebra** (o campo) sobre \\(\Omega\\) si satisface:
 1. \\(\Omega \in \mathcal{A}\\).
 2. Si \\(A \in \mathcal{A}\\), entonces \\(A^c \in \mathcal{A}\\) (cerradura bajo complementos).
 3. Si \\(A, B \in \mathcal{A}\\), entonces \\(A \cup B \in \mathcal{A}\\) (cerradura bajo uniones finitas).
 
-**Definición 1.13 ($\sigma$-álgebra).** Sea \\(\Omega\\) un conjunto no vacío. Una familia \\(\mathcal{F} \subseteq \mathcal{P}(\Omega)\\) es una **\\(\sigma\\)-álgebra** (o campo de Borel) sobre \\(\Omega\\) si satisface:
+**Definición 1.13 (σ-álgebra).** Sea \\(\Omega\\) un conjunto no vacío. Una familia \\(\mathcal{F} \subseteq \mathcal{P}(\Omega)\\) es una **σ-álgebra** (o campo de Borel) sobre \\(\Omega\\) si satisface:
 1. \\(\Omega \in \mathcal{F}\\).
 2. Si \\(A \in \mathcal{F}\\), entonces \\(A^c \in \mathcal{F}\\) (cerradura bajo complementos).
 3. Si \\(\{A_n\}_{n=1}^{\infty} \subseteq \mathcal{F}\\) es una sucesión numerable de conjuntos en \\(\mathcal{F}\\), entonces:
@@ -55,7 +55,7 @@ En espacios finitos podemos considerar que *cualquier* subconjunto de \\(\Omega\
 
 El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y los elementos de \\(\mathcal{F}\\) se denominan **conjuntos medibles** o **eventos**.
 
-**Proposición 1.14 (Propiedades elementales de una $\sigma$-álgebra).** *Sea \\(\mathcal{F}\\) una \\(\sigma\\)-álgebra sobre \\(\Omega\\). Entonces:*
+**Proposición 1.14 (Propiedades elementales de una σ-álgebra).** *Sea \\(\mathcal{F}\\) una σ-álgebra sobre \\(\Omega\\). Entonces:*
 1. \\(\emptyset \in \mathcal{F}\\).
 2. Si \\(A_1, \dots, A_k \in \mathcal{F}\\), entonces \\(\bigcup_{i=1}^k A_i \in \mathcal{F}\\) (cerradura finita).
 3. Si \\(\{A_n\}_{n=1}^{\infty} \subseteq \mathcal{F}\\), entonces \\(\bigcap_{n=1}^{\infty} A_n \in \mathcal{F}\\) (cerradura bajo intersecciones numerables).
@@ -69,32 +69,32 @@ El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y lo
    Como cada \\(A_n \in \mathcal{F}\\), su complemento \\(A_n^c \in \mathcal{F}\\). Por cerradura bajo uniones numerables, \\(\bigcup_{n=1}^{\infty} A_n^c \in \mathcal{F}\\), y su complemento final pertenece a \\(\mathcal{F}\\).
 4. Como \\(A \setminus B = A \cap B^c\\), al ser \\(B^c \in \mathcal{F}\\), la intersección finita pertenece a \\(\mathcal{F}\\). Análogamente, \\(A \mathbin{\Delta} B = (A \setminus B) \cup (B \setminus A) \in \mathcal{F}\\). \\(\blacksquare\\)
 
-### Ejemplos notables de $\sigma$-álgebras
+### Ejemplos notables de σ-álgebras
 
-1. **$\sigma$-álgebra trivial (mínima):** \\(\mathcal{F}_{\text{min}} = \{\emptyset, \Omega\}\\).
-2. **$\sigma$-álgebra discreta (máxima):** \\(\mathcal{F}_{\text{max}} = \mathcal{P}(\Omega)\\).
-3. **$\sigma$-álgebra generada por un evento \\(A \subseteq \Omega\\):** \\(\mathcal{F}_A = \{\emptyset, A, A^c, \Omega\}\\).
-4. **$\sigma$-álgebra de una partición finita:** Si \\(\Omega = \bigcup_{i=1}^k B_i\\) con \\(B_i \cap B_j = \emptyset\\) para \\(i \neq j\\), la \\(\sigma\\)-álgebra generada por la partición consiste en todas las uniones de elementos de la partición (incluyendo la unión vacía \\(\emptyset\\)), conteniendo exactamente \\(2^k\\) eventos.
+1. **σ-álgebra trivial (mínima):** \\(\mathcal{F}_{\text{min}} = \{\emptyset, \Omega\}\\).
+2. **σ-álgebra discreta (máxima):** \\(\mathcal{F}_{\text{max}} = \mathcal{P}(\Omega)\\).
+3. **σ-álgebra generada por un evento \\(A \subseteq \Omega\\):** \\(\mathcal{F}_A = \{\emptyset, A, A^c, \Omega\}\\).
+4. **σ-álgebra de una partición finita:** Si \\(\Omega = \bigcup_{i=1}^k B_i\\) con \\(B_i \cap B_j = \emptyset\\) para \\(i \neq j\\), la σ-álgebra generada por la partición consiste en todas las uniones de elementos de la partición (incluyendo la unión vacía \\(\emptyset\\)), conteniendo exactamente \\(2^k\\) eventos.
 
 ---
 
-## 1.2.4 $\sigma$-álgebra generada y la $\sigma$-álgebra de Borel
+## 1.2.4 σ-álgebra generada y la σ-álgebra de Borel
 
-**Teorema 1.15.** *La intersección arbitraria de cualquier colección de \\(\sigma\\)-álgebras sobre \\(\Omega\\) es también una \\(\sigma\\)-álgebra sobre \\(\Omega\\).*
+**Teorema 1.15.** *La intersección arbitraria de cualquier colección de σ-álgebras sobre \\(\Omega\\) es también una σ-álgebra sobre \\(\Omega\\).*
 
-*Demostración.* Sea \\(\{\mathcal{F}_i\}_{i \in I}\\) una familia no vacía de \\(\sigma\\)-álgebras sobre \\(\Omega\\), y definamos \\(\mathcal{F} = \bigcap_{i \in I} \mathcal{F}_i\\).
+*Demostración.* Sea \\(\{\mathcal{F}_i\}_{i \in I}\\) una familia no vacía de σ-álgebras sobre \\(\Omega\\), y definamos \\(\mathcal{F} = \bigcap_{i \in I} \mathcal{F}_i\\).
 1. Como \\(\Omega \in \mathcal{F}_i\\) para todo \\(i \in I\\), se tiene \\(\Omega \in \mathcal{F}\\).
-2. Si \\(A \in \mathcal{F}\\), entonces \\(A \in \mathcal{F}_i\\) para todo \\(i\\). Como cada \\(\mathcal{F}_i\\) es \\(\sigma\\)-álgebra, \\(A^c \in \mathcal{F}_i\\) para todo \\(i\\), luego \\(A^c \in \mathcal{F}\\).
+2. Si \\(A \in \mathcal{F}\\), entonces \\(A \in \mathcal{F}_i\\) para todo \\(i\\). Como cada \\(\mathcal{F}_i\\) es σ-álgebra, \\(A^c \in \mathcal{F}_i\\) para todo \\(i\\), luego \\(A^c \in \mathcal{F}\\).
 3. Si \\(\{A_n\}_{n=1}^{\infty} \subseteq \mathcal{F}\\), entonces \\(\{A_n\}_{n=1}^{\infty} \subseteq \mathcal{F}_i\\) para todo \\(i\\). Por cerradura en cada \\(\mathcal{F}_i\\), \\(\bigcup_{n=1}^{\infty} A_n \in \mathcal{F}_i\\) para todo \\(i\\), por ende \\(\bigcup_{n=1}^{\infty} A_n \in \mathcal{F}\\). \\(\blacksquare\\)
 
-**Definición 1.16 ($\sigma$-álgebra generada).** Sea \\(\mathcal{C} \subseteq \mathcal{P}(\Omega)\\) una clase arbitraria de subconjuntos de \\(\Omega\\). La **\\(\sigma\\)-álgebra generada por \\(\mathcal{C}\\)**, denotada por \\(\sigma(\mathcal{C})\\), es la menor \\(\sigma\\)-álgebra sobre \\(\Omega\\) que contiene a \\(\mathcal{C}\\):
+**Definición 1.16 (σ-álgebra generada).** Sea \\(\mathcal{C} \subseteq \mathcal{P}(\Omega)\\) una clase arbitraria de subconjuntos de \\(\Omega\\). La **σ-álgebra generada por \\(\mathcal{C}\\)**, denotada por \\(\sigma(\mathcal{C})\\), es la menor σ-álgebra sobre \\(\Omega\\) que contiene a \\(\mathcal{C}\\):
 \\[ \sigma(\mathcal{C}) = \bigcap \{\mathcal{G} \subseteq \mathcal{P}(\Omega) : \mathcal{G} \text{ es una } \sigma\text{-álgebra y } \mathcal{C} \subseteq \mathcal{G}\}. \\]
 
-### La $\sigma$-álgebra de Borel sobre $\mathbb{R}$ y $\mathbb{R}^n$
+### La σ-álgebra de Borel sobre la recta real y espacios euclidianos
 
 Cuando el espacio muestral es la recta real \\(\mathbb{R}\\), la topología usual (generada por los intervalos abiertos) nos proporciona la estructura natural.
 
-**Definición 1.17 ($\sigma$-álgebra de Borel en $\mathbb{R}$).** La **\\(\sigma\\)-álgebra de Borel** sobre \\(\mathbb{R}\\), denotada por \\(\mathcal{B}(\mathbb{R})\\) o simplemente \\(\mathcal{B}\\), es la \\(\sigma\\)-álgebra generada por la clase de todos los conjuntos abiertos de \\(\mathbb{R}\\):
+**Definición 1.17 (σ-álgebra de Borel en ℝ).** La **σ-álgebra de Borel** sobre \\(\mathbb{R}\\), denotada por \\(\mathcal{B}(\mathbb{R})\\) o simplemente \\(\mathcal{B}\\), es la σ-álgebra generada por la clase de todos los conjuntos abiertos de \\(\mathbb{R}\\):
 \\[ \mathcal{B}(\mathbb{R}) = \sigma(\{\text{abiertos de } \mathbb{R}\}). \\]
 A los elementos de \\(\mathcal{B}(\mathbb{R})\\) se les llama **conjuntos borelianos**.
 

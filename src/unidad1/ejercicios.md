@@ -16,9 +16,9 @@
 
 ---
 
-## Bloque B: $\sigma$-álgebras y axiomática de Kolmogórov
+## Bloque B: σ-álgebras y axiomática de Kolmogórov
 
-4. **$\sigma$-álgebra generada:** Sea \\(\Omega = \{1, 2, 3, 4, 5, 6\}\\) y consideremos los eventos \\(A = \{1, 2\}\\) y \\(B = \{2, 3, 4\}\\).
+4. **σ-álgebra generada:** Sea \\(\Omega = \{1, 2, 3, 4, 5, 6\}\\) y consideremos los eventos \\(A = \{1, 2\}\\) y \\(B = \{2, 3, 4\}\\).
    - Determine explícitamente todos los elementos de la \\(\sigma\\)-álgebra \\(\sigma(\{A, B\})\\). ¿Cuántos eventos contiene?
 
 5. **Demostración analítica de la diferencia simétrica:**

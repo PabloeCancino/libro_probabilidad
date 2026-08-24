@@ -60,7 +60,7 @@ La región favorable \\(A\\) es el conjunto de puntos \\((x, \theta) \in \Omega\
 Aplicando la definición de probabilidad geométrica:
 \\[ \mathbb{P}(\text{Cruce}) = \frac{\text{Área}(A)}{\text{Área}(\Omega)} = \frac{L/2}{\pi D / 4} = \frac{2L}{\pi D}. \quad \blacksquare \\]
 
-**Estimación de $\pi$ vía Monte Carlo:** Si se arroja la aguja \\(N\\) veces y se observan \\(N_{\text{cruces}}\\) cruces, la frecuencia relativa converge a la probabilidad teórica:
+**Estimación de π vía Monte Carlo:** Si se arroja la aguja \\(N\\) veces y se observan \\(N_{\text{cruces}}\\) cruces, la frecuencia relativa converge a la probabilidad teórica:
 \\[ \frac{N_{\text{cruces}}}{N} \approx \frac{2L}{\pi D} \implies \hat{\pi} = \frac{2L \cdot N}{D \cdot N_{\text{cruces}}}. \\]
 
 ---

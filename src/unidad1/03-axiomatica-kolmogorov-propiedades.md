@@ -15,7 +15,7 @@ En 1933, Andréi N. Kolmogórov formuló la fundamentación axiomática definiti
 > **Axioma 2 (Normalización / Certidumbre):** La probabilidad del evento seguro es 1:
 > \\[ \mathbb{P}(\Omega) = 1. \\]
 >
-> **Axioma 3 ($\sigma$-aditividad o aditividad numerable):** Para cualquier sucesión infinita de eventos disjuntos dos a dos en \\(\mathcal{F}\\) (es decir, \\(A_i \cap A_j = \emptyset\\) para todo \\(i \neq j\\)):
+> **Axioma 3 (σ-aditividad o aditividad numerable):** Para cualquier sucesión infinita de eventos disjuntos dos a dos en \\(\mathcal{F}\\) (es decir, \\(A_i \cap A_j = \emptyset\\) para todo \\(i \neq j\\)):
 > \\[ \mathbb{P}\left(\bigcup_{n=1}^{\infty} A_n\right) = \sum_{n=1}^{\infty} \mathbb{P}(A_n). \\]
 
 ---
@@ -141,4 +141,4 @@ Una de las propiedades más poderosas de la \\(\sigma\\)-aditividad es que permi
 2. Sea \\(A_n \downarrow A\\). Entonces los complementos forman una sucesión creciente: \\(A_n^c \uparrow A^c\\). Por la parte 1 y la regla del complemento:
    \\[ \lim_{n \to \infty} \mathbb{P}(A_n^c) = \mathbb{P}(A^c) \implies \lim_{n \to \infty} (1 - \mathbb{P}(A_n)) = 1 - \mathbb{P}(A) \implies \lim_{n \to \infty} \mathbb{P}(A_n) = \mathbb{P}(A). \quad \blacksquare \\]
 
-**Teorema 1.30 (Equivalencia de la $\sigma$-aditividad).** *Sobre un álgebra de conjuntos \\(\mathcal{A}\\), una función aditiva finita \\(\mathbb{P}\\) con \\(\mathbb{P}(\Omega) = 1\\) es \\(\sigma\\)-aditiva si y solo si es continua en \\(\emptyset\\) (es decir, \\(A_n \downarrow \emptyset \implies \lim_{n \to \infty} \mathbb{P}(A_n) = 0\\)).*
+**Teorema 1.30 (Equivalencia de la σ-aditividad).** *Sobre un álgebra de conjuntos \\(\mathcal{A}\\), una función aditiva finita \\(\mathbb{P}\\) con \\(\mathbb{P}(\Omega) = 1\\) es \\(\sigma\\)-aditiva si y solo si es continua en \\(\emptyset\\) (es decir, \\(A_n \downarrow \emptyset \implies \lim_{n \to \infty} \mathbb{P}(A_n) = 0\\)).*

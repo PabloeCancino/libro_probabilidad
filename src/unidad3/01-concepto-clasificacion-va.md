@@ -26,14 +26,14 @@ Por convención de notación probabilística, el evento \\(\{\omega \in \Omega :
 
 ---
 
-## 3.1.2 Medida de probabilidad inducida y $\sigma$-álgebra generada
+## 3.1.2 Medida de probabilidad inducida y σ-álgebra generada
 
 Toda variable aleatoria \\(X\\) transfiere la estructura probabilística del espacio abstracto original \\((\Omega, \mathcal{F}, \mathbb{P})\\) a la recta real \\((\mathbb{R}, \mathcal{B}(\mathbb{R}))\\).
 
-**Definición 3.3 (Medida de probabilidad inducida / Distribución de $X$).** La **distribución de probabilidad inducida** por \\(X\\) en \\((\mathbb{R}, \mathcal{B}(\mathbb{R}))\\) es la función \\(\mathbb{P}_X : \mathcal{B}(\mathbb{R}) \to [0, 1]\\) definida por:
+**Definición 3.3 (Medida de probabilidad inducida / Distribución de X).** La **distribución de probabilidad inducida** por \\(X\\) en \\((\mathbb{R}, \mathcal{B}(\mathbb{R}))\\) es la función \\(\mathbb{P}_X : \mathcal{B}(\mathbb{R}) \to [0, 1]\\) definida por:
 \\[ \mathbb{P}_X(B) = \mathbb{P}(X^{-1}(B)) = \mathbb{P}(X \in B), \quad \forall B \in \mathcal{B}(\mathbb{R}). \\]
 
-**Definición 3.4 ($\sigma$-álgebra generada por una variable aleatoria).** La \\(\sigma\\)-álgebra generada por \\(X\\), denotada \\(\sigma(X)\\), es la menor sub-\\(\sigma\\)-álgebra de \\(\mathcal{F}\\) respecto a la cual \\(X\\) es medible:
+**Definición 3.4 (σ-álgebra generada por una variable aleatoria).** La \\(\sigma\\)-álgebra generada por \\(X\\), denotada \\(\sigma(X)\\), es la menor sub-\\(\sigma\\)-álgebra de \\(\mathcal{F}\\) respecto a la cual \\(X\\) es medible:
 \\[ \sigma(X) = \{X^{-1}(B) : B \in \mathcal{B}(\mathbb{R})\}. \\]
 Intuitivamente, \\(\sigma(X)\\) representa toda la información experimental que puede obtenerse observando únicamente el valor numérico tomado por \\(X\\).
 

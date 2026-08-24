@@ -9,7 +9,7 @@
 # Unidad 1. Espacios de probabilidad y combinatoria
 
 - [1.1 Pensamiento probabilístico, desarrollo histórico y combinatoria](unidad1/01-fundamentos-historicos-conteo.md)
-- [1.2 Espacios muestrales, álgebra de eventos y $\sigma$-álgebras](unidad1/02-espacios-muestrales-sigma-algebras.md)
+- [1.2 Espacios muestrales, álgebra de eventos y σ-álgebras](unidad1/02-espacios-muestrales-sigma-algebras.md)
 - [1.3 Axiomática de Kolmogórov y propiedades fundamentales](unidad1/03-axiomatica-kolmogorov-propiedades.md)
 - [1.4 Probabilidad geométrica y problemas clásicos](unidad1/04-probabilidad-geometrica.md)
 - [Ejercicios de la Unidad 1](unidad1/ejercicios.md)

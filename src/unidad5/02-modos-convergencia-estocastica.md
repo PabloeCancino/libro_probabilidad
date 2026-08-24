@@ -26,9 +26,9 @@ Evalúa si la masa de probabilidad de que \\(X_n\\) difiera de \\(X\\) en más d
 
 ---
 
-### 3. Convergencia en media de orden $p$ ($L^p$)
+### 3. Convergencia en media de orden p (Lᵖ)
 
-**Definición 5.9 (Convergencia en $L^p$).** Para \\(p \ge 1\\), la sucesión \\(\{X_n\}\\) converge a \\(X\\) en **media de orden \\(p\\)** (denotado \\(X_n \xrightarrow{L^p} X\\)) si \\(\mathbb{E}[|X_n|^p] < \infty\\) para todo \\(n\\) y:
+**Definición 5.9 (Convergencia en Lᵖ).** Para \\(p \ge 1\\), la sucesión \\(\{X_n\}\\) converge a \\(X\\) en **media de orden \\(p\\)** (denotado \\(X_n \xrightarrow{L^p} X\\)) si \\(\mathbb{E}[|X_n|^p] < \infty\\) para todo \\(n\\) y:
 \\[ \lim_{n \to \infty} \mathbb{E}[|X_n - X|^p] = 0. \\]
 - Para \\(p = 1\\): **Convergencia en media** (\\(\lim_{n\to\infty} \mathbb{E}[|X_n - X|] = 0\\)).
 - Para \\(p = 2\\): **Convergencia en media cuadrática** (\\(\lim_{n\to\infty} \mathbb{E}[(X_n - X)^2] = 0\\)), denotada \\(X_n \xrightarrow{\text{m.c.}} X\\).
@@ -57,13 +57,13 @@ X_n ──L^p──> X ───> X_n ──P──> X ───> X_n ──d─
 
 *Demostraciones formales de las implicaciones principales:*
 
-### 1. Convergencia en $L^p \implies$ Convergencia en probabilidad
+### 1. Convergencia en Lᵖ ⟹ Convergencia en probabilidad
 Aplicando la desigualdad de Márkov generalizada (Teorema 5.1) con \\(g(u) = u^p\\):
 \\[ \mathbb{P}(|X_n - X| > \epsilon) \le \frac{\mathbb{E}[|X_n - X|^p]}{\epsilon^p}. \\]
 Como \\(\lim_{n \to \infty} \mathbb{E}[|X_n - X|^p] = 0\\), para cualquier \\(\epsilon > 0\\) fijo:
 \\[ 0 \le \lim_{n \to \infty} \mathbb{P}(|X_n - X| > \epsilon) \le \lim_{n \to \infty} \frac{\mathbb{E}[|X_n - X|^p]}{\epsilon^p} = 0 \implies X_n \xrightarrow{P} X. \quad \blacksquare \\]
 
-### 2. Convergencia casi segura $\implies$ Convergencia en probabilidad
+### 2. Convergencia casi segura ⟹ Convergencia en probabilidad
 Para cualquier \\(\epsilon > 0\\), definamos el conjunto \\(E_n = \bigcup_{k=n}^\infty (|X_k - X| > \epsilon)\\).  
 La sucesión \\(E_n\\) es decreciente: \\(E_n \downarrow E = \limsup_{k\to\infty} (|X_k - X| > \epsilon)\\).  
 Por la hipótesis de convergencia casi segura, \\(\mathbb{P}(E) = 0\\).  
@@ -72,7 +72,7 @@ Por continuidad de la probabilidad desde arriba (Teorema 1.29):
 Como \\((|X_n - X| > \epsilon) \subseteq E_n\\), por monotonía:
 \\[ 0 \le \lim_{n \to \infty} \mathbb{P}(|X_n - X| > \epsilon) \le \lim_{n \to \infty} \mathbb{P}(E_n) = 0 \implies X_n \xrightarrow{P} X. \quad \blacksquare \\]
 
-### 3. Convergencia en probabilidad $\implies$ Convergencia en distribución
+### 3. Convergencia en probabilidad ⟹ Convergencia en distribución
 Para cualquier \\(\epsilon > 0\\) y \\(x \in \mathbb{R}\\):
 \\[ F_{X_n}(x) = \mathbb{P}(X_n \le x) = \mathbb{P}(X_n \le x, |X_n - X| \le \epsilon) + \mathbb{P}(X_n \le x, |X_n - X| > \epsilon). \\]
 Si \\(X_n \le x\\) y \\(|X_n - X| \le \epsilon\\), entonces \\(X \le X_n + \epsilon \le x + \epsilon\\). Por tanto:
@@ -101,7 +101,7 @@ Definamos la sucesión de intervalos viajantes \\(I_n = \left[\frac{j}{2^k}, \fr
   \\[ \limsup_{n \to \infty} X_n(\omega) = 1 \neq \liminf_{n \to \infty} X_n(\omega) = 0, \quad \forall \omega \in \Omega. \\]
   En consecuencia, \\(\mathbb{P}(\lim_{n \to \infty} X_n = 0) = 0\\), demostrando que \\(X_n\\) **no** converge casi seguramente.
 
-### Contraejemplo 2: Convergencia en probabilidad NO implica convergencia en $L^1$
+### Contraejemplo 2: Convergencia en probabilidad NO implica convergencia en L¹
 Sea \\(\Omega = (0, 1)\\) con probabilidad uniforme. Definamos:
 \\[ X_n(\omega) = n^2 \cdot \mathbb{I}_{(0, 1/n)}(\omega). \\]
 - Para todo \\(\epsilon > 0\\), \\(\mathbb{P}(|X_n| > \epsilon) = \mathbb{P}(\omega \in (0, 1/n)) = \frac{1}{n} \to 0 \implies X_n \xrightarrow{P} 0\\).

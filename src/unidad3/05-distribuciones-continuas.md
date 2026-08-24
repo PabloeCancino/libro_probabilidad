@@ -105,19 +105,19 @@ Modela variables continuas acotadas en el intervalo unitario \\((0, 1)\\), ampli
 
 ## 3.5.6 Otras distribuciones continuas fundamentales
 
-### 1. Distribución Chi-cuadrada ($\chi^2$)
+### 1. Distribución Chi-cuadrada (χ²)
 Si \\(Z_1, \dots, Z_k \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(0,1)\\), la suma de sus cuadrados \\(X = \sum_{i=1}^k Z_i^2 \sim \chi^2(k)\\) sigue una Chi-cuadrada con \\(k\\) grados de libertad.
 - **PDF:** \\(f(x) = \frac{1}{2^{k/2}\Gamma(k/2)} x^{k/2 - 1} e^{-x/2}\\) para \\(x > 0\\).
 - **Esperanza y Varianza:** \\(\mathbb{E}[X] = k\\), \\(\text{Var}(X) = 2k\\).
 
-### 2. Distribución $t$-Student
+### 2. Distribución t-Student
 Si \\(Z \sim \mathcal{N}(0,1)\\) y \\(V \sim \chi^2(k)\\) son independientes:
 \\[ T = \frac{Z}{\sqrt{V / k}} \sim t(k). \\]
 - **PDF:** \\(f(t) = \frac{\Gamma((k+1)/2)}{\sqrt{k\pi}\Gamma(k/2)} \left(1 + \frac{t^2}{k}\right)^{-(k+1)/2}\\) para \\(t \in \mathbb{R}\\).
 - Posee colas más pesadas que la Normal; cuando \\(k \to \infty\\), \\(t(k) \xrightarrow{d} \mathcal{N}(0,1)\\).
 - \\(\mathbb{E}[T] = 0\\) (para \\(k > 1\\)), \\(\text{Var}(T) = \frac{k}{k-2}\\) (para \\(k > 2\\)).
 
-### 3. Distribución $F$ de Fisher-Snedecor
+### 3. Distribución F de Fisher-Snedecor
 Si \\(U \sim \chi^2(d_1)\\) y \\(V \sim \chi^2(d_2)\\) son independientes:
 \\[ X = \frac{U / d_1}{V / d_2} \sim F(d_1, d_2). \\]
 - **Esperanza:** \\(\mathbb{E}[X] = \frac{d_2}{d_2 - 2}\\) para \\(d_2 > 2\\).
