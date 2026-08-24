@@ -46,7 +46,16 @@ La propiedad más poderosa y operativa de la esperanza matemática es su **linea
 
 *Demostración (caso continuo bivariado).*  
 Aplicando el Teorema 4.2 con \\(g(x, y) = ax + by + c\\):
-\\[ \begin{aligned} \mathbb{E}[aX + bY + c] &= \int_{-\infty}^\infty \int_{-\infty}^\infty (ax + by + c) f_{X,Y}(x, y) \, dx \, dy \\ &= a \int_{-\infty}^\infty x \left[\int_{-\infty}^\infty f_{X,Y}(x, y) dy\right] dx + b \int_{-\infty}^\infty y \left[\int_{-\infty}^\infty f_{X,Y}(x, y) dx\right] dy \\ &\quad + c \int_{-\infty}^\infty \int_{-\infty}^\infty f_{X,Y}(x, y) \, dx \, dy \\ &= a \int_{-\infty}^\infty x f_X(x) \, dx + b \int_{-\infty}^\infty y f_Y(y) \, dy + c \cdot 1 \\ &= a\mathbb{E}[X] + b\mathbb{E}[Y] + c. \quad \blacksquare \end{aligned} \\]
+
+\\[
+\begin{aligned}
+\mathbb{E}[aX + bY + c] &= \int_{-\infty}^\infty \int_{-\infty}^\infty (ax + by + c) f_{X,Y}(x, y) \, dx \, dy \\\\
+&= a \int_{-\infty}^\infty x \left[\int_{-\infty}^\infty f_{X,Y}(x, y) dy\right] dx + b \int_{-\infty}^\infty y \left[\int_{-\infty}^\infty f_{X,Y}(x, y) dx\right] dy \\\\
+&\quad + c \int_{-\infty}^\infty \int_{-\infty}^\infty f_{X,Y}(x, y) \, dx \, dy \\\\
+&= a \int_{-\infty}^\infty x f_X(x) \, dx + b \int_{-\infty}^\infty y f_Y(y) \, dy + c \cdot 1 \\\\
+&= a\mathbb{E}[X] + b\mathbb{E}[Y] + c. \quad \blacksquare
+\end{aligned}
+\\]
 
 ---
 
@@ -65,7 +74,14 @@ Aplicando el Teorema 4.2 con \\(g(x, y) = ax + by + c\\):
 
 *Demostración (caso continuo).*  
 Dado que \\(X \perp Y\\), la densidad conjunta factoriza: \\(f_{X,Y}(x, y) = f_X(x) f_Y(y)\\). Por el Teorema de Fubini:
-\\[ \begin{aligned} \mathbb{E}[XY] &= \int_{-\infty}^\infty \int_{-\infty}^\infty (xy) f_{X,Y}(x, y) \, dx \, dy = \int_{-\infty}^\infty \int_{-\infty}^\infty (xy) f_X(x) f_Y(y) \, dx \, dy \\ &= \left(\int_{-\infty}^\infty x f_X(x) \, dx\right) \left(\int_{-\infty}^\infty y f_Y(y) \, dy\right) = \mathbb{E}[X] \cdot \mathbb{E}[Y]. \quad \blacksquare \end{aligned} \\]
+
+\\[
+\begin{aligned}
+\mathbb{E}[XY] &= \int_{-\infty}^\infty \int_{-\infty}^\infty (xy) f_{X,Y}(x, y) \, dx \, dy \\\\
+&= \int_{-\infty}^\infty \int_{-\infty}^\infty (xy) f_X(x) f_Y(y) \, dx \, dy \\\\
+&= \left(\int_{-\infty}^\infty x f_X(x) \, dx\right) \left(\int_{-\infty}^\infty y f_Y(y) \, dy\right) = \mathbb{E}[X] \cdot \mathbb{E}[Y]. \quad \blacksquare
+\end{aligned}
+\\]
 
 ---
 

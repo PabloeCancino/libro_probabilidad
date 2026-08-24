@@ -96,7 +96,14 @@ El Teorema 1.25 se generaliza para la unión de cualquier número finito \\(n\\)
 **Teorema 1.26 (Principio de inclusión-exclusión de Poincaré).** *Para cualquier colección finita de eventos \\(A_1, A_2, \dots, A_n \in \mathcal{F}\\):*
 \\[ \mathbb{P}\left(\bigcup_{i=1}^n A_i\right) = \sum_{k=1}^n (-1)^{k-1} \sum_{1 \le i_1 < i_2 < \dots < i_k \le n} \mathbb{P}(A_{i_1} \cap A_{i_2} \cap \dots \cap A_{i_k}). \\]
 En particular, para \\(n = 3\\):
-\\[ \begin{aligned} \mathbb{P}(A_1 \cup A_2 \cup A_3) = &\ \mathbb{P}(A_1) + \mathbb{P}(A_2) + \mathbb{P}(A_3) \\ &- [\mathbb{P}(A_1 \cap A_2) + \mathbb{P}(A_1 \cap A_3) + \mathbb{P}(A_2 \cap A_3)] \\ &+ \mathbb{P}(A_1 \cap A_2 \cap A_3). \end{aligned} \\]
+
+\\[
+\begin{aligned}
+\mathbb{P}(A_1 \cup A_2 \cup A_3) &= \mathbb{P}(A_1) + \mathbb{P}(A_2) + \mathbb{P}(A_3) \\\\
+&\quad - [\mathbb{P}(A_1 \cap A_2) + \mathbb{P}(A_1 \cap A_3) + \mathbb{P}(A_2 \cap A_3)] \\\\
+&\quad + \mathbb{P}(A_1 \cap A_2 \cap A_3).
+\end{aligned}
+\\]
 
 *Demostración (por funciones indicadoras).*  
 Recordemos que la función indicadora \\(\mathbb{I}_A(\omega)\\) vale 1 si \\(\omega \in A\\) y 0 si \\(\omega \notin A\\), y cumple \\(\mathbb{E}[\mathbb{I}_A] = \mathbb{P}(A)\\).  

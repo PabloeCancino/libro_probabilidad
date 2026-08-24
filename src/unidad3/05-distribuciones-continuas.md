@@ -12,7 +12,10 @@ Modela la probabilidad homogénea en un intervalo continuo acotado \\([a, b]\\).
 - **Notación:** \\(X \sim \mathcal{U}(a, b)\\).
 - **Soporte:** \\(S_X = [a, b]\\).
 - **PDF y CDF:**
-  \\[ f_X(x) = \begin{cases} \dfrac{1}{b - a}, & a \le x \le b, \\ 0, & \text{en otro caso.} \end{cases} \qquad F_X(x) = \begin{cases} 0, & x < a, \\ \dfrac{x - a}{b - a}, & a \le x \le b, \\ 1, & x > b. \end{cases} \\]
+
+  \\[
+  f_X(x) = \begin{cases} \dfrac{1}{b - a}, & a \le x \le b, \\\\ 0, & \text{en otro caso.} \end{cases} \qquad F_X(x) = \begin{cases} 0, & x < a, \\\\ \dfrac{x - a}{b - a}, & a \le x \le b, \\\\ 1, & x > b. \end{cases}
+  \\]
 - **Esperanza y Varianza:**
   \\[ \mathbb{E}[X] = \int_a^b \frac{x}{b-a} \, dx = \frac{b^2 - a^2}{2(b-a)} = \frac{a + b}{2}. \\]
   \\[ \mathbb{E}[X^2] = \int_a^b \frac{x^2}{b-a} \, dx = \frac{b^3 - a^3}{3(b-a)} = \frac{a^2 + ab + b^2}{3} \implies \text{Var}(X) = \frac{(b - a)^2}{12}. \\]
@@ -35,7 +38,7 @@ Es la distribución continua más importante de toda la teoría estadística y p
 \\[ I^2 = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-(x^2 + y^2)/2} \, dx \, dy = \int_0^{2\pi} d\theta \int_0^{\infty} r e^{-r^2/2} \, dr = 2\pi [-e^{-r^2/2}]_0^{\infty} = 2\pi (0 - (-1)) = 2\pi. \\]
 Por ende, \\(I = \sqrt{2\pi}\\). Esto demuestra que \\(\int_{-\infty}^\infty f_X(x) \, dx = 1\\). \\(\blacksquare\\)
 
-### La Normal Estándar y la transformación $Z$
+### La Normal Estándar y la transformación Z
 Si \\(X \sim \mathcal{N}(\mu, \sigma^2)\\), la variable tipificada (estandarizada):
 \\[ Z = \frac{X - \mu}{\sigma} \sim \mathcal{N}(0, 1). \\]
 Su PDF se denota por \\(\phi(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}\\) y su CDF por \\(\Phi(z) = \int_{-\infty}^z \phi(t) \, dt\\).  
@@ -58,7 +61,10 @@ Modela el tiempo continuo de espera hasta la ocurrencia del primer evento en un 
 - **Notación:** \\(X \sim \text{Exp}(\lambda)\\).
 - **Soporte:** \\(S_X = [0, \infty)\\).
 - **PDF y CDF:**
-  \\[ f_X(x) = \begin{cases} \lambda e^{-\lambda x}, & x \ge 0, \\ 0, & x < 0. \end{cases} \qquad F_X(x) = \begin{cases} 1 - e^{-\lambda x}, & x \ge 0, \\ 0, & x < 0. \end{cases} \\]
+
+  \\[
+  f_X(x) = \begin{cases} \lambda e^{-\lambda x}, & x \ge 0, \\\\ 0, & x < 0. \end{cases} \qquad F_X(x) = \begin{cases} 1 - e^{-\lambda x}, & x \ge 0, \\\\ 0, & x < 0. \end{cases}
+  \\]
 - **Función de Supervivencia / Confiabilidad:** \\(S_X(x) = \mathbb{P}(X > x) = e^{-\lambda x}\\).
 - **Esperanza y Varianza:**
   \\[ \mathbb{E}[X] = \frac{1}{\lambda}, \qquad \text{Var}(X) = \frac{1}{\lambda^2}. \\]

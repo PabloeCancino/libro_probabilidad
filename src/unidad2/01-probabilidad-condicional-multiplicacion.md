@@ -25,11 +25,24 @@ Un resultado fundamental es que, para cualquier evento fijo \\(B\\) con \\(\math
    \\[ \mathbb{P}(A \mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \ge 0. \\]
 2. **Axioma 2 (Normalización):** Evaluando en \\(\Omega\\):
    \\[ \mathbb{P}(\Omega \mid B) = \frac{\mathbb{P}(\Omega \cap B)}{\mathbb{P}(B)} = \frac{\mathbb{P}(B)}{\mathbb{P}(B)} = 1. \\]
-3. **Axioma 3 (σ-aditividad):** Sea \\(\{A_n\}_{n=1}^\infty \subseteq \mathcal{F}\\) una sucesión de eventos disjuntos dos a dos (\\(A_i \cap A_j = \emptyset\\) para \\(i \neq j\\)).  
-   Entonces los conjuntos \\(A_n \cap B\\) son también disjuntos dos a dos, pues \\((A_i \cap B) \cap (A_j \cap B) = (A_i \cap A_j) \cap B = \emptyset \cap B = \emptyset\\).  
-   Por la distributividad de la intersección respecto a la unión y la \\(\sigma\\)-aditividad de \\(\mathbb{P}\\):
-   \\[ \begin{aligned} \mathbb{P}\left(\bigcup_{n=1}^\infty A_n \;\middle|\; B\right) &= \frac{\mathbb{P}\left(\left(\bigcup_{n=1}^\infty A_n\right) \cap B\right)}{\mathbb{P}(B)} = \frac{\mathbb{P}\left(\bigcup_{n=1}^\infty (A_n \cap B)\right)}{\mathbb{P}(B)} \\ &= \frac{\sum_{n=1}^\infty \mathbb{P}(A_n \cap B)}{\mathbb{P}(B)} = \sum_{n=1}^\infty \frac{\mathbb{P}(A_n \cap B)}{\mathbb{P}(B)} = \sum_{n=1}^\infty \mathbb{P}(A_n \mid B). \end{aligned} \\]
-Por tanto, \\(\mathbb{P}(\cdot \mid B)\\) es una medida de probabilidad axiomática sobre \\((\Omega, \mathcal{F})\\). \\(\blacksquare\\)
+3. **Axioma 3 (σ-aditividad):** Sea \\((A_n)_{n=1}^\infty \subseteq \mathcal{F}\\) una sucesión de eventos disjuntos dos a dos, es decir, \\(A_i \cap A_j = \emptyset\\) para todo \\(i \neq j\\).  
+   Entonces los conjuntos \\(A_n \cap B\\) son también mutuamente disjuntos dos a dos, puesto que:
+   \\[
+   (A_i \cap B) \cap (A_j \cap B) = (A_i \cap A_j) \cap B = \emptyset \cap B = \emptyset.
+   \\]
+   Por la distributividad de la intersección respecto a la unión numerable y la σ-aditividad de \\(\mathbb{P}\\):
+
+   \\[
+   \begin{aligned}
+   \mathbb{P}\left(\bigcup_{n=1}^\infty A_n \;\middle|\; B\right) &= \frac{\mathbb{P}\left(\left(\bigcup_{n=1}^\infty A_n\right) \cap B\right)}{\mathbb{P}(B)} \\\\
+   &= \frac{\mathbb{P}\left(\bigcup_{n=1}^\infty (A_n \cap B)\right)}{\mathbb{P}(B)} \\\\
+   &= \frac{\sum_{n=1}^\infty \mathbb{P}(A_n \cap B)}{\mathbb{P}(B)} \\\\
+   &= \sum_{n=1}^\infty \frac{\mathbb{P}(A_n \cap B)}{\mathbb{P}(B)} \\\\
+   &= \sum_{n=1}^\infty \mathbb{P}(A_n \mid B).
+   \end{aligned}
+   \\]
+
+   Por tanto, \\(\mathbb{P}(\cdot \mid B)\\) es una medida de probabilidad axiomática sobre \\((\Omega, \mathcal{F})\\). \\(\blacksquare\\)
 
 ### Consecuencias inmediatas
 Dado que \\(\mathbb{P}(\cdot \mid B)\\) es una medida de probabilidad, hereda **todos** los teoremas demostrados en la Unidad 1:

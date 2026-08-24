@@ -50,9 +50,15 @@ Se selecciona un microprocesador al azar de la producción total. ¿Cuál es la 
 
 *Solución:*  
 Las líneas \\(\{B_1, B_2, B_3\}\\) constituyen una partición del espacio muestral:
-\\[ \mathbb{P}(B_1) = 0.50, \quad \mathbb{P}(B_2) = 0.30, \quad \mathbb{P}(B_3) = 0.20. \\]
 Por el Teorema de la Probabilidad Total:
-\\[ \begin{aligned} \mathbb{P}(D) &= \mathbb{P}(B_1)\mathbb{P}(D \mid B_1) + \mathbb{P}(B_2)\mathbb{P}(D \mid B_2) + \mathbb{P}(B_3)\mathbb{P}(D \mid B_3) \\ &= (0.50)(0.01) + (0.30)(0.02) + (0.20)(0.05) \\ &= 0.005 + 0.006 + 0.010 = 0.021 \quad (2.1\%). \end{aligned} \\]
+
+\\[
+\begin{aligned}
+\mathbb{P}(D) &= \mathbb{P}(B_1)\mathbb{P}(D \mid B_1) + \mathbb{P}(B_2)\mathbb{P}(D \mid B_2) + \mathbb{P}(B_3)\mathbb{P}(D \mid B_3) \\\\
+&= (0.50)(0.01) + (0.30)(0.02) + (0.20)(0.05) \\\\
+&= 0.005 + 0.006 + 0.010 = 0.021 \quad (2.1\%).
+\end{aligned}
+\\]
 
 **Ejemplo 2.16 (La ruina del jugador en un paso).**  
 En un juego de azar, un participante gana \$1 con probabilidad \\(p\\) y pierde \$1 con probabilidad \\(q = 1 - p\\). Sea \\(u_k\\) la probabilidad de que el jugador eventualmente alcance una fortuna de \$N antes de arruinarse (llegar a \$0), partiendo de un capital inicial de \$k\\) (con \\(0 \le k \le N\\)).  

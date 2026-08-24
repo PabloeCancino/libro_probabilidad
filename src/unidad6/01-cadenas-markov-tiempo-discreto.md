@@ -35,7 +35,14 @@ Toda matriz de transición es una **matriz estocástica por filas**:
 
 *Demostración.*  
 Aplicando la Ley de la Probabilidad Total condicionando sobre el estado intermedio \\(X_n = k\\) y la propiedad de Márkov:
-\\[ \begin{aligned} p_{ij}^{(n+m)} &= \mathbb{P}(X_{n+m} = j \mid X_0 = i) = \sum_{k \in S} \mathbb{P}(X_{n+m} = j, X_n = k \mid X_0 = i) \\ &= \sum_{k \in S} \mathbb{P}(X_n = k \mid X_0 = i) \mathbb{P}(X_{n+m} = j \mid X_n = k, X_0 = i) \\ &= \sum_{k \in S} p_{ik}^{(n)} p_{kj}^{(m)}. \end{aligned} \\]
+
+\\[
+\begin{aligned}
+p_{ij}^{(n+m)} &= \mathbb{P}(X_{n+m} = j \mid X_0 = i) = \sum_{k \in S} \mathbb{P}(X_{n+m} = j, X_n = k \mid X_0 = i) \\\\
+&= \sum_{k \in S} \mathbb{P}(X_n = k \mid X_0 = i) \mathbb{P}(X_{n+m} = j \mid X_n = k, X_0 = i) \\\\
+&= \sum_{k \in S} p_{ik}^{(n)} p_{kj}^{(m)}.
+\end{aligned}
+\\]
 Esto coincide exactamente con la regla del producto de matrices para \\(\mathbf{P}^{n+m} = \mathbf{P}^n \mathbf{P}^m\\). \\(\blacksquare\\)
 
 Si el vector de probabilidades iniciales es \\(\boldsymbol{\pi}^{(0)} = (\mathbb{P}(X_0=1), \dots, \mathbb{P}(X_0=N))\\), la distribución de probabilidad marginal en el paso \\(n\\) es:
@@ -67,7 +74,10 @@ Si el vector de probabilidades iniciales es \\(\boldsymbol{\pi}^{(0)} = (\mathbb
 **Teorema 6.6 (Teorema Ergódico Fundamental de Markov).** *Si una cadena de Markov con espacio de estados finito es **irreducible y aperiódica**, entonces:*
 1. *Existe una **única** distribución estacionaria \\(\boldsymbol{\pi}\\) estrictamente positiva (\\(\pi_i > 0\\) para todo \\(i\\)).*
 2. *Para cualquier distribución inicial \\(\boldsymbol{\pi}^{(0)}\\), la cadena converge asintóticamente al equilibrio:*
-   \\[ \lim_{n \to \infty} \mathbf{P}^n = \begin{pmatrix} \boldsymbol{\pi} \\ \boldsymbol{\pi} \\ \vdots \\ \boldsymbol{\pi} \end{pmatrix}, \qquad \lim_{n \to \infty} \boldsymbol{\pi}^{(n)} = \boldsymbol{\pi}. \\]
+
+   \\[
+   \lim_{n \to \infty} \mathbf{P}^n = \begin{pmatrix} \boldsymbol{\pi} \\\\ \boldsymbol{\pi} \\\\ \vdots \\\\ \boldsymbol{\pi} \end{pmatrix}, \qquad \lim_{n \to \infty} \boldsymbol{\pi}^{(n)} = \boldsymbol{\pi}.
+   \\]
 3. *El tiempo medio de recurrencia al estado \\(i\\) es \\(\mu_{ii} = \frac{1}{\pi_i}\\).*
 
 ---
@@ -79,9 +89,17 @@ Consideremos un modelo simplificado del clima con dos estados: Soleado (1) y Llu
 - Si hoy llueve, mañana estará soleado con probabilidad 0.4 y lluvioso con 0.6.
 
 La matriz de transición es:
-\\[ \mathbf{P} = \begin{pmatrix} 0.8 & 0.2 \\ 0.4 & 0.6 \end{pmatrix}. \\]
+
+\\[
+\mathbf{P} = \begin{pmatrix} 0.8 & 0.2 \\\\ 0.4 & 0.6 \end{pmatrix}.
+\\]
+
 Para encontrar la distribución estacionaria \\(\boldsymbol{\pi} = (\pi_1, \pi_2)\\):
-\\[ (\pi_1, \pi_2) \begin{pmatrix} 0.8 & 0.2 \\ 0.4 & 0.6 \end{pmatrix} = (\pi_1, \pi_2) \implies \begin{cases} 0.8\pi_1 + 0.4\pi_2 = \pi_1 \\ 0.2\pi_1 + 0.6\pi_2 = \pi_2 \\ \pi_1 + \pi_2 = 1 \end{cases} \implies 0.4\pi_2 = 0.2\pi_1 \implies \pi_1 = 2\pi_2. \\]
+
+\\[
+(\pi_1, \pi_2) \begin{pmatrix} 0.8 & 0.2 \\\\ 0.4 & 0.6 \end{pmatrix} = (\pi_1, \pi_2) \implies \begin{cases} 0.8\pi_1 + 0.4\pi_2 = \pi_1 \\\\ 0.2\pi_1 + 0.6\pi_2 = \pi_2 \\\\ \pi_1 + \pi_2 = 1 \end{cases} \implies 0.4\pi_2 = 0.2\pi_1 \implies \pi_1 = 2\pi_2.
+\\]
+
 Sustituyendo en \\(\pi_1 + \pi_2 = 1\\):
 \\[ 2\pi_2 + \pi_2 = 1 \implies \pi_2 = \frac{1}{3}, \quad \pi_1 = \frac{2}{3}. \\]
 A largo plazo, el 66.67% de los días serán soleados y el 33.33% serán lluviosos, independientemente del clima en el día inicial.

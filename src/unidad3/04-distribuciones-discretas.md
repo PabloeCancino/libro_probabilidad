@@ -125,7 +125,13 @@ Modela el número de eventos raros que ocurren en un intervalo continuo fijo (ti
 
 *Demostración analítica.*  
 Escribiendo la PMF binomial con \\(p = \frac{\lambda}{n}\\):
-\\[ \begin{aligned} \mathbb{P}(X_n = k) &= \frac{n(n-1)\cdots(n-k+1)}{k!} \left(\frac{\lambda}{n}\right)^k \left(1 - \frac{\lambda}{n}\right)^{n-k} \\ &= \frac{\lambda^k}{k!} \left[\frac{n(n-1)\cdots(n-k+1)}{n^k}\right] \left(1 - \frac{\lambda}{n}\right)^n \left(1 - \frac{\lambda}{n}\right)^{-k}. \end{aligned} \\]
+
+\\[
+\begin{aligned}
+\mathbb{P}(X_n = k) &= \frac{n(n-1)\cdots(n-k+1)}{k!} \left(\frac{\lambda}{n}\right)^k \left(1 - \frac{\lambda}{n}\right)^{n-k} \\\\
+&= \frac{\lambda^k}{k!} \left[\frac{n(n-1)\cdots(n-k+1)}{n^k}\right] \left(1 - \frac{\lambda}{n}\right)^n \left(1 - \frac{\lambda}{n}\right)^{-k}.
+\end{aligned}
+\\]
 Tomando el límite cuando \\(n \to \infty\\) para \\(k\\) fijo:
 - \\(\lim_{n \to \infty} \frac{n(n-1)\cdots(n-k+1)}{n^k} = 1\\).
 - \\(\lim_{n \to \infty} \left(1 - \frac{\lambda}{n}\right)^n = e^{-\lambda}\\) (límite clásico de Euler).

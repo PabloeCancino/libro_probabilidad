@@ -40,7 +40,13 @@ El segundo momento central mide el grado de dispersión o concentración de la m
 
 *Demostración.*
 1. Expandiendo el binomio cuadrático y aplicando la linealidad de la esperanza:
-   \\[ \begin{aligned} \text{Var}(X) &= \mathbb{E}[(X - \mu)^2] = \mathbb{E}[X^2 - 2\mu X + \mu^2] \\ &= \mathbb{E}[X^2] - 2\mu\mathbb{E}[X] + \mu^2 = \mathbb{E}[X^2] - 2\mu^2 + \mu^2 = \mathbb{E}[X^2] - \mu^2. \end{aligned} \\]
+
+   \\[
+   \begin{aligned}
+   \text{Var}(X) &= \mathbb{E}[(X - \mu)^2] = \mathbb{E}[X^2 - 2\mu X + \mu^2] \\\\
+   &= \mathbb{E}[X^2] - 2\mu\mathbb{E}[X] + \mu^2 = \mathbb{E}[X^2] - 2\mu^2 + \mu^2 = \mathbb{E}[X^2] - \mu^2.
+   \end{aligned}
+   \\]
 2. \\((X - \mu)^2 \ge 0\\), luego su esperanza es no negativa.
 3. \\(\mathbb{E}[aX + b] = a\mu + b\\). Por tanto:
    \\[ \text{Var}(aX + b) = \mathbb{E}[((aX + b) - (a\mu + b))^2] = \mathbb{E}[(a(X - \mu))^2] = a^2 \mathbb{E}[(X - \mu)^2] = a^2 \text{Var}(X). \quad \blacksquare \\]

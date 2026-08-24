@@ -69,7 +69,13 @@ Una persona asintomática seleccionada al azar de la población se realiza el te
 
 *Solución analítica:*  
 Aplicando el Teorema de Bayes:
-\\[ \begin{aligned} \mathbb{P}(E \mid T^+) &= \frac{(0.001)(0.99)}{(0.001)(0.99) + (0.999)(0.05)} \\ &= \frac{0.00099}{0.00099 + 0.04995} = \frac{0.00099}{0.05094} \approx 0.01943 \quad (1.94\%). \end{aligned} \\]
+
+\\[
+\begin{aligned}
+\mathbb{P}(E \mid T^+) &= \frac{(0.001)(0.99)}{(0.001)(0.99) + (0.999)(0.05)} \\\\
+&= \frac{0.00099}{0.00099 + 0.04995} = \frac{0.00099}{0.05094} \approx 0.01943 \quad (1.94\%).
+\end{aligned}
+\\]
 
 > **Conclusión contraintuitiva pero rigurosa:** A pesar de que la prueba tiene un 99% de sensibilidad y 95% de especificidad, una persona que da positivo **solo tiene un 1.94% de probabilidad real de estar enferma**. El 98.06% de los resultados positivos son en realidad falsos positivos.  
 > **Explicación matemática:** En una población de 100\,000 personas:

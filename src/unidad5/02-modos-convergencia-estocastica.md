@@ -94,7 +94,10 @@ Haciendo \\(\epsilon \to 0^+\\) en un punto de continuidad de \\(F_X\\):
 Sea \\(\Omega = [0, 1)\\) con la medida de Lebesgue uniforme.  
 Para cada entero \\(n \ge 1\\), escribimos \\(n = 2^k + j\\) de forma única con \\(k \ge 0\\) y \\(0 \le j < 2^k\\).  
 Definamos la sucesión de intervalos viajantes \\(I_n = \left[\frac{j}{2^k}, \frac{j+1}{2^k}\right)\\) y las variables aleatorias indicadoras:
-\\[ X_n(\omega) = \mathbb{I}_{I_n}(\omega) = \begin{cases} 1, & \omega \in I_n, \\ 0, & \omega \notin I_n. \end{cases} \\]
+
+\\[
+X_n(\omega) = \mathbb{I}_{I_n}(\omega) = \begin{cases} 1, & \omega \in I_n, \\\\ 0, & \omega \notin I_n. \end{cases}
+\\]
 - **En probabilidad:** Para todo \\(\epsilon \in (0, 1)\\):
   \\[ \mathbb{P}(|X_n - 0| > \epsilon) = \mathbb{P}(X_n = 1) = \text{Longitud}(I_n) = \frac{1}{2^k} \to 0 \quad \text{cuando } n \to \infty \implies X_n \xrightarrow{P} 0. \\]
 - **Casi seguramente:** Para **todo** \\(\omega \in [0, 1)\\), el punto \\(\omega\\) es cubierto infinitas veces por los intervalos \\(I_n\\) e ignorado infinitas veces. Por tanto, la sucesión numérica \\(X_n(\omega)\\) oscila eternamente entre 0 y 1:

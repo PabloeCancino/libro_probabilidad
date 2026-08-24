@@ -26,7 +26,14 @@ Es decir, \\(\mathbb{E}[X \mid Y]\\) es una función medible de la variable alea
 *Demostración (caso continuo).*  
 Sea \\(g(y) = \mathbb{E}[X \mid Y = y] = \int_{-\infty}^\infty x \frac{f_{X,Y}(x, y)}{f_Y(y)} dx\\).  
 Por LOTUS (Teorema 4.2), la esperanza de la variable aleatoria \\(g(Y)\\) es:
-\\[ \begin{aligned} \mathbb{E}[\mathbb{E}[X \mid Y]] &= \mathbb{E}[g(Y)] = \int_{-\infty}^\infty g(y) f_Y(y) \, dy \\ &= \int_{-\infty}^\infty \left(\int_{-\infty}^\infty x \frac{f_{X,Y}(x, y)}{f_Y(y)} \, dx\right) f_Y(y) \, dy \\ &= \int_{-\infty}^\infty \int_{-\infty}^\infty x f_{X,Y}(x, y) \, dx \, dy = \mathbb{E}[X]. \quad \blacksquare \end{aligned} \\]
+
+\\[
+\begin{aligned}
+\mathbb{E}[\mathbb{E}[X \mid Y]] &= \mathbb{E}[g(Y)] = \int_{-\infty}^\infty g(y) f_Y(y) \, dy \\\\
+&= \int_{-\infty}^\infty \left(\int_{-\infty}^\infty x \frac{f_{X,Y}(x, y)}{f_Y(y)} \, dx\right) f_Y(y) \, dy \\\\
+&= \int_{-\infty}^\infty \int_{-\infty}^\infty x f_{X,Y}(x, y) \, dx \, dy = \mathbb{E}[X]. \quad \blacksquare
+\end{aligned}
+\\]
 
 ### Propiedades algebraicas de la esperanza condicional
 1. **Linealidad:** \\(\mathbb{E}[a X_1 + b X_2 + c \mid Y] = a \mathbb{E}[X_1 \mid Y] + b \mathbb{E}[X_2 \mid Y] + c\\).
@@ -86,4 +93,10 @@ Sea \\(S_N = \sum_{i=1}^N X_i\\) el monto total reclamado (con \\(S_0 = 0\\)).
 2. **Varianza total:**
    \\[ \text{Var}(S_N \mid N) = N \text{Var}(X). \\]
    Por la Ley de la Varianza Total:
-   \\[ \begin{aligned} \text{Var}(S_N) &= \mathbb{E}[\text{Var}(S_N \mid N)] + \text{Var}(\mathbb{E}[S_N \mid N]) = \mathbb{E}[N \text{Var}(X)] + \text{Var}(N \mathbb{E}[X]) \\ &= \text{Var}(X)\mathbb{E}[N] + (\mathbb{E}[X])^2 \text{Var}(N) = \frac{1}{\beta^2} \lambda + \frac{1}{\beta^2} \lambda = \frac{2\lambda}{\beta^2}. \end{aligned} \\]
+
+   \\[
+   \begin{aligned}
+   \text{Var}(S_N) &= \mathbb{E}[\text{Var}(S_N \mid N)] + \text{Var}(\mathbb{E}[S_N \mid N]) = \mathbb{E}[N \text{Var}(X)] + \text{Var}(N \mathbb{E}[X]) \\\\
+   &= \text{Var}(X)\mathbb{E}[N] + (\mathbb{E}[X])^2 \text{Var}(N) = \frac{1}{\beta^2} \lambda + \frac{1}{\beta^2} \lambda = \frac{2\lambda}{\beta^2}.
+   \end{aligned}
+   \\]
