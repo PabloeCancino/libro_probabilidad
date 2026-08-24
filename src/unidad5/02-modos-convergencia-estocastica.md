@@ -10,8 +10,12 @@ En análisis real ordinario, una sucesión de números reales \\(\{x_n\}\\) conv
 
 Es la noción más fuerte de convergencia estocástica y corresponde a la convergencia puntual del análisis funcional salvo en un conjunto de resultados de medida nula.
 
-**Definición 5.7 (Convergencia casi segura).** Una sucesión de variables aleatorias \\(\{X_n\}_{n=1}^\infty\\) converge **casi seguramente (c.s.)** a la variable aleatoria \\(X\\) (denotado \\(X_n \xrightarrow{\text{c.s.}} X\\) o \\(X_n \xrightarrow{\text{a.s.}} X\\)) si:
-\\[ \mathbb{P}\left(\left\{\omega \in \Omega : \lim_{n \to \infty} X_n(\omega) = X(\omega)\right\}\right) = 1. \\]
+**Definición 5.7 (Convergencia casi segura).** Una sucesión de variables aleatorias \\((X_n)_{n=1}^\infty\\) converge **casi seguramente (c.s.)** a la variable aleatoria \\(X\\) (denotado \\(X_n \xrightarrow{\text{c.s.}} X\\) o \\(X_n \xrightarrow{\text{a.s.}} X\\)) si:
+
+\\[
+\mathbb{P}\left(\left\\{\omega \in \Omega : \lim_{n \to \infty} X_n(\omega) = X(\omega)\right\\}\right) = 1.
+\\]
+
 Equivalentemente:
 \\[ \mathbb{P}\left(\limsup_{n \to \infty} |X_n - X| > \epsilon\right) = 0, \quad \forall \epsilon > 0. \\]
 

@@ -51,7 +51,11 @@ La posición de la aguja queda unívocamente determinada por dos variables aleat
 2. \\(\Theta\\): El ángulo agudo que forma la aguja con la dirección de las líneas paralelas, que varía uniformemente en \\([0, \pi/2]\\).
 
 El espacio muestral en el plano \\((x, \theta)\\) es el rectángulo:
-\\[ \Omega = \left\{(x, \theta) : 0 \le x \le \frac{D}{2}, \ 0 \le \theta \le \frac{\pi}{2}\right\}, \quad \text{con Área}(\Omega) = \frac{D}{2} \times \frac{\pi}{2} = \frac{\pi D}{4}. \\]
+
+\\[
+\Omega = \left\\{(x, \theta) : 0 \le x \le \frac{D}{2}, \ 0 \le \theta \le \frac{\pi}{2}\right\\}, \quad \text{con } \text{Área}(\Omega) = \frac{D}{2} \times \frac{\pi}{2} = \frac{\pi D}{4}.
+\\]
+
 Por trigonometría elemental, la proyección del semicuerpo de la aguja perpendicular a las líneas es \\(\frac{L}{2} \sin \theta\\).  
 La aguja cruza una línea si y solo si la distancia \\(X\\) del centro a la línea es menor o igual a dicha proyección:
 \\[ X \le \frac{L}{2} \sin \theta. \\]

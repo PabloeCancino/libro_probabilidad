@@ -80,7 +80,11 @@ Por el Teorema Fundamental del Cálculo, si \\(F_X\\) es diferenciable en \\(x\\
 
 4. **Continuidad por la derecha:** Sea \\(x \in \mathbb{R}\\) fijo y consideremos una sucesión decreciente \\(h_n > 0\\) tal que \\(h_n \downarrow 0\\).  
    Los eventos \\(C_n = (X \le x + h_n)\\) forman una sucesión decreciente cuya intersección es:
-   \\[ \bigcap_{n=1}^\infty C_n = \bigcap_{n=1}^\infty \left\{\omega : X(\omega) \le x + h_n\right\} = \{\omega : X(\omega) \le x\} = (X \le x). \\]
+
+   \\[
+   \bigcap_{n=1}^\infty C_n = \bigcap_{n=1}^\infty \left\\{\omega : X(\omega) \le x + h_n\right\\} = \left\\{\omega : X(\omega) \le x\right\\} = (X \le x).
+   \\]
+
    Por la continuidad de la probabilidad desde arriba:
    \\[ \lim_{n \to \infty} F_X(x + h_n) = \lim_{n \to \infty} \mathbb{P}(C_n) = \mathbb{P}(X \le x) = F_X(x). \quad \blacksquare \\]
 
