@@ -10,6 +10,11 @@ Este repositorio contiene el texto completo, en formato [mdBook](https://rust-la
 Disponible para lectura en línea en:  
 👉 **[https://pabloecancino.github.io/libro_probabilidad/](https://pabloecancino.github.io/libro_probabilidad/)**
 
+## Aplicación Móvil e Interactiva Complementaria
+
+Este libro cuenta con una aplicación interactiva desarrollada bajo la norma técnica **NTE-UAN-APK-001 v1.4** de la UAN:  
+📱 **[Web App Interactiva en Vivo](https://PabloeCancino.github.io/uan-apk-probabilidad/)** | 📥 **[Descargar APK Android](https://github.com/PabloeCancino/uan-apk-probabilidad/releases)** | 💻 **[Repositorio GitHub](https://github.com/PabloeCancino/uan-apk-probabilidad)**
+
 ## Estructura del libro
 
 - **Unidad 1.** Espacios de probabilidad y combinatoria (técnicas de conteo, formalización de espacios muestrales, $\sigma$-álgebras, axiomas de Kolmogórov, principio de inclusión-exclusión y probabilidad geométrica).
