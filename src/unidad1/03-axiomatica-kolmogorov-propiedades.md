@@ -115,7 +115,7 @@ Despejando \\(\mathbb{I}_A(\omega)\\) y tomando esperanza (o integrando respecto
 
 ### Subaditividad (Desigualdad de Boole)
 
-**Teorema 1.27 (Desigualdad de Boole).** *Para cualquier sucesión finita o numerable de eventos \\(\{A_n\}_{n=1}^{\infty} \subseteq \mathcal{F}\\):*
+**Teorema 1.27 (Desigualdad de Boole).** *Para cualquier sucesión finita o numerable de eventos \\((A_n)_{n=1}^{\infty} \subseteq \mathcal{F}\\):*
 \\[ \mathbb{P}\left(\bigcup_{n=1}^{\infty} A_n\right) \le \sum_{n=1}^{\infty} \mathbb{P}(A_n). \\]
 
 *Demostración.* Definamos una sucesión disjunta \\(B_n\\) mediante la técnica de disyuntivación estándar:
@@ -128,11 +128,11 @@ Aplicando el Axioma 3 y la monotonía (Teorema 1.24):
 
 ## 1.3.4 Continuidad de la medida de probabilidad
 
-Una de las propiedades más poderosas de la \\(\sigma\\)-aditividad es que permite intercambiar el operador de probabilidad con el paso al límite de sucesiones monótonas de eventos.
+Una de las propiedades más poderosas de la σ-aditividad es que permite intercambiar el operador de probabilidad con el paso al límite de sucesiones monótonas de eventos.
 
 **Definición 1.28 (Sucesiones monótonas de eventos).**
-1. Una sucesión \\(\{A_n\}_{n=1}^{\infty}\\) es **creciente** (o monótona no decreciente), denotada \\(A_n \uparrow A\\), si \\(A_1 \subseteq A_2 \subseteq A_3 \subseteq \dots\\) y \\(A = \bigcup_{n=1}^{\infty} A_n\\).
-2. Una sucesión \\(\{A_n\}_{n=1}^{\infty}\\) es **decreciente** (o monótona no creciente), denotada \\(A_n \downarrow A\\), si \\(A_1 \supseteq A_2 \supseteq A_3 \supseteq \dots\\) y \\(A = \bigcap_{n=1}^{\infty} A_n\\).
+1. Una sucesión \\((A_n)_{n=1}^{\infty}\\) es **creciente** (o monótona no decreciente), denotada \\(A_n \uparrow A\\), si \\(A_1 \subseteq A_2 \subseteq A_3 \subseteq \dots\\) y \\(A = \bigcup_{n=1}^{\infty} A_n\\).
+2. Una sucesión \\((A_n)_{n=1}^{\infty}\\) es **decreciente** (o monótona no creciente), denotada \\(A_n \downarrow A\\), si \\(A_1 \supseteq A_2 \supseteq A_3 \supseteq \dots\\) y \\(A = \bigcap_{n=1}^{\infty} A_n\\).
 
 **Teorema 1.29 (Continuidad de la probabilidad).**
 1. **(Continuidad desde abajo):** Si \\(A_n \uparrow A\\), entonces:

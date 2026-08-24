@@ -2,13 +2,13 @@
 
 ## 6.1.1 Introducción a los procesos estocásticos y la propiedad de Márkov
 
-Un **proceso estocástico** es una familia indexada de variables aleatorias \\(\{X_t\}_{t \in T}\\) definidas sobre un espacio de probabilidad común \\((\Omega, \mathcal{F}, \mathbb{P})\\), donde el índice \\(t \in T\\) representa usualmente el tiempo.
-- Si \\(T = \mathbb{N} = \{0, 1, 2, \dots\}\\), el proceso es a **tiempo discreto**.
+Un **proceso estocástico** es una familia indexada de variables aleatorias \\((X_t)_{t \in T}\\) definidas sobre un espacio de probabilidad común \\((\Omega, \mathcal{F}, \mathbb{P})\\), donde el índice \\(t \in T\\) representa usualmente el tiempo.
+- Si \\(T = \mathbb{N}_0 = \{0, 1, 2, \dots\}\\), el proceso es a **tiempo discreto**.
 - Si \\(T = [0, \infty)\\), el proceso es a **tiempo continuo**.
 
 El conjunto de todos los valores posibles que pueden tomar las variables \\(X_t\\) se denomina el **espacio de estados** \\(S\\). En esta sección nos enfocaremos en espacios de estados finitos o numerables \\(S = \{1, 2, \dots, N\}\\).
 
-**Definición 6.1 (Propiedad de Márkov a tiempo discreto).** Un proceso estocástico a tiempo discreto \\(\{X_n\}_{n=0}^\infty\\) con espacio de estados \\(S\\) es una **Cadena de Markov a tiempo discreto (DTMC)** si satisface la **propiedad de pérdida de memoria estocástica (propiedad de Márkov)**: la probabilidad condicional de la transición hacia el estado futuro \\(X_{n+1}\\) depende únicamente del estado presente actual \\(X_n\\), siendo completamente independiente de toda la trayectoria histórica pasada:
+**Definición 6.1 (Propiedad de Márkov a tiempo discreto).** Un proceso estocástico a tiempo discreto \\((X_n)_{n=0}^\infty\\) con espacio de estados \\(S\\) es una **Cadena de Markov a tiempo discreto (DTMC)** si satisface la **propiedad de pérdida de memoria estocástica (propiedad de Márkov)**: la probabilidad condicional de la transición hacia el estado futuro \\(X_{n+1}\\) depende únicamente del estado presente actual \\(X_n\\), siendo completamente independiente de toda la trayectoria histórica pasada:
 \\[ \mathbb{P}(X_{n+1} = j \mid X_n = i, \ X_{n-1} = i_{n-1}, \dots, X_0 = i_0) = \mathbb{P}(X_{n+1} = j \mid X_n = i), \\]
 para todo \\(n \ge 0\\) y para cualesquiera estados \\(i, j, i_0, \dots, i_{n-1} \in S\\).
 

@@ -33,7 +33,7 @@ Sean \\(A, B \subseteq \Omega\\) dos eventos:
 - **Eventos mutuamente excluyentes (disjuntos):** \\(A \cap B = \emptyset\\). No pueden ocurrir simultáneamente.
 - **Inclusión (implicación):** \\(A \subseteq B\\). La ocurrencia de \\(A\\) garantiza necesariamente la ocurrencia de \\(B\\).
 
-**Leyes de De Morgan:** Para cualquier familia arbitraria (finita, numerable o no numerable) de eventos \\(\{A_i\}_{i \in I}\\):
+**Leyes de De Morgan:** Para cualquier familia arbitraria (finita, numerable o no numerable) de eventos \\((A_i)_{i \in I}\\):
 \\[ \left(\bigcup_{i \in I} A_i\right)^c = \bigcap_{i \in I} A_i^c, \qquad \left(\bigcap_{i \in I} A_i\right)^c = \bigcup_{i \in I} A_i^c. \\]
 
 ---
@@ -50,7 +50,7 @@ En espacios finitos podemos considerar que *cualquier* subconjunto de \\(\Omega\
 **Definición 1.13 (σ-álgebra).** Sea \\(\Omega\\) un conjunto no vacío. Una familia \\(\mathcal{F} \subseteq \mathcal{P}(\Omega)\\) es una **σ-álgebra** (o campo de Borel) sobre \\(\Omega\\) si satisface:
 1. \\(\Omega \in \mathcal{F}\\).
 2. Si \\(A \in \mathcal{F}\\), entonces \\(A^c \in \mathcal{F}\\) (cerradura bajo complementos).
-3. Si \\(\{A_n\}_{n=1}^{\infty} \subseteq \mathcal{F}\\) es una sucesión numerable de conjuntos en \\(\mathcal{F}\\), entonces:
+3. Si \\((A_n)_{n=1}^{\infty} \subseteq \mathcal{F}\\) es una sucesión numerable de conjuntos en \\(\mathcal{F}\\), entonces:
    \\[ \bigcup_{n=1}^{\infty} A_n \in \mathcal{F} \quad \text{(cerradura bajo uniones numerables)}. \\]
 
 El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y los elementos de \\(\mathcal{F}\\) se denominan **conjuntos medibles** o **eventos**.
@@ -58,7 +58,7 @@ El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y lo
 **Proposición 1.14 (Propiedades elementales de una σ-álgebra).** *Sea \\(\mathcal{F}\\) una σ-álgebra sobre \\(\Omega\\). Entonces:*
 1. \\(\emptyset \in \mathcal{F}\\).
 2. Si \\(A_1, \dots, A_k \in \mathcal{F}\\), entonces \\(\bigcup_{i=1}^k A_i \in \mathcal{F}\\) (cerradura finita).
-3. Si \\(\{A_n\}_{n=1}^{\infty} \subseteq \mathcal{F}\\), entonces \\(\bigcap_{n=1}^{\infty} A_n \in \mathcal{F}\\) (cerradura bajo intersecciones numerables).
+3. Si \\((A_n)_{n=1}^{\infty} \subseteq \mathcal{F}\\), entonces \\(\bigcap_{n=1}^{\infty} A_n \in \mathcal{F}\\) (cerradura bajo intersecciones numerables).
 4. Si \\(A, B \in \mathcal{F}\\), entonces \\(A \setminus B \in \mathcal{F}\\) y \\(A \mathbin{\Delta} B \in \mathcal{F}\\).
 
 *Demostración.*
@@ -82,10 +82,12 @@ El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y lo
 
 **Teorema 1.15.** *La intersección arbitraria de cualquier colección de σ-álgebras sobre \\(\Omega\\) es también una σ-álgebra sobre \\(\Omega\\).*
 
-*Demostración.* Sea \\(\{\mathcal{F}_i\}_{i \in I}\\) una familia no vacía de σ-álgebras sobre \\(\Omega\\), y definamos \\(\mathcal{F} = \bigcap_{i \in I} \mathcal{F}_i\\).
+*Demostración.* Sea \\((\mathcal{F}_i)_{i \in I}\\) una familia no vacía de σ-álgebras sobre \\(\Omega\\), y definamos \\(\mathcal{F} = \bigcap_{i \in I} \mathcal{F}_i\\).
 1. Como \\(\Omega \in \mathcal{F}_i\\) para todo \\(i \in I\\), se tiene \\(\Omega \in \mathcal{F}\\).
 2. Si \\(A \in \mathcal{F}\\), entonces \\(A \in \mathcal{F}_i\\) para todo \\(i\\). Como cada \\(\mathcal{F}_i\\) es σ-álgebra, \\(A^c \in \mathcal{F}_i\\) para todo \\(i\\), luego \\(A^c \in \mathcal{F}\\).
-3. Si \\(\{A_n\}_{n=1}^{\infty} \subseteq \mathcal{F}\\), entonces \\(\{A_n\}_{n=1}^{\infty} \subseteq \mathcal{F}_i\\) para todo \\(i\\). Por cerradura en cada \\(\mathcal{F}_i\\), \\(\bigcup_{n=1}^{\infty} A_n \in \mathcal{F}_i\\) para todo \\(i\\), por ende \\(\bigcup_{n=1}^{\infty} A_n \in \mathcal{F}\\). \\(\blacksquare\\)
+3. Si \\((A_n)_{n=1}^{\infty} \subseteq \mathcal{F}\\), entonces \\(A_n \in \mathcal{F}_i\\) para todo \\(n \ge 1\\) y para todo \\(i \in I\\). Por la cerradura de cada \\(\mathcal{F}_i\\) bajo uniones numerables:
+   \\[ \bigcup_{n=1}^{\infty} A_n \in \mathcal{F}_i, \quad \forall i \in I. \\]
+   Por consiguiente, \\(\bigcup_{n=1}^{\infty} A_n \in \bigcap_{i \in I} \mathcal{F}_i = \mathcal{F}\\). \\(\blacksquare\\)
 
 **Definición 1.16 (σ-álgebra generada).** Sea \\(\mathcal{C} \subseteq \mathcal{P}(\Omega)\\) una clase arbitraria de subconjuntos de \\(\Omega\\). La **σ-álgebra generada por \\(\mathcal{C}\\)**, denotada por \\(\sigma(\mathcal{C})\\), es la menor σ-álgebra sobre \\(\Omega\\) que contiene a \\(\mathcal{C}\\):
 \\[ \sigma(\mathcal{C}) = \bigcap \{\mathcal{G} \subseteq \mathcal{P}(\Omega) : \mathcal{G} \text{ es una } \sigma\text{-álgebra y } \mathcal{C} \subseteq \mathcal{G}\}. \\]

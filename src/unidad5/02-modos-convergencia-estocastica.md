@@ -25,14 +25,14 @@ Equivalentemente:
 
 Evalúa si la masa de probabilidad de que \\(X_n\\) difiera de \\(X\\) en más de una tolerancia \\(\epsilon\\) se extingue cuando \\(n \to \infty\\).
 
-**Definición 5.8 (Convergencia en probabilidad).** La sucesión \\(\{X_n\}\\) converge **en probabilidad** a \\(X\\) (denotado \\(X_n \xrightarrow{P} X\\) o \\(\text{plim}_{n\to\infty} X_n = X\\)) si para todo \\(\epsilon > 0\\):
+**Definición 5.8 (Convergencia en probabilidad).** La sucesión \\((X_n)_{n=1}^\infty\\) converge **en probabilidad** a \\(X\\) (denotado \\(X_n \xrightarrow{P} X\\) o \\(\text{plim}_{n\to\infty} X_n = X\\)) si para todo \\(\epsilon > 0\\):
 \\[ \lim_{n \to \infty} \mathbb{P}(|X_n - X| > \epsilon) = 0 \iff \lim_{n \to \infty} \mathbb{P}(|X_n - X| \le \epsilon) = 1. \\]
 
 ---
 
 ### 3. Convergencia en media de orden p (Lᵖ)
 
-**Definición 5.9 (Convergencia en Lᵖ).** Para \\(p \ge 1\\), la sucesión \\(\{X_n\}\\) converge a \\(X\\) en **media de orden \\(p\\)** (denotado \\(X_n \xrightarrow{L^p} X\\)) si \\(\mathbb{E}[|X_n|^p] < \infty\\) para todo \\(n\\) y:
+**Definición 5.9 (Convergencia en Lᵖ).** Para \\(p \ge 1\\), la sucesión \\((X_n)_{n=1}^\infty\\) converge a \\(X\\) en **media de orden \\(p\\)** (denotado \\(X_n \xrightarrow{L^p} X\\)) si \\(\mathbb{E}[|X_n|^p] < \infty\\) para todo \\(n\\) y:
 \\[ \lim_{n \to \infty} \mathbb{E}[|X_n - X|^p] = 0. \\]
 - Para \\(p = 1\\): **Convergencia en media** (\\(\lim_{n\to\infty} \mathbb{E}[|X_n - X|] = 0\\)).
 - Para \\(p = 2\\): **Convergencia en media cuadrática** (\\(\lim_{n\to\infty} \mathbb{E}[(X_n - X)^2] = 0\\)), denotada \\(X_n \xrightarrow{\text{m.c.}} X\\).
@@ -43,7 +43,7 @@ Evalúa si la masa de probabilidad de que \\(X_n\\) difiera de \\(X\\) en más d
 
 Es la noción más débil: no exige que las variables aleatorias estén definidas sobre el mismo espacio muestral \\(\Omega\\), pues solo concierne a sus funciones de distribución acumulada.
 
-**Definición 5.10 (Convergencia en distribución).** La sucesión \\(\{X_n\}\\) converge **en distribución** (o en ley) a \\(X\\) (denotado \\(X_n \xrightarrow{d} X\\) o \\(X_n \xrightarrow{\mathcal{D}} X\\)) si:
+**Definición 5.10 (Convergencia en distribución).** La sucesión \\((X_n)_{n=1}^\infty\\) converge **en distribución** (o en ley) a \\(X\\) (denotado \\(X_n \xrightarrow{d} X\\) o \\(X_n \xrightarrow{\mathcal{D}} X\\)) si:
 \\[ \lim_{n \to \infty} F_{X_n}(x) = F_X(x), \\]
 para todo punto \\(x \in \mathbb{R}\\) donde la función de distribución límite \\(F_X\\) es continua (puntos de continuidad \\(C(F_X)\\)).
 
@@ -118,7 +118,7 @@ Sea \\(\Omega = (0, 1)\\) con probabilidad uniforme. Definamos:
 
 ## 5.2.4 Teorema de Slutsky y Teorema de Mapeo Continuo
 
-**Teorema 5.13 (Teorema de Slutsky).** *Sean \\(\{X_n\}\\) e \\(\{Y_n\}\\) dos sucesiones de variables aleatorias tales que \\(X_n \xrightarrow{d} X\\) y \\(Y_n \xrightarrow{P} c\\) (donde \\(c\\) es una constante). Entonces:*
+**Teorema 5.13 (Teorema de Slutsky).** *Sean \\((X_n)_{n=1}^\infty\\) e \\((Y_n)_{n=1}^\infty\\) dos sucesiones de variables aleatorias tales que \\(X_n \xrightarrow{d} X\\) y \\(Y_n \xrightarrow{P} c\\) (donde \\(c\\) es una constante). Entonces:*
 1. \\(X_n + Y_n \xrightarrow{d} X + c\\).
 2. \\(X_n Y_n \xrightarrow{d} c X\\).
 3. \\(\dfrac{X_n}{Y_n} \xrightarrow{d} \dfrac{X}{c}\\) (siempre que \\(c \neq 0\\)).

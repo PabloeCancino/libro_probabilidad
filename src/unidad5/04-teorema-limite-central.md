@@ -6,7 +6,7 @@ El **Teorema del Límite Central (TLC)** es considerado el resultado cumbre de l
 
 Mientras que la Ley de los Grandes Números nos dice que la masa de \\(\bar{X}_n\\) colapsa en el punto \\(\mu\\), el Teorema del Límite Central describe la **forma geométrica exacta** de las fluctuaciones estocásticas a escala \\(1/\sqrt{n}\\).
 
-**Teorema 5.19 (Teorema del Límite Central de Lindeberg-Lévy, 1920).** *Sea \\(\{X_n\}_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas (i.i.d.) con media común \\(\mathbb{E}[X_i] = \mu\\) y varianza común finita \\(0 < \text{Var}(X_i) = \sigma^2 < \infty\\).*  
+**Teorema 5.19 (Teorema del Límite Central de Lindeberg-Lévy, 1920).** *Sea \\((X_n)_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas (i.i.d.) con media común \\(\mathbb{E}[X_i] = \mu\\) y varianza común finita \\(0 < \text{Var}(X_i) = \sigma^2 < \infty\\).*  
 *Definamos la variable estandarizada de la suma \\(S_n = \sum_{i=1}^n X_i\\) (o de la media muestral \\(\bar{X}_n = S_n / n\\)):*
 \\[ Z_n = \frac{S_n - n\mu}{\sigma \sqrt{n}} = \frac{\bar{X}_n - \mu}{\sigma / \sqrt{n}}. \\]
 *Entonces \\(Z_n\\) converge en distribución a una variable Normal estándar \\(\mathcal{N}(0, 1)\\):*

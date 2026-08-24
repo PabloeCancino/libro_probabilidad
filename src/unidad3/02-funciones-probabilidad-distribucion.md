@@ -96,8 +96,12 @@ Por el Teorema Fundamental del Cálculo, si \\(F_X\\) es diferenciable en \\(x\\
 \\[ \mathbb{P}(X = x) = F_X(x) - F_X(x^-). \\]
 
 *Demostración.*  
-El evento puntual \\(\{X = x\}\\) se escribe como la intersección de intervalos semiabiertos decrecientes:
-\\[ \{X = x\} = \bigcap_{n=1}^\infty \left(x - \frac{1}{n} < X \le x\right). \\]
+El evento puntual \\((X = x)\\) se escribe como la intersección de intervalos semiabiertos decrecientes:
+
+\\[
+(X = x) = \bigcap_{n=1}^\infty \left(x - \frac{1}{n} < X \le x\right).
+\\]
+
 Por continuidad de la probabilidad:
 \\[ \mathbb{P}(X = x) = \lim_{n \to \infty} \mathbb{P}\left(x - \frac{1}{n} < X \le x\right) = \lim_{n \to \infty} \left[F_X(x) - F_X\left(x - \frac{1}{n}\right)\right] = F_X(x) - F_X(x^-). \quad \blacksquare \\]
 

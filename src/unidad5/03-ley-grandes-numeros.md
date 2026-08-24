@@ -2,7 +2,7 @@
 
 ## 5.3.1 La media muestral y el promedio de variables aleatorias
 
-Sea \\(\{X_n\}_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas (**i.i.d.**) en un espacio de probabilidad \\((\Omega, \mathcal{F}, \mathbb{P})\\), con media común \\(\mathbb{E}[X_i] = \mu\\).
+Sea \\((X_n)_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas (**i.i.d.**) en un espacio de probabilidad \\((\Omega, \mathcal{F}, \mathbb{P})\\), con media común \\(\mathbb{E}[X_i] = \mu\\).
 
 **Definición 5.15 (Media muestral).** La **media muestral** de las primeras \\(n\\) observaciones es el promedio aritmético:
 \\[ \bar{X}_n = \frac{1}{n} \sum_{i=1}^n X_i = \frac{S_n}{n}. \\]
@@ -20,7 +20,7 @@ Nótese que la varianza de la media muestral decae a cero como \\(\mathcal{O}(1/
 
 La Ley Débil establece que la probabilidad de observar cualquier desviación entre el promedio empírico \\(\bar{X}_n\\) y la media teórica \\(\mu\\) se anula cuando el tamaño muestral \\(n\\) tiende a infinito.
 
-**Teorema 5.16 (Ley Débil de los Grandes Números - Versión de Chebyshev con varianza finita).** *Sea \\(\{X_n\}_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas con media \\(\mu\\) y varianza finita \\(\sigma^2 < \infty\\). Entonces \\(\bar{X}_n\\) converge en probabilidad a \\(\mu\\):*
+**Teorema 5.16 (Ley Débil de los Grandes Números - Versión de Chebyshev con varianza finita).** *Sea \\((X_n)_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas con media \\(\mu\\) y varianza finita \\(\sigma^2 < \infty\\). Entonces \\(\bar{X}_n\\) converge en probabilidad a \\(\mu\\):*
 \\[ \bar{X}_n \xrightarrow{P} \mu, \quad \text{es decir, } \lim_{n \to \infty} \mathbb{P}(|\bar{X}_n - \mu| > \epsilon) = 0, \quad \forall \epsilon > 0. \\]
 
 *Demostración analítica.*  
@@ -30,7 +30,7 @@ Tomando el límite cuando \\(n \to \infty\\) para cualquier \\(\epsilon > 0\\) c
 \\[ 0 \le \lim_{n \to \infty} \mathbb{P}(|\bar{X}_n - \mu| \ge \epsilon) \le \lim_{n \to \infty} \frac{\sigma^2}{n \epsilon^2} = 0. \\]
 Por el teorema del sándwich, \\(\lim_{n \to \infty} \mathbb{P}(|\bar{X}_n - \mu| > \epsilon) = 0\\), lo que concluye que \\(\bar{X}_n \xrightarrow{P} \mu\\). \\(\blacksquare\\)
 
-**Teorema 5.17 (Ley Débil de Khinchin).** *Si \\(\{X_n\}\\) son i.i.d. con \\(\mathbb{E}[|X_i|] < \infty\\) y media \\(\mu\\) (sin requerir varianza finita), entonces \\(\bar{X}_n \xrightarrow{P} \mu\\).*
+**Teorema 5.17 (Ley Débil de Khinchin).** *Si \\((X_n)_{n=1}^\infty\\) son i.i.d. con \\(\mathbb{E}[|X_i|] < \infty\\) y media \\(\mu\\) (sin requerir varianza finita), entonces \\(\bar{X}_n \xrightarrow{P} \mu\\).*
 
 *Demostración.* Se deduce mediante la expansión de Taylor de la función característica \\(\varphi_X(t) = 1 + i\mu t + o(t)\\) y el Teorema de Continuidad de Lévy. \\(\blacksquare\\)
 
@@ -40,7 +40,7 @@ Por el teorema del sándwich, \\(\lim_{n \to \infty} \mathbb{P}(|\bar{X}_n - \mu
 
 La Ley Fuerte es un resultado mucho más profundo y contundente: afirma que con probabilidad 1, la trayectoria empírica de promedios \\(\bar{X}_n(\omega)\\) converge punto a punto a \\(\mu\\).
 
-**Teorema 5.18 (Ley Fuerte de los Grandes Números - Teorema de Kolmogórov, 1930).** *Sea \\(\{X_n\}_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas. La existencia de una constante \\(\mu\\) tal que:*
+**Teorema 5.18 (Ley Fuerte de los Grandes Números - Teorema de Kolmogórov, 1930).** *Sea \\((X_n)_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas. La existencia de una constante \\(\mu\\) tal que:*
 \\[ \bar{X}_n \xrightarrow{\text{c.s.}} \mu \quad \left(\mathbb{P}\left(\lim_{n \to \infty} \frac{1}{n}\sum_{i=1}^n X_i = \mu\right) = 1\right), \\]
 *es posible si y solo si \\(\mathbb{E}[|X_1|] < \infty\\), en cuyo caso \\(\mu = \mathbb{E}[X_1]\\).*
 
