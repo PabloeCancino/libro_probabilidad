@@ -87,7 +87,7 @@ Por el Teorema de la Probabilidad Total:
 \\]
 
 **Ejemplo 2.16 (La ruina del jugador en un paso).**  
-En un juego de azar, un participante gana \$1 con probabilidad \\(p\\) y pierde \$1 con probabilidad \\(q = 1 - p\\). Sea \\(u\_k\\) la probabilidad de que el jugador eventualmente alcance una fortuna de \$N antes de arruinarse (llegar a \$0), partiendo de un capital inicial de \$k\$ (con \\(0 \le k \le N\\)).  
+En un juego de azar, un participante gana \$1 con probabilidad \\(p\\) y pierde \$1 con probabilidad \\(q = 1 - p\\). Sea \\(u\_k\\) la probabilidad de que el jugador eventualmente alcance una fortuna de \$N antes de arruinarse (llegar a \$0), partiendo de un capital inicial de \\(k\\) (con \\(0 \le k \le N\\)).  
 Condicionando sobre el resultado del primer juego (partición \\(\{G, P\}\\) donde \\(G\\) es ganar y \\(P\\) es perder):
 
 \\[
