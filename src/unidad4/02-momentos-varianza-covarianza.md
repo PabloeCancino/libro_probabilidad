@@ -4,7 +4,7 @@
 
 Los momentos son medidas numéricas descriptivas que caracterizan completamente la forma, localización, dispersión y colas de la distribución de probabilidad de una variable aleatoria.
 
-**Definición 4.7 (Momentos de orden $k$).** Sea \\(X\\) una variable aleatoria y sea \\(k \in \mathbb{Z}^+\\).
+**Definición 4.7 (Momentos de orden \\(k\\)).** Sea \\(X\\) una variable aleatoria y sea \\(k \in \mathbb{Z}^+\\).
 1. El **momento ordinario (alrededor del origen) de orden \\(k\\)** es:
 
    \\[

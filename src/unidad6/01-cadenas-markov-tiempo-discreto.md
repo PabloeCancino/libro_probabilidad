@@ -36,7 +36,7 @@ Toda matriz de transición es una **matriz estocástica por filas**:
 1. \\(p\_{ij} \ge 0\\) para todo \\(i, j \in S\\).
 2. Cada fila suma exactamente 1: \\(\sum\_{j=1}^N p\_{ij} = 1\\) para todo \\(i \in S\\).
 
-**Definición 6.3 (Probabilidades de transición en $n$ pasos).**
+**Definición 6.3 (Probabilidades de transición en \\(n\\) pasos).**
 
 \\[
 p\_{ij}^{(n)} = \mathbb{P}(X\_{n+m} = j \mid X\_m = i) = \mathbb{P}(X\_n = j \mid X\_0 = i).

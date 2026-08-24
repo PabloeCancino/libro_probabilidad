@@ -60,7 +60,7 @@ Aplicando la definición de probabilidad condicional \\(\mathbb{P}(A \cap B\_i) 
 \mathbb{P}(A) = \sum\_{n=1}^\infty \mathbb{P}(B\_n) \mathbb{P}(A \mid B\_n).
 \\]
 
-*Demostración.* Sigue idéntico razonamiento aplicando directamente el Axioma 3 ($\sigma$-aditividad). \\(\blacksquare\\)
+*Demostración.* Sigue idéntico razonamiento aplicando directamente el Axioma 3 (\\(\sigma\\)-aditividad). \\(\blacksquare\\)
 
 ---
 

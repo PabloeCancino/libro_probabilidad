@@ -49,7 +49,7 @@
    - (b) Calcule la probabilidad de que en un segundo determinado lleguen exactamente 4 peticiones.
    - (c) Calcule la probabilidad de que transcurran más de 2 segundos sin ninguna petición (utilizando la relación entre Poisson y Exponencial).
 
-6. **Distribución Normal y puntuaciones $Z$:**
+6. **Distribución Normal y puntuaciones \\(Z\\):**
    - La estatura de una población de adultos se distribuye normalmente con media \\(\mu = 170\text{ cm}\\) y desviación estándar \\(\sigma = 8\text{ cm}\\).
    - (a) Calcule la proporción de adultos con estatura superior a 186 cm.
    - (b) Encuentre el percentil 90 de la estatura.

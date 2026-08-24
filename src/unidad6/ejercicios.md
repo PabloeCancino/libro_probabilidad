@@ -24,7 +24,7 @@
    - (a) Deduzca analíticamente la fórmula de la transformada inversa \\(X = F^{-1}(U)\\).
    - (b) Implemente una función en Python para generar 100\,000 muestras de Cauchy y grafique el histograma comparado con la PDF teórica.
 
-4. **Estimación del volumen de una hiperesfera en dimensión $d$:**
+4. **Estimación del volumen de una hiperesfera en dimensión \\(d\\):**
    - El volumen teórico de una esfera unitaria en \\(\mathbb{R}^d\\) es \\(V\_d = \frac{\pi^{d/2}}{\Gamma(d/2 + 1)}\\).
    - Escriba un script en Python que estime \\(V\_d\\) mediante integración de Monte Carlo para \\(d = 2, 3, 4, 5, 10\\) y analice cómo evoluciona la eficiencia muestral al aumentar la dimensión.
 

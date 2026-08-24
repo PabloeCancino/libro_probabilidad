@@ -151,7 +151,7 @@ J = \begin{pmatrix} \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial
 f\_{U,V}(u, v) = f\_{X,Y}(h\_1(u, v), h\_2(u, v)) \cdot |\det(J)|.
 \\]
 
-### Aplicación fundamental: Distribución de la suma $U = X + Y$ (Convolución)
+### Aplicación fundamental: Distribución de la suma \\(U = X + Y\\) (Convolución)
 
 Sea \\(U = X + Y\\) y definamos una variable auxiliar \\(V = Y\\).  
 La transformación inversa es \\(X = U - V\\), \\(Y = V\\).  
