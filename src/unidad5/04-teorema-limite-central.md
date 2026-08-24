@@ -4,25 +4,25 @@
 
 El **Teorema del Límite Central (TLC)** es considerado el resultado cumbre de la probabilidad clásica y uno de los mayores logros del análisis matemático: explica por qué la distribución Normal (Gaussiana) emerge de manera omnipresente en la naturaleza, la física, la biología, las ciencias sociales y la ingeniería cada vez que un fenómeno es el resultado agregado de una multitud de pequeñas fluctuaciones aleatorias independientes.
 
-Mientras que la Ley de los Grandes Números nos dice que la masa de \\(\bar{X}_n\\) colapsa en el punto \\(\mu\\), el Teorema del Límite Central describe la **forma geométrica exacta** de las fluctuaciones estocásticas a escala \\(1/\sqrt{n}\\).
+Mientras que la Ley de los Grandes Números nos dice que la masa de \\(\bar{X}\_n\\) colapsa en el punto \\(\mu\\), el Teorema del Límite Central describe la **forma geométrica exacta** de las fluctuaciones estocásticas a escala \\(1/\sqrt{n}\\).
 
-**Teorema 5.19 (Teorema del Límite Central de Lindeberg-Lévy, 1920).** *Sea \\((X_n)_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas (i.i.d.) con media común \\(\mathbb{E}[X_i] = \mu\\) y varianza común finita \\(0 < \text{Var}(X_i) = \sigma^2 < \infty\\).*  
-*Definamos la variable estandarizada de la suma \\(S_n = \sum_{i=1}^n X_i\\) (o de la media muestral \\(\bar{X}_n = S_n / n\\)):*
+**Teorema 5.19 (Teorema del Límite Central de Lindeberg-Lévy, 1920).** *Sea \\((X\_n)\_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas (i.i.d.) con media común \\(\mathbb{E}[X\_i] = \mu\\) y varianza común finita \\(0 < \text{Var}(X\_i) = \sigma^2 < \infty\\).*  
+*Definamos la variable estandarizada de la suma \\(S\_n = \sum\_{i=1}^n X\_i\\) (o de la media muestral \\(\bar{X}\_n = S\_n / n\\)):*
 
 \\[
-Z_n = \frac{S_n - n\mu}{\sigma \sqrt{n}} = \frac{\bar{X}_n - \mu}{\sigma / \sqrt{n}}.
+Z\_n = \frac{S\_n - n\mu}{\sigma \sqrt{n}} = \frac{\bar{X}\_n - \mu}{\sigma / \sqrt{n}}.
 \\]
 
-*Entonces \\(Z_n\\) converge en distribución a una variable Normal estándar \\(\mathcal{N}(0, 1)\\):*
+*Entonces \\(Z\_n\\) converge en distribución a una variable Normal estándar \\(\mathcal{N}(0, 1)\\):*
 
 \\[
-Z_n \xrightarrow{d} \mathcal{N}(0, 1),
+Z\_n \xrightarrow{d} \mathcal{N}(0, 1),
 \\]
 
 *es decir, para todo \\(z \in \mathbb{R}\\):*
 
 \\[
-\lim_{n \to \infty} \mathbb{P}(Z_n \le z) = \Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^z e^{-u^2 / 2} \, du.
+\lim\_{n \to \infty} \mathbb{P}(Z\_n \le z) = \Phi(z) = \frac{1}{\sqrt{2\pi}} \int\_{-\infty}^z e^{-u^2 / 2} \, du.
 \\]
 
 ---
@@ -30,69 +30,69 @@ Z_n \xrightarrow{d} \mathcal{N}(0, 1),
 ## 5.4.2 Demostración analítica rigurosa del TLC mediante MGF
 
 *Demostración.*  
-Sin pérdida de generalidad, consideremos las variables centradas \\(Y_i = \frac{X_i - \mu}{\sigma}\\).  
-Entonces las \\(Y_i\\) son i.i.d. con:
+Sin pérdida de generalidad, consideremos las variables centradas \\(Y\_i = \frac{X\_i - \mu}{\sigma}\\).  
+Entonces las \\(Y\_i\\) son i.i.d. con:
 
 \\[
-\mathbb{E}[Y_i] = 0, \qquad \text{Var}(Y_i) = \mathbb{E}[Y_i^2] = 1.
+\mathbb{E}[Y\_i] = 0, \qquad \text{Var}(Y\_i) = \mathbb{E}[Y\_i^2] = 1.
 \\]
 
-La variable normalizada \\(Z_n\\) se expresa como:
+La variable normalizada \\(Z\_n\\) se expresa como:
 
 \\[
-Z_n = \frac{1}{\sqrt{n}} \sum_{i=1}^n Y_i.
+Z\_n = \frac{1}{\sqrt{n}} \sum\_{i=1}^n Y\_i.
 \\]
 
-Supongamos que la MGF común \\(M_Y(t)\\) existe en un entorno de cero \\((-h, h)\\).  
-Por el Teorema de Taylor, la expansión de Maclaurin de \\(M_Y(t)\\) hasta segundo orden es:
+Supongamos que la MGF común \\(M\_Y(t)\\) existe en un entorno de cero \\((-h, h)\\).  
+Por el Teorema de Taylor, la expansión de Maclaurin de \\(M\_Y(t)\\) hasta segundo orden es:
 
 \\[
-M_Y(t) = M_Y(0) + M_Y'(0) t + \frac{1}{2!} M_Y''(0) t^2 + o(t^2) = 1 + 0 \cdot t + \frac{1}{2}(1) t^2 + o(t^2) = 1 + \frac{t^2}{2} + o(t^2).
+M\_Y(t) = M\_Y(0) + M\_Y'(0) t + \frac{1}{2!} M\_Y''(0) t^2 + o(t^2) = 1 + 0 \cdot t + \frac{1}{2}(1) t^2 + o(t^2) = 1 + \frac{t^2}{2} + o(t^2).
 \\]
 
 Por las propiedades de la MGF de sumas de variables independientes y escalamiento (Teorema 4.25):
 
 \\[
-M_{Z_n}(t) = M_{\sum_{i=1}^n Y_i / \sqrt{n}}(t) = \left[ M_Y\left(\frac{t}{\sqrt{n}}\right) \right]^n.
+M\_{Z\_n}(t) = M\_{\sum\_{i=1}^n Y\_i / \sqrt{n}}(t) = \left[ M\_Y\left(\frac{t}{\sqrt{n}}\right) \right]^n.
 \\]
 
 Sustituyendo el desarrollo de Taylor en \\(t/\sqrt{n}\\):
 
 \\[
-M_{Z_n}(t) = \left[ 1 + \frac{(t/\sqrt{n})^2}{2} + o\left(\frac{t^2}{n}\right) \right]^n = \left[ 1 + \frac{t^2 / 2 + n \cdot o(t^2 / n)}{n} \right]^n.
+M\_{Z\_n}(t) = \left[ 1 + \frac{(t/\sqrt{n})^2}{2} + o\left(\frac{t^2}{n}\right) \right]^n = \left[ 1 + \frac{t^2 / 2 + n \cdot o(t^2 / n)}{n} \right]^n.
 \\]
 
-Tomando el límite cuando \\(n \to \infty\\) para cualquier \\(t \in \mathbb{R}\\) fijo, y recordando el límite clásico \\(\lim_{n \to \infty} (1 + a_n / n)^n = e^a\\) si \\(a_n \to a\\):
+Tomando el límite cuando \\(n \to \infty\\) para cualquier \\(t \in \mathbb{R}\\) fijo, y recordando el límite clásico \\(\lim\_{n \to \infty} (1 + a\_n / n)^n = e^a\\) si \\(a\_n \to a\\):
 
 \\[
-\lim_{n \to \infty} M_{Z_n}(t) = \lim_{n \to \infty} \left(1 + \frac{t^2 / 2}{n}\right)^n = \exp\left(\frac{t^2}{2}\right).
+\lim\_{n \to \infty} M\_{Z\_n}(t) = \lim\_{n \to \infty} \left(1 + \frac{t^2 / 2}{n}\right)^n = \exp\left(\frac{t^2}{2}\right).
 \\]
 
 Observemos que \\(\exp(t^2/2)\\) es precisamente la **función generadora de momentos de la distribución Normal estándar \\(\mathcal{N}(0, 1)\\)**.  
 Por el **Teorema de Continuidad y Unicidad de Lévy-Cramér**, la convergencia de las funciones generadoras implica la convergencia en distribución de las funciones de distribución acumulada:
 
 \\[
-Z_n \xrightarrow{d} \mathcal{N}(0, 1). \quad \blacksquare
+Z\_n \xrightarrow{d} \mathcal{N}(0, 1). \quad \blacksquare
 \\]
 
-*(Nota técnica: Cuando la MGF no existe en un entorno real, la misma demostración se realiza de manera idéntica utilizando la función característica \\(\varphi_Y(t) = 1 - \frac{t^2}{2} + o(t^2)\\), garantizando la validez universal del teorema para cualquier distribución con segundo momento finito).*
+*(Nota técnica: Cuando la MGF no existe en un entorno real, la misma demostración se realiza de manera idéntica utilizando la función característica \\(\varphi\_Y(t) = 1 - \frac{t^2}{2} + o(t^2)\\), garantizando la validez universal del teorema para cualquier distribución con segundo momento finito).*
 
 ---
 
 ## 5.4.3 Generalizaciones: Condiciones de Lyapunov y Lindeberg
 
-Cuando las variables \\(X_i\\) son independientes pero **no idénticamente distribuidas** (con medias \\(\mu_i\\) y varianzas \\(\sigma_i^2\\)), sea \\(s_n^2 = \sum_{i=1}^n \sigma_i^2\\).
+Cuando las variables \\(X\_i\\) son independientes pero **no idénticamente distribuidas** (con medias \\(\mu\_i\\) y varianzas \\(\sigma\_i^2\\)), sea \\(s\_n^2 = \sum\_{i=1}^n \sigma\_i^2\\).
 
 **Teorema 5.20 (Condición de Lindeberg).** *Si para todo \\(\epsilon > 0\\):*
 
 \\[
-\lim_{n \to \infty} \frac{1}{s_n^2} \sum_{i=1}^n \mathbb{E}\left[(X_i - \mu_i)^2 \cdot \mathbb{I}_{(|X_i - \mu_i| > \epsilon s_n)}\right] = 0,
+\lim\_{n \to \infty} \frac{1}{s\_n^2} \sum\_{i=1}^n \mathbb{E}\left[(X\_i - \mu\_i)^2 \cdot \mathbb{I}\_{(|X\_i - \mu\_i| > \epsilon s\_n)}\right] = 0,
 \\]
 
 *entonces:*
 
 \\[
-\frac{\sum_{i=1}^n (X_i - \mu_i)}{s_n} \xrightarrow{d} \mathcal{N}(0, 1).
+\frac{\sum\_{i=1}^n (X\_i - \mu\_i)}{s\_n} \xrightarrow{d} \mathcal{N}(0, 1).
 \\]
 
 ---
@@ -100,7 +100,7 @@ Cuando las variables \\(X_i\\) son independientes pero **no idénticamente distr
 ## 5.4.4 Aplicaciones prácticas fundamentales del TLC
 
 ### 1. Aproximación Normal a la Binomial (Teorema de De Moivre-Laplace)
-Si \\(X \sim \text{Binomial}(n, p)\\), como \\(X = \sum_{i=1}^n Y_i\\) con \\(Y_i \stackrel{\text{i.i.d.}}{\sim} \text{Bernoulli}(p)\\), para \\(n\\) grande (típicamente \\(np \ge 5\\) y \\(n(1-p) \ge 5\\)):
+Si \\(X \sim \text{Binomial}(n, p)\\), como \\(X = \sum\_{i=1}^n Y\_i\\) con \\(Y\_i \stackrel{\text{i.i.d.}}{\sim} \text{Bernoulli}(p)\\), para \\(n\\) grande (típicamente \\(np \ge 5\\) y \\(n(1-p) \ge 5\\)):
 
 \\[
 X \approx \mathcal{N}(\mu = np, \ \sigma^2 = np(1-p)).
@@ -122,7 +122,6 @@ X \approx \mathcal{N}(\mu = \lambda, \ \sigma^2 = \lambda).
 ---
 
 ## 5.4.5 Laboratorio en Python: Verificación empírica del TLC con distribuciones sesgadas
-
 ```python
 import numpy as np
 import scipy.stats as stats

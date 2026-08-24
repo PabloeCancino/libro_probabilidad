@@ -21,16 +21,16 @@
 ## Bloque B: Modos de convergencia estocástica
 
 3. **Convergencia de variables uniformes:**
-   - Sea \\(X_n \sim \mathcal{U}\left(0, \frac{1}{n}\right)\\) para \\(n \ge 1\\).
-   - (a) Demuestre que \\(X_n \xrightarrow{\text{c.s.}} 0\\).
-   - (b) Demuestre que \\(X_n \xrightarrow{L^2} 0\\).
+   - Sea \\(X\_n \sim \mathcal{U}\left(0, \frac{1}{n}\right)\\) para \\(n \ge 1\\).
+   - (a) Demuestre que \\(X\_n \xrightarrow{\text{c.s.}} 0\\).
+   - (b) Demuestre que \\(X\_n \xrightarrow{L^2} 0\\).
 
 4. **El máximo de variables exponenciales independientes:**
-   - Sean \\(X_1, X_2, \dots, X_n \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(1)\\). Sea \\(M_n = \max(X_1, \dots, X_n)\\).
-   - Demuestre que la variable normalizada \\(Y_n = M_n - \ln n\\) converge en distribución a la distribución de Gumbel (valor extremo tipo I):
+   - Sean \\(X\_1, X\_2, \dots, X\_n \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(1)\\). Sea \\(M\_n = \max(X\_1, \dots, X\_n)\\).
+   - Demuestre que la variable normalizada \\(Y\_n = M\_n - \ln n\\) converge en distribución a la distribución de Gumbel (valor extremo tipo I):
 
      \\[
-     F_Y(y) = e^{-e^{-y}}, \quad \forall y \in \mathbb{R}.
+     F\_Y(y) = e^{-e^{-y}}, \quad \forall y \in \mathbb{R}.
      \\]
 
 ---
@@ -39,7 +39,7 @@
 
 5. **Diseño de tamaño muestral por Chebyshev:**
    - Una fábrica produce resistencias cuyo valor nominal es \\(100\,\Omega\\) con desviación estándar \\(\sigma = 5\,\Omega\\).
-   - ¿Cuántas resistencias \\(n\\) deben medirse como mínimo para garantizar con al menos un 95% de confianza que la media muestral \\(\bar{X}_n\\) no difiera de \\(100\,\Omega\\) en más de \\(0.5\,\Omega\\)?
+   - ¿Cuántas resistencias \\(n\\) deben medirse como mínimo para garantizar con al menos un 95% de confianza que la media muestral \\(\bar{X}\_n\\) no difiera de \\(100\,\Omega\\) en más de \\(0.5\,\Omega\\)?
    - Compare el tamaño muestral obtenido por Chebyshev con el obtenido utilizando el Teorema del Límite Central.
 
 6. **Aproximación Normal a la Binomial con corrección por continuidad:**

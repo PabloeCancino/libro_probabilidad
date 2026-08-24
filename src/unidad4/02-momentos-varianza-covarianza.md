@@ -8,17 +8,17 @@ Los momentos son medidas numéricas descriptivas que caracterizan completamente 
 1. El **momento ordinario (alrededor del origen) de orden \\(k\\)** es:
 
    \\[
-   \alpha_k = \mathbb{E}[X^k].
+   \alpha\_k = \mathbb{E}[X^k].
    \\]
 
-   (En particular, \\(\alpha_1 = \mathbb{E}[X] = \mu\\) es la media poblacional).
+   (En particular, \\(\alpha\_1 = \mathbb{E}[X] = \mu\\) es la media poblacional).
 2. El **momento central de orden \\(k\\)** es:
 
    \\[
-   \mu_k = \mathbb{E}[(X - \mu)^k].
+   \mu\_k = \mathbb{E}[(X - \mu)^k].
    \\]
 
-   (Se cumple siempre \\(\mu_1 = \mathbb{E}[X - \mu] = \mu - \mu = 0\\)).
+   (Se cumple siempre \\(\mu\_1 = \mathbb{E}[X - \mu] = \mu - \mu = 0\\)).
 
 **Teorema 4.8 (Existencia de momentos inferiores).** *Si \\(\mathbb{E}[|X|^k] < \infty\\) para algún \\(k \ge 1\\), entonces \\(\mathbb{E}[|X|^j] < \infty\\) para todo \\(1 \le j \le k\\).*
 
@@ -37,7 +37,7 @@ Por monotonía y linealidad de la esperanza:
 El segundo momento central mide el grado de dispersión o concentración de la masa de probabilidad alrededor de su media \\(\mu\\).
 
 **Definición 4.9 (Varianza y desviación estándar).**
-1. La **varianza** de \\(X\\), denotada \\(\text{Var}(X)\\) o \\(\sigma_X^2\\) o \\(\sigma^2\\), es:
+1. La **varianza** de \\(X\\), denotada \\(\text{Var}(X)\\) o \\(\sigma\_X^2\\) o \\(\sigma^2\\), es:
 
    \\[
    \text{Var}(X) = \mathbb{E}[(X - \mu)^2].
@@ -46,7 +46,7 @@ El segundo momento central mide el grado de dispersión o concentración de la m
 2. La **desviación estándar** es la raíz cuadrada no negativa de la varianza:
 
    \\[
-   \sigma_X = \sqrt{\text{Var}(X)}.
+   \sigma\_X = \sqrt{\text{Var}(X)}.
    \\]
 
 **Teorema 4.10 (Fórmula computacional y propiedades operativas de la varianza).**
@@ -60,7 +60,7 @@ El segundo momento central mide el grado de dispersión o concentración de la m
 3. **Invarianza bajo traslaciones y escalamiento:** Para cualesquiera constantes \\(a, b \in \mathbb{R}\\):
 
    \\[
-   \text{Var}(aX + b) = a^2 \text{Var}(X), \qquad \sigma_{aX + b} = |a| \sigma_X.
+   \text{Var}(aX + b) = a^2 \text{Var}(X), \qquad \sigma\_{aX + b} = |a| \sigma\_X.
    \\]
 
 *Demostración.*
@@ -84,10 +84,10 @@ El segundo momento central mide el grado de dispersión o concentración de la m
 
 ## 4.2.3 Covarianza y varianza de combinaciones lineales
 
-**Definición 4.11 (Covarianza).** La **covarianza** entre dos variables aleatorias \\(X\\) e \\(Y\\), denotada \\(\text{Cov}(X, Y)\\) o \\(\sigma_{XY}\\), es:
+**Definición 4.11 (Covarianza).** La **covarianza** entre dos variables aleatorias \\(X\\) e \\(Y\\), denotada \\(\text{Cov}(X, Y)\\) o \\(\sigma\_{XY}\\), es:
 
 \\[
-\text{Cov}(X, Y) = \mathbb{E}[(X - \mu_X)(Y - \mu_Y)] = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y].
+\text{Cov}(X, Y) = \mathbb{E}[(X - \mu\_X)(Y - \mu\_Y)] = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y].
 \\]
 
 ### Propiedades algebraicas de la covarianza
@@ -102,7 +102,7 @@ El segundo momento central mide el grado de dispersión o concentración de la m
 4. **Distributividad general:**
 
    \\[
-   \text{Cov}\left(\sum_{i=1}^n a_i X_i, \ \sum_{j=1}^m b_j Y_j\right) = \sum_{i=1}^n \sum_{j=1}^m a_i b_j \text{Cov}(X_i, Y_j).
+   \text{Cov}\left(\sum\_{i=1}^n a\_i X\_i, \ \sum\_{j=1}^m b\_j Y\_j\right) = \sum\_{i=1}^n \sum\_{j=1}^m a\_i b\_j \text{Cov}(X\_i, Y\_j).
    \\]
 
 5. **Independencia implica covarianza nula:** Si \\(X \perp Y\\), entonces \\(\mathbb{E}[XY] = \mathbb{E}[X]\mathbb{E}[Y]\\), lo que implica:
@@ -113,26 +113,26 @@ El segundo momento central mide el grado de dispersión o concentración de la m
 
    *(El recíproco es falso en general: covarianza cero no implica independencia).*
 
-**Teorema 4.12 (Varianza de una combinación lineal).** *Para cualquier colección de variables aleatorias \\(X_1, \dots, X_n\\) y constantes \\(a_1, \dots, a_n \in \mathbb{R}\\):*
+**Teorema 4.12 (Varianza de una combinación lineal).** *Para cualquier colección de variables aleatorias \\(X\_1, \dots, X\_n\\) y constantes \\(a\_1, \dots, a\_n \in \mathbb{R}\\):*
 
 \\[
-\text{Var}\left(\sum_{i=1}^n a_i X_i\right) = \sum_{i=1}^n a_i^2 \text{Var}(X_i) + 2 \sum_{1 \le i < j \le n} a_i a_j \text{Cov}(X_i, X_j).
+\text{Var}\left(\sum\_{i=1}^n a\_i X\_i\right) = \sum\_{i=1}^n a\_i^2 \text{Var}(X\_i) + 2 \sum\_{1 \le i < j \le n} a\_i a\_j \text{Cov}(X\_i, X\_j).
 \\]
 
 En particular, si las variables son independientes dos a dos (o simplemente no correlacionadas):
 
 \\[
-\text{Var}\left(\sum_{i=1}^n a_i X_i\right) = \sum_{i=1}^n a_i^2 \text{Var}(X_i).
+\text{Var}\left(\sum\_{i=1}^n a\_i X\_i\right) = \sum\_{i=1}^n a\_i^2 \text{Var}(X\_i).
 \\]
 
 ---
 
 ## 4.2.4 Coeficiente de correlación lineal de Pearson
 
-**Definición 4.13 (Coeficiente de correlación de Pearson).** Para variables aleatorias \\(X, Y\\) con varianzas positivas finitas \\(\sigma_X^2, \sigma_Y^2 > 0\\), el **coeficiente de correlación lineal** es:
+**Definición 4.13 (Coeficiente de correlación de Pearson).** Para variables aleatorias \\(X, Y\\) con varianzas positivas finitas \\(\sigma\_X^2, \sigma\_Y^2 > 0\\), el **coeficiente de correlación lineal** es:
 
 \\[
-\rho(X, Y) = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y} = \frac{\mathbb{E}[(X - \mu_X)(Y - \mu_Y)]}{\sqrt{\mathbb{E}[(X-\mu_X)^2]\mathbb{E}[(Y-\mu_Y)^2]}}.
+\rho(X, Y) = \frac{\text{Cov}(X, Y)}{\sigma\_X \sigma\_Y} = \frac{\mathbb{E}[(X - \mu\_X)(Y - \mu\_Y)]}{\sqrt{\mathbb{E}[(X-\mu\_X)^2]\mathbb{E}[(Y-\mu\_Y)^2]}}.
 \\]
 
 **Teorema 4.14 (Desigualdad de Cauchy-Schwarz para variables aleatorias).** *Para cualesquiera variables aleatorias \\(U, V\\) con segundo momento finito:*
@@ -170,22 +170,22 @@ lo que concluye la desigualdad de Cauchy-Schwarz. \\(\blacksquare\\)
 
 ## 4.2.5 Momentos de orden superior: Asimetría y Curtosis
 
-1. **Coeficiente de Asimetría (Skewness - \\(\gamma_1\\)):**
+1. **Coeficiente de Asimetría (Skewness - \\(\gamma\_1\\)):**
 
    \\[
-   \gamma_1 = \frac{\mu_3}{\sigma^3} = \frac{\mathbb{E}[(X - \mu)^3]}{\sigma^3}.
+   \gamma\_1 = \frac{\mu\_3}{\sigma^3} = \frac{\mathbb{E}[(X - \mu)^3]}{\sigma^3}.
    \\]
 
-   - \\(\gamma_1 = 0\\): Distribución simétrica (como la Normal o Uniforme).
-   - \\(\gamma_1 > 0\\): Asimetría positiva (cola larga a la derecha, como la Exponencial).
-   - \\(\gamma_1 < 0\\): Asimetría negativa (cola larga a la izquierda).
+   - \\(\gamma\_1 = 0\\): Distribución simétrica (como la Normal o Uniforme).
+   - \\(\gamma\_1 > 0\\): Asimetría positiva (cola larga a la derecha, como la Exponencial).
+   - \\(\gamma\_1 < 0\\): Asimetría negativa (cola larga a la izquierda).
 
-2. **Coeficiente de Curtosis (Exceso de curtosis - \\(\gamma_2\\)):**
+2. **Coeficiente de Curtosis (Exceso de curtosis - \\(\gamma\_2\\)):**
 
    \\[
-   \gamma_2 = \frac{\mu_4}{\sigma^4} - 3 = \frac{\mathbb{E}[(X - \mu)^4]}{\sigma^4} - 3.
+   \gamma\_2 = \frac{\mu\_4}{\sigma^4} - 3 = \frac{\mathbb{E}[(X - \mu)^4]}{\sigma^4} - 3.
    \\]
 
-   - \\(\gamma_2 = 0\\): Mesocúrtica (idéntica a la Normal).
-   - \\(\gamma_2 > 0\\): Leptocúrtica (colas pesadas, pico agudo, como la \\(t\\)-Student y Laplace).
-   - \\(\gamma_2 < 0\\): Platicúrtica (colas ligeras, más aplanada, como la Uniforme).
+   - \\(\gamma\_2 = 0\\): Mesocúrtica (idéntica a la Normal).
+   - \\(\gamma\_2 > 0\\): Leptocúrtica (colas pesadas, pico agudo, como la \\(t\\)-Student y Laplace).
+   - \\(\gamma\_2 < 0\\): Platicúrtica (colas ligeras, más aplanada, como la Uniforme).

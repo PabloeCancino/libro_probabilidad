@@ -79,11 +79,11 @@ Sea \\(X \sim \text{Binomial}(n = 10, p = 0.3)\\). ¿Cuál es el valor esperado 
 - D) \\(2.1\\)
 
 ### Solución analítica y justificación formal
-Toda variable binomial \\(X \sim \text{Binomial}(n, p)\\) se descompone como la suma de \\(n\\) variables indicadoras independientes \\(Y_1, \dots, Y_n \stackrel{\text{i.i.d.}}{\sim} \text{Bernoulli}(p)\\), donde \\(\mathbb{E}[Y_i] = 1 \cdot p + 0 \cdot (1-p) = p\\).  
+Toda variable binomial \\(X \sim \text{Binomial}(n, p)\\) se descompone como la suma de \\(n\\) variables indicadoras independientes \\(Y\_1, \dots, Y\_n \stackrel{\text{i.i.d.}}{\sim} \text{Bernoulli}(p)\\), donde \\(\mathbb{E}[Y\_i] = 1 \cdot p + 0 \cdot (1-p) = p\\).  
 Por la linealidad del operador esperanza (Teorema 4.3):
 
 \\[
-\mathbb{E}[X] = \mathbb{E}\left[\sum_{i=1}^{10} Y_i\right] = \sum_{i=1}^{10} \mathbb{E}[Y_i] = 10 \cdot p = 10 \times 0.3 = 3.0.
+\mathbb{E}[X] = \mathbb{E}\left[\sum\_{i=1}^{10} Y\_i\right] = \sum\_{i=1}^{10} \mathbb{E}[Y\_i] = 10 \cdot p = 10 \times 0.3 = 3.0.
 \\]
 
 ### Análisis pedagógico de distractores
@@ -107,15 +107,15 @@ Sea \\(X \sim \text{Exp}(\lambda)\\) una variable aleatoria continua con media \
 
 ### Solución analítica y justificación formal
 Dado que \\(\mathbb{E}[X] = 1/\lambda = 2\\), el parámetro de tasa es \\(\lambda = 1/2 = 0.5\\).  
-La función de densidad es \\(f_X(x) = \frac{1}{2} e^{-x/2}\\) para \\(x \ge 0\\).  
+La función de densidad es \\(f\_X(x) = \frac{1}{2} e^{-x/2}\\) para \\(x \ge 0\\).  
 La probabilidad de la cola de supervivencia es:
 
 \\[
-\mathbb{P}(X > 3) = \int_3^\infty \frac{1}{2} e^{-x/2} \, dx = \left[-e^{-x/2}\right]_3^\infty = 0 - (-e^{-3/2}) = e^{-3/2} = e^{-1.5} \approx 0.22313.
+\mathbb{P}(X > 3) = \int\_3^\infty \frac{1}{2} e^{-x/2} \, dx = \left[-e^{-x/2}\right]\_3^\infty = 0 - (-e^{-3/2}) = e^{-3/2} = e^{-1.5} \approx 0.22313.
 \\]
 
 ### Análisis pedagógico de distractores
-- **Distractor B (\\(1 - e^{-3/2}\\)):** Es la probabilidad acumulada \\(\mathbb{P}(X \le 3) = F_X(3)\\).
+- **Distractor B (\\(1 - e^{-3/2}\\)):** Es la probabilidad acumulada \\(\mathbb{P}(X \le 3) = F\_X(3)\\).
 - **Distractor C (\\(e^{-3}\\)):** Corresponde a asumir erróneamente \\(\lambda = 1\\) en lugar de \\(\lambda = 1/2\\).
 - **Distractor D (\\(0.50\\)):** Asume erróneamente un decaimiento lineal.
 
@@ -128,7 +128,7 @@ La probabilidad de la cola de supervivencia es:
 **Enunciado institucional:**  
 Dos variables aleatorias continuas \\(X\\) e \\(Y\\) son estocásticamente independientes si y solo si:
 
-- **A) \\(f_{X,Y}(x, y) = f_X(x) \cdot f_Y(y)\\) para todo \\((x, y) \in \mathbb{R}^2\\)** *(Opción Correcta)*
+- **A) \\(f\_{X,Y}(x, y) = f\_X(x) \cdot f\_Y(y)\\) para todo \\((x, y) \in \mathbb{R}^2\\)** *(Opción Correcta)*
 - B) \\(\mathbb{E}[XY] = \mathbb{E}[X]\mathbb{E}[Y]\\)
 - C) \\(\text{Cov}(X, Y) = 0\\)
 - D) \\(\mathbb{P}(X > a) = \mathbb{P}(Y > a)\\) para todo \\(a \in \mathbb{R}\\)

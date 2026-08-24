@@ -7,17 +7,17 @@ Cuando un experimento aleatorio posee un espacio muestral continuo no numerable 
 **Definición 1.31 (Probabilidad geométrica).** Si \\(\Omega \subset \mathbb{R}^n\\) es una región con medida \\(\mu(\Omega) > 0\\), la probabilidad geométrica de cualquier evento boreliano \\(A \in \mathcal{B}(\Omega)\\) es:
 
 \\[
-\mathbb{P}(A) = \frac{\mu(A)}{\mu(\Omega)} = \frac{\int_A d\mathbf{x}}{\int_\Omega d\mathbf{x}}.
+\mathbb{P}(A) = \frac{\mu(A)}{\mu(\Omega)} = \frac{\int\_A d\mathbf{x}}{\int\_\Omega d\mathbf{x}}.
 \\]
 
 - **En \\(\mathbb{R}\\) (Longitud):** \\(\mathbb{P}(A) = \frac{\text{Longitud}(A)}{\text{Longitud}(\Omega)}\\).
 - **En \\(\mathbb{R}^2\\) (Área):** \\(\mathbb{P}(A) = \frac{\text{Área}(A)}{\text{Área}(\Omega)}\\).
 - **En \\(\mathbb{R}^3\\) (Volumen):** \\(\mathbb{P}(A) = \frac{\text{Volumen}(A)}{\text{Volumen}(\Omega)}\\).
 
-**Observación importante (Conjuntos de medida cero):** Para cualquier punto individual \\(\mathbf{x}_0 \in \Omega\\), \\(\mu(\{\mathbf{x}_0\}) = 0\\), lo que implica:
+**Observación importante (Conjuntos de medida cero):** Para cualquier punto individual \\(\mathbf{x}\_0 \in \Omega\\), \\(\mu(\{\mathbf{x}\_0\}) = 0\\), lo que implica:
 
 \\[
-\mathbb{P}(\{\mathbf{x}_0\}) = 0.
+\mathbb{P}(\{\mathbf{x}\_0\}) = 0.
 \\]
 
 En un espacio de probabilidad continuo, un evento con probabilidad cero **no es necesariamente imposible** (el experimento necesariamente arrojará algún punto individual de probabilidad cero). De igual forma, un evento con probabilidad 1 no es necesariamente el espacio seguro \\(\Omega\\), sino que se dice que ocurre **casi con certeza** o **casi seguramente (c.s.)**.
@@ -95,7 +95,7 @@ X \le \frac{L}{2} \sin \theta.
 La región favorable \\(A\\) es el conjunto de puntos \\((x, \theta) \in \Omega\\) bajo la curva \\(x = \frac{L}{2} \sin \theta\\). Su área se calcula mediante la integral definida:
 
 \\[
-\text{Área}(A) = \int_0^{\pi/2} \left(\frac{L}{2} \sin \theta\right) d\theta = \frac{L}{2} [-\cos \theta]_0^{\pi/2} = \frac{L}{2} (0 - (-1)) = \frac{L}{2}.
+\text{Área}(A) = \int\_0^{\pi/2} \left(\frac{L}{2} \sin \theta\right) d\theta = \frac{L}{2} [-\cos \theta]\_0^{\pi/2} = \frac{L}{2} (0 - (-1)) = \frac{L}{2}.
 \\]
 
 Aplicando la definición de probabilidad geométrica:
@@ -104,10 +104,10 @@ Aplicando la definición de probabilidad geométrica:
 \mathbb{P}(\text{Cruce}) = \frac{\text{Área}(A)}{\text{Área}(\Omega)} = \frac{L/2}{\pi D / 4} = \frac{2L}{\pi D}. \quad \blacksquare
 \\]
 
-**Estimación de π vía Monte Carlo:** Si se arroja la aguja \\(N\\) veces y se observan \\(N_{\text{cruces}}\\) cruces, la frecuencia relativa converge a la probabilidad teórica:
+**Estimación de π vía Monte Carlo:** Si se arroja la aguja \\(N\\) veces y se observan \\(N\_{\text{cruces}}\\) cruces, la frecuencia relativa converge a la probabilidad teórica:
 
 \\[
-\frac{N_{\text{cruces}}}{N} \approx \frac{2L}{\pi D} \implies \hat{\pi} = \frac{2L \cdot N}{D \cdot N_{\text{cruces}}}.
+\frac{N\_{\text{cruces}}}{N} \approx \frac{2L}{\pi D} \implies \hat{\pi} = \frac{2L \cdot N}{D \cdot N\_{\text{cruces}}}.
 \\]
 
 ---
@@ -124,33 +124,32 @@ Bertrand propuso tres métodos aparentemente legítimos que conducen a tres resp
    Fijamos un extremo \\(A\\) del triángulo. El segundo extremo \\(B\\) se elige uniformemente sobre la circunferencia. Para que la cuerda sea mayor que \\(R\sqrt{3}\\), el punto \\(B\\) debe caer en el arco opuesto que subtiende \\(120^\circ\\) de los \\(360^\circ\\) totales.  
 
    \\[
-   \mathbb{P}_1 = \frac{120^\circ}{360^\circ} = \frac{1}{3}.
+   \mathbb{P}\_1 = \frac{120^\circ}{360^\circ} = \frac{1}{3}.
    \\]
 
 2. **Método 2 (Radio al azar):**  
    Fijamos un radio perpendicular a la cuerda. El punto medio de la cuerda se elige uniformemente sobre el radio de longitud \\(R\\). La cuerda mide más de \\(R\sqrt{3}\\) si su distancia al centro es menor que \\(R/2\\).  
 
    \\[
-   \mathbb{P}_2 = \frac{R/2}{R} = \frac{1}{2}.
+   \mathbb{P}\_2 = \frac{R/2}{R} = \frac{1}{2}.
    \\]
 
 3. **Método 3 (Punto medio en el círculo):**  
    El punto medio de la cuerda se elige uniformemente en el interior del círculo de radio \\(R\\) (área \\(\pi R^2\\)). Para que la cuerda sea mayor que \\(R\sqrt{3}\\), el punto medio debe caer dentro de un círculo concéntrico de radio \\(R/2\\) (área \\(\pi (R/2)^2 = \frac{1}{4}\pi R^2\\)).  
 
    \\[
-   \mathbb{P}_3 = \frac{\pi (R/2)^2}{\pi R^2} = \frac{1}{4}.
+   \mathbb{P}\_3 = \frac{\pi (R/2)^2}{\pi R^2} = \frac{1}{4}.
    \\]
 
 ### Resolución matemática de la paradoja
 
-La aparente paradoja radica en que la frase *"trazar una cuerda al azar"* está **mal definida** hasta que se especifique unívocamente la medida de probabilidad en el espacio de cuerdas. Cada método define un espacio de probabilidad \\((\Omega_i, \mathcal{F}_i, \mathbb{P}_i)\\) distinto con un grupo de simetrías diferente.
+La aparente paradoja radica en que la frase *"trazar una cuerda al azar"* está **mal definida** hasta que se especifique unívocamente la medida de probabilidad en el espacio de cuerdas. Cada método define un espacio de probabilidad \\((\Omega\_i, \mathcal{F}\_i, \mathbb{P}\_i)\\) distinto con un grupo de simetrías diferente.
 
 Edwin Jaynes (1973) demostró mediante el principio de máxima ignorancia que si se impone invariancia bajo rotaciones y traslaciones en el plano (invariancia euclidiana completa), el único modelo físicamente consistente con el lanzamiento de cuerdas reales es el **Método 2**, cuya probabilidad es \\(1/2\\).
 
 ---
 
 ## 1.4.5 Laboratorio en Python: Aguja de Buffon y Bertrand
-
 ```python
 import numpy as np
 

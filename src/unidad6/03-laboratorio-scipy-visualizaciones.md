@@ -14,7 +14,7 @@ Para cualquier variable aleatoria continua `dist` (ej. `stats.norm`, `stats.expo
 | `dist.pdf(x, params)` | Evalúa la función de densidad de probabilidad \\(f(x)\\) (continua). |
 | `dist.cdf(x, params)` | Evalúa la función de distribución acumulada \\(F(x) = \mathbb{P}(X \le x)\\). |
 | `dist.sf(x, params)` | Función de supervivencia \\(S(x) = 1 - F(x) = \mathbb{P}(X > x)\\). |
-| `dist.ppf(q, params)` | Función cuantil / percentil \\(F^{-1}(q)\\) tal que \\(\mathbb{P}(X \le x_q) = q\\). |
+| `dist.ppf(q, params)` | Función cuantil / percentil \\(F^{-1}(q)\\) tal que \\(\mathbb{P}(X \le x\_q) = q\\). |
 | `dist.stats(params, moments='mvsk')` | Devuelve la media (m), varianza (v), asimetría (s) y curtosis (k). |
 | `dist.fit(datos)` | Estima los parámetros óptimos por **Máxima Verosimilitud (MLE)** a partir de datos. |
 
@@ -23,7 +23,6 @@ Para cualquier variable aleatoria continua `dist` (ej. `stats.norm`, `stats.expo
 ## 6.3.2 Guía de Implementación Práctica
 
 ### 1. Manipulación de distribuciones continuas
-
 ```python
 import numpy as np
 import scipy.stats as stats
@@ -50,16 +49,15 @@ print(f"Media: {media:.2f}, Varianza: {varianza:.2f}, Asimetría: {sesgo:.2f}")
 
 ## 6.3.3 Diagnóstico visual y contrastes de bondad de ajuste
 
-Para evaluar si una muestra empírica \\(\{x_1, \dots, x_n\}\\) proviene de una distribución teórica postulada, se combinan gráficos de diagnóstico y pruebas formales:
+Para evaluar si una muestra empírica \\(\{x\_1, \dots, x\_n\}\\) proviene de una distribución teórica postulada, se combinan gráficos de diagnóstico y pruebas formales:
 
 1. **Histograma de densidad vs. PDF teórica superpuesta.**
 2. **Gráfico Q-Q (Quantile-Quantile Plot):** Grafica los cuantiles empíricos muestrales frente a los cuantiles teóricos. Si los puntos se alinean perfectamente sobre la diagonal de 45 grados, los datos provienen de la distribución postulada.
-3. **Prueba de Kolmogorov-Smirnov:** Contrasta la distancia suprema entre la CDF empírica \\(F_n(x)\\) y la teórica \\(F(x)\\):
+3. **Prueba de Kolmogorov-Smirnov:** Contrasta la distancia suprema entre la CDF empírica \\(F\_n(x)\\) y la teórica \\(F(x)\\):
 
    \\[
-   D_n = \sup_{x \in \mathbb{R}} |F_n(x) - F(x)|.
+   D\_n = \sup\_{x \in \mathbb{R}} |F\_n(x) - F(x)|.
    \\]
-
 ```python
 def diagnostico_distribucional(datos, dist_nombre='norm'):
     """Genera panel completo de diagnostico grafico para una muestra de datos."""

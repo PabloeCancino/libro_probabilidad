@@ -34,24 +34,24 @@ En términos de teoría de conjuntos, si \\(A\\) y \\(B\\) son conjuntos finitos
 |A \cup B| = |A| + |B|.
 \\]
 
-Generalizando para una familia de conjuntos finitos disjuntos dos a dos \\(A_1, A_2, \dots, A_k\\):
+Generalizando para una familia de conjuntos finitos disjuntos dos a dos \\(A\_1, A\_2, \dots, A\_k\\):
 
 \\[
-\left|\bigcup_{i=1}^k A_i\right| = \sum_{i=1}^k |A_i|.
+\left|\bigcup\_{i=1}^k A\_i\right| = \sum\_{i=1}^k |A\_i|.
 \\]
 
 ### Principio de multiplicación (regla del producto)
 
-**Proposición 1.2 (Principio de multiplicación).** *Si un procedimiento se compone de \\(k\\) etapas secuenciales, donde la primera etapa puede realizarse de \\(n_1\\) formas, la segunda de \\(n_2\\) formas (independientemente del resultado de la primera), y en general la etapa \\(i\\)-ésima puede realizarse de \\(n_i\\) formas, entonces el número total de formas en que puede completarse el procedimiento completo es:*
+**Proposición 1.2 (Principio de multiplicación).** *Si un procedimiento se compone de \\(k\\) etapas secuenciales, donde la primera etapa puede realizarse de \\(n\_1\\) formas, la segunda de \\(n\_2\\) formas (independientemente del resultado de la primera), y en general la etapa \\(i\\)-ésima puede realizarse de \\(n\_i\\) formas, entonces el número total de formas en que puede completarse el procedimiento completo es:*
 
 \\[
-N = n_1 \cdot n_2 \cdots n_k = \prod_{i=1}^k n_i.
+N = n\_1 \cdot n\_2 \cdots n\_k = \prod\_{i=1}^k n\_i.
 \\]
 
-En términos de conjuntos, si \\(A_1, \dots, A_k\\) son conjuntos finitos, el cardinal del producto cartesiano satisface:
+En términos de conjuntos, si \\(A\_1, \dots, A\_k\\) son conjuntos finitos, el cardinal del producto cartesiano satisface:
 
 \\[
-|A_1 \times A_2 \times \dots \times A_k| = |A_1| \cdot |A_2| \cdots |A_k|.
+|A\_1 \times A\_2 \times \dots \times A\_k| = |A\_1| \cdot |A\_2| \cdots |A\_k|.
 \\]
 
 ---
@@ -67,7 +67,7 @@ Una **permutación** de \\(S\\) es una ordenación biyectiva de los \\(n\\) elem
 **Teorema 1.3.** *El número de permutaciones de \\(n\\) elementos distintos es:*
 
 \\[
-P_n = n! = n \cdot (n-1) \cdot (n-2) \cdots 2 \cdot 1, \quad \text{con } 0! = 1.
+P\_n = n! = n \cdot (n-1) \cdot (n-2) \cdots 2 \cdot 1, \quad \text{con } 0! = 1.
 \\]
 
 *Demostración.* Hay \\(n\\) opciones para la primera posición, \\(n-1\\) para la segunda, \\(n-2\\) para la tercera, y así sucesivamente hasta \\(1\\) opción para la última posición. Por el principio de multiplicación, el total es \\(n!\\). \\(\blacksquare\\)
@@ -79,7 +79,7 @@ Una **variación** o \\(r\\)-permutación es una selección ordenada de \\(r\\) 
 **Teorema 1.4.** *El número de ordenaciones de \\(r\\) elementos tomados de \\(n\\) elementos distintos sin repetición es:*
 
 \\[
-P(n, r) = V_n^r = \frac{n!}{(n-r)!} = n(n-1)\cdots(n-r+1).
+P(n, r) = V\_n^r = \frac{n!}{(n-r)!} = n(n-1)\cdots(n-r+1).
 \\]
 
 *Demostración.* La primera posición puede llenarse de \\(n\\) formas, la segunda de \\(n-1\\), ..., y la posición \\(r\\)-ésima de \\(n - (r-1) = n - r + 1\\) formas. Multiplicando y completando el factorial:
@@ -91,7 +91,7 @@ n(n-1)\cdots(n-r+1) = \frac{n(n-1)\cdots(n-r+1)(n-r)\cdots 1}{(n-r)\cdots 1} = \
 Si se permite repetición (cada elemento puede elegirse más de una vez en las \\(r\\) posiciones), el número de variaciones con repetición es:
 
 \\[
-VR_n^r = n^r.
+VR\_n^r = n^r.
 \\]
 
 ### 3. Combinaciones simples
@@ -116,45 +116,45 @@ P(n, r) = \binom{n}{r} \cdot r! \implies \binom{n}{r} = \frac{P(n, r)}{r!} = \fr
 3. **Teorema del Binomio:** Para cualesquiera \\(x, y \in \mathbb{R}\\) y \\(n \in \mathbb{N}\\):
 
    \\[
-   (x + y)^n = \sum_{r=0}^n \binom{n}{r} x^{n-r} y^r.
+   (x + y)^n = \sum\_{r=0}^n \binom{n}{r} x^{n-r} y^r.
    \\]
 
-4. **Suma de coeficientes:** \\(\sum_{r=0}^n \binom{n}{r} = 2^n\\) (el cardinal del conjunto potencia \\(|\mathcal{P}(S)|\\)).
+4. **Suma de coeficientes:** \\(\sum\_{r=0}^n \binom{n}{r} = 2^n\\) (el cardinal del conjunto potencia \\(|\mathcal{P}(S)|\\)).
 
 ### 4. Permutaciones con repetición y particiones ordenadas
 
-Si se tienen \\(n\\) objetos donde \\(n_1\\) son de tipo 1 (indistinguibles entre sí), \\(n_2\\) de tipo 2, ..., y \\(n_k\\) de tipo \\(k\\), con \\(n_1 + n_2 + \dots + n_k = n\\):
+Si se tienen \\(n\\) objetos donde \\(n\_1\\) son de tipo 1 (indistinguibles entre sí), \\(n\_2\\) de tipo 2, ..., y \\(n\_k\\) de tipo \\(k\\), con \\(n\_1 + n\_2 + \dots + n\_k = n\\):
 
 **Teorema 1.6 (Coeficiente Multinomial).** *El número de permutaciones distinguibles de estos \\(n\\) objetos es:*
 
 \\[
-\binom{n}{n_1, n_2, \dots, n_k} = \frac{n!}{n_1! n_2! \cdots n_k!}.
+\binom{n}{n\_1, n\_2, \dots, n\_k} = \frac{n!}{n\_1! n\_2! \cdots n\_k!}.
 \\]
 
-*Demostración.* De las \\(n\\) posiciones, elegimos \\(n_1\\) para los objetos del tipo 1 de \\(\binom{n}{n_1}\\) formas; de las \\(n - n_1\\) restantes, elegimos \\(n_2\\) para los del tipo 2 de \\(\binom{n-n_1}{n_2}\\) formas, y así sucesivamente. Multiplicando:
+*Demostración.* De las \\(n\\) posiciones, elegimos \\(n\_1\\) para los objetos del tipo 1 de \\(\binom{n}{n\_1}\\) formas; de las \\(n - n\_1\\) restantes, elegimos \\(n\_2\\) para los del tipo 2 de \\(\binom{n-n\_1}{n\_2}\\) formas, y así sucesivamente. Multiplicando:
 
 \\[
-\binom{n}{n_1}\binom{n-n_1}{n_2}\cdots\binom{n_k}{n_k} = \frac{n!}{n_1!(n-n_1)!}\frac{(n-n_1)!}{n_2!(n-n_1-n_2)!}\cdots\frac{n_k!}{n_k!0!} = \frac{n!}{n_1! n_2! \cdots n_k!}. \quad \blacksquare
+\binom{n}{n\_1}\binom{n-n\_1}{n\_2}\cdots\binom{n\_k}{n\_k} = \frac{n!}{n\_1!(n-n\_1)!}\frac{(n-n\_1)!}{n\_2!(n-n\_1-n\_2)!}\cdots\frac{n\_k!}{n\_k!0!} = \frac{n!}{n\_1! n\_2! \cdots n\_k!}. \quad \blacksquare
 \\]
 
 ### 5. Combinaciones con repetición
 
-El número de formas de seleccionar \\(r\\) objetos de un conjunto de \\(n\\) tipos con reemplazo (donde el orden no importa pero un tipo puede elegirse varias veces) equivale al número de soluciones enteras no negativas a la ecuación \\(x_1 + x_2 + \dots + x_n = r\\) (con \\(x_i \ge 0\\)).
+El número de formas de seleccionar \\(r\\) objetos de un conjunto de \\(n\\) tipos con reemplazo (donde el orden no importa pero un tipo puede elegirse varias veces) equivale al número de soluciones enteras no negativas a la ecuación \\(x\_1 + x\_2 + \dots + x\_n = r\\) (con \\(x\_i \ge 0\\)).
 
 **Teorema 1.7 (Estrellas y barras).**
 
 \\[
-CR_n^r = \binom{n + r - 1}{r} = \binom{n + r - 1}{n - 1}.
+CR\_n^r = \binom{n + r - 1}{r} = \binom{n + r - 1}{n - 1}.
 \\]
 
 ---
 
 ## 1.1.5 La regla clásica de Laplace
 
-Cuando un experimento aleatorio tiene un espacio muestral finito \\(\Omega = \{\omega_1, \omega_2, \dots, \omega_N\}\\) y no existe ninguna razón asimétrica para favorecer un resultado elemental sobre otro (*principio de razón suficiente o indiferencia*), todos los eventos elementales son **equiprobables**:
+Cuando un experimento aleatorio tiene un espacio muestral finito \\(\Omega = \{\omega\_1, \omega\_2, \dots, \omega\_N\}\\) y no existe ninguna razón asimétrica para favorecer un resultado elemental sobre otro (*principio de razón suficiente o indiferencia*), todos los eventos elementales son **equiprobables**:
 
 \\[
-\mathbb{P}(\{\omega_i\}) = \frac{1}{N}, \quad \forall i = 1, \dots, N.
+\mathbb{P}(\{\omega\_i\}) = \frac{1}{N}, \quad \forall i = 1, \dots, N.
 \\]
 
 **Definición 1.8 (Regla de Laplace).** Para cualquier evento \\(A \subseteq \Omega\\), la probabilidad de ocurrencia de \\(A\\) es la razón entre el número de casos favorables a \\(A\\) y el número total de casos posibles:
@@ -185,13 +185,13 @@ El número de formas en que \\(k\\) personas tienen cumpleaños distintos es la 
 Por la regla de Laplace y la propiedad del complemento:
 
 \\[
-\mathbb{P}(A^c) = \frac{|A^c|}{|\Omega|} = \frac{365 \cdot 364 \cdots (365 - k + 1)}{365^k} = \prod_{i=0}^{k-1} \left(1 - \frac{i}{365}\right).
+\mathbb{P}(A^c) = \frac{|A^c|}{|\Omega|} = \frac{365 \cdot 364 \cdots (365 - k + 1)}{365^k} = \prod\_{i=0}^{k-1} \left(1 - \frac{i}{365}\right).
 \\]
 
 Por consiguiente:
 
 \\[
-\mathbb{P}(A) = 1 - \prod_{i=0}^{k-1} \left(1 - \frac{i}{365}\right).
+\mathbb{P}(A) = 1 - \prod\_{i=0}^{k-1} \left(1 - \frac{i}{365}\right).
 \\]
 
 Evaluando para valores representativos:
@@ -230,7 +230,6 @@ Por la regla de Laplace:
 ---
 
 ## 1.1.6 Implementación en Python: Verificación combinatoria y simulación
-
 ```python
 import math
 import numpy as np

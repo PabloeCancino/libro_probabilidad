@@ -21,11 +21,11 @@ Es la desigualdad fundamental a partir de la cual se deducen casi todas las dem�
 \\]
 
 *Demostración analítica.*  
-Para \\(a > 0\\), consideremos la función indicadora \\(\mathbb{I}_{(X \ge a)}\\).  
+Para \\(a > 0\\), consideremos la función indicadora \\(\mathbb{I}\_{(X \ge a)}\\).  
 Para todo \\(\omega \in \Omega\\), se verifica la desigualdad puntual:
 
 \\[
-a \cdot \mathbb{I}_{(X \ge a)}(\omega) \le X(\omega).
+a \cdot \mathbb{I}\_{(X \ge a)}(\omega) \le X(\omega).
 \\]
 
 - Si \\(X(\omega) < a\\), el lado izquierdo es \\(a \cdot 0 = 0 \le X(\omega)\\) (pues \\(X \ge 0\\)).
@@ -34,7 +34,7 @@ a \cdot \mathbb{I}_{(X \ge a)}(\omega) \le X(\omega).
 Tomando la esperanza matemática en ambos lados (preservada por monotonía y linealidad):
 
 \\[
-\mathbb{E}[a \cdot \mathbb{I}_{(X \ge a)}] \le \mathbb{E}[X] \implies a \mathbb{E}[\mathbb{I}_{(X \ge a)}] \le \mathbb{E}[X] \implies a \mathbb{P}(X \ge a) \le \mathbb{E}[X].
+\mathbb{E}[a \cdot \mathbb{I}\_{(X \ge a)}] \le \mathbb{E}[X] \implies a \mathbb{E}[\mathbb{I}\_{(X \ge a)}] \le \mathbb{E}[X] \implies a \mathbb{P}(X \ge a) \le \mathbb{E}[X].
 \\]
 
 Dividiendo entre \\(a > 0\\) se obtiene la desigualdad de Márkov. \\(\blacksquare\\)
@@ -151,16 +151,16 @@ Tomando la esperanza matemática en ambos lados por monotonía y linealidad:
 
 Para variables cuya MGF existe, las **cotas de Chernoff** proporcionan un decaimiento exponencial extremadamente rápido en las colas.
 
-**Teorema 5.6 (Cota de Chernoff).** *Sea \\(X\\) una variable aleatoria con función generadora de momentos \\(M_X(t)\\) finita para \\(t > 0\\). Para cualquier \\(a \in \mathbb{R}\\):*
+**Teorema 5.6 (Cota de Chernoff).** *Sea \\(X\\) una variable aleatoria con función generadora de momentos \\(M\_X(t)\\) finita para \\(t > 0\\). Para cualquier \\(a \in \mathbb{R}\\):*
 
 \\[
-\mathbb{P}(X \ge a) \le \inf_{t > 0} e^{-ta} M_X(t).
+\mathbb{P}(X \ge a) \le \inf\_{t > 0} e^{-ta} M\_X(t).
 \\]
 
 *Y análogamente para la cola izquierda:*
 
 \\[
-\mathbb{P}(X \le a) \le \inf_{t > 0} e^{ta} M_X(-t).
+\mathbb{P}(X \le a) \le \inf\_{t > 0} e^{ta} M\_X(-t).
 \\]
 
 *Demostración.*  
@@ -168,7 +168,7 @@ Para cualquier \\(t > 0\\) fijo, la función \\(x \mapsto e^{tx}\\) es monótona
 Aplicando la desigualdad de Márkov a la variable positiva \\(e^{tX}\\):
 
 \\[
-\mathbb{P}(X \ge a) = \mathbb{P}(e^{tX} \ge e^{ta}) \le \frac{\mathbb{E}[e^{tX}]}{e^{ta}} = e^{-ta} M_X(t).
+\mathbb{P}(X \ge a) = \mathbb{P}(e^{tX} \ge e^{ta}) \le \frac{\mathbb{E}[e^{tX}]}{e^{ta}} = e^{-ta} M\_X(t).
 \\]
 
 Dado que la desigualdad es válida para **todo** \\(t > 0\\), se toma el ínfimo sobre todos los valores posibles de \\(t > 0\\) para obtener la cota más ajustada. \\(\blacksquare\\)

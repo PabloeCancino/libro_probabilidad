@@ -5,11 +5,11 @@
 1. **Constante de normalización y CDF:** Sea la función:
 
    \\[
-   f_X(x) = \begin{cases} c(1 - x^2), & -1 \le x \le 1, \\\\ 0, & \text{en otro caso.} \end{cases}
+   f\_X(x) = \begin{cases} c(1 - x^2), & -1 \le x \le 1, \\\\ 0, & \text{en otro caso.} \end{cases}
    \\]
 
-   - (a) Determine el valor exacto de la constante \\(c\\) para que \\(f_X\\) sea una PDF legítima.
-   - (b) Obtenga la función de distribución acumulada \\(F_X(x)\\) para todo \\(x \in \mathbb{R}\\).
+   - (a) Determine el valor exacto de la constante \\(c\\) para que \\(f\_X\\) sea una PDF legítima.
+   - (b) Obtenga la función de distribución acumulada \\(F\_X(x)\\) para todo \\(x \in \mathbb{R}\\).
    - (c) Calcule \\(\mathbb{P}(-0.5 \le X \le 0.5)\\) y la mediana de \\(X\\).
 
 2. **Propiedades de la CDF:** Sea la función de distribución:
@@ -28,12 +28,12 @@
 3. **Densidad conjunta y condicional:** Sean \\(X\\) e \\(Y\\) con densidad conjunta:
 
    \\[
-   f_{X,Y}(x, y) = \begin{cases} 8xy, & 0 \le y \le x \le 1, \\\\ 0, & \text{en otro caso.} \end{cases}
+   f\_{X,Y}(x, y) = \begin{cases} 8xy, & 0 \le y \le x \le 1, \\\\ 0, & \text{en otro caso.} \end{cases}
    \\]
 
-   - (a) Calcule las densidades marginales \\(f_X(x)\\) y \\(f_Y(y)\\).
+   - (a) Calcule las densidades marginales \\(f\_X(x)\\) y \\(f\_Y(y)\\).
    - (b) ¿Son \\(X\\) e \\(Y\\) variables aleatorias independientes? Justifique analíticamente.
-   - (c) Obtenga la densidad condicional \\(f_{Y \mid X}(y \mid x)\\) y calcule \\(\mathbb{P}(Y \le 0.5 \mid X = 0.8)\\).
+   - (c) Obtenga la densidad condicional \\(f\_{Y \mid X}(y \mid x)\\) y calcule \\(\mathbb{P}(Y \le 0.5 \mid X = 0.8)\\).
 
 4. **Transformación por el método del Jacobiano:**
    - Sean \\(X, Y \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(0, 1)\\). Definamos la transformación a coordenadas polares \\(R = \sqrt{X^2 + Y^2}\\) y \\(\Theta = \arctan(Y/X)\\).

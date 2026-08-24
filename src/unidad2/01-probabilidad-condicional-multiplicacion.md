@@ -40,22 +40,22 @@ Un resultado fundamental es que, para cualquier evento fijo \\(B\\) con \\(\math
    \mathbb{P}(\Omega \mid B) = \frac{\mathbb{P}(\Omega \cap B)}{\mathbb{P}(B)} = \frac{\mathbb{P}(B)}{\mathbb{P}(B)} = 1.
    \\]
 
-3. **Axioma 3 (σ-aditividad):** Sea \\((A_n)_{n=1}^\infty \subseteq \mathcal{F}\\) una sucesión de eventos disjuntos dos a dos, es decir, \\(A_i \cap A_j = \emptyset\\) para todo \\(i \neq j\\).  
-   Entonces los conjuntos \\(A_n \cap B\\) son también mutuamente disjuntos dos a dos, puesto que:
+3. **Axioma 3 (σ-aditividad):** Sea \\((A\_n)\_{n=1}^\infty \subseteq \mathcal{F}\\) una sucesión de eventos disjuntos dos a dos, es decir, \\(A\_i \cap A\_j = \emptyset\\) para todo \\(i \neq j\\).  
+   Entonces los conjuntos \\(A\_n \cap B\\) son también mutuamente disjuntos dos a dos, puesto que:
 
    \\[
-   (A_i \cap B) \cap (A_j \cap B) = (A_i \cap A_j) \cap B = \emptyset \cap B = \emptyset.
+   (A\_i \cap B) \cap (A\_j \cap B) = (A\_i \cap A\_j) \cap B = \emptyset \cap B = \emptyset.
    \\]
 
    Por la distributividad de la intersección respecto a la unión numerable y la σ-aditividad de \\(\mathbb{P}\\):
 
    \\[
    \begin{aligned}
-   \mathbb{P}\left(\bigcup_{n=1}^\infty A_n \;\middle|\; B\right) &= \frac{\mathbb{P}\left(\left(\bigcup_{n=1}^\infty A_n\right) \cap B\right)}{\mathbb{P}(B)} \\\\
-   &= \frac{\mathbb{P}\left(\bigcup_{n=1}^\infty (A_n \cap B)\right)}{\mathbb{P}(B)} \\\\
-   &= \frac{\sum_{n=1}^\infty \mathbb{P}(A_n \cap B)}{\mathbb{P}(B)} \\\\
-   &= \sum_{n=1}^\infty \frac{\mathbb{P}(A_n \cap B)}{\mathbb{P}(B)} \\\\
-   &= \sum_{n=1}^\infty \mathbb{P}(A_n \mid B).
+   \mathbb{P}\left(\bigcup\_{n=1}^\infty A\_n \;\middle|\; B\right) &= \frac{\mathbb{P}\left(\left(\bigcup\_{n=1}^\infty A\_n\right) \cap B\right)}{\mathbb{P}(B)} \\\\
+   &= \frac{\mathbb{P}\left(\bigcup\_{n=1}^\infty (A\_n \cap B)\right)}{\mathbb{P}(B)} \\\\
+   &= \frac{\sum\_{n=1}^\infty \mathbb{P}(A\_n \cap B)}{\mathbb{P}(B)} \\\\
+   &= \sum\_{n=1}^\infty \frac{\mathbb{P}(A\_n \cap B)}{\mathbb{P}(B)} \\\\
+   &= \sum\_{n=1}^\infty \mathbb{P}(A\_n \mid B).
    \end{aligned}
    \\]
 
@@ -65,8 +65,8 @@ Un resultado fundamental es que, para cualquier evento fijo \\(B\\) con \\(\math
 Dado que \\(\mathbb{P}(\cdot \mid B)\\) es una medida de probabilidad, hereda **todos** los teoremas demostrados en la Unidad 1:
 - \\(\mathbb{P}(\emptyset \mid B) = 0\\).
 - \\(\mathbb{P}(A^c \mid B) = 1 - \mathbb{P}(A \mid B)\\).
-- Si \\(A_1 \subseteq A_2\\), entonces \\(\mathbb{P}(A_1 \mid B) \le \mathbb{P}(A_2 \mid B)\\).
-- \\(\mathbb{P}(A_1 \cup A_2 \mid B) = \mathbb{P}(A_1 \mid B) + \mathbb{P}(A_2 \mid B) - \mathbb{P}(A_1 \cap A_2 \mid B)\\).
+- Si \\(A\_1 \subseteq A\_2\\), entonces \\(\mathbb{P}(A\_1 \mid B) \le \mathbb{P}(A\_2 \mid B)\\).
+- \\(\mathbb{P}(A\_1 \cup A\_2 \mid B) = \mathbb{P}(A\_1 \mid B) + \mathbb{P}(A\_2 \mid B) - \mathbb{P}(A\_1 \cap A\_2 \mid B)\\).
 
 ---
 
@@ -80,22 +80,22 @@ Despejando la probabilidad conjunta \\(\mathbb{P}(A \cap B)\\) de la definición
 
 Este principio se extiende inductivamente a cualquier número finito de eventos.
 
-**Teorema 2.3 (Regla general de la multiplicación).** *Sean \\(A_1, A_2, \dots, A_n \in \mathcal{F}\\) eventos tales que \\(\mathbb{P}(A_1 \cap A_2 \cap \dots \cap A_{n-1}) > 0\\). Entonces:*
+**Teorema 2.3 (Regla general de la multiplicación).** *Sean \\(A\_1, A\_2, \dots, A\_n \in \mathcal{F}\\) eventos tales que \\(\mathbb{P}(A\_1 \cap A\_2 \cap \dots \cap A\_{n-1}) > 0\\). Entonces:*
 
 \\[
-\mathbb{P}\left(\bigcap_{i=1}^n A_i\right) = \mathbb{P}(A_1) \mathbb{P}(A_2 \mid A_1) \mathbb{P}(A_3 \mid A_1 \cap A_2) \cdots \mathbb{P}\left(A_n \;\middle|\; \bigcap_{i=1}^{n-1} A_i\right).
+\mathbb{P}\left(\bigcap\_{i=1}^n A\_i\right) = \mathbb{P}(A\_1) \mathbb{P}(A\_2 \mid A\_1) \mathbb{P}(A\_3 \mid A\_1 \cap A\_2) \cdots \mathbb{P}\left(A\_n \;\middle|\; \bigcap\_{i=1}^{n-1} A\_i\right).
 \\]
 
 *Demostración (por inducción matemática).*
-- **Base (\\(n = 2\\)):** \\(\mathbb{P}(A_1 \cap A_2) = \mathbb{P}(A_1)\mathbb{P}(A_2 \mid A_1)\\), que es la definición de probabilidad condicional.
+- **Base (\\(n = 2\\)):** \\(\mathbb{P}(A\_1 \cap A\_2) = \mathbb{P}(A\_1)\mathbb{P}(A\_2 \mid A\_1)\\), que es la definición de probabilidad condicional.
 - **Paso inductivo:** Supongamos que la fórmula es válida para \\(k-1\\) eventos.  
-  Definamos el evento \\(B = \bigcap_{i=1}^{k-1} A_i\\). Entonces:
+  Definamos el evento \\(B = \bigcap\_{i=1}^{k-1} A\_i\\). Entonces:
 
   \\[
-  \mathbb{P}\left(\bigcap_{i=1}^k A_i\right) = \mathbb{P}(B \cap A_k) = \mathbb{P}(B) \mathbb{P}(A_k \mid B) = \mathbb{P}\left(\bigcap_{i=1}^{k-1} A_i\right) \mathbb{P}\left(A_k \;\middle|\; \bigcap_{i=1}^{k-1} A_i\right).
+  \mathbb{P}\left(\bigcap\_{i=1}^k A\_i\right) = \mathbb{P}(B \cap A\_k) = \mathbb{P}(B) \mathbb{P}(A\_k \mid B) = \mathbb{P}\left(\bigcap\_{i=1}^{k-1} A\_i\right) \mathbb{P}\left(A\_k \;\middle|\; \bigcap\_{i=1}^{k-1} A\_i\right).
   \\]
 
-  Sustituyendo la hipótesis de inducción para \\(\mathbb{P}\left(\bigcap_{i=1}^{k-1} A_i\right)\\), se obtiene el resultado para \\(k\\) eventos. Por el principio de inducción, la fórmula es válida para todo \\(n \ge 2\\). \\(\blacksquare\\)
+  Sustituyendo la hipótesis de inducción para \\(\mathbb{P}\left(\bigcap\_{i=1}^{k-1} A\_i\right)\\), se obtiene el resultado para \\(k\\) eventos. Por el principio de inducción, la fórmula es válida para todo \\(n \ge 2\\). \\(\blacksquare\\)
 
 ---
 
@@ -105,21 +105,21 @@ Este principio se extiende inductivamente a cualquier número finito de eventos.
 Una urna contiene 5 bolas rojas y 3 bolas verdes. Se extraen 3 bolas consecutivamente sin reemplazo. ¿Cuál es la probabilidad de que las tres bolas extraídas sean rojas?
 
 *Solución:*  
-Sean \\(R_1, R_2, R_3\\) los eventos "la bola extraída en el turno 1, 2 y 3 es roja".
+Sean \\(R\_1, R\_2, R\_3\\) los eventos "la bola extraída en el turno 1, 2 y 3 es roja".
 Por la regla de la multiplicación:
 
 \\[
-\mathbb{P}(R_1 \cap R_2 \cap R_3) = \mathbb{P}(R_1) \mathbb{P}(R_2 \mid R_1) \mathbb{P}(R_3 \mid R_1 \cap R_2).
+\mathbb{P}(R\_1 \cap R\_2 \cap R\_3) = \mathbb{P}(R\_1) \mathbb{P}(R\_2 \mid R\_1) \mathbb{P}(R\_3 \mid R\_1 \cap R\_2).
 \\]
 
-1. En la primera extracción hay 5 rojas de un total de 8: \\(\mathbb{P}(R_1) = \frac{5}{8}\\).
-2. Quedan 4 rojas de un total de 7: \\(\mathbb{P}(R_2 \mid R_1) = \frac{4}{7}\\).
-3. Quedan 3 rojas de un total de 6: \\(\mathbb{P}(R_3 \mid R_1 \cap R_2) = \frac{3}{6} = \frac{1}{2}\\).
+1. En la primera extracción hay 5 rojas de un total de 8: \\(\mathbb{P}(R\_1) = \frac{5}{8}\\).
+2. Quedan 4 rojas de un total de 7: \\(\mathbb{P}(R\_2 \mid R\_1) = \frac{4}{7}\\).
+3. Quedan 3 rojas de un total de 6: \\(\mathbb{P}(R\_3 \mid R\_1 \cap R\_2) = \frac{3}{6} = \frac{1}{2}\\).
 
 Multiplicando las probabilidades condicionales:
 
 \\[
-\mathbb{P}(R_1 \cap R_2 \cap R_3) = \frac{5}{8} \times \frac{4}{7} \times \frac{3}{6} = \frac{60}{336} = \frac{5}{28} \approx 0.17857 \quad (17.86\%).
+\mathbb{P}(R\_1 \cap R\_2 \cap R\_3) = \frac{5}{8} \times \frac{4}{7} \times \frac{3}{6} = \frac{60}{336} = \frac{5}{28} \approx 0.17857 \quad (17.86\%).
 \\]
 
 (Nótese que por combinatoria directa mediante Laplace: \\(\frac{\binom{5}{3}}{\binom{8}{3}} = \frac{10}{56} = \frac{5}{28}\\), verificando la consistencia del modelo).

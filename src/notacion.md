@@ -16,28 +16,28 @@ A lo largo del texto se emplea la siguiente notación estándar, salvo advertenc
 | \\(\mathbb{P}(A \mid B)\\) | Probabilidad condicional del evento \\(A\\) dado que ha ocurrido \\(B\\). |
 | \\(A \perp B\\) | Independencia estocástica de los eventos \\(A\\) y \\(B\\) (\\(\mathbb{P}(A \cap B) = \mathbb{P}(A)\mathbb{P}(B)\\)). |
 | \\(X, Y, Z\\) | Variables aleatorias (funciones medibles \\(X: \Omega \to \mathbb{R}\\)). |
-| \\(\mathbf{X} = (X_1, \dots, X_n)\\) | Vector aleatorio \\(n\\)-dimensional. |
-| \\(S_X\\) o \\(\text{sop}(X)\\) | Soporte de la variable aleatoria \\(X\\). |
-| \\(p_X(x)\\) o \\(P(X = x)\\) | Función de masa de probabilidad (PMF) de una v.a. discreta. |
-| \\(f_X(x)\\) | Función de densidad de probabilidad (PDF) de una v.a. continua. |
-| \\(F_X(x) = \mathbb{P}(X \le x)\\) | Función de distribución acumulada (CDF). |
+| \\(\mathbf{X} = (X\_1, \dots, X\_n)\\) | Vector aleatorio \\(n\\)-dimensional. |
+| \\(S\_X\\) o \\(\text{sop}(X)\\) | Soporte de la variable aleatoria \\(X\\). |
+| \\(p\_X(x)\\) o \\(P(X = x)\\) | Función de masa de probabilidad (PMF) de una v.a. discreta. |
+| \\(f\_X(x)\\) | Función de densidad de probabilidad (PDF) de una v.a. continua. |
+| \\(F\_X(x) = \mathbb{P}(X \le x)\\) | Función de distribución acumulada (CDF). |
 | \\(\mathbb{E}[X]\\) o \\(E[X]\\) | Esperanza matemática o valor esperado de \\(X\\). |
-| \\(\text{Var}(X)\\) o \\(\sigma_X^2\\) | Varianza de la variable aleatoria \\(X\\). |
-| \\(\sigma_X = \sqrt{\text{Var}(X)}\\) | Desviación estándar de \\(X\\). |
-| \\(\text{Cov}(X, Y)\\) o \\(\sigma_{XY}\\) | Covarianza entre \\(X\\) e \\(Y\\). |
+| \\(\text{Var}(X)\\) o \\(\sigma\_X^2\\) | Varianza de la variable aleatoria \\(X\\). |
+| \\(\sigma\_X = \sqrt{\text{Var}(X)}\\) | Desviación estándar de \\(X\\). |
+| \\(\text{Cov}(X, Y)\\) o \\(\sigma\_{XY}\\) | Covarianza entre \\(X\\) e \\(Y\\). |
 | \\(\rho(X, Y)\\) o \\(\text{Corr}(X, Y)\\) | Coeficiente de correlación lineal de Pearson. |
 | \\(\mathbb{E}[X \mid Y]\\) | Esperanza condicional de \\(X\\) dado el valor de \\(Y\\). |
-| \\(M_X(t) = \mathbb{E}[e^{tX}]\\) | Función generadora de momentos (MGF). |
-| \\(G_X(s) = \mathbb{E}[s^X]\\) | Función generadora de probabilidad (PGF). |
-| \\(\varphi_X(t) = \mathbb{E}[e^{itX}]\\) | Función característica de \\(X\\). |
+| \\(M\_X(t) = \mathbb{E}[e^{tX}]\\) | Función generadora de momentos (MGF). |
+| \\(G\_X(s) = \mathbb{E}[s^X]\\) | Función generadora de probabilidad (PGF). |
+| \\(\varphi\_X(t) = \mathbb{E}[e^{itX}]\\) | Función característica de \\(X\\). |
 | \\(X \sim \mathcal{D}(\boldsymbol{\theta})\\) | La v.a. \\(X\\) sigue la familia distribucional \\(\mathcal{D}\\) con vector de parámetros \\(\boldsymbol{\theta}\\). |
 | \\(\mathcal{N}(\mu, \sigma^2)\\) | Distribución Normal (Gaussiana) con media \\(\mu\\) y varianza \\(\sigma^2\\). |
 | \\(\Phi(z)\\) | Función de distribución acumulada de la Normal estándar \\(\mathcal{N}(0,1)\\). |
-| \\(X_n \xrightarrow{\text{c.s.}} X\\) | Convergencia casi segura (con probabilidad 1). |
-| \\(X_n \xrightarrow{P} X\\) | Convergencia en probabilidad. |
-| \\(X_n \xrightarrow{L^p} X\\) | Convergencia en media de orden \\(p\\) (en particular \\(L^2\\) o media cuadrática). |
-| \\(X_n \xrightarrow{d} X\\) | Convergencia en distribución (débil). |
-| \\(\mathbb{I}_A(\omega)\\) o \\(\mathbf{1}_A\\) | Función indicadora del conjunto \\(A\\) (vale 1 si \\(\omega \in A\\) y 0 si \\(\omega \notin A\\)). |
+| \\(X\_n \xrightarrow{\text{c.s.}} X\\) | Convergencia casi segura (con probabilidad 1). |
+| \\(X\_n \xrightarrow{P} X\\) | Convergencia en probabilidad. |
+| \\(X\_n \xrightarrow{L^p} X\\) | Convergencia en media de orden \\(p\\) (en particular \\(L^2\\) o media cuadrática). |
+| \\(X\_n \xrightarrow{d} X\\) | Convergencia en distribución (débil). |
+| \\(\mathbb{I}\_A(\omega)\\) o \\(\mathbf{1}\_A\\) | Función indicadora del conjunto \\(A\\) (vale 1 si \\(\omega \in A\\) y 0 si \\(\omega \notin A\\)). |
 | \\(\blacksquare\\) o "∎" | Cierre de demostración formal. |
 
 ---

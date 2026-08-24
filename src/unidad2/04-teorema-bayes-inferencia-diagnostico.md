@@ -4,47 +4,47 @@
 
 Publicado póstumamente en 1763 por Thomas Bayes y reformulado independientemente por Pierre-Simon Laplace en 1774, el **Teorema de Bayes** es la piedra angular del razonamiento condicional inverso: permite actualizar la probabilidad asignada a una hipótesis inicial (*a priori*) a la luz de una nueva evidencia observada (*a posteriori*).
 
-**Teorema 2.17 (Teorema de Bayes).** *Sea \\(\{B_1, B_2, \dots, B_k\}\\) una partición del espacio muestral \\(\Omega\\) con \\(\mathbb{P}(B_i) > 0\\) para todo \\(i = 1, \dots, k\\). Sea \\(A \in \mathcal{F}\\) un evento con \\(\mathbb{P}(A) > 0\\). Entonces, para cualquier \\(j \in \{1, \dots, k\}\\):*
+**Teorema 2.17 (Teorema de Bayes).** *Sea \\(\{B\_1, B\_2, \dots, B\_k\}\\) una partición del espacio muestral \\(\Omega\\) con \\(\mathbb{P}(B\_i) > 0\\) para todo \\(i = 1, \dots, k\\). Sea \\(A \in \mathcal{F}\\) un evento con \\(\mathbb{P}(A) > 0\\). Entonces, para cualquier \\(j \in \{1, \dots, k\}\\):*
 
 \\[
-\mathbb{P}(B_j \mid A) = \frac{\mathbb{P}(B_j \cap A)}{\mathbb{P}(A)} = \frac{\mathbb{P}(B_j) \mathbb{P}(A \mid B_j)}{\sum_{i=1}^k \mathbb{P}(B_i) \mathbb{P}(A \mid B_i)}.
+\mathbb{P}(B\_j \mid A) = \frac{\mathbb{P}(B\_j \cap A)}{\mathbb{P}(A)} = \frac{\mathbb{P}(B\_j) \mathbb{P}(A \mid B\_j)}{\sum\_{i=1}^k \mathbb{P}(B\_i) \mathbb{P}(A \mid B\_i)}.
 \\]
 
 *Demostración.*
 Por la definición de probabilidad condicional:
 
 \\[
-\mathbb{P}(B_j \mid A) = \frac{\mathbb{P}(B_j \cap A)}{\mathbb{P}(A)}.
+\mathbb{P}(B\_j \mid A) = \frac{\mathbb{P}(B\_j \cap A)}{\mathbb{P}(A)}.
 \\]
 
 Por la regla de la multiplicación en el numerador:
 
 \\[
-\mathbb{P}(B_j \cap A) = \mathbb{P}(B_j) \mathbb{P}(A \mid B_j).
+\mathbb{P}(B\_j \cap A) = \mathbb{P}(B\_j) \mathbb{P}(A \mid B\_j).
 \\]
 
 Sustituyendo en el denominador la descomposición del Teorema de la Probabilidad Total (Teorema 2.13):
 
 \\[
-\mathbb{P}(A) = \sum_{i=1}^k \mathbb{P}(B_i) \mathbb{P}(A \mid B_i).
+\mathbb{P}(A) = \sum\_{i=1}^k \mathbb{P}(B\_i) \mathbb{P}(A \mid B\_i).
 \\]
 
 Dividiendo ambas expresiones se obtiene la fórmula de Bayes. \\(\blacksquare\\)
 
 ### Terminología bayesiana fundamental
-- \\(\mathbb{P}(B_j)\\): **Probabilidad a priori (prior)** de la hipótesis \\(B_j\\) antes de observar la evidencia \\(A\\).
-- \\(\mathbb{P}(A \mid B_j)\\): **Verosimilitud (likelihood)** de observar la evidencia \\(A\\) si la hipótesis \\(B_j\\) fuera cierta.
-- \\(\mathbb{P}(A) = \sum_{i=1}^k \mathbb{P}(B_i) \mathbb{P}(A \mid B_i)\\): **Probabilidad marginal de la evidencia** (constante de normalización).
-- \\(\mathbb{P}(B_j \mid A)\\): **Probabilidad a posteriori (posterior)** de la hipótesis \\(B_j\\) dada la evidencia observada \\(A\\).
+- \\(\mathbb{P}(B\_j)\\): **Probabilidad a priori (prior)** de la hipótesis \\(B\_j\\) antes de observar la evidencia \\(A\\).
+- \\(\mathbb{P}(A \mid B\_j)\\): **Verosimilitud (likelihood)** de observar la evidencia \\(A\\) si la hipótesis \\(B\_j\\) fuera cierta.
+- \\(\mathbb{P}(A) = \sum\_{i=1}^k \mathbb{P}(B\_i) \mathbb{P}(A \mid B\_i)\\): **Probabilidad marginal de la evidencia** (constante de normalización).
+- \\(\mathbb{P}(B\_j \mid A)\\): **Probabilidad a posteriori (posterior)** de la hipótesis \\(B\_j\\) dada la evidencia observada \\(A\\).
 
 ---
 
 ## 2.4.2 Forma de Momios (Odds) y Razón de Verosimilitud
 
-Para dos hipótesis rivales \\(H_0\\) y \\(H_1\\), definiendo los momios a priori como \\(\text{Odds}(H_1) = \frac{\mathbb{P}(H_1)}{\mathbb{P}(H_0)}\\), el Teorema de Bayes se expresa de forma compacta:
+Para dos hipótesis rivales \\(H\_0\\) y \\(H\_1\\), definiendo los momios a priori como \\(\text{Odds}(H\_1) = \frac{\mathbb{P}(H\_1)}{\mathbb{P}(H\_0)}\\), el Teorema de Bayes se expresa de forma compacta:
 
 \\[
-\frac{\mathbb{P}(H_1 \mid A)}{\mathbb{P}(H_0 \mid A)} = \frac{\mathbb{P}(H_1)}{\mathbb{P}(H_0)} \times \frac{\mathbb{P}(A \mid H_1)}{\mathbb{P}(A \mid H_0)}.
+\frac{\mathbb{P}(H\_1 \mid A)}{\mathbb{P}(H\_0 \mid A)} = \frac{\mathbb{P}(H\_1)}{\mathbb{P}(H\_0)} \times \frac{\mathbb{P}(A \mid H\_1)}{\mathbb{P}(A \mid H\_0)}.
 \\]
 
 \\[
@@ -56,38 +56,38 @@ Para dos hipótesis rivales \\(H_0\\) y \\(H_1\\), definiendo los momios a prior
 ## 2.4.3 Aplicación crítica: Pruebas diagnósticas y epidemiología
 
 Consideremos una prueba clínica para detectar una enfermedad \\(E\\).
-- \\(E\\): El paciente padece la enfermedad (prevalencia poblacional \\(\mathbb{P}(E) = \pi_0\\)).
-- \\(E^c\\): El paciente está sano (\\(\mathbb{P}(E^c) = 1 - \pi_0\\)).
+- \\(E\\): El paciente padece la enfermedad (prevalencia poblacional \\(\mathbb{P}(E) = \pi\_0\\)).
+- \\(E^c\\): El paciente está sano (\\(\mathbb{P}(E^c) = 1 - \pi\_0\\)).
 - \\(T^+\\): La prueba diagnóstica resulta **positiva**.
 - \\(T^-\\): La prueba diagnóstica resulta **negativa**.
 
 ### Parámetros intrínsecos de la prueba diagnóstica
-1. **Sensibilidad (\\(S_e\\)):** Probabilidad de que la prueba sea positiva si el paciente está enfermo:
+1. **Sensibilidad (\\(S\_e\\)):** Probabilidad de que la prueba sea positiva si el paciente está enfermo:
 
    \\[
-   S_e = \mathbb{P}(T^+ \mid E).
+   S\_e = \mathbb{P}(T^+ \mid E).
    \\]
 
-   (La tasa de falsos negativos es \\(\mathbb{P}(T^- \mid E) = 1 - S_e\\)).
-2. **Especificidad (\\(S_p\\)):** Probabilidad de que la prueba sea negativa si el paciente está sano:
+   (La tasa de falsos negativos es \\(\mathbb{P}(T^- \mid E) = 1 - S\_e\\)).
+2. **Especificidad (\\(S\_p\\)):** Probabilidad de que la prueba sea negativa si el paciente está sano:
 
    \\[
-   S_p = \mathbb{P}(T^- \mid E^c).
+   S\_p = \mathbb{P}(T^- \mid E^c).
    \\]
 
-   (La tasa de falsos positivos es \\(\mathbb{P}(T^+ \mid E^c) = 1 - S_p\\)).
+   (La tasa de falsos positivos es \\(\mathbb{P}(T^+ \mid E^c) = 1 - S\_p\\)).
 
 ### Valores predictivos (Inferencia a posteriori)
 - **Valor Predictivo Positivo (VPP):** Probabilidad de estar realmente enfermo dado un resultado positivo en la prueba:
 
   \\[
-  \text{VPP} = \mathbb{P}(E \mid T^+) = \frac{\mathbb{P}(E)\mathbb{P}(T^+ \mid E)}{\mathbb{P}(E)\mathbb{P}(T^+ \mid E) + \mathbb{P}(E^c)\mathbb{P}(T^+ \mid E^c)} = \frac{\pi_0 \cdot S_e}{\pi_0 \cdot S_e + (1 - \pi_0)(1 - S_p)}.
+  \text{VPP} = \mathbb{P}(E \mid T^+) = \frac{\mathbb{P}(E)\mathbb{P}(T^+ \mid E)}{\mathbb{P}(E)\mathbb{P}(T^+ \mid E) + \mathbb{P}(E^c)\mathbb{P}(T^+ \mid E^c)} = \frac{\pi\_0 \cdot S\_e}{\pi\_0 \cdot S\_e + (1 - \pi\_0)(1 - S\_p)}.
   \\]
 
 - **Valor Predictivo Negativo (VPN):** Probabilidad de estar sano dado un resultado negativo:
 
   \\[
-  \text{VPN} = \mathbb{P}(E^c \mid T^-) = \frac{(1 - \pi_0) S_p}{(1 - \pi_0) S_p + \pi_0 (1 - S_e)}.
+  \text{VPN} = \mathbb{P}(E^c \mid T^-) = \frac{(1 - \pi\_0) S\_p}{(1 - \pi\_0) S\_p + \pi\_0 (1 - S\_e)}.
   \\]
 
 ---
@@ -97,9 +97,9 @@ Consideremos una prueba clínica para detectar una enfermedad \\(E\\).
 ### 1. La paradoja del falso positivo (Olvido de la tasa base / Base Rate Fallacy)
 
 **Ejemplo 2.18 (El cribado de una enfermedad rara).**  
-Supongamos una enfermedad con una prevalencia de 1 en cada 1\,000 habitantes en la población general (\\(\pi_0 = 0.001\\)). Se desarrolla un test diagnóstico con alta precisión clínica:
-- Sensibilidad: \\(S_e = 99\% = 0.99\\).
-- Especificidad: \\(S_p = 95\% = 0.95\\) (tasa de falsos positivos \\(1 - S_p = 5\%\\)).
+Supongamos una enfermedad con una prevalencia de 1 en cada 1\,000 habitantes en la población general (\\(\pi\_0 = 0.001\\)). Se desarrolla un test diagnóstico con alta precisión clínica:
+- Sensibilidad: \\(S\_e = 99\% = 0.99\\).
+- Especificidad: \\(S\_p = 95\% = 0.95\\) (tasa de falsos positivos \\(1 - S\_p = 5\%\\)).
 
 Una persona asintomática seleccionada al azar de la población se realiza el test y obtiene un resultado positivo (\\(T^+\\)). ¿Cuál es la probabilidad real de que padezca la enfermedad?
 
@@ -133,7 +133,6 @@ Si la población sospechosa es de 1\,000\,000 de personas, habrá unas 10 person
 ---
 
 ## 2.4.5 Laboratorio en Python: Calculadora e Inferencia Bayesiana
-
 ```python
 import numpy as np
 import matplotlib.pyplot as plt

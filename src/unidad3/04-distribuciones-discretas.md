@@ -10,11 +10,11 @@ Modela un experimento con \\(k\\) resultados posibles que tienen exactamente la 
 
 - **Parámetros:** Enteros \\(a, b \in \mathbb{Z}\\) con \\(a \le b\\), donde \\(k = b - a + 1\\).
 - **Notación:** \\(X \sim \mathcal{U}\{a, b\}\\).
-- **Soporte:** \\(S_X = \{a, a+1, \dots, b\}\\).
+- **Soporte:** \\(S\_X = \{a, a+1, \dots, b\}\\).
 - **Función de masa (PMF):**
 
   \\[
-  p_X(x) = \frac{1}{b - a + 1} = \frac{1}{k}, \quad \forall x \in S_X.
+  p\_X(x) = \frac{1}{b - a + 1} = \frac{1}{k}, \quad \forall x \in S\_X.
   \\]
 
 - **Esperanza y Varianza:**
@@ -31,11 +31,11 @@ Modela un ensayo dicotómico único con dos resultados posibles: "Éxito" (\\(X=
 
 - **Parámetro:** Probabilidad de éxito \\(p \in [0, 1]\\).
 - **Notación:** \\(X \sim \text{Bernoulli}(p)\\).
-- **Soporte:** \\(S_X = \{0, 1\}\\).
+- **Soporte:** \\(S\_X = \{0, 1\}\\).
 - **Función de masa (PMF):**
 
   \\[
-  p_X(x) = p^x (1 - p)^{1 - x}, \quad x \in \{0, 1\}.
+  p\_X(x) = p^x (1 - p)^{1 - x}, \quad x \in \{0, 1\}.
   \\]
 
 - **Esperanza y Varianza:**
@@ -56,30 +56,30 @@ Modela el número total de éxitos obtenidos en una secuencia de \\(n\\) ensayos
 
 - **Parámetros:** \\(n \in \mathbb{Z}^+\\) (número de ensayos), \\(p \in [0, 1]\\) (probabilidad de éxito).
 - **Notación:** \\(X \sim \text{Binomial}(n, p)\\).
-- **Soporte:** \\(S_X = \{0, 1, 2, \dots, n\}\\).
+- **Soporte:** \\(S\_X = \{0, 1, 2, \dots, n\}\\).
 - **Función de masa (PMF):**
 
   \\[
-  p_X(k) = \mathbb{P}(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k \in \{0, 1, \dots, n\}.
+  p\_X(k) = \mathbb{P}(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k \in \{0, 1, \dots, n\}.
   \\]
 
 **Verificación de la normalización:** Por el Teorema del Binomio de Newton:
 
 \\[
-\sum_{k=0}^n p_X(k) = \sum_{k=0}^n \binom{n}{k} p^k (1-p)^{n-k} = (p + (1 - p))^n = 1^n = 1.
+\sum\_{k=0}^n p\_X(k) = \sum\_{k=0}^n \binom{n}{k} p^k (1-p)^{n-k} = (p + (1 - p))^n = 1^n = 1.
 \\]
 
 **Deducción de la Esperanza y Varianza:**  
-Dado que \\(X = \sum_{i=1}^n Y_i\\), donde \\(Y_i \stackrel{\text{i.i.d.}}{\sim} \text{Bernoulli}(p)\\):
+Dado que \\(X = \sum\_{i=1}^n Y\_i\\), donde \\(Y\_i \stackrel{\text{i.i.d.}}{\sim} \text{Bernoulli}(p)\\):
 
 \\[
-\mathbb{E}[X] = \mathbb{E}\left[\sum_{i=1}^n Y_i\right] = \sum_{i=1}^n \mathbb{E}[Y_i] = \sum_{i=1}^n p = np.
+\mathbb{E}[X] = \mathbb{E}\left[\sum\_{i=1}^n Y\_i\right] = \sum\_{i=1}^n \mathbb{E}[Y\_i] = \sum\_{i=1}^n p = np.
 \\]
 
 Por independencia de los ensayos:
 
 \\[
-\text{Var}(X) = \text{Var}\left(\sum_{i=1}^n Y_i\right) = \sum_{i=1}^n \text{Var}(Y_i) = \sum_{i=1}^n p(1-p) = np(1 - p).
+\text{Var}(X) = \text{Var}\left(\sum\_{i=1}^n Y\_i\right) = \sum\_{i=1}^n \text{Var}(Y\_i) = \sum\_{i=1}^n p(1-p) = np(1 - p).
 \\]
 
 ---
@@ -90,17 +90,17 @@ Modela el número de ensayos Bernoulli independientes requeridos hasta observar 
 
 - **Parámetro:** \\(p \in (0, 1]\\).
 - **Notación:** \\(X \sim \text{Geométrica}(p)\\).
-- **Soporte:** \\(S_X = \{1, 2, 3, \dots\}\\) (versión que cuenta el número de intentos totales).
+- **Soporte:** \\(S\_X = \{1, 2, 3, \dots\}\\) (versión que cuenta el número de intentos totales).
 - **Función de masa (PMF):**
 
   \\[
-  p_X(k) = (1 - p)^{k - 1} p, \quad k \in \{1, 2, 3, \dots\}.
+  p\_X(k) = (1 - p)^{k - 1} p, \quad k \in \{1, 2, 3, \dots\}.
   \\]
 
 - **Función de distribución acumulada (CDF):**
 
   \\[
-  F_X(k) = \mathbb{P}(X \le k) = 1 - \mathbb{P}(X > k) = 1 - (1 - p)^k, \quad k \ge 1.
+  F\_X(k) = \mathbb{P}(X \le k) = 1 - \mathbb{P}(X > k) = 1 - (1 - p)^k, \quad k \ge 1.
   \\]
 
 - **Esperanza y Varianza:**
@@ -129,12 +129,12 @@ Modela el número de ensayos Bernoulli independientes \\(X\\) necesarios para ac
 
 - **Parámetros:** \\(r \in \mathbb{Z}^+\\) (éxitos requeridos), \\(p \in (0, 1]\\).
 - **Notación:** \\(X \sim \text{BN}(r, p)\\).
-- **Soporte:** \\(S_X = \{r, r+1, r+2, \dots\}\\).
+- **Soporte:** \\(S\_X = \{r, r+1, r+2, \dots\}\\).
 - **Función de masa (PMF):**  
   Para que el \\(r\\)-ésimo éxito ocurra en el intento \\(k\\), debe haber exactamente \\(r-1\\) éxitos en los primeros \\(k-1\\) intentos y un éxito en el intento \\(k\\):
 
   \\[
-  p_X(k) = \binom{k - 1}{r - 1} p^r (1 - p)^{k - r}, \quad k \ge r.
+  p\_X(k) = \binom{k - 1}{r - 1} p^r (1 - p)^{k - r}, \quad k \ge r.
   \\]
 
 - **Esperanza y Varianza:** (Como suma de \\(r\\) variables geométricas independientes):
@@ -151,11 +151,11 @@ Modela el número de éxitos \\(k\\) obtenidos en una muestra de tamaño \\(n\\)
 
 - **Parámetros:** \\(N \in \mathbb{Z}^+\\) (tamaño poblacional), \\(K \in \{0, 1, \dots, N\}\\) (éxitos en la población), \\(n \in \{1, \dots, N\}\\) (tamaño muestral).
 - **Notación:** \\(X \sim \text{Hipergeométrica}(N, K, n)\\).
-- **Soporte:** \\(S_X = \{\max(0, n - (N - K)), \dots, \min(n, K)\}\\).
+- **Soporte:** \\(S\_X = \{\max(0, n - (N - K)), \dots, \min(n, K)\}\\).
 - **Función de masa (PMF):**
 
   \\[
-  p_X(k) = \frac{\binom{K}{k}\binom{N - K}{n - k}}{\binom{N}{n}}.
+  p\_X(k) = \frac{\binom{K}{k}\binom{N - K}{n - k}}{\binom{N}{n}}.
   \\]
 
 - **Esperanza y Varianza:**
@@ -178,23 +178,23 @@ Modela el número de eventos raros que ocurren en un intervalo continuo fijo (ti
 
 - **Parámetro:** Tasa media \\(\lambda > 0\\).
 - **Notación:** \\(X \sim \text{Poisson}(\lambda)\\).
-- **Soporte:** \\(S_X = \{0, 1, 2, \dots\} = \mathbb{N}\\).
+- **Soporte:** \\(S\_X = \{0, 1, 2, \dots\} = \mathbb{N}\\).
 - **Función de masa (PMF):**
 
   \\[
-  p_X(k) = \frac{e^{-\lambda} \lambda^k}{k!}, \quad k \in \mathbb{N}.
+  p\_X(k) = \frac{e^{-\lambda} \lambda^k}{k!}, \quad k \in \mathbb{N}.
   \\]
 
 **Verificación de la normalización:**
 
 \\[
-\sum_{k=0}^\infty \frac{e^{-\lambda} \lambda^k}{k!} = e^{-\lambda} \sum_{k=0}^\infty \frac{\lambda^k}{k!} = e^{-\lambda} e^\lambda = 1.
+\sum\_{k=0}^\infty \frac{e^{-\lambda} \lambda^k}{k!} = e^{-\lambda} \sum\_{k=0}^\infty \frac{\lambda^k}{k!} = e^{-\lambda} e^\lambda = 1.
 \\]
 
-**Teorema 3.22 (Ley de eventos raros de Poisson).** *Si \\(X_n \sim \text{Binomial}(n, p_n)\\) donde \\(n \to \infty\\) y \\(p_n \to 0\\) de forma tal que \\(n p_n \to \lambda > 0\\), entonces para todo \\(k \in \mathbb{N}\\) fijo:*
+**Teorema 3.22 (Ley de eventos raros de Poisson).** *Si \\(X\_n \sim \text{Binomial}(n, p\_n)\\) donde \\(n \to \infty\\) y \\(p\_n \to 0\\) de forma tal que \\(n p\_n \to \lambda > 0\\), entonces para todo \\(k \in \mathbb{N}\\) fijo:*
 
 \\[
-\lim_{n \to \infty} \mathbb{P}(X_n = k) = \frac{e^{-\lambda} \lambda^k}{k!}.
+\lim\_{n \to \infty} \mathbb{P}(X\_n = k) = \frac{e^{-\lambda} \lambda^k}{k!}.
 \\]
 
 *Demostración analítica.*  
@@ -202,30 +202,30 @@ Escribiendo la PMF binomial con \\(p = \frac{\lambda}{n}\\):
 
 \\[
 \begin{aligned}
-\mathbb{P}(X_n = k) &= \frac{n(n-1)\cdots(n-k+1)}{k!} \left(\frac{\lambda}{n}\right)^k \left(1 - \frac{\lambda}{n}\right)^{n-k} \\\\
+\mathbb{P}(X\_n = k) &= \frac{n(n-1)\cdots(n-k+1)}{k!} \left(\frac{\lambda}{n}\right)^k \left(1 - \frac{\lambda}{n}\right)^{n-k} \\\\
 &= \frac{\lambda^k}{k!} \left[\frac{n(n-1)\cdots(n-k+1)}{n^k}\right] \left(1 - \frac{\lambda}{n}\right)^n \left(1 - \frac{\lambda}{n}\right)^{-k}.
 \end{aligned}
 \\]
 
 Tomando el límite cuando \\(n \to \infty\\) para \\(k\\) fijo:
-- \\(\lim_{n \to \infty} \frac{n(n-1)\cdots(n-k+1)}{n^k} = 1\\).
-- \\(\lim_{n \to \infty} \left(1 - \frac{\lambda}{n}\right)^n = e^{-\lambda}\\) (límite clásico de Euler).
-- \\(\lim_{n \to \infty} \left(1 - \frac{\lambda}{n}\right)^{-k} = 1^{-k} = 1\\).
+- \\(\lim\_{n \to \infty} \frac{n(n-1)\cdots(n-k+1)}{n^k} = 1\\).
+- \\(\lim\_{n \to \infty} \left(1 - \frac{\lambda}{n}\right)^n = e^{-\lambda}\\) (límite clásico de Euler).
+- \\(\lim\_{n \to \infty} \left(1 - \frac{\lambda}{n}\right)^{-k} = 1^{-k} = 1\\).
 
 Multiplicando los límites:
 
 \\[
-\lim_{n \to \infty} \mathbb{P}(X_n = k) = \frac{\lambda^k}{k!} \cdot 1 \cdot e^{-\lambda} \cdot 1 = \frac{e^{-\lambda}\lambda^k}{k!}. \quad \blacksquare
+\lim\_{n \to \infty} \mathbb{P}(X\_n = k) = \frac{\lambda^k}{k!} \cdot 1 \cdot e^{-\lambda} \cdot 1 = \frac{e^{-\lambda}\lambda^k}{k!}. \quad \blacksquare
 \\]
 
 **Esperanza y Varianza de Poisson:**
 
 \\[
-\mathbb{E}[X] = \sum_{k=0}^\infty k \frac{e^{-\lambda} \lambda^k}{k!} = \lambda e^{-\lambda} \sum_{k=1}^\infty \frac{\lambda^{k-1}}{(k-1)!} = \lambda e^{-\lambda} e^\lambda = \lambda.
+\mathbb{E}[X] = \sum\_{k=0}^\infty k \frac{e^{-\lambda} \lambda^k}{k!} = \lambda e^{-\lambda} \sum\_{k=1}^\infty \frac{\lambda^{k-1}}{(k-1)!} = \lambda e^{-\lambda} e^\lambda = \lambda.
 \\]
 
 \\[
-\mathbb{E}[X(X-1)] = \sum_{k=2}^\infty k(k-1)\frac{e^{-\lambda}\lambda^k}{k!} = \lambda^2 e^{-\lambda}\sum_{k=2}^\infty \frac{\lambda^{k-2}}{(k-2)!} = \lambda^2.
+\mathbb{E}[X(X-1)] = \sum\_{k=2}^\infty k(k-1)\frac{e^{-\lambda}\lambda^k}{k!} = \lambda^2 e^{-\lambda}\sum\_{k=2}^\infty \frac{\lambda^{k-2}}{(k-2)!} = \lambda^2.
 \\]
 
 \\[
@@ -238,13 +238,13 @@ Multiplicando los límites:
 
 ## 3.4.8 Distribución Multinomial
 
-Generalización multivariada de la distribución Binomial a \\(k\\) posibles categorías excluyentes con probabilidades \\(\mathbf{p} = (p_1, \dots, p_k)\\) tales que \\(\sum_{i=1}^k p_i = 1\\) en \\(n\\) ensayos independientes.
+Generalización multivariada de la distribución Binomial a \\(k\\) posibles categorías excluyentes con probabilidades \\(\mathbf{p} = (p\_1, \dots, p\_k)\\) tales que \\(\sum\_{i=1}^k p\_i = 1\\) en \\(n\\) ensayos independientes.
 
-- **PMF Conjunta:** Para \\(\mathbf{x} = (x_1, \dots, x_k)\\) con \\(x_i \in \mathbb{N}\\) y \\(\sum_{i=1}^k x_i = n\\):
+- **PMF Conjunta:** Para \\(\mathbf{x} = (x\_1, \dots, x\_k)\\) con \\(x\_i \in \mathbb{N}\\) y \\(\sum\_{i=1}^k x\_i = n\\):
 
   \\[
-  p_{\mathbf{X}}(x_1, \dots, x_k) = \frac{n!}{x_1! x_2! \cdots x_k!} p_1^{x_1} p_2^{x_2} \cdots p_k^{x_k}.
+  p\_{\mathbf{X}}(x\_1, \dots, x\_k) = \frac{n!}{x\_1! x\_2! \cdots x\_k!} p\_1^{x\_1} p\_2^{x\_2} \cdots p\_k^{x\_k}.
   \\]
 
-- **Marginales:** Cada componente individual es binomial: \\(X_i \sim \text{Binomial}(n, p_i)\\).
-- **Covarianza entre categorías:** \\(\text{Cov}(X_i, X_j) = -n p_i p_j\\) para \\(i \neq j\\).
+- **Marginales:** Cada componente individual es binomial: \\(X\_i \sim \text{Binomial}(n, p\_i)\\).
+- **Covarianza entre categorías:** \\(\text{Cov}(X\_i, X\_j) = -n p\_i p\_j\\) para \\(i \neq j\\).

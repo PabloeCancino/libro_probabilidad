@@ -16,7 +16,7 @@ X = F^{-1}(U)
 Calculamos la función de distribución acumulada de la variable \\(X = F^{-1}(U)\\):
 
 \\[
-F_X(x) = \mathbb{P}(X \le x) = \mathbb{P}(F^{-1}(U) \le x).
+F\_X(x) = \mathbb{P}(X \le x) = \mathbb{P}(F^{-1}(U) \le x).
 \\]
 
 Dado que \\(F\\) es monótona estrictamente creciente, aplicar \\(F\\) en ambos lados de la desigualdad preserva la relación de orden:
@@ -31,7 +31,7 @@ Como \\(U \sim \mathcal{U}(0, 1)\\), su CDF es \\(\mathbb{P}(U \le u) = u\\) par
 \mathbb{P}(U \le F(x)) = F(x).
 \\]
 
-Esto demuestra que \\(F_X(x) = F(x)\\) para todo \\(x \in \mathbb{R}\\). \\(\blacksquare\\)
+Esto demuestra que \\(F\_X(x) = F(x)\\) para todo \\(x \in \mathbb{R}\\). \\(\blacksquare\\)
 
 ### Aplicación: Generación de la distribución Exponencial
 Para \\(X \sim \text{Exp}(\lambda)\\), su CDF es \\(F(x) = 1 - e^{-\lambda x}\\) para \\(x \ge 0\\).  
@@ -73,28 +73,28 @@ f(x) \le c \cdot g(x), \quad \forall x \in \mathbb{R}.
 Deseamos aproximar el valor de una integral definida multidimensional compleja:
 
 \\[
-I = \int_D h(\mathbf{x}) \, d\mathbf{x}.
+I = \int\_D h(\mathbf{x}) \, d\mathbf{x}.
 \\]
 
 Reescribiendo la integral como el valor esperado de una función respecto a una densidad uniforme \\(f(\mathbf{x}) = \frac{1}{\text{Vol}(D)}\\):
 
 \\[
-I = \text{Vol}(D) \int_D h(\mathbf{x}) \frac{1}{\text{Vol}(D)} \, d\mathbf{x} = \text{Vol}(D) \cdot \mathbb{E}[h(\mathbf{X})], \quad \text{donde } \mathbf{X} \sim \mathcal{U}(D).
+I = \text{Vol}(D) \int\_D h(\mathbf{x}) \frac{1}{\text{Vol}(D)} \, d\mathbf{x} = \text{Vol}(D) \cdot \mathbb{E}[h(\mathbf{X})], \quad \text{donde } \mathbf{X} \sim \mathcal{U}(D).
 \\]
 
 El **estimador de Monte Carlo** basado en \\(N\\) puntos independientes generados uniformemente en \\(D\\) es:
 
 \\[
-\hat{I}_N = \frac{\text{Vol}(D)}{N} \sum_{i=1}^N h(\mathbf{X}_i).
+\hat{I}\_N = \frac{\text{Vol}(D)}{N} \sum\_{i=1}^N h(\mathbf{X}\_i).
 \\]
 
 **Propiedades del estimador de Monte Carlo:**
-1. **Insesgamiento:** \\(\mathbb{E}[\hat{I}_N] = I\\).
-2. **Convergencia casi segura:** Por la Ley Fuerte de los Grandes Números, \\(\hat{I}_N \xrightarrow{\text{c.s.}} I\\).
+1. **Insesgamiento:** \\(\mathbb{E}[\hat{I}\_N] = I\\).
+2. **Convergencia casi segura:** Por la Ley Fuerte de los Grandes Números, \\(\hat{I}\_N \xrightarrow{\text{c.s.}} I\\).
 3. **Error estándar asintótico:** Por el Teorema del Límite Central:
 
    \\[
-   \text{Error} = |\hat{I}_N - I| \sim \mathcal{O}\left(\frac{\sigma_h}{\sqrt{N}}\right).
+   \text{Error} = |\hat{I}\_N - I| \sim \mathcal{O}\left(\frac{\sigma\_h}{\sqrt{N}}\right).
    \\]
 
 > **Ventaja decisiva en alta dimensión:** Mientras que las reglas de cuadratura numéricas tradicionales (como Simpson o Gauss) sufren la *maldición de la dimensionalidad* (el error decae como \\(\mathcal{O}(N^{-k/d})\\), volviéndose inútiles para \\(d \ge 4\\)), **la tasa de convergencia de Monte Carlo \\(\mathcal{O}(N^{-1/2})\\) es completamente independiente de la dimensión \\(d\\)**.
@@ -102,7 +102,6 @@ El **estimador de Monte Carlo** basado en \\(N\\) puntos independientes generado
 ---
 
 ## 6.2.4 Implementación en Python: Integración Monte Carlo y Transformada Inversa
-
 ```python
 import numpy as np
 import scipy.stats as stats

@@ -35,14 +35,14 @@
      \mathbb{P}(A \cap B) \ge \mathbb{P}(A) + \mathbb{P}(B) - 1.
      \\]
 
-   - Generalice por inducción matemática para demostrar que para \\(n\\) eventos \\(A_1, \dots, A_n\\):
+   - Generalice por inducción matemática para demostrar que para \\(n\\) eventos \\(A\_1, \dots, A\_n\\):
 
      \\[
-     \mathbb{P}\left(\bigcap_{i=1}^n A_i\right) \ge \sum_{i=1}^n \mathbb{P}(A_i) - (n - 1).
+     \mathbb{P}\left(\bigcap\_{i=1}^n A\_i\right) \ge \sum\_{i=1}^n \mathbb{P}(A\_i) - (n - 1).
      \\]
 
-7. **Continuidad de la medida:** Sea \\((\Omega, \mathcal{F}, \mathbb{P})\\) un espacio de probabilidad y sea \\((A_n)_{n=1}^\infty\\) una sucesión de eventos tales que \\(\mathbb{P}(A_n) = 1\\) para todo \\(n \ge 1\\).
-   - Demuestre que \\(\mathbb{P}\left(\bigcap_{n=1}^\infty A_n\right) = 1\\).
+7. **Continuidad de la medida:** Sea \\((\Omega, \mathcal{F}, \mathbb{P})\\) un espacio de probabilidad y sea \\((A\_n)\_{n=1}^\infty\\) una sucesión de eventos tales que \\(\mathbb{P}(A\_n) = 1\\) para todo \\(n \ge 1\\).
+   - Demuestre que \\(\mathbb{P}\left(\bigcap\_{n=1}^\infty A\_n\right) = 1\\).
 
 ---
 

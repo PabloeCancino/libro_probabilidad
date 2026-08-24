@@ -16,11 +16,11 @@
 
 ## Bloque B: Independencia estocástica y contraejemplos
 
-3. **Independencia y complementos generalizados:** Sean \\(A_1, A_2, \dots, A_n\\) eventos mutuamente independientes con \\(\mathbb{P}(A_i) = p_i\\).
+3. **Independencia y complementos generalizados:** Sean \\(A\_1, A\_2, \dots, A\_n\\) eventos mutuamente independientes con \\(\mathbb{P}(A\_i) = p\_i\\).
    - Demuestre que la probabilidad de que ocurra al menos uno de ellos es:
 
      \\[
-     \mathbb{P}\left(\bigcup_{i=1}^n A_i\right) = 1 - \prod_{i=1}^n (1 - p_i).
+     \mathbb{P}\left(\bigcup\_{i=1}^n A\_i\right) = 1 - \prod\_{i=1}^n (1 - p\_i).
      \\]
 
 4. **Construcción de independencia condicional:**
@@ -42,9 +42,9 @@
    - Calcule la probabilidad de que un correo que contiene la palabra "gratis" sea realmente Spam.
 
 7. **Pruebas diagnósticas en serie y en paralelo:**
-   - Se aplican dos pruebas diagnósticas independientes \\(T_1\\) y \\(T_2\\) a un paciente para confirmar una enfermedad con prevalencia \\(\pi_0 = 0.05\\).
-   - La prueba 1 tiene sensibilidad \\(S_{e1} = 0.90\\) y especificidad \\(S_{p1} = 0.95\\).
-   - La prueba 2 tiene sensibilidad \\(S_{e2} = 0.85\\) y especificidad \\(S_{p2} = 0.98\\).
+   - Se aplican dos pruebas diagnósticas independientes \\(T\_1\\) y \\(T\_2\\) a un paciente para confirmar una enfermedad con prevalencia \\(\pi\_0 = 0.05\\).
+   - La prueba 1 tiene sensibilidad \\(S\_{e1} = 0.90\\) y especificidad \\(S\_{p1} = 0.95\\).
+   - La prueba 2 tiene sensibilidad \\(S\_{e2} = 0.85\\) y especificidad \\(S\_{p2} = 0.98\\).
    - (a) Calcule el VPP si ambas pruebas resultan positivas en el paciente.
    - (b) Calcule el VPN si ambas pruebas resultan negativas.
 

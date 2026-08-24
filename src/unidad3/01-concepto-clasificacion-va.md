@@ -47,10 +47,10 @@ X^{-1}((-\infty, x]) = \{\omega \in \Omega : X(\omega) \le x\} \in \mathcal{F}.
 
 Toda variable aleatoria \\(X\\) transfiere la estructura probabilística del espacio abstracto original \\((\Omega, \mathcal{F}, \mathbb{P})\\) a la recta real \\((\mathbb{R}, \mathcal{B}(\mathbb{R}))\\).
 
-**Definición 3.3 (Medida de probabilidad inducida / Distribución de X).** La **distribución de probabilidad inducida** por \\(X\\) en \\((\mathbb{R}, \mathcal{B}(\mathbb{R}))\\) es la función \\(\mathbb{P}_X : \mathcal{B}(\mathbb{R}) \to [0, 1]\\) definida por:
+**Definición 3.3 (Medida de probabilidad inducida / Distribución de X).** La **distribución de probabilidad inducida** por \\(X\\) en \\((\mathbb{R}, \mathcal{B}(\mathbb{R}))\\) es la función \\(\mathbb{P}\_X : \mathcal{B}(\mathbb{R}) \to [0, 1]\\) definida por:
 
 \\[
-\mathbb{P}_X(B) = \mathbb{P}(X^{-1}(B)) = \mathbb{P}(X \in B), \quad \forall B \in \mathcal{B}(\mathbb{R}).
+\mathbb{P}\_X(B) = \mathbb{P}(X^{-1}(B)) = \mathbb{P}(X \in B), \quad \forall B \in \mathcal{B}(\mathbb{R}).
 \\]
 
 **Definición 3.4 (σ-álgebra generada por una variable aleatoria).** La \\(\sigma\\)-álgebra generada por \\(X\\), denotada \\(\sigma(X)\\), es la menor sub-\\(\sigma\\)-álgebra de \\(\mathcal{F}\\) respecto a la cual \\(X\\) es medible:
@@ -65,32 +65,32 @@ Intuitivamente, \\(\sigma(X)\\) representa toda la información experimental que
 
 ## 3.1.3 Clasificación rigurosa de las variables aleatorias
 
-Sea \\(S_X = X(\Omega) = \{X(\omega) : \omega \in \Omega\} \subset \mathbb{R}\\) el **soporte** (o rango) de la variable aleatoria \\(X\\). Según la naturaleza matemática de su soporte y su medida inducida respecto a la medida de Lebesgue \\(\lambda\\), las variables aleatorias se clasifican en:
+Sea \\(S\_X = X(\Omega) = \{X(\omega) : \omega \in \Omega\} \subset \mathbb{R}\\) el **soporte** (o rango) de la variable aleatoria \\(X\\). Según la naturaleza matemática de su soporte y su medida inducida respecto a la medida de Lebesgue \\(\lambda\\), las variables aleatorias se clasifican en:
 
 ### 1. Variables aleatorias discretas
-Una variable aleatoria \\(X\\) es **discreta** si su soporte \\(S_X\\) es un conjunto finito o infinito numerable:
+Una variable aleatoria \\(X\\) es **discreta** si su soporte \\(S\_X\\) es un conjunto finito o infinito numerable:
 
 \\[
-S_X = \{x_1, x_2, \dots, x_n, \dots\} \subset \mathbb{R}, \quad \text{con } \sum_{x \in S_X} \mathbb{P}(X = x) = 1.
+S\_X = \{x\_1, x\_2, \dots, x\_n, \dots\} \subset \mathbb{R}, \quad \text{con } \sum\_{x \in S\_X} \mathbb{P}(X = x) = 1.
 \\]
 
 La masa de probabilidad está concentrada en puntos aislados (átomos de probabilidad).
 
 ### 2. Variables aleatorias continuas (Absolutamente continuas)
-Una variable aleatoria \\(X\\) es **(absolutamente) continua** si su medida inducida \\(\mathbb{P}_X\\) es absolutamente continua respecto a la medida de Lebesgue en \\(\mathbb{R}\\) (es decir, conjuntos de longitud de Lebesgue cero tienen probabilidad cero).  
-Por el Teorema de Radon-Nikodym, esto equivale a la existencia de una función integrable no negativa \\(f_X: \mathbb{R} \to [0, \infty)\\) (la *función de densidad*) tal que para todo boreliano \\(B \in \mathcal{B}(\mathbb{R})\\):
+Una variable aleatoria \\(X\\) es **(absolutamente) continua** si su medida inducida \\(\mathbb{P}\_X\\) es absolutamente continua respecto a la medida de Lebesgue en \\(\mathbb{R}\\) (es decir, conjuntos de longitud de Lebesgue cero tienen probabilidad cero).  
+Por el Teorema de Radon-Nikodym, esto equivale a la existencia de una función integrable no negativa \\(f\_X: \mathbb{R} \to [0, \infty)\\) (la *función de densidad*) tal que para todo boreliano \\(B \in \mathcal{B}(\mathbb{R})\\):
 
 \\[
-\mathbb{P}(X \in B) = \int_B f_X(x) \, dx.
+\mathbb{P}(X \in B) = \int\_B f\_X(x) \, dx.
 \\]
 
-Para cualquier punto individual \\(x_0 \in \mathbb{R}\\):
+Para cualquier punto individual \\(x\_0 \in \mathbb{R}\\):
 
 \\[
-\mathbb{P}(X = x_0) = \int_{x_0}^{x_0} f_X(x) \, dx = 0.
+\mathbb{P}(X = x\_0) = \int\_{x\_0}^{x\_0} f\_X(x) \, dx = 0.
 \\]
 
 ### 3. Variables aleatorias mixtas y singulares
 - **Mixtas:** Su distribución posee tanto componentes discretos (átomos con probabilidad estrictamente positiva) como una componente continua integrada por una densidad.  
-  *Ejemplo:* El tiempo de espera \\(T\\) en un semáforo: \\(\mathbb{P}(T = 0) = p > 0\\) (si el semáforo ya estaba en verde), y para \\(t > 0\\) el tiempo se distribuye con una densidad continua en \\((0, t_{\text{max}}]\\).
+  *Ejemplo:* El tiempo de espera \\(T\\) en un semáforo: \\(\mathbb{P}(T = 0) = p > 0\\) (si el semáforo ya estaba en verde), y para \\(t > 0\\) el tiempo se distribuye con una densidad continua en \\((0, t\_{\text{max}}]\\).
 - **Singulares continuas:** Variables cuya función de distribución acumulada es continua en todo punto pero su derivada es cero casi en todas partes respecto a la medida de Lebesgue (por ejemplo, la distribución asociada al conjunto de Cantor).

@@ -5,16 +5,16 @@
 La esperanza condicional es una de las herramientas más sofisticadas y útiles de la teoría moderna de probabilidades, sirviendo como fundamento de las martingalas, el filtrado estocástico y la inferencia predictiva.
 
 **Definición 4.16 (Esperanza condicional dado un valor numérico).** Sea \\((X, Y)\\) un vector aleatorio con esperanza \\(\mathbb{E}[|X|] < \infty\\).
-1. **Caso discreto:** Para cualquier \\(y\\) con \\(p_Y(y) > 0\\):
+1. **Caso discreto:** Para cualquier \\(y\\) con \\(p\_Y(y) > 0\\):
 
    \\[
-   \mathbb{E}[X \mid Y = y] = \sum_{x} x \cdot p_{X \mid Y}(x \mid y) = \sum_{x} x \frac{p_{X,Y}(x, y)}{p_Y(y)}.
+   \mathbb{E}[X \mid Y = y] = \sum\_{x} x \cdot p\_{X \mid Y}(x \mid y) = \sum\_{x} x \frac{p\_{X,Y}(x, y)}{p\_Y(y)}.
    \\]
 
-2. **Caso continuo:** Para cualquier \\(y\\) con \\(f_Y(y) > 0\\):
+2. **Caso continuo:** Para cualquier \\(y\\) con \\(f\_Y(y) > 0\\):
 
    \\[
-   \mathbb{E}[X \mid Y = y] = \int_{-\infty}^{\infty} x \cdot f_{X \mid Y}(x \mid y) \, dx = \int_{-\infty}^{\infty} x \frac{f_{X,Y}(x, y)}{f_Y(y)} \, dx.
+   \mathbb{E}[X \mid Y = y] = \int\_{-\infty}^{\infty} x \cdot f\_{X \mid Y}(x \mid y) \, dx = \int\_{-\infty}^{\infty} x \frac{f\_{X,Y}(x, y)}{f\_Y(y)} \, dx.
    \\]
 
 Observemos que \\(\mathbb{E}[X \mid Y = y] = g(y)\\) es una función determinista ordinaria del valor \\(y\\).
@@ -38,19 +38,19 @@ Es decir, \\(\mathbb{E}[X \mid Y]\\) es una función medible de la variable alea
 \\]
 
 *Demostración (caso continuo).*  
-Sea \\(g(y) = \mathbb{E}[X \mid Y = y] = \int_{-\infty}^\infty x \frac{f_{X,Y}(x, y)}{f_Y(y)} dx\\).  
+Sea \\(g(y) = \mathbb{E}[X \mid Y = y] = \int\_{-\infty}^\infty x \frac{f\_{X,Y}(x, y)}{f\_Y(y)} dx\\).  
 Por LOTUS (Teorema 4.2), la esperanza de la variable aleatoria \\(g(Y)\\) es:
 
 \\[
 \begin{aligned}
-\mathbb{E}[\mathbb{E}[X \mid Y]] &= \mathbb{E}[g(Y)] = \int_{-\infty}^\infty g(y) f_Y(y) \, dy \\\\
-&= \int_{-\infty}^\infty \left(\int_{-\infty}^\infty x \frac{f_{X,Y}(x, y)}{f_Y(y)} \, dx\right) f_Y(y) \, dy \\\\
-&= \int_{-\infty}^\infty \int_{-\infty}^\infty x f_{X,Y}(x, y) \, dx \, dy = \mathbb{E}[X]. \quad \blacksquare
+\mathbb{E}[\mathbb{E}[X \mid Y]] &= \mathbb{E}[g(Y)] = \int\_{-\infty}^\infty g(y) f\_Y(y) \, dy \\\\
+&= \int\_{-\infty}^\infty \left(\int\_{-\infty}^\infty x \frac{f\_{X,Y}(x, y)}{f\_Y(y)} \, dx\right) f\_Y(y) \, dy \\\\
+&= \int\_{-\infty}^\infty \int\_{-\infty}^\infty x f\_{X,Y}(x, y) \, dx \, dy = \mathbb{E}[X]. \quad \blacksquare
 \end{aligned}
 \\]
 
 ### Propiedades algebraicas de la esperanza condicional
-1. **Linealidad:** \\(\mathbb{E}[a X_1 + b X_2 + c \mid Y] = a \mathbb{E}[X_1 \mid Y] + b \mathbb{E}[X_2 \mid Y] + c\\).
+1. **Linealidad:** \\(\mathbb{E}[a X\_1 + b X\_2 + c \mid Y] = a \mathbb{E}[X\_1 \mid Y] + b \mathbb{E}[X\_2 \mid Y] + c\\).
 2. **"Sacar lo que es conocido":** Si \\(h(Y)\\) es una función medible de \\(Y\\):
 
    \\[
@@ -71,7 +71,7 @@ Por LOTUS (Teorema 4.2), la esperanza de la variable aleatoria \\(g(Y)\\) es:
 **Teorema 4.19 (Ortogonalidad y predicción óptima).** *Entre todas las funciones medibles \\(h(Y)\\) con segundo momento finito, la esperanza condicional \\(g(Y) = \mathbb{E}[X \mid Y]\\) es el estimador que minimiza el error cuadrático medio:*
 
 \\[
-\min_{h} \mathbb{E}[(X - h(Y))^2] = \mathbb{E}[(X - \mathbb{E}[X \mid Y])^2].
+\min\_{h} \mathbb{E}[(X - h(Y))^2] = \mathbb{E}[(X - \mathbb{E}[X \mid Y])^2].
 \\]
 
 *Demostración.*  
@@ -90,13 +90,13 @@ Elevando al cuadrado y tomando esperanza:
 Por la ley de esperanzas iteradas y sacando la función de \\(Y\\):
 
 \\[
-\mathbb{E}[(X - \mathbb{E}[X \mid Y])(\mathbb{E}[X \mid Y] - h(Y))] = \mathbb{E}\Big[(\mathbb{E}[X \mid Y] - h(Y)) \cdot \underbrace{\mathbb{E}[X - \mathbb{E}[X \mid Y] \mid Y]}_{= \mathbb{E}[X \mid Y] - \mathbb{E}[X \mid Y] = 0}\Big] = 0.
+\mathbb{E}[(X - \mathbb{E}[X \mid Y])(\mathbb{E}[X \mid Y] - h(Y))] = \mathbb{E}\Big[(\mathbb{E}[X \mid Y] - h(Y)) \cdot \underbrace{\mathbb{E}[X - \mathbb{E}[X \mid Y] \mid Y]}\_{= \mathbb{E}[X \mid Y] - \mathbb{E}[X \mid Y] = 0}\Big] = 0.
 \\]
 
 Por tanto:
 
 \\[
-\mathbb{E}[(X - h(Y))^2] = \mathbb{E}[(X - \mathbb{E}[X \mid Y])^2] + \underbrace{\mathbb{E}[(\mathbb{E}[X \mid Y] - h(Y))^2]}_{\ge 0}.
+\mathbb{E}[(X - h(Y))^2] = \mathbb{E}[(X - \mathbb{E}[X \mid Y])^2] + \underbrace{\mathbb{E}[(\mathbb{E}[X \mid Y] - h(Y))^2]}\_{\ge 0}.
 \\]
 
 La expresión se minimiza de forma única cuando el segundo término no negativo se anula, es decir, cuando \\(h(Y) = \mathbb{E}[X \mid Y]\\) casi seguramente. \\(\blacksquare\\)
@@ -147,25 +147,25 @@ Sumando la Ecuación 1 y la Ecuación 2:
 - \\(\text{Var}(\mathbb{E}[X \mid Y])\\): **Varianza explicada** por la variable \\(Y\\) (variabilidad inter-grupos).
 
 **Ejemplo 4.22 (Suma aleatoria de variables aleatorias: Proceso Compuesto de Poisson).**  
-Sea \\(N \sim \text{Poisson}(\lambda)\\) el número de reclamos a una aseguradora en un mes, y sean \\(X_1, X_2, \dots \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(\beta)\\) los montos individuales de cada reclamo, independientes de \\(N\\).  
-Sea \\(S_N = \sum_{i=1}^N X_i\\) el monto total reclamado (con \\(S_0 = 0\\)).
+Sea \\(N \sim \text{Poisson}(\lambda)\\) el número de reclamos a una aseguradora en un mes, y sean \\(X\_1, X\_2, \dots \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(\beta)\\) los montos individuales de cada reclamo, independientes de \\(N\\).  
+Sea \\(S\_N = \sum\_{i=1}^N X\_i\\) el monto total reclamado (con \\(S\_0 = 0\\)).
 1. **Esperanza total:**
 
    \\[
-   \mathbb{E}[S_N \mid N] = \mathbb{E}\left[\sum_{i=1}^N X_i \;\middle|\; N\right] = N \mathbb{E}[X] \implies \mathbb{E}[S_N] = \mathbb{E}[N \mathbb{E}[X]] = \mathbb{E}[N] \mathbb{E}[X] = \lambda \cdot \frac{1}{\beta}.
+   \mathbb{E}[S\_N \mid N] = \mathbb{E}\left[\sum\_{i=1}^N X\_i \;\middle|\; N\right] = N \mathbb{E}[X] \implies \mathbb{E}[S\_N] = \mathbb{E}[N \mathbb{E}[X]] = \mathbb{E}[N] \mathbb{E}[X] = \lambda \cdot \frac{1}{\beta}.
    \\]
 
 2. **Varianza total:**
 
    \\[
-   \text{Var}(S_N \mid N) = N \text{Var}(X).
+   \text{Var}(S\_N \mid N) = N \text{Var}(X).
    \\]
 
    Por la Ley de la Varianza Total:
 
    \\[
    \begin{aligned}
-   \text{Var}(S_N) &= \mathbb{E}[\text{Var}(S_N \mid N)] + \text{Var}(\mathbb{E}[S_N \mid N]) = \mathbb{E}[N \text{Var}(X)] + \text{Var}(N \mathbb{E}[X]) \\\\
+   \text{Var}(S\_N) &= \mathbb{E}[\text{Var}(S\_N \mid N)] + \text{Var}(\mathbb{E}[S\_N \mid N]) = \mathbb{E}[N \text{Var}(X)] + \text{Var}(N \mathbb{E}[X]) \\\\
    &= \text{Var}(X)\mathbb{E}[N] + (\mathbb{E}[X])^2 \text{Var}(N) = \frac{1}{\beta^2} \lambda + \frac{1}{\beta^2} \lambda = \frac{2\lambda}{\beta^2}.
    \end{aligned}
    \\]

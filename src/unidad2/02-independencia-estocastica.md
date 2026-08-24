@@ -61,18 +61,18 @@ Sin embargo, para evitar requerir que \\(\mathbb{P}(B) > 0\\) y para que la defi
 
 Para una colección de más de dos eventos, la independencia por pares (dos a dos) **no es suficiente** para garantizar la independencia conjunta (mutua).
 
-**Definición 2.9 (Independencia mutua o colectiva).** Una familia de \\(n\\) eventos \\(A_1, A_2, \dots, A_n \in \mathcal{F}\\) es **mutuamente independiente** si para todo subconjunto de índices \\(\{i_1, i_2, \dots, i_k\} \subseteq \{1, 2, \dots, n\}\\) con \\(2 \le k \le n\\), se satisface:
+**Definición 2.9 (Independencia mutua o colectiva).** Una familia de \\(n\\) eventos \\(A\_1, A\_2, \dots, A\_n \in \mathcal{F}\\) es **mutuamente independiente** si para todo subconjunto de índices \\(\{i\_1, i\_2, \dots, i\_k\} \subseteq \{1, 2, \dots, n\}\\) con \\(2 \le k \le n\\), se satisface:
 
 \\[
-\mathbb{P}\left(\bigcap_{j=1}^k A_{i_j}\right) = \prod_{j=1}^k \mathbb{P}(A_{i_j}).
+\mathbb{P}\left(\bigcap\_{j=1}^k A\_{i\_j}\right) = \prod\_{j=1}^k \mathbb{P}(A\_{i\_j}).
 \\]
 
 (Esto requiere verificar un total de \\(2^n - n - 1\\) ecuaciones de producto).
 
-**Definición 2.10 (Independencia dos a dos o por pares).** La familia \\(A_1, \dots, A_n\\) es **independiente dos a dos** si:
+**Definición 2.10 (Independencia dos a dos o por pares).** La familia \\(A\_1, \dots, A\_n\\) es **independiente dos a dos** si:
 
 \\[
-\mathbb{P}(A_i \cap A_j) = \mathbb{P}(A_i) \mathbb{P}(A_j) \quad \text{para todo } 1 \le i < j \le n.
+\mathbb{P}(A\_i \cap A\_j) = \mathbb{P}(A\_i) \mathbb{P}(A\_j) \quad \text{para todo } 1 \le i < j \le n.
 \\]
 
 ### El contraejemplo clásico de Serguéi Bernstein (1927)
@@ -90,47 +90,47 @@ Se lanza el tetraedro y se observa la cara que apoya en la mesa. Como las cuatro
 \\]
 
 Definamos los eventos:
-- \\(E_R\\): "La cara resultante contiene el color Rojo" \\(= \{1, 4\}\\).
-- \\(E_V\\): "La cara resultante contiene el color Verde" \\(= \{2, 4\}\\).
-- \\(E_A\\): "La cara resultante contiene el color Azul" \\(= \{3, 4\}\\).
+- \\(E\_R\\): "La cara resultante contiene el color Rojo" \\(= \{1, 4\}\\).
+- \\(E\_V\\): "La cara resultante contiene el color Verde" \\(= \{2, 4\}\\).
+- \\(E\_A\\): "La cara resultante contiene el color Azul" \\(= \{3, 4\}\\).
 
 Calculamos sus probabilidades marginales:
 
 \\[
-\mathbb{P}(E_R) = \frac{2}{4} = \frac{1}{2}, \quad \mathbb{P}(E_V) = \frac{2}{4} = \frac{1}{2}, \quad \mathbb{P}(E_A) = \frac{2}{4} = \frac{1}{2}.
+\mathbb{P}(E\_R) = \frac{2}{4} = \frac{1}{2}, \quad \mathbb{P}(E\_V) = \frac{2}{4} = \frac{1}{2}, \quad \mathbb{P}(E\_A) = \frac{2}{4} = \frac{1}{2}.
 \\]
 
 Analicemos las intersecciones dos a dos:
 
 \\[
-E_R \cap E_V = \{4\} \implies \mathbb{P}(E_R \cap E_V) = \frac{1}{4} = \frac{1}{2} \times \frac{1}{2} = \mathbb{P}(E_R)\mathbb{P}(E_V).
+E\_R \cap E\_V = \{4\} \implies \mathbb{P}(E\_R \cap E\_V) = \frac{1}{4} = \frac{1}{2} \times \frac{1}{2} = \mathbb{P}(E\_R)\mathbb{P}(E\_V).
 \\]
 
 \\[
-E_R \cap E_A = \{4\} \implies \mathbb{P}(E_R \cap E_A) = \frac{1}{4} = \mathbb{P}(E_R)\mathbb{P}(E_A).
+E\_R \cap E\_A = \{4\} \implies \mathbb{P}(E\_R \cap E\_A) = \frac{1}{4} = \mathbb{P}(E\_R)\mathbb{P}(E\_A).
 \\]
 
 \\[
-E_V \cap E_A = \{4\} \implies \mathbb{P}(E_V \cap E_A) = \frac{1}{4} = \mathbb{P}(E_V)\mathbb{P}(E_A).
+E\_V \cap E\_A = \{4\} \implies \mathbb{P}(E\_V \cap E\_A) = \frac{1}{4} = \mathbb{P}(E\_V)\mathbb{P}(E\_A).
 \\]
 
-Por consiguiente, los eventos \\(E_R, E_V, E_A\\) son **independientes dos a dos**.
+Por consiguiente, los eventos \\(E\_R, E\_V, E\_A\\) son **independientes dos a dos**.
 
 Ahora evaluemos la intersección triple simultánea:
 
 \\[
-E_R \cap E_V \cap E_A = \{4\} \implies \mathbb{P}(E_R \cap E_V \cap E_A) = \frac{1}{4}.
+E\_R \cap E\_V \cap E\_A = \{4\} \implies \mathbb{P}(E\_R \cap E\_V \cap E\_A) = \frac{1}{4}.
 \\]
 
 Sin embargo, el producto de las tres probabilidades individuales es:
 
 \\[
-\mathbb{P}(E_R)\mathbb{P}(E_V)\mathbb{P}(E_A) = \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}.
+\mathbb{P}(E\_R)\mathbb{P}(E\_V)\mathbb{P}(E\_A) = \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}.
 \\]
 
 Como \\(\frac{1}{4} \neq \frac{1}{8}\\), los tres eventos **no son mutuamente independientes**.
 
-De hecho, si sabemos que ocurrieron \\(E_R\\) y \\(E_V\\), estamos con certeza en la cara 4, por lo que \\(\mathbb{P}(E_A \mid E_R \cap E_V) = 1 \neq \mathbb{P}(E_A) = 1/2\\).
+De hecho, si sabemos que ocurrieron \\(E\_R\\) y \\(E\_V\\), estamos con certeza en la cara 4, por lo que \\(\mathbb{P}(E\_A \mid E\_R \cap E\_V) = 1 \neq \mathbb{P}(E\_A) = 1/2\\).
 
 ---
 
