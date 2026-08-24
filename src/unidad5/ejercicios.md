@@ -11,7 +11,10 @@
 
 2. **Aplicación de la desigualdad de Jensen:**
    - Sea \\(X > 0\\) una variable aleatoria continua con media \\(\mu = 4\\). Demuestre que:
-     \\[ \mathbb{E}\left[\frac{1}{X}\right] \ge \frac{1}{4} \qquad \text{y} \qquad \mathbb{E}[\sqrt{X}] \le 2. \\]
+
+     \\[
+     \mathbb{E}\left[\frac{1}{X}\right] \ge \frac{1}{4} \qquad \text{y} \qquad \mathbb{E}[\sqrt{X}] \le 2.
+     \\]
 
 ---
 
@@ -25,7 +28,10 @@
 4. **El máximo de variables exponenciales independientes:**
    - Sean \\(X_1, X_2, \dots, X_n \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(1)\\). Sea \\(M_n = \max(X_1, \dots, X_n)\\).
    - Demuestre que la variable normalizada \\(Y_n = M_n - \ln n\\) converge en distribución a la distribución de Gumbel (valor extremo tipo I):
-     \\[ F_Y(y) = e^{-e^{-y}}, \quad \forall y \in \mathbb{R}. \\]
+
+     \\[
+     F_Y(y) = e^{-e^{-y}}, \quad \forall y \in \mathbb{R}.
+     \\]
 
 ---
 

@@ -9,29 +9,50 @@ Un **proceso estocástico** es una familia indexada de variables aleatorias \\((
 El conjunto de todos los valores posibles que pueden tomar las variables \\(X_t\\) se denomina el **espacio de estados** \\(S\\). En esta sección nos enfocaremos en espacios de estados finitos o numerables \\(S = \{1, 2, \dots, N\}\\).
 
 **Definición 6.1 (Propiedad de Márkov a tiempo discreto).** Un proceso estocástico a tiempo discreto \\((X_n)_{n=0}^\infty\\) con espacio de estados \\(S\\) es una **Cadena de Markov a tiempo discreto (DTMC)** si satisface la **propiedad de pérdida de memoria estocástica (propiedad de Márkov)**: la probabilidad condicional de la transición hacia el estado futuro \\(X_{n+1}\\) depende únicamente del estado presente actual \\(X_n\\), siendo completamente independiente de toda la trayectoria histórica pasada:
-\\[ \mathbb{P}(X_{n+1} = j \mid X_n = i, \ X_{n-1} = i_{n-1}, \dots, X_0 = i_0) = \mathbb{P}(X_{n+1} = j \mid X_n = i), \\]
+
+\\[
+\mathbb{P}(X_{n+1} = j \mid X_n = i, \ X_{n-1} = i_{n-1}, \dots, X_0 = i_0) = \mathbb{P}(X_{n+1} = j \mid X_n = i),
+\\]
+
 para todo \\(n \ge 0\\) y para cualesquiera estados \\(i, j, i_0, \dots, i_{n-1} \in S\\).
 
 Decimos que la cadena es **homogénea en el tiempo** si las probabilidades de transición no dependen del paso temporal \\(n\\):
-\\[ p_{ij} = \mathbb{P}(X_{n+1} = j \mid X_n = i) = \mathbb{P}(X_1 = j \mid X_0 = i). \\]
+
+\\[
+p_{ij} = \mathbb{P}(X_{n+1} = j \mid X_n = i) = \mathbb{P}(X_1 = j \mid X_0 = i).
+\\]
 
 ---
 
 ## 6.1.2 Matriz de transición de un paso y Ecuaciones de Chapman-Kolmogórov
 
 **Definición 6.2 (Matriz estocástica de transición).** Para una cadena homogénea con \\(N\\) estados, la **matriz de transición en un paso** es la matriz cuadrada \\(\mathbf{P} = (p_{ij}) \in \mathbb{R}^{N \times N}\\):
-\\[ \mathbf{P} = \begin{pmatrix} p_{11} & p_{12} & \dots & p_{1N} \\ p_{21} & p_{22} & \dots & p_{2N} \\ \vdots & \vdots & \ddots & \vdots \\ p_{N1} & p_{N2} & \dots & p_{NN} \end{pmatrix}. \\]
+
+\\[
+\mathbf{P} = \begin{pmatrix} p_{11} & p_{12} & \dots & p_{1N} \\ p_{21} & p_{22} & \dots & p_{2N} \\ \vdots & \vdots & \ddots & \vdots \\ p_{N1} & p_{N2} & \dots & p_{NN} \end{pmatrix}.
+\\]
+
 Toda matriz de transición es una **matriz estocástica por filas**:
 1. \\(p_{ij} \ge 0\\) para todo \\(i, j \in S\\).
 2. Cada fila suma exactamente 1: \\(\sum_{j=1}^N p_{ij} = 1\\) para todo \\(i \in S\\).
 
 **Definición 6.3 (Probabilidades de transición en $n$ pasos).**
-\\[ p_{ij}^{(n)} = \mathbb{P}(X_{n+m} = j \mid X_m = i) = \mathbb{P}(X_n = j \mid X_0 = i). \\]
+
+\\[
+p_{ij}^{(n)} = \mathbb{P}(X_{n+m} = j \mid X_m = i) = \mathbb{P}(X_n = j \mid X_0 = i).
+\\]
 
 **Teorema 6.4 (Ecuaciones de Chapman-Kolmogórov).** *Para cualesquiera enteros \\(n, m \ge 0\\) y estados \\(i, j \in S\\):*
-\\[ p_{ij}^{(n+m)} = \sum_{k \in S} p_{ik}^{(n)} p_{kj}^{(m)}. \\]
+
+\\[
+p_{ij}^{(n+m)} = \sum_{k \in S} p_{ik}^{(n)} p_{kj}^{(m)}.
+\\]
+
 *En notación matricial, la matriz de transición en \\(n\\) pasos es simplemente la \\(n\\)-ésima potencia algebraica de la matriz \\(\mathbf{P}\\):*
-\\[ \mathbf{P}^{(n)} = \mathbf{P}^n = \underbrace{\mathbf{P} \cdot \mathbf{P} \cdots \mathbf{P}}_{n \text{ veces}}. \\]
+
+\\[
+\mathbf{P}^{(n)} = \mathbf{P}^n = \underbrace{\mathbf{P} \cdot \mathbf{P} \cdots \mathbf{P}}_{n \text{ veces}}.
+\\]
 
 *Demostración.*  
 Aplicando la Ley de la Probabilidad Total condicionando sobre el estado intermedio \\(X_n = k\\) y la propiedad de Márkov:
@@ -43,10 +64,14 @@ p_{ij}^{(n+m)} &= \mathbb{P}(X_{n+m} = j \mid X_0 = i) = \sum_{k \in S} \mathbb{
 &= \sum_{k \in S} p_{ik}^{(n)} p_{kj}^{(m)}.
 \end{aligned}
 \\]
+
 Esto coincide exactamente con la regla del producto de matrices para \\(\mathbf{P}^{n+m} = \mathbf{P}^n \mathbf{P}^m\\). \\(\blacksquare\\)
 
 Si el vector de probabilidades iniciales es \\(\boldsymbol{\pi}^{(0)} = (\mathbb{P}(X_0=1), \dots, \mathbb{P}(X_0=N))\\), la distribución de probabilidad marginal en el paso \\(n\\) es:
-\\[ \boldsymbol{\pi}^{(n)} = \boldsymbol{\pi}^{(0)} \mathbf{P}^n. \\]
+
+\\[
+\boldsymbol{\pi}^{(n)} = \boldsymbol{\pi}^{(0)} \mathbf{P}^n.
+\\]
 
 ---
 
@@ -68,7 +93,11 @@ Si el vector de probabilidades iniciales es \\(\boldsymbol{\pi}^{(0)} = (\mathbb
 ## 6.1.4 Distribución estacionaria y convergencia al equilibrio
 
 **Definición 6.5 (Distribución estacionaria o invariante).** Un vector de probabilidad por filas \\(\boldsymbol{\pi} = (\pi_1, \dots, \pi_N)\\) es una **distribución estacionaria** para la cadena de Markov con matriz \\(\mathbf{P}\\) si satisface:
-\\[ \boldsymbol{\pi} \mathbf{P} = \boldsymbol{\pi}, \qquad \text{con } \pi_i \ge 0 \quad \text{y} \quad \sum_{i=1}^N \pi_i = 1. \\]
+
+\\[
+\boldsymbol{\pi} \mathbf{P} = \boldsymbol{\pi}, \qquad \text{con } \pi_i \ge 0 \quad \text{y} \quad \sum_{i=1}^N \pi_i = 1.
+\\]
+
 (Es decir, \\(\boldsymbol{\pi}\\) es un vector propio por la izquierda asociado al valor propio \\(\lambda = 1\\)).
 
 **Teorema 6.6 (Teorema Ergódico Fundamental de Markov).** *Si una cadena de Markov con espacio de estados finito es **irreducible y aperiódica**, entonces:*
@@ -78,6 +107,7 @@ Si el vector de probabilidades iniciales es \\(\boldsymbol{\pi}^{(0)} = (\mathbb
    \\[
    \lim_{n \to \infty} \mathbf{P}^n = \begin{pmatrix} \boldsymbol{\pi} \\\\ \boldsymbol{\pi} \\\\ \vdots \\\\ \boldsymbol{\pi} \end{pmatrix}, \qquad \lim_{n \to \infty} \boldsymbol{\pi}^{(n)} = \boldsymbol{\pi}.
    \\]
+
 3. *El tiempo medio de recurrencia al estado \\(i\\) es \\(\mu_{ii} = \frac{1}{\pi_i}\\).*
 
 ---
@@ -101,5 +131,9 @@ Para encontrar la distribución estacionaria \\(\boldsymbol{\pi} = (\pi_1, \pi_2
 \\]
 
 Sustituyendo en \\(\pi_1 + \pi_2 = 1\\):
-\\[ 2\pi_2 + \pi_2 = 1 \implies \pi_2 = \frac{1}{3}, \quad \pi_1 = \frac{2}{3}. \\]
+
+\\[
+2\pi_2 + \pi_2 = 1 \implies \pi_2 = \frac{1}{3}, \quad \pi_1 = \frac{2}{3}.
+\\]
+
 A largo plazo, el 66.67% de los días serán soleados y el 33.33% serán lluviosos, independientemente del clima en el día inicial.

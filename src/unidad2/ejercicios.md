@@ -18,7 +18,10 @@
 
 3. **Independencia y complementos generalizados:** Sean \\(A_1, A_2, \dots, A_n\\) eventos mutuamente independientes con \\(\mathbb{P}(A_i) = p_i\\).
    - Demuestre que la probabilidad de que ocurra al menos uno de ellos es:
-     \\[ \mathbb{P}\left(\bigcup_{i=1}^n A_i\right) = 1 - \prod_{i=1}^n (1 - p_i). \\]
+
+     \\[
+     \mathbb{P}\left(\bigcup_{i=1}^n A_i\right) = 1 - \prod_{i=1}^n (1 - p_i).
+     \\]
 
 4. **Construcción de independencia condicional:**
    - Proporcione un ejemplo con un espacio muestral finito de tres eventos \\(A, B, C\\) tales que \\(A\\) y \\(B\\) sean condicionalmente independientes dado \\(C\\), pero sean marginalmente dependientes (es decir, \\(A \not\perp B\\)).

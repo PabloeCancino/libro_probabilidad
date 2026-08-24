@@ -23,13 +23,23 @@
 
 5. **Demostración analítica de la diferencia simétrica:**
    - Demuestre rigurosamente a partir de los axiomas de Kolmogórov que para cualesquiera \\(A, B \in \mathcal{F}\\):
-     \\[ \mathbb{P}(A \mathbin{\Delta} B) = \mathbb{P}(A) + \mathbb{P}(B) - 2\mathbb{P}(A \cap B). \\]
+
+     \\[
+     \mathbb{P}(A \mathbin{\Delta} B) = \mathbb{P}(A) + \mathbb{P}(B) - 2\mathbb{P}(A \cap B).
+     \\]
 
 6. **Desigualdades de Bonferroni:**
    - Demuestre que para cualquier par de eventos \\(A, B \in \mathcal{F}\\):
-     \\[ \mathbb{P}(A \cap B) \ge \mathbb{P}(A) + \mathbb{P}(B) - 1. \\]
+
+     \\[
+     \mathbb{P}(A \cap B) \ge \mathbb{P}(A) + \mathbb{P}(B) - 1.
+     \\]
+
    - Generalice por inducción matemática para demostrar que para \\(n\\) eventos \\(A_1, \dots, A_n\\):
-     \\[ \mathbb{P}\left(\bigcap_{i=1}^n A_i\right) \ge \sum_{i=1}^n \mathbb{P}(A_i) - (n - 1). \\]
+
+     \\[
+     \mathbb{P}\left(\bigcap_{i=1}^n A_i\right) \ge \sum_{i=1}^n \mathbb{P}(A_i) - (n - 1).
+     \\]
 
 7. **Continuidad de la medida:** Sea \\((\Omega, \mathcal{F}, \mathbb{P})\\) un espacio de probabilidad y sea \\((A_n)_{n=1}^\infty\\) una sucesión de eventos tales que \\(\mathbb{P}(A_n) = 1\\) para todo \\(n \ge 1\\).
    - Demuestre que \\(\mathbb{P}\left(\bigcap_{n=1}^\infty A_n\right) = 1\\).

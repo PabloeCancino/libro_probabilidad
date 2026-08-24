@@ -34,7 +34,10 @@ Sean \\(A, B \subseteq \Omega\\) dos eventos:
 - **Inclusión (implicación):** \\(A \subseteq B\\). La ocurrencia de \\(A\\) garantiza necesariamente la ocurrencia de \\(B\\).
 
 **Leyes de De Morgan:** Para cualquier familia arbitraria (finita, numerable o no numerable) de eventos \\((A_i)_{i \in I}\\):
-\\[ \left(\bigcup_{i \in I} A_i\right)^c = \bigcap_{i \in I} A_i^c, \qquad \left(\bigcap_{i \in I} A_i\right)^c = \bigcup_{i \in I} A_i^c. \\]
+
+\\[
+\left(\bigcup_{i \in I} A_i\right)^c = \bigcap_{i \in I} A_i^c, \qquad \left(\bigcap_{i \in I} A_i\right)^c = \bigcup_{i \in I} A_i^c.
+\\]
 
 ---
 
@@ -51,7 +54,10 @@ En espacios finitos podemos considerar que *cualquier* subconjunto de \\(\Omega\
 1. \\(\Omega \in \mathcal{F}\\).
 2. Si \\(A \in \mathcal{F}\\), entonces \\(A^c \in \mathcal{F}\\) (cerradura bajo complementos).
 3. Si \\((A_n)_{n=1}^{\infty} \subseteq \mathcal{F}\\) es una sucesión numerable de conjuntos en \\(\mathcal{F}\\), entonces:
-   \\[ \bigcup_{n=1}^{\infty} A_n \in \mathcal{F} \quad \text{(cerradura bajo uniones numerables)}. \\]
+
+   \\[
+   \bigcup_{n=1}^{\infty} A_n \in \mathcal{F} \quad \text{(cerradura bajo uniones numerables)}.
+   \\]
 
 El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y los elementos de \\(\mathcal{F}\\) se denominan **conjuntos medibles** o **eventos**.
 
@@ -65,7 +71,11 @@ El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y lo
 1. Por el axioma 1, \\(\Omega \in \mathcal{F}\\). Por el axioma 2, \\(\Omega^c = \emptyset \in \mathcal{F}\\).
 2. Tomando la sucesión \\(A_1, A_2, \dots, A_k, \emptyset, \emptyset, \dots\\), su unión infinita coincide con \\(\bigcup_{i=1}^k A_i\\), que pertenece a \\(\mathcal{F}\\) por el axioma 3.
 3. Por las leyes de De Morgan:
-   \\[ \bigcap_{n=1}^{\infty} A_n = \left(\bigcup_{n=1}^{\infty} A_n^c\right)^c. \\]
+
+   \\[
+   \bigcap_{n=1}^{\infty} A_n = \left(\bigcup_{n=1}^{\infty} A_n^c\right)^c.
+   \\]
+
    Como cada \\(A_n \in \mathcal{F}\\), su complemento \\(A_n^c \in \mathcal{F}\\). Por cerradura bajo uniones numerables, \\(\bigcup_{n=1}^{\infty} A_n^c \in \mathcal{F}\\), y su complemento final pertenece a \\(\mathcal{F}\\).
 4. Como \\(A \setminus B = A \cap B^c\\), al ser \\(B^c \in \mathcal{F}\\), la intersección finita pertenece a \\(\mathcal{F}\\). Análogamente, \\(A \mathbin{\Delta} B = (A \setminus B) \cup (B \setminus A) \in \mathcal{F}\\). \\(\blacksquare\\)
 
@@ -86,18 +96,29 @@ El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y lo
 1. Como \\(\Omega \in \mathcal{F}_i\\) para todo \\(i \in I\\), se tiene \\(\Omega \in \mathcal{F}\\).
 2. Si \\(A \in \mathcal{F}\\), entonces \\(A \in \mathcal{F}_i\\) para todo \\(i\\). Como cada \\(\mathcal{F}_i\\) es σ-álgebra, \\(A^c \in \mathcal{F}_i\\) para todo \\(i\\), luego \\(A^c \in \mathcal{F}\\).
 3. Si \\((A_n)_{n=1}^{\infty} \subseteq \mathcal{F}\\), entonces \\(A_n \in \mathcal{F}_i\\) para todo \\(n \ge 1\\) y para todo \\(i \in I\\). Por la cerradura de cada \\(\mathcal{F}_i\\) bajo uniones numerables:
-   \\[ \bigcup_{n=1}^{\infty} A_n \in \mathcal{F}_i, \quad \forall i \in I. \\]
+
+   \\[
+   \bigcup_{n=1}^{\infty} A_n \in \mathcal{F}_i, \quad \forall i \in I.
+   \\]
+
    Por consiguiente, \\(\bigcup_{n=1}^{\infty} A_n \in \bigcap_{i \in I} \mathcal{F}_i = \mathcal{F}\\). \\(\blacksquare\\)
 
 **Definición 1.16 (σ-álgebra generada).** Sea \\(\mathcal{C} \subseteq \mathcal{P}(\Omega)\\) una clase arbitraria de subconjuntos de \\(\Omega\\). La **σ-álgebra generada por \\(\mathcal{C}\\)**, denotada por \\(\sigma(\mathcal{C})\\), es la menor σ-álgebra sobre \\(\Omega\\) que contiene a \\(\mathcal{C}\\):
-\\[ \sigma(\mathcal{C}) = \bigcap \{\mathcal{G} \subseteq \mathcal{P}(\Omega) : \mathcal{G} \text{ es una } \sigma\text{-álgebra y } \mathcal{C} \subseteq \mathcal{G}\}. \\]
+
+\\[
+\sigma(\mathcal{C}) = \bigcap \{\mathcal{G} \subseteq \mathcal{P}(\Omega) : \mathcal{G} \text{ es una } \sigma\text{-álgebra y } \mathcal{C} \subseteq \mathcal{G}\}.
+\\]
 
 ### La σ-álgebra de Borel sobre la recta real y espacios euclidianos
 
 Cuando el espacio muestral es la recta real \\(\mathbb{R}\\), la topología usual (generada por los intervalos abiertos) nos proporciona la estructura natural.
 
 **Definición 1.17 (σ-álgebra de Borel en ℝ).** La **σ-álgebra de Borel** sobre \\(\mathbb{R}\\), denotada por \\(\mathcal{B}(\mathbb{R})\\) o simplemente \\(\mathcal{B}\\), es la σ-álgebra generada por la clase de todos los conjuntos abiertos de \\(\mathbb{R}\\):
-\\[ \mathcal{B}(\mathbb{R}) = \sigma(\{\text{abiertos de } \mathbb{R}\}). \\]
+
+\\[
+\mathcal{B}(\mathbb{R}) = \sigma(\{\text{abiertos de } \mathbb{R}\}).
+\\]
+
 A los elementos de \\(\mathcal{B}(\mathbb{R})\\) se les llama **conjuntos borelianos**.
 
 **Proposición 1.18.** *La \\(\sigma\\)-álgebra de Borel \\(\mathcal{B}(\mathbb{R})\\) puede ser generada equivalentemente por cualquiera de las siguientes familias de intervalos:*
@@ -108,12 +129,24 @@ A los elementos de \\(\mathcal{B}(\mathbb{R})\\) se les llama **conjuntos boreli
 
 *Demostración (caso \\(\mathcal{C}_3\\)).*
 - Todo rayo abierto \\((-\infty, x)\\) se escribe como la unión numerable de rayos cerrados:
-  \\[ (-\infty, x) = \bigcup_{n=1}^{\infty} \left(-\infty, x - \frac{1}{n}\right]. \\]
+
+  \\[
+  (-\infty, x) = \bigcup_{n=1}^{\infty} \left(-\infty, x - \frac{1}{n}\right].
+  \\]
+
   Por tanto, \\(\sigma(\mathcal{C}_4) \subseteq \sigma(\mathcal{C}_3)\\).
 - Cualquier intervalo semiabierto \\((a, b]\\) se expresa como diferencia de rayos:
-  \\[ (a, b] = (-\infty, b] \setminus (-\infty, a] \in \sigma(\mathcal{C}_3). \\]
+
+  \\[
+  (a, b] = (-\infty, b] \setminus (-\infty, a] \in \sigma(\mathcal{C}_3).
+  \\]
+
 - Cualquier intervalo abierto \\((a, b)\\) se obtiene como unión numerable:
-  \\[ (a, b) = \bigcup_{n=1}^{\infty} \left(a, b - \frac{1}{n}\right] \in \sigma(\mathcal{C}_3). \\]
+
+  \\[
+  (a, b) = \bigcup_{n=1}^{\infty} \left(a, b - \frac{1}{n}\right] \in \sigma(\mathcal{C}_3).
+  \\]
+
 - Como todo conjunto abierto en \\(\mathbb{R}\\) es la unión numerable disjunta de intervalos abiertos racionales, todo abierto pertenece a \\(\sigma(\mathcal{C}_3)\\). En consecuencia, \\(\mathcal{B}(\mathbb{R}) = \sigma(\mathcal{C}_3)\\). \\(\blacksquare\\)
 
 Esta propiedad es crucial en probabilidad: garantiza que para definir rigurosamente una variable aleatoria o una función de distribución acumulada \\(F(x) = \mathbb{P}(X \le x) = \mathbb{P}(X \in (-\infty, x])\\), basta con especificar las probabilidades sobre los rayos \\((-\infty, x]\\).

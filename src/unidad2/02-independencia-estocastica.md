@@ -7,13 +7,20 @@ Intuitivamente, dos eventos \\(A\\) y \\(B\\) son independientes si la ocurrenci
 Sin embargo, para evitar requerir que \\(\mathbb{P}(B) > 0\\) y para que la definición sea perfectamente simétrica respecto a ambos eventos, se formula mediante el producto de sus probabilidades.
 
 **Definición 2.5 (Independencia de dos eventos).** Dos eventos \\(A, B \in \mathcal{F}\\) son **estocásticamente independientes** (denotado \\(A \perp B\\)) si y solo si:
-\\[ \mathbb{P}(A \cap B) = \mathbb{P}(A) \cdot \mathbb{P}(B). \\]
+
+\\[
+\mathbb{P}(A \cap B) = \mathbb{P}(A) \cdot \mathbb{P}(B).
+\\]
 
 **Proposición 2.6.** *Si \\(\mathbb{P}(B) > 0\\), entonces \\(A \perp B \iff \mathbb{P}(A \mid B) = \mathbb{P}(A)\\).*
 
 *Demostración.*
 - \\((\implies)\\) Si \\(A \perp B\\), entonces \\(\mathbb{P}(A \cap B) = \mathbb{P}(A)\mathbb{P}(B)\\). Por tanto:
-  \\[ \mathbb{P}(A \mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\mathbb{P}(A)\mathbb{P}(B)}{\mathbb{P}(B)} = \mathbb{P}(A). \\]
+
+  \\[
+  \mathbb{P}(A \mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\mathbb{P}(A)\mathbb{P}(B)}{\mathbb{P}(B)} = \mathbb{P}(A).
+  \\]
+
 - \\((\impliedby)\\) Si \\(\mathbb{P}(A \mid B) = \mathbb{P}(A)\\), multiplicando por \\(\mathbb{P}(B)\\) se obtiene inmediatamente \\(\mathbb{P}(A \cap B) = \mathbb{P}(A)\mathbb{P}(B)\\). \\(\blacksquare\\)
 
 ---
@@ -27,9 +34,17 @@ Sin embargo, para evitar requerir que \\(\mathbb{P}(B) > 0\\) y para que la defi
 
 *Demostración.*
 1. Descomponiendo \\(A = (A \cap B) \cup (A \cap B^c)\\) en dos conjuntos disjuntos:
-   \\[ \mathbb{P}(A) = \mathbb{P}(A \cap B) + \mathbb{P}(A \cap B^c). \\]
+
+   \\[
+   \mathbb{P}(A) = \mathbb{P}(A \cap B) + \mathbb{P}(A \cap B^c).
+   \\]
+
    Dado que \\(A\\) y \\(B\\) son independientes, \\(\mathbb{P}(A \cap B) = \mathbb{P}(A)\mathbb{P}(B)\\). Sustituyendo:
-   \\[ \mathbb{P}(A \cap B^c) = \mathbb{P}(A) - \mathbb{P}(A)\mathbb{P}(B) = \mathbb{P}(A)(1 - \mathbb{P}(B)) = \mathbb{P}(A)\mathbb{P}(B^c). \\]
+
+   \\[
+   \mathbb{P}(A \cap B^c) = \mathbb{P}(A) - \mathbb{P}(A)\mathbb{P}(B) = \mathbb{P}(A)(1 - \mathbb{P}(B)) = \mathbb{P}(A)\mathbb{P}(B^c).
+   \\]
+
    Esto demuestra que \\(A \perp B^c\\).
 2. Se deduce de la parte (1) por la simetría de la independencia.
 3. Aplicando el resultado de la parte (1) a los eventos \\(B^c\\) y \\(A\\): como \\(B^c \perp A\\), se tiene \\(B^c \perp A^c\\), es decir, \\(\mathbb{P}(A^c \cap B^c) = \mathbb{P}(A^c)\mathbb{P}(B^c)\\). \\(\blacksquare\\)
@@ -47,11 +62,18 @@ Sin embargo, para evitar requerir que \\(\mathbb{P}(B) > 0\\) y para que la defi
 Para una colección de más de dos eventos, la independencia por pares (dos a dos) **no es suficiente** para garantizar la independencia conjunta (mutua).
 
 **Definición 2.9 (Independencia mutua o colectiva).** Una familia de \\(n\\) eventos \\(A_1, A_2, \dots, A_n \in \mathcal{F}\\) es **mutuamente independiente** si para todo subconjunto de índices \\(\{i_1, i_2, \dots, i_k\} \subseteq \{1, 2, \dots, n\}\\) con \\(2 \le k \le n\\), se satisface:
-\\[ \mathbb{P}\left(\bigcap_{j=1}^k A_{i_j}\right) = \prod_{j=1}^k \mathbb{P}(A_{i_j}). \\]
+
+\\[
+\mathbb{P}\left(\bigcap_{j=1}^k A_{i_j}\right) = \prod_{j=1}^k \mathbb{P}(A_{i_j}).
+\\]
+
 (Esto requiere verificar un total de \\(2^n - n - 1\\) ecuaciones de producto).
 
 **Definición 2.10 (Independencia dos a dos o por pares).** La familia \\(A_1, \dots, A_n\\) es **independiente dos a dos** si:
-\\[ \mathbb{P}(A_i \cap A_j) = \mathbb{P}(A_i) \mathbb{P}(A_j) \quad \text{para todo } 1 \le i < j \le n. \\]
+
+\\[
+\mathbb{P}(A_i \cap A_j) = \mathbb{P}(A_i) \mathbb{P}(A_j) \quad \text{para todo } 1 \le i < j \le n.
+\\]
 
 ### El contraejemplo clásico de Serguéi Bernstein (1927)
 
@@ -62,25 +84,50 @@ Consideremos un tetraedro regular cuyas cuatro caras están pintadas de la sigui
 - Cara 4: Pintada con franjas de los tres colores Rojo, Verde y Azul (\\(R, V, A\\)).
 
 Se lanza el tetraedro y se observa la cara que apoya en la mesa. Como las cuatro caras son simétricas y equiprobables:
-\\[ \Omega = \{1, 2, 3, 4\}, \quad \mathbb{P}(\{i\}) = \frac{1}{4}, \ \forall i=1,2,3,4. \\]
+
+\\[
+\Omega = \{1, 2, 3, 4\}, \quad \mathbb{P}(\{i\}) = \frac{1}{4}, \ \forall i=1,2,3,4.
+\\]
+
 Definamos los eventos:
 - \\(E_R\\): "La cara resultante contiene el color Rojo" \\(= \{1, 4\}\\).
 - \\(E_V\\): "La cara resultante contiene el color Verde" \\(= \{2, 4\}\\).
 - \\(E_A\\): "La cara resultante contiene el color Azul" \\(= \{3, 4\}\\).
 
 Calculamos sus probabilidades marginales:
-\\[ \mathbb{P}(E_R) = \frac{2}{4} = \frac{1}{2}, \quad \mathbb{P}(E_V) = \frac{2}{4} = \frac{1}{2}, \quad \mathbb{P}(E_A) = \frac{2}{4} = \frac{1}{2}. \\]
+
+\\[
+\mathbb{P}(E_R) = \frac{2}{4} = \frac{1}{2}, \quad \mathbb{P}(E_V) = \frac{2}{4} = \frac{1}{2}, \quad \mathbb{P}(E_A) = \frac{2}{4} = \frac{1}{2}.
+\\]
 
 Analicemos las intersecciones dos a dos:
-\\[ E_R \cap E_V = \{4\} \implies \mathbb{P}(E_R \cap E_V) = \frac{1}{4} = \frac{1}{2} \times \frac{1}{2} = \mathbb{P}(E_R)\mathbb{P}(E_V). \\]
-\\[ E_R \cap E_A = \{4\} \implies \mathbb{P}(E_R \cap E_A) = \frac{1}{4} = \mathbb{P}(E_R)\mathbb{P}(E_A). \\]
-\\[ E_V \cap E_A = \{4\} \implies \mathbb{P}(E_V \cap E_A) = \frac{1}{4} = \mathbb{P}(E_V)\mathbb{P}(E_A). \\]
+
+\\[
+E_R \cap E_V = \{4\} \implies \mathbb{P}(E_R \cap E_V) = \frac{1}{4} = \frac{1}{2} \times \frac{1}{2} = \mathbb{P}(E_R)\mathbb{P}(E_V).
+\\]
+
+\\[
+E_R \cap E_A = \{4\} \implies \mathbb{P}(E_R \cap E_A) = \frac{1}{4} = \mathbb{P}(E_R)\mathbb{P}(E_A).
+\\]
+
+\\[
+E_V \cap E_A = \{4\} \implies \mathbb{P}(E_V \cap E_A) = \frac{1}{4} = \mathbb{P}(E_V)\mathbb{P}(E_A).
+\\]
+
 Por consiguiente, los eventos \\(E_R, E_V, E_A\\) son **independientes dos a dos**.
 
 Ahora evaluemos la intersección triple simultánea:
-\\[ E_R \cap E_V \cap E_A = \{4\} \implies \mathbb{P}(E_R \cap E_V \cap E_A) = \frac{1}{4}. \\]
+
+\\[
+E_R \cap E_V \cap E_A = \{4\} \implies \mathbb{P}(E_R \cap E_V \cap E_A) = \frac{1}{4}.
+\\]
+
 Sin embargo, el producto de las tres probabilidades individuales es:
-\\[ \mathbb{P}(E_R)\mathbb{P}(E_V)\mathbb{P}(E_A) = \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}. \\]
+
+\\[
+\mathbb{P}(E_R)\mathbb{P}(E_V)\mathbb{P}(E_A) = \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}.
+\\]
+
 Como \\(\frac{1}{4} \neq \frac{1}{8}\\), los tres eventos **no son mutuamente independientes**.
 
 De hecho, si sabemos que ocurrieron \\(E_R\\) y \\(E_V\\), estamos con certeza en la cara 4, por lo que \\(\mathbb{P}(E_A \mid E_R \cap E_V) = 1 \neq \mathbb{P}(E_A) = 1/2\\).

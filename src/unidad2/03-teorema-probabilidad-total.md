@@ -16,24 +16,50 @@ El ejemplo más elemental de partición para cualquier evento \\(B\\) con \\(0 <
 ## 2.3.2 El Teorema de la Probabilidad Total
 
 **Teorema 2.13 (Ley de la Probabilidad Total).** *Sea \\(\{B_1, B_2, \dots, B_k\}\\) una partición finita del espacio muestral \\(\Omega\\) tal que \\(\mathbb{P}(B_i) > 0\\) para todo \\(i = 1, \dots, k\\). Para cualquier evento \\(A \in \mathcal{F}\\), se tiene:*
-\\[ \mathbb{P}(A) = \sum_{i=1}^k \mathbb{P}(A \cap B_i) = \sum_{i=1}^k \mathbb{P}(B_i) \mathbb{P}(A \mid B_i). \\]
+
+\\[
+\mathbb{P}(A) = \sum_{i=1}^k \mathbb{P}(A \cap B_i) = \sum_{i=1}^k \mathbb{P}(B_i) \mathbb{P}(A \mid B_i).
+\\]
 
 *Demostración.*
 Como \\(\bigcup_{i=1}^k B_i = \Omega\\), podemos expresar el evento \\(A\\) mediante la intersección con el espacio universal:
-\\[ A = A \cap \Omega = A \cap \left(\bigcup_{i=1}^k B_i\right). \\]
+
+\\[
+A = A \cap \Omega = A \cap \left(\bigcup_{i=1}^k B_i\right).
+\\]
+
 Por la propiedad distributiva de la teoría de conjuntos:
-\\[ A = \bigcup_{i=1}^k (A \cap B_i). \\]
+
+\\[
+A = \bigcup_{i=1}^k (A \cap B_i).
+\\]
+
 Dado que los conjuntos \\(B_i\\) son disjuntos dos a dos, los eventos \\(A \cap B_i\\) también son disjuntos dos a dos:
-\\[ (A \cap B_i) \cap (A \cap B_j) = A \cap (B_i \cap B_j) = A \cap \emptyset = \emptyset \quad \forall i \neq j. \\]
+
+\\[
+(A \cap B_i) \cap (A \cap B_j) = A \cap (B_i \cap B_j) = A \cap \emptyset = \emptyset \quad \forall i \neq j.
+\\]
+
 Aplicando el axioma de aditividad finita (Corolario 1.21):
-\\[ \mathbb{P}(A) = \sum_{i=1}^k \mathbb{P}(A \cap B_i). \\]
+
+\\[
+\mathbb{P}(A) = \sum_{i=1}^k \mathbb{P}(A \cap B_i).
+\\]
+
 Aplicando la definición de probabilidad condicional \\(\mathbb{P}(A \cap B_i) = \mathbb{P}(B_i)\mathbb{P}(A \mid B_i)\\) a cada término:
-\\[ \mathbb{P}(A) = \sum_{i=1}^k \mathbb{P}(B_i) \mathbb{P}(A \mid B_i). \quad \blacksquare \\]
+
+\\[
+\mathbb{P}(A) = \sum_{i=1}^k \mathbb{P}(B_i) \mathbb{P}(A \mid B_i). \quad \blacksquare
+\\]
 
 ### Versión para particiones numerables infinitas
 
 **Corolario 2.14.** *Si \\(\{B_n\}_{n=1}^\infty\\) es una partición numerable de \\(\Omega\\), entonces para todo \\(A \in \mathcal{F}\\):*
-\\[ \mathbb{P}(A) = \sum_{n=1}^\infty \mathbb{P}(B_n) \mathbb{P}(A \mid B_n). \\]
+
+\\[
+\mathbb{P}(A) = \sum_{n=1}^\infty \mathbb{P}(B_n) \mathbb{P}(A \mid B_n).
+\\]
+
 *Demostración.* Sigue idéntico razonamiento aplicando directamente el Axioma 3 ($\sigma$-aditividad). \\(\blacksquare\\)
 
 ---
@@ -63,7 +89,15 @@ Por el Teorema de la Probabilidad Total:
 **Ejemplo 2.16 (La ruina del jugador en un paso).**  
 En un juego de azar, un participante gana \$1 con probabilidad \\(p\\) y pierde \$1 con probabilidad \\(q = 1 - p\\). Sea \\(u_k\\) la probabilidad de que el jugador eventualmente alcance una fortuna de \$N antes de arruinarse (llegar a \$0), partiendo de un capital inicial de \$k\\) (con \\(0 \le k \le N\\)).  
 Condicionando sobre el resultado del primer juego (partición \\(\{G, P\}\\) donde \\(G\\) es ganar y \\(P\\) es perder):
-\\[ u_k = \mathbb{P}(\text{Victoria} \mid G) \mathbb{P}(G) + \mathbb{P}(\text{Victoria} \mid P) \mathbb{P}(P) = p \cdot u_{k+1} + q \cdot u_{k-1}. \\]
+
+\\[
+u_k = \mathbb{P}(\text{Victoria} \mid G) \mathbb{P}(G) + \mathbb{P}(\text{Victoria} \mid P) \mathbb{P}(P) = p \cdot u_{k+1} + q \cdot u_{k-1}.
+\\]
+
 Esta es la clásica ecuación en diferencias de segundo orden homogénea:
-\\[ p u_{k+1} - u_k + q u_{k-1} = 0, \quad \text{con condiciones de frontera } u_0 = 0, \ u_N = 1, \\]
+
+\\[
+p u_{k+1} - u_k + q u_{k-1} = 0, \quad \text{con condiciones de frontera } u_0 = 0, \ u_N = 1,
+\\]
+
 cuya deducción descansa enteramente en el Teorema de la Probabilidad Total.

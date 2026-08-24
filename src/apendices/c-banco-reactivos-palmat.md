@@ -16,9 +16,16 @@ Sean \\(A\\) y \\(B\\) dos eventos en un espacio de probabilidad \\((\Omega, \ma
 
 ### Solución analítica y justificación formal
 Por definición, dos eventos son **mutuamente excluyentes** si su intersección es el evento imposible:
-\\[ A \cap B = \emptyset \implies \mathbb{P}(A \cap B) = \mathbb{P}(\emptyset) = 0. \\]
+
+\\[
+A \cap B = \emptyset \implies \mathbb{P}(A \cap B) = \mathbb{P}(\emptyset) = 0.
+\\]
+
 Aplicando la regla general de adición de Kolmogórov (Teorema 1.25):
-\\[ \mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A \cap B) = 0.3 + 0.4 - 0 = 0.70. \\]
+
+\\[
+\mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A \cap B) = 0.3 + 0.4 - 0 = 0.70.
+\\]
 
 ### Análisis pedagógico de distractores
 - **Distractor B (\\(0.12\\)):** Es el producto \\(\mathbb{P}(A)\mathbb{P}(B) = 0.3 \times 0.4 = 0.12\\). Este cálculo corresponde a la probabilidad de la *intersección* \\(\mathbb{P}(A \cap B)\\) bajo la hipótesis de *independencia*, no a la unión de eventos excluyentes.
@@ -41,9 +48,16 @@ En un grupo estudiantil, el 60% tiene competencia en inglés (\\(I\\)), el 40% e
 
 ### Solución analítica y justificación formal
 Identificamos los datos proporcionados:
-\\[ \mathbb{P}(I) = 0.60, \qquad \mathbb{P}(F) = 0.40, \qquad \mathbb{P}(I \cap F) = 0.20. \\]
+
+\\[
+\mathbb{P}(I) = 0.60, \qquad \mathbb{P}(F) = 0.40, \qquad \mathbb{P}(I \cap F) = 0.20.
+\\]
+
 Por la definición formal de probabilidad condicional (Definición 2.1) sobre el espacio muestral reducido \\(I\\):
-\\[ \mathbb{P}(F \mid I) = \frac{\mathbb{P}(F \cap I)}{\mathbb{P}(I)} = \frac{0.20}{0.60} = \frac{2}{6} = \frac{1}{3} \approx 0.3333 \quad (33.33\%). \\]
+
+\\[
+\mathbb{P}(F \mid I) = \frac{\mathbb{P}(F \cap I)}{\mathbb{P}(I)} = \frac{0.20}{0.60} = \frac{2}{6} = \frac{1}{3} \approx 0.3333 \quad (33.33\%).
+\\]
 
 ### Análisis pedagógico de distractores
 - **Distractor B (\\(0.40\\)):** Corresponde a la probabilidad marginal \\(\mathbb{P}(F)\\), ignorando el condicionamiento sobre el subgrupo que habla inglés.
@@ -67,7 +81,10 @@ Sea \\(X \sim \text{Binomial}(n = 10, p = 0.3)\\). ¿Cuál es el valor esperado 
 ### Solución analítica y justificación formal
 Toda variable binomial \\(X \sim \text{Binomial}(n, p)\\) se descompone como la suma de \\(n\\) variables indicadoras independientes \\(Y_1, \dots, Y_n \stackrel{\text{i.i.d.}}{\sim} \text{Bernoulli}(p)\\), donde \\(\mathbb{E}[Y_i] = 1 \cdot p + 0 \cdot (1-p) = p\\).  
 Por la linealidad del operador esperanza (Teorema 4.3):
-\\[ \mathbb{E}[X] = \mathbb{E}\left[\sum_{i=1}^{10} Y_i\right] = \sum_{i=1}^{10} \mathbb{E}[Y_i] = 10 \cdot p = 10 \times 0.3 = 3.0. \\]
+
+\\[
+\mathbb{E}[X] = \mathbb{E}\left[\sum_{i=1}^{10} Y_i\right] = \sum_{i=1}^{10} \mathbb{E}[Y_i] = 10 \cdot p = 10 \times 0.3 = 3.0.
+\\]
 
 ### Análisis pedagógico de distractores
 - **Distractor B (\\(0.3\\)):** Es únicamente el parámetro de probabilidad individual \\(p\\).
@@ -92,7 +109,10 @@ Sea \\(X \sim \text{Exp}(\lambda)\\) una variable aleatoria continua con media \
 Dado que \\(\mathbb{E}[X] = 1/\lambda = 2\\), el parámetro de tasa es \\(\lambda = 1/2 = 0.5\\).  
 La función de densidad es \\(f_X(x) = \frac{1}{2} e^{-x/2}\\) para \\(x \ge 0\\).  
 La probabilidad de la cola de supervivencia es:
-\\[ \mathbb{P}(X > 3) = \int_3^\infty \frac{1}{2} e^{-x/2} \, dx = \left[-e^{-x/2}\right]_3^\infty = 0 - (-e^{-3/2}) = e^{-3/2} = e^{-1.5} \approx 0.22313. \\]
+
+\\[
+\mathbb{P}(X > 3) = \int_3^\infty \frac{1}{2} e^{-x/2} \, dx = \left[-e^{-x/2}\right]_3^\infty = 0 - (-e^{-3/2}) = e^{-3/2} = e^{-1.5} \approx 0.22313.
+\\]
 
 ### Análisis pedagógico de distractores
 - **Distractor B (\\(1 - e^{-3/2}\\)):** Es la probabilidad acumulada \\(\mathbb{P}(X \le 3) = F_X(3)\\).

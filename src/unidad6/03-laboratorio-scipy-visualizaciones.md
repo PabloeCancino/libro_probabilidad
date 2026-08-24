@@ -55,7 +55,10 @@ Para evaluar si una muestra empírica \\(\{x_1, \dots, x_n\}\\) proviene de una 
 1. **Histograma de densidad vs. PDF teórica superpuesta.**
 2. **Gráfico Q-Q (Quantile-Quantile Plot):** Grafica los cuantiles empíricos muestrales frente a los cuantiles teóricos. Si los puntos se alinean perfectamente sobre la diagonal de 45 grados, los datos provienen de la distribución postulada.
 3. **Prueba de Kolmogorov-Smirnov:** Contrasta la distancia suprema entre la CDF empírica \\(F_n(x)\\) y la teórica \\(F(x)\\):
-   \\[ D_n = \sup_{x \in \mathbb{R}} |F_n(x) - F(x)|. \\]
+
+   \\[
+   D_n = \sup_{x \in \mathbb{R}} |F_n(x) - F(x)|.
+   \\]
 
 ```python
 def diagnostico_distribucional(datos, dist_nombre='norm'):

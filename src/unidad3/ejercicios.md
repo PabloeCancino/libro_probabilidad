@@ -7,6 +7,7 @@
    \\[
    f_X(x) = \begin{cases} c(1 - x^2), & -1 \le x \le 1, \\\\ 0, & \text{en otro caso.} \end{cases}
    \\]
+
    - (a) Determine el valor exacto de la constante \\(c\\) para que \\(f_X\\) sea una PDF legítima.
    - (b) Obtenga la función de distribución acumulada \\(F_X(x)\\) para todo \\(x \in \mathbb{R}\\).
    - (c) Calcule \\(\mathbb{P}(-0.5 \le X \le 0.5)\\) y la mediana de \\(X\\).
@@ -16,6 +17,7 @@
    \\[
    F(x) = \begin{cases} 0, & x < 0, \\\\ \frac{1}{2} x, & 0 \le x < 1, \\\\ 1 - \frac{1}{4} e^{-(x-1)}, & x \ge 1. \end{cases}
    \\]
+
    - (a) Demuestre que \\(F\\) cumple las 4 propiedades de una CDF.
    - (b) Calcule \\(\mathbb{P}(X = 1)\\), \\(\mathbb{P}(0.5 < X \le 2)\\) y determine si \\(X\\) es continua, discreta o mixta.
 
@@ -28,6 +30,7 @@
    \\[
    f_{X,Y}(x, y) = \begin{cases} 8xy, & 0 \le y \le x \le 1, \\\\ 0, & \text{en otro caso.} \end{cases}
    \\]
+
    - (a) Calcule las densidades marginales \\(f_X(x)\\) y \\(f_Y(y)\\).
    - (b) ¿Son \\(X\\) e \\(Y\\) variables aleatorias independientes? Justifique analíticamente.
    - (c) Obtenga la densidad condicional \\(f_{Y \mid X}(y \mid x)\\) y calcule \\(\mathbb{P}(Y \le 0.5 \mid X = 0.8)\\).
