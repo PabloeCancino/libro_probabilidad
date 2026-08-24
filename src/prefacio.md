@@ -1,0 +1,28 @@
+# Prefacio
+
+La teoría de la probabilidad es el pilar matemático fundamental para el estudio formal y riguroso de la incertidumbre, la aleatoriedad y los fenómenos estocásticos. En sus orígenes históricos ligada al análisis de los juegos de azar por Fermat, Pascal y Huygens, la probabilidad experimentó una revolución conceptual y formal en el siglo XX, cuando Andréi Nikoláyevich Kolmogórov en 1933 fundamentó la disciplina sobre la sólida teoría de la medida y la integración de Lebesgue.
+
+Hoy en día, la probabilidad no solo es un campo vibrante y autónomo de las matemáticas puras, sino que constituye el lenguaje indispensable de la física estadística, la inferencia actuarial, la econometría, la biología cuantitativa, la teoría de la información y los algoritmos modernos de inteligencia artificial y ciencia de datos.
+
+Este libro surge de la experiencia docente e investigación en el curso-laboratorio de *Probabilidad* (clave `CBIMAT-234`) del Programa Académico de Licenciatura en Matemáticas (PALMAT) de la Universidad Autónoma de Nayarit. Su diseño obedece al compromiso de ofrecer un texto integral en español que combine el máximo rigor axiomático y deductivo propio de la formación matemática con la intuición geométrica, la resolución de problemas aplicados y la verificación computacional activa.
+
+## Organización del libro
+
+El libro se estructura rigurosamente en concordancia con el programa oficial del PALMAT 2024:
+
+1. **Unidad 1. Espacios de probabilidad y combinatoria.** Se introducen los fundamentos del pensamiento probabilístico, técnicas combinatorias avanzadas, la formalización de espacios muestrales, $\sigma$-álgebras de Borel, la axiomática de Kolmogórov con deducciones completas de todas las propiedades de la medida, el principio de inclusión-exclusión y la probabilidad geométrica (incluyendo la resolución de la paradoja de Bertrand y la aguja de Buffon).
+2. **Unidad 2. Probabilidad condicional, independencia y Teorema de Bayes.** Se formaliza la probabilidad condicional sobre espacios reducidos, la independencia estocástica (distinguiendo independencia mutua de independencia 2 a 2 mediante contraejemplos analíticos), particiones del espacio muestral, el Teorema de la Probabilidad Total y el Teorema de Bayes, con aplicaciones críticas a pruebas diagnósticas, tablas de confusión y el análisis exhaustivo de falacias bayesianas clásicas.
+3. **Unidad 3. Variables aleatorias y familias de distribuciones.** Se define formalmente la variable aleatoria como función medible, funciones de masa (PMF), densidad (PDF) y distribución acumulada (CDF) con sus cuatro propiedades cardinales. Se estudian vectores bivariados, distribuciones conjuntas, marginales, condicionales y transformaciones mediante el jacobiano. Se presenta un catálogo exhaustivo con deducción completa de parámetros, media y varianza para las familias discretas y continuas estándar (Bernoulli, Binomial, Poisson, Geométrica, Pascal, Hipergeométrica, Multinomial; Uniforme, Normal, Exponencial, Gamma, Beta, Log-Normal, Pareto, Weibull, Laplace, Cauchy, $t$-Student, Fisher y Chi-cuadrada).
+4. **Unidad 4. Esperanza matemática, momentos y operadores lineales.** Se formaliza la integral de Lebesgue/Riemann para el valor esperado, el Teorema del Estadístico Inconsciente (LOTUS), la linealidad del operador esperanza, momentos ordinarios y centrales, varianza, covarianza, coeficiente de correlación de Pearson (con cota demostrada por Cauchy-Schwarz), esperanza condicional como variable aleatoria y proyector ortogonal, la Ley de la Varianza Total, funciones generadoras de momentos (MGF), de probabilidad (PGF) y funciones características.
+5. **Unidad 5. Teoremas límite y leyes asintóticas.** Se deducen las desigualdades fundamentales de Márkov, Chebyshev, Jensen y Chernoff. Se caracterizan con rigor los cuatro modos de convergencia estocástica (casi segura, en probabilidad, en media de orden $p$ y en distribución). Se enuncian y demuestran la Ley Débil de los Grandes Números (Khinchin/Chebyshev), la Ley Fuerte de Kolmogórov y el Teorema del Límite Central de Lindeberg-Lévy mediante expansiones de funciones generadoras.
+6. **Unidad 6 (Complementaria y Laboratorio). Procesos estocásticos y simulación computacional.** Se introduce la teoría básica de cadenas de Markov a tiempo discreto, matrices de transición y distribución estacionaria; algoritmos de generación estocástica (transformada inversa, aceptación-rechazo, Monte Carlo) y un taller integral de implementación en Python con `NumPy`, `SciPy.stats` y `Matplotlib`.
+
+Cierran la obra cuatro apéndices de consulta: elementos de teoría de la medida (Borel-Cantelli, convergencia monótona y dominada), la gran tabla sinóptica de distribuciones, el banco de reactivos institucionales resueltos del PALMAT 2024 y una detallada bibliografía comentada.
+
+## A quién está dirigido
+
+Este texto está destinado a estudiantes de las licenciaturas en Matemáticas, Matemáticas Aplicadas, Física, Ciencias de la Computación, Actuaría y ramas de ingeniería con alta exigencia matemática. Se presupone familiaridad con el cálculo diferencial e integral de una y varias variables, el álgebra lineal básica y nociones elementales de teoría de conjuntos.
+
+## Agradecimientos
+
+Este libro se sustenta en la enriquecedora tradición de los textos canónicos de probabilidad y estadística matemática —Sheldon Ross, Liliana Rincón, George Casella, Roger Berger, William Feller, Morris DeGroot, Dennis Wackerly y Richard Dudley—, así como en las notas, problemarios y proyectos computacionales desarrollados con los estudiantes de la Licenciatura en Matemáticas de la Universidad Autónoma de Nayarit.

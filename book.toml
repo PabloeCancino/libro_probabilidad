@@ -1,0 +1,29 @@
+[book]
+title = "Probabilidad"
+authors = ["Pablo Eduardo Cancino Marentes"]
+description = "Texto y laboratorio de Probabilidad para la Licenciatura en Matemáticas, basado en el programa del Plan de Estudios 2024 (PALMAT CBIMAT-234) de la Universidad Autónoma de Nayarit."
+language = "es"
+src = "src"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+mathjax-support = true
+git-repository-url = "https://github.com/PabloeCancino/libro_probabilidad"
+site-url = "/libro_probabilidad/"
+
+[output.html.search]
+enable = true
+limit-results = 20
+use-boolean-and = true
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.print]
+enable = true
