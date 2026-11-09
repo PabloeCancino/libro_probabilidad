@@ -59,7 +59,7 @@ Publicada por Pafnuti Chebyshev en 1867, acota la probabilidad de que una variab
 
 *Demostración.*  
 Definamos la variable aleatoria no negativa \\(Y = (X - \mu)^2 \ge 0\\).  
-El evento \\(\{|X - \mu| \ge \epsilon\}\\) es idéntico al evento \\(\{(X - \mu)^2 \ge \epsilon^2\}\\).  
+El evento \\(\\{|X - \mu| \ge \epsilon\\}\\) es idéntico al evento \\(\\{(X - \mu)^2 \ge \epsilon^2\\}\\).  
 Aplicando la desigualdad de Márkov (Teorema 5.1) a la variable \\(Y\\) con el valor \\(a = \epsilon^2 > 0\\):
 
 \\[
@@ -67,9 +67,9 @@ Aplicando la desigualdad de Márkov (Teorema 5.1) a la variable \\(Y\\) con el v
 \\]
 
 ### Regla universal de concentración
-- Para \\(k = 2\\): \\(\mathbb{P}(|X - \mu| \ge 2\sigma) \le \frac{1}{4} = 0.25 \implies \mathbb{P}(|X - \mu| < 2\sigma) \ge 75\%\\).
-- Para \\(k = 3\\): \\(\mathbb{P}(|X - \mu| \ge 3\sigma) \le \frac{1}{9} \approx 0.111 \implies \mathbb{P}(|X - \mu| < 3\sigma) \ge 88.89\%\\).
-- Para \\(k = 5\\): \\(\mathbb{P}(|X - \mu| \ge 5\sigma) \le \frac{1}{25} = 0.04 \implies \mathbb{P}(|X - \mu| < 5\sigma) \ge 96\%\\).
+- Para \\(k = 2\\): \\(\mathbb{P}(|X - \mu| \ge 2\sigma) \le \frac{1}{4} = 0.25 \implies \mathbb{P}(|X - \mu| < 2\sigma) \ge 75\\%\\).
+- Para \\(k = 3\\): \\(\mathbb{P}(|X - \mu| \ge 3\sigma) \le \frac{1}{9} \approx 0.111 \implies \mathbb{P}(|X - \mu| < 3\sigma) \ge 88.89\\%\\).
+- Para \\(k = 5\\): \\(\mathbb{P}(|X - \mu| \ge 5\sigma) \le \frac{1}{25} = 0.04 \implies \mathbb{P}(|X - \mu| < 5\sigma) \ge 96\\%\\).
 
 *(Nótese que esta cota es válida para **cualquier** distribución con varianza finita, por muy asimétrica o extraña que sea).*
 
@@ -164,7 +164,7 @@ Para variables cuya MGF existe, las **cotas de Chernoff** proporcionan un decaim
 \\]
 
 *Demostración.*  
-Para cualquier \\(t > 0\\) fijo, la función \\(x \mapsto e^{tx}\\) es monótona estrictamente creciente. Por tanto, el evento \\(\{X \ge a\}\\) es idéntico a \\(\{e^{tX} \ge e^{ta}\}\\).  
+Para cualquier \\(t > 0\\) fijo, la función \\(x \mapsto e^{tx}\\) es monótona estrictamente creciente. Por tanto, el evento \\(\\{X \ge a\\}\\) es idéntico a \\(\\{e^{tX} \ge e^{ta}\\}\\).  
 Aplicando la desigualdad de Márkov a la variable positiva \\(e^{tX}\\):
 
 \\[

@@ -22,7 +22,7 @@ Z\_n \xrightarrow{d} \mathcal{N}(0, 1),
 *es decir, para todo \\(z \in \mathbb{R}\\):*
 
 \\[
-\lim\_{n \to \infty} \mathbb{P}(Z\_n \le z) = \Phi(z) = \frac{1}{\sqrt{2\pi}} \int\_{-\infty}^z e^{-u^2 / 2} \, du.
+\lim\_{n \to \infty} \mathbb{P}(Z\_n \le z) = \Phi(z) = \frac{1}{\sqrt{2\pi}} \int\_{-\infty}^z e^{-u^2 / 2} \\, du.
 \\]
 
 ---

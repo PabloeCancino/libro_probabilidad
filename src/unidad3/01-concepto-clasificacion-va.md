@@ -15,19 +15,19 @@ X : \Omega \to \mathbb{R},
 tal que para todo conjunto boreliano \\(B \in \mathcal{B}(\mathbb{R})\\), la imagen inversa (preimagen) pertenece a \\(\mathcal{F}\\):
 
 \\[
-X^{-1}(B) = \{\omega \in \Omega : X(\omega) \in B\} \in \mathcal{F}.
+X^{-1}(B) = \\{\omega \in \Omega : X(\omega) \in B\\} \in \mathcal{F}.
 \\]
 
-Por convención de notación probabilística, el evento \\(\{\omega \in \Omega : X(\omega) \in B\}\\) se abrevia simplemente como:
+Por convención de notación probabilística, el evento \\(\\{\omega \in \Omega : X(\omega) \in B\\}\\) se abrevia simplemente como:
 
 \\[
-(X \in B) \quad \text{o} \quad \{X \in B\}.
+(X \in B) \quad \text{o} \quad \\{X \in B\\}.
 \\]
 
 **Teorema 3.2 (Criterio de medibilidad por rayos).** *Una función \\(X: \Omega \to \mathbb{R}\\) es una variable aleatoria si y solo si para todo número real \\(x \in \mathbb{R}\\):*
 
 \\[
-X^{-1}((-\infty, x]) = \{\omega \in \Omega : X(\omega) \le x\} \in \mathcal{F}.
+X^{-1}((-\infty, x]) = \\{\omega \in \Omega : X(\omega) \le x\\} \in \mathcal{F}.
 \\]
 
 *Demostración.*  
@@ -35,7 +35,7 @@ X^{-1}((-\infty, x]) = \{\omega \in \Omega : X(\omega) \le x\} \in \mathcal{F}.
 - \\((\impliedby)\\) Consideremos la clase de subconjuntos de \\(\mathbb{R}\\) cuyas preimágenes pertenecen a \\(\mathcal{F}\\):
 
   \\[
-  \mathcal{G} = \{B \subseteq \mathbb{R} : X^{-1}(B) \in \mathcal{F}\}.
+  \mathcal{G} = \\{B \subseteq \mathbb{R} : X^{-1}(B) \in \mathcal{F}\\}.
   \\]
 
   Se verifica fácilmente que \\(\mathcal{G}\\) es una \\(\sigma\\)-álgebra sobre \\(\mathbb{R}\\) debido a las propiedades de la preimagen de conjuntos (preserva complementos, uniones e intersecciones numerables).  
@@ -56,7 +56,7 @@ Toda variable aleatoria \\(X\\) transfiere la estructura probabilística del esp
 **Definición 3.4 (σ-álgebra generada por una variable aleatoria).** La \\(\sigma\\)-álgebra generada por \\(X\\), denotada \\(\sigma(X)\\), es la menor sub-\\(\sigma\\)-álgebra de \\(\mathcal{F}\\) respecto a la cual \\(X\\) es medible:
 
 \\[
-\sigma(X) = \{X^{-1}(B) : B \in \mathcal{B}(\mathbb{R})\}.
+\sigma(X) = \\{X^{-1}(B) : B \in \mathcal{B}(\mathbb{R})\\}.
 \\]
 
 Intuitivamente, \\(\sigma(X)\\) representa toda la información experimental que puede obtenerse observando únicamente el valor numérico tomado por \\(X\\).
@@ -65,13 +65,13 @@ Intuitivamente, \\(\sigma(X)\\) representa toda la información experimental que
 
 ## 3.1.3 Clasificación rigurosa de las variables aleatorias
 
-Sea \\(S\_X = X(\Omega) = \{X(\omega) : \omega \in \Omega\} \subset \mathbb{R}\\) el **soporte** (o rango) de la variable aleatoria \\(X\\). Según la naturaleza matemática de su soporte y su medida inducida respecto a la medida de Lebesgue \\(\lambda\\), las variables aleatorias se clasifican en:
+Sea \\(S\_X = X(\Omega) = \\{X(\omega) : \omega \in \Omega\\} \subset \mathbb{R}\\) el **soporte** (o rango) de la variable aleatoria \\(X\\). Según la naturaleza matemática de su soporte y su medida inducida respecto a la medida de Lebesgue \\(\lambda\\), las variables aleatorias se clasifican en:
 
 ### 1. Variables aleatorias discretas
 Una variable aleatoria \\(X\\) es **discreta** si su soporte \\(S\_X\\) es un conjunto finito o infinito numerable:
 
 \\[
-S\_X = \{x\_1, x\_2, \dots, x\_n, \dots\} \subset \mathbb{R}, \quad \text{con } \sum\_{x \in S\_X} \mathbb{P}(X = x) = 1.
+S\_X = \\{x\_1, x\_2, \dots, x\_n, \dots\\} \subset \mathbb{R}, \quad \text{con } \sum\_{x \in S\_X} \mathbb{P}(X = x) = 1.
 \\]
 
 La masa de probabilidad está concentrada en puntos aislados (átomos de probabilidad).
@@ -81,13 +81,13 @@ Una variable aleatoria \\(X\\) es **(absolutamente) continua** si su medida indu
 Por el Teorema de Radon-Nikodym, esto equivale a la existencia de una función integrable no negativa \\(f\_X: \mathbb{R} \to [0, \infty)\\) (la *función de densidad*) tal que para todo boreliano \\(B \in \mathcal{B}(\mathbb{R})\\):
 
 \\[
-\mathbb{P}(X \in B) = \int\_B f\_X(x) \, dx.
+\mathbb{P}(X \in B) = \int\_B f\_X(x) \\, dx.
 \\]
 
 Para cualquier punto individual \\(x\_0 \in \mathbb{R}\\):
 
 \\[
-\mathbb{P}(X = x\_0) = \int\_{x\_0}^{x\_0} f\_X(x) \, dx = 0.
+\mathbb{P}(X = x\_0) = \int\_{x\_0}^{x\_0} f\_X(x) \\, dx = 0.
 \\]
 
 ### 3. Variables aleatorias mixtas y singulares

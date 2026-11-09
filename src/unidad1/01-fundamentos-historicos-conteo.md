@@ -151,10 +151,10 @@ CR\_n^r = \binom{n + r - 1}{r} = \binom{n + r - 1}{n - 1}.
 
 ## 1.1.5 La regla clásica de Laplace
 
-Cuando un experimento aleatorio tiene un espacio muestral finito \\(\Omega = \{\omega\_1, \omega\_2, \dots, \omega\_N\}\\) y no existe ninguna razón asimétrica para favorecer un resultado elemental sobre otro (*principio de razón suficiente o indiferencia*), todos los eventos elementales son **equiprobables**:
+Cuando un experimento aleatorio tiene un espacio muestral finito \\(\Omega = \\{\omega\_1, \omega\_2, \dots, \omega\_N\\}\\) y no existe ninguna razón asimétrica para favorecer un resultado elemental sobre otro (*principio de razón suficiente o indiferencia*), todos los eventos elementales son **equiprobables**:
 
 \\[
-\mathbb{P}(\{\omega\_i\}) = \frac{1}{N}, \quad \forall i = 1, \dots, N.
+\mathbb{P}(\\{\omega\_i\\}) = \frac{1}{N}, \quad \forall i = 1, \dots, N.
 \\]
 
 **Definición 1.8 (Regla de Laplace).** Para cualquier evento \\(A \subseteq \Omega\\), la probabilidad de ocurrencia de \\(A\\) es la razón entre el número de casos favorables a \\(A\\) y el número total de casos posibles:
@@ -206,7 +206,7 @@ En una baraja inglesa estándar de 52 cartas (4 palos de 13 cartas cada uno), se
 El número total de manos posibles de 5 cartas es:
 
 \\[
-|\Omega| = \binom{52}{5} = \frac{52 \cdot 51 \cdot 50 \cdot 49 \cdot 48}{120} = 2\,598\,960.
+|\Omega| = \binom{52}{5} = \frac{52 \cdot 51 \cdot 50 \cdot 49 \cdot 48}{120} = 2\\,598\\,960.
 \\]
 
 Para formar un Full House:
@@ -218,13 +218,13 @@ Para formar un Full House:
 Por el principio de multiplicación, el número de casos favorables es:
 
 \\[
-|A| = \binom{13}{1}\binom{4}{3}\binom{12}{1}\binom{4}{2} = 13 \times 4 \times 12 \times 6 = 3\,744.
+|A| = \binom{13}{1}\binom{4}{3}\binom{12}{1}\binom{4}{2} = 13 \times 4 \times 12 \times 6 = 3\\,744.
 \\]
 
 Por la regla de Laplace:
 
 \\[
-\mathbb{P}(\text{Full House}) = \frac{3\,744}{2\,598\,960} = \frac{6}{4\,165} \approx 0.001441 \quad (0.1441\%).
+\mathbb{P}(\text{Full House}) = \frac{3\\,744}{2\\,598\\,960} = \frac{6}{4\\,165} \approx 0.001441 \quad (0.1441\\%).
 \\]
 
 ---

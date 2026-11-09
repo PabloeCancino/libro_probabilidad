@@ -2,7 +2,7 @@
 
 ## 1.4.1 Fundamentos de la probabilidad geométrica
 
-Cuando un experimento aleatorio posee un espacio muestral continuo no numerable \\(\Omega \subset \mathbb{R}^n\\) (con \\(n \in \{1, 2, 3\}\\)) que tiene medida de Lebesgue finita y estrictamente positiva \\(0 < \mu(\Omega) < \infty\\) (donde \\(\mu\\) representa longitud, área o volumen), y se postula que el punto se elige "al azar" de manera uniforme en \\(\Omega\\), la probabilidad de que el resultado caiga dentro de una región medible de Borel \\(A \subseteq \Omega\\) se define geométricamente.
+Cuando un experimento aleatorio posee un espacio muestral continuo no numerable \\(\Omega \subset \mathbb{R}^n\\) (con \\(n \in \\{1, 2, 3\\}\\)) que tiene medida de Lebesgue finita y estrictamente positiva \\(0 < \mu(\Omega) < \infty\\) (donde \\(\mu\\) representa longitud, área o volumen), y se postula que el punto se elige "al azar" de manera uniforme en \\(\Omega\\), la probabilidad de que el resultado caiga dentro de una región medible de Borel \\(A \subseteq \Omega\\) se define geométricamente.
 
 **Definición 1.31 (Probabilidad geométrica).** Si \\(\Omega \subset \mathbb{R}^n\\) es una región con medida \\(\mu(\Omega) > 0\\), la probabilidad geométrica de cualquier evento boreliano \\(A \in \mathcal{B}(\Omega)\\) es:
 
@@ -14,10 +14,10 @@ Cuando un experimento aleatorio posee un espacio muestral continuo no numerable 
 - **En \\(\mathbb{R}^2\\) (Área):** \\(\mathbb{P}(A) = \frac{\text{Área}(A)}{\text{Área}(\Omega)}\\).
 - **En \\(\mathbb{R}^3\\) (Volumen):** \\(\mathbb{P}(A) = \frac{\text{Volumen}(A)}{\text{Volumen}(\Omega)}\\).
 
-**Observación importante (Conjuntos de medida cero):** Para cualquier punto individual \\(\mathbf{x}\_0 \in \Omega\\), \\(\mu(\{\mathbf{x}\_0\}) = 0\\), lo que implica:
+**Observación importante (Conjuntos de medida cero):** Para cualquier punto individual \\(\mathbf{x}\_0 \in \Omega\\), \\(\mu(\\{\mathbf{x}\_0\\}) = 0\\), lo que implica:
 
 \\[
-\mathbb{P}(\{\mathbf{x}\_0\}) = 0.
+\mathbb{P}(\\{\mathbf{x}\_0\\}) = 0.
 \\]
 
 En un espacio de probabilidad continuo, un evento con probabilidad cero **no es necesariamente imposible** (el experimento necesariamente arrojará algún punto individual de probabilidad cero). De igual forma, un evento con probabilidad 1 no es necesariamente el espacio seguro \\(\Omega\\), sino que se dice que ocurre **casi con certeza** o **casi seguramente (c.s.)**.
@@ -34,32 +34,32 @@ Sean \\(X\\) e \\(Y\\) los tiempos de llegada (en minutos después de las 12:00)
 El espacio muestral es el cuadrado unitario en el plano:
 
 \\[
-\Omega = \{(x, y) \in \mathbb{R}^2 : 0 \le x \le 60, \ 0 \le y \le 60\}, \quad \text{con Área}(\Omega) = 60 \times 60 = 3\,600.
+\Omega = \\{(x, y) \in \mathbb{R}^2 : 0 \le x \le 60, \ 0 \le y \le 60\\}, \quad \text{con Área}(\Omega) = 60 \times 60 = 3\\,600.
 \\]
 
 Las dos personas se encuentran si y solo si la diferencia absoluta de sus tiempos de llegada no supera los 15 minutos:
 
 \\[
-A = \{(x, y) \in \Omega : |x - y| \le 15\} = \{(x, y) \in \Omega : x - 15 \le y \le x + 15\}.
+A = \\{(x, y) \in \Omega : |x - y| \le 15\\} = \\{(x, y) \in \Omega : x - 15 \le y \le x + 15\\}.
 \\]
 
-El evento complementario \\(A^c = \{(x, y) \in \Omega : |x - y| > 15\}\\) corresponde a dos triángulos rectángulos idénticos en las esquinas superior izquierda (\\(y - x > 15\\)) e inferior derecha (\\(x - y > 15\\)).  
+El evento complementario \\(A^c = \\{(x, y) \in \Omega : |x - y| > 15\\}\\) corresponde a dos triángulos rectángulos idénticos en las esquinas superior izquierda (\\(y - x > 15\\)) e inferior derecha (\\(x - y > 15\\)).  
 La base y altura de cada triángulo complementario miden \\(60 - 15 = 45\\) minutos. Por tanto:
 
 \\[
-\text{Área}(A^c) = 2 \times \left(\frac{1}{2} \times 45 \times 45\right) = 45^2 = 2\,025.
+\text{Área}(A^c) = 2 \times \left(\frac{1}{2} \times 45 \times 45\right) = 45^2 = 2\\,025.
 \\]
 
 El área de la región favorable \\(A\\) es:
 
 \\[
-\text{Área}(A) = \text{Área}(\Omega) - \text{Área}(A^c) = 3\,600 - 2\,025 = 1\,575.
+\text{Área}(A) = \text{Área}(\Omega) - \text{Área}(A^c) = 3\\,600 - 2\\,025 = 1\\,575.
 \\]
 
 Por la fórmula de probabilidad geométrica:
 
 \\[
-\mathbb{P}(A) = \frac{\text{Área}(A)}{\text{Área}(\Omega)} = \frac{1\,575}{3\,600} = \frac{7}{16} = 0.4375 \quad (43.75\%).
+\mathbb{P}(A) = \frac{\text{Área}(A)}{\text{Área}(\Omega)} = \frac{1\\,575}{3\\,600} = \frac{7}{16} = 0.4375 \quad (43.75\\%).
 \\]
 
 ---

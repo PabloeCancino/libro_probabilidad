@@ -7,7 +7,7 @@ La **esperanza matemática** (o valor esperado) de una variable aleatoria es el 
 En el marco riguroso de la teoría de la medida de Lebesgue, si \\(X: \Omega \to \mathbb{R}\\) es una variable aleatoria en \\((\Omega, \mathcal{F}, \mathbb{P})\\), la esperanza se define como la integral abstracta:
 
 \\[
-\mathbb{E}[X] = \int\_\Omega X(\omega) \, d\mathbb{P}(\omega) = \int\_{-\infty}^\infty x \, dF\_X(x).
+\mathbb{E}[X] = \int\_\Omega X(\omega) \\, d\mathbb{P}(\omega) = \int\_{-\infty}^\infty x \\, dF\_X(x).
 \\]
 
 **Condición de existencia absoluta:** Decimos que la esperanza \\(\mathbb{E}[X]\\) **existe** y es finita si y solo si \\(X\\) es absolutamente integrable respecto a la medida de probabilidad:
@@ -30,7 +30,7 @@ En el marco riguroso de la teoría de la medida de Lebesgue, si \\(X: \Omega \to
 2. **Caso continuo:** Si \\(X\\) es una v.a. continua con PDF \\(f\_X(x)\\):
 
    \\[
-   \mathbb{E}[X] = \int\_{-\infty}^{\infty} x \cdot f\_X(x) \, dx, \quad \text{siempre que } \int\_{-\infty}^{\infty} |x| \cdot f\_X(x) \, dx < \infty.
+   \mathbb{E}[X] = \int\_{-\infty}^{\infty} x \cdot f\_X(x) \\, dx, \quad \text{siempre que } \int\_{-\infty}^{\infty} |x| \cdot f\_X(x) \\, dx < \infty.
    \\]
 
 ---
@@ -49,7 +49,7 @@ Para calcular la esperanza de una función de una variable aleatoria \\(Y = g(X)
 2. **Caso continuo:**
 
    \\[
-   \mathbb{E}[g(X)] = \int\_{-\infty}^{\infty} g(x) \cdot f\_X(x) \, dx.
+   \mathbb{E}[g(X)] = \int\_{-\infty}^{\infty} g(x) \cdot f\_X(x) \\, dx.
    \\]
 
 *en ambos casos siempre que \\(\mathbb{E}[|g(X)|] < \infty\\).*
@@ -57,7 +57,7 @@ Para calcular la esperanza de una función de una variable aleatoria \\(Y = g(X)
 Para el caso bivariado \\(Z = g(X, Y)\\):
 
 \\[
-\mathbb{E}[g(X, Y)] = \iint\_{\mathbb{R}^2} g(x, y) f\_{X,Y}(x, y) \, dx \, dy \quad \left(\text{o } \sum\_{x}\sum\_{y} g(x, y) p\_{X,Y}(x, y)\right).
+\mathbb{E}[g(X, Y)] = \iint\_{\mathbb{R}^2} g(x, y) f\_{X,Y}(x, y) \\, dx \\, dy \quad \left(\text{o } \sum\_{x}\sum\_{y} g(x, y) p\_{X,Y}(x, y)\right).
 \\]
 
 ---
@@ -77,10 +77,10 @@ Aplicando el Teorema 4.2 con \\(g(x, y) = ax + by + c\\):
 
 \\[
 \begin{aligned}
-\mathbb{E}[aX + bY + c] &= \int\_{-\infty}^\infty \int\_{-\infty}^\infty (ax + by + c) f\_{X,Y}(x, y) \, dx \, dy \\\\
+\mathbb{E}[aX + bY + c] &= \int\_{-\infty}^\infty \int\_{-\infty}^\infty (ax + by + c) f\_{X,Y}(x, y) \\, dx \\, dy \\\\
 &= a \int\_{-\infty}^\infty x \left[\int\_{-\infty}^\infty f\_{X,Y}(x, y) dy\right] dx + b \int\_{-\infty}^\infty y \left[\int\_{-\infty}^\infty f\_{X,Y}(x, y) dx\right] dy \\\\
-&\quad + c \int\_{-\infty}^\infty \int\_{-\infty}^\infty f\_{X,Y}(x, y) \, dx \, dy \\\\
-&= a \int\_{-\infty}^\infty x f\_X(x) \, dx + b \int\_{-\infty}^\infty y f\_Y(y) \, dy + c \cdot 1 \\\\
+&\quad + c \int\_{-\infty}^\infty \int\_{-\infty}^\infty f\_{X,Y}(x, y) \\, dx \\, dy \\\\
+&= a \int\_{-\infty}^\infty x f\_X(x) \\, dx + b \int\_{-\infty}^\infty y f\_Y(y) \\, dy + c \cdot 1 \\\\
 &= a\mathbb{E}[X] + b\mathbb{E}[Y] + c. \quad \blacksquare
 \end{aligned}
 \\]
@@ -115,9 +115,9 @@ Dado que \\(X \perp Y\\), la densidad conjunta factoriza: \\(f\_{X,Y}(x, y) = f\
 
 \\[
 \begin{aligned}
-\mathbb{E}[XY] &= \int\_{-\infty}^\infty \int\_{-\infty}^\infty (xy) f\_{X,Y}(x, y) \, dx \, dy \\\\
-&= \int\_{-\infty}^\infty \int\_{-\infty}^\infty (xy) f\_X(x) f\_Y(y) \, dx \, dy \\\\
-&= \left(\int\_{-\infty}^\infty x f\_X(x) \, dx\right) \left(\int\_{-\infty}^\infty y f\_Y(y) \, dy\right) = \mathbb{E}[X] \cdot \mathbb{E}[Y]. \quad \blacksquare
+\mathbb{E}[XY] &= \int\_{-\infty}^\infty \int\_{-\infty}^\infty (xy) f\_{X,Y}(x, y) \\, dx \\, dy \\\\
+&= \int\_{-\infty}^\infty \int\_{-\infty}^\infty (xy) f\_X(x) f\_Y(y) \\, dx \\, dy \\\\
+&= \left(\int\_{-\infty}^\infty x f\_X(x) \\, dx\right) \left(\int\_{-\infty}^\infty y f\_Y(y) \\, dy\right) = \mathbb{E}[X] \cdot \mathbb{E}[Y]. \quad \blacksquare
 \end{aligned}
 \\]
 
@@ -131,7 +131,7 @@ Para variables aleatorias no negativas, la esperanza puede calcularse directamen
 1. **Caso continuo:**
 
    \\[
-   \mathbb{E}[X] = \int\_0^\infty \mathbb{P}(X > x) \, dx = \int\_0^\infty (1 - F\_X(x)) \, dx.
+   \mathbb{E}[X] = \int\_0^\infty \mathbb{P}(X > x) \\, dx = \int\_0^\infty (1 - F\_X(x)) \\, dx.
    \\]
 
 2. **Caso discreto en \\(\mathbb{N}\\):**
@@ -144,5 +144,5 @@ Para variables aleatorias no negativas, la esperanza puede calcularse directamen
 Por la definición y cambiando el orden de integración (Fubini):
 
 \\[
-\int\_0^\infty \mathbb{P}(X > x) \, dx = \int\_0^\infty \left(\int\_x^\infty f\_X(t) \, dt\right) dx = \int\_0^\infty f\_X(t) \left(\int\_0^t dx\right) dt = \int\_0^\infty t f\_X(t) \, dt = \mathbb{E}[X]. \quad \blacksquare
+\int\_0^\infty \mathbb{P}(X > x) \\, dx = \int\_0^\infty \left(\int\_x^\infty f\_X(t) \\, dt\right) dx = \int\_0^\infty f\_X(t) \left(\int\_0^t dx\right) dt = \int\_0^\infty t f\_X(t) \\, dt = \mathbb{E}[X]. \quad \blacksquare
 \\]

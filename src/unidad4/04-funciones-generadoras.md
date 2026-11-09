@@ -13,7 +13,7 @@ M\_X(t) = \mathbb{E}[e^{tX}], \quad t \in \mathbb{R},
 definida para todos los valores de \\(t\\) para los cuales la esperanza converge absolutamente. Decimos que la MGF **existe** si existe algún \\(h > 0\\) tal que \\(M\_X(t) < \infty\\) para todo \\(t \in (-h, h)\\).
 
 - **Caso discreto:** \\(M\_X(t) = \sum\_{x \in S\_X} e^{tx} p\_X(x)\\).
-- **Caso continuo:** \\(M\_X(t) = \int\_{-\infty}^{\infty} e^{tx} f\_X(x) \, dx\\) (la transformada bilateral de Laplace de \\(f\_X\\)).
+- **Caso continuo:** \\(M\_X(t) = \int\_{-\infty}^{\infty} e^{tx} f\_X(x) \\, dx\\) (la transformada bilateral de Laplace de \\(f\_X\\)).
 
 ---
 
@@ -82,7 +82,7 @@ F\_X(x) = F\_Y(x), \quad \forall x \in \mathbb{R}.
 
 ## 4.4.4 Función Generadora de Probabilidad (PGF)
 
-Para variables aleatorias discretas no negativas con soporte en \\(\mathbb{N} = \{0, 1, 2, \dots\}\\), la **función generadora de probabilidad** proporciona un marco analítico en series de potencias complejas.
+Para variables aleatorias discretas no negativas con soporte en \\(\mathbb{N} = \\{0, 1, 2, \dots\\}\\), la **función generadora de probabilidad** proporciona un marco analítico en series de potencias complejas.
 
 **Definición 4.27 (PGF).** La **PGF** de una variable discreta entera \\(X \ge 0\\) es:
 
@@ -118,11 +118,11 @@ Cuando una distribución no posee momentos finitos (como la distribución de Cau
 
 | Distribución | Parámetros | Soporte | MGF: \\(M\_X(t)\\) | Dominio de convergencia |
 |---|---|---|---|---|
-| **Bernoulli** | \\(p \in [0, 1]\\) | \\(\{0, 1\}\\) | \\((1 - p) + p e^t\\) | \\(t \in \mathbb{R}\\) |
-| **Binomial** | \\(n, p\\) | \\(\{0, 1, \dots, n\}\\) | \\([(1 - p) + p e^t]^n\\) | \\(t \in \mathbb{R}\\) |
-| **Geométrica** | \\(p \in (0, 1]\\) | \\(\{1, 2, \dots\}\\) | \\(\dfrac{p e^t}{1 - (1 - p) e^t}\\) | \\(t < -\ln(1 - p)\\) |
-| **Binomial Negativa** | \\(r, p\\) | \\(\{r, r+1, \dots\}\\) | \\(\left[\dfrac{p e^t}{1 - (1 - p)e^t}\right]^r\\) | \\(t < -\ln(1 - p)\\) |
-| **Poisson** | \\(\lambda > 0\\) | \\(\{0, 1, 2, \dots\}\\) | \\(\exp(\lambda(e^t - 1))\\) | \\(t \in \mathbb{R}\\) |
+| **Bernoulli** | \\(p \in [0, 1]\\) | \\(\\{0, 1\\}\\) | \\((1 - p) + p e^t\\) | \\(t \in \mathbb{R}\\) |
+| **Binomial** | \\(n, p\\) | \\(\\{0, 1, \dots, n\\}\\) | \\([(1 - p) + p e^t]^n\\) | \\(t \in \mathbb{R}\\) |
+| **Geométrica** | \\(p \in (0, 1]\\) | \\(\\{1, 2, \dots\\}\\) | \\(\dfrac{p e^t}{1 - (1 - p) e^t}\\) | \\(t < -\ln(1 - p)\\) |
+| **Binomial Negativa** | \\(r, p\\) | \\(\\{r, r+1, \dots\\}\\) | \\(\left[\dfrac{p e^t}{1 - (1 - p)e^t}\right]^r\\) | \\(t < -\ln(1 - p)\\) |
+| **Poisson** | \\(\lambda > 0\\) | \\(\\{0, 1, 2, \dots\\}\\) | \\(\exp(\lambda(e^t - 1))\\) | \\(t \in \mathbb{R}\\) |
 | **Uniforme** | \\(a < b\\) | \\([a, b]\\) | \\(\dfrac{e^{tb} - e^{ta}}{t(b - a)}\\) (con \\(M(0)=1\\)) | \\(t \in \mathbb{R}\\) |
 | **Exponencial** | \\(\lambda > 0\\) | \\([0, \infty)\\) | \\(\dfrac{\lambda}{\lambda - t} = \left(1 - \frac{t}{\lambda}\right)^{-1}\\) | \\(t < \lambda\\) |
 | **Gamma** | \\(\alpha, \beta\\) | \\((0, \infty)\\) | \\(\left(\dfrac{\beta}{\beta - t}\right)^\alpha = \left(1 - \frac{t}{\beta}\right)^{-\alpha}\\) | \\(t < \beta\\) |

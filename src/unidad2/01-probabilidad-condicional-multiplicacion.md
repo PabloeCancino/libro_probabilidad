@@ -51,7 +51,7 @@ Un resultado fundamental es que, para cualquier evento fijo \\(B\\) con \\(\math
 
    \\[
    \begin{aligned}
-   \mathbb{P}\left(\bigcup\_{n=1}^\infty A\_n \;\middle|\; B\right) &= \frac{\mathbb{P}\left(\left(\bigcup\_{n=1}^\infty A\_n\right) \cap B\right)}{\mathbb{P}(B)} \\\\
+   \mathbb{P}\left(\bigcup\_{n=1}^\infty A\_n \\;\middle|\\; B\right) &= \frac{\mathbb{P}\left(\left(\bigcup\_{n=1}^\infty A\_n\right) \cap B\right)}{\mathbb{P}(B)} \\\\
    &= \frac{\mathbb{P}\left(\bigcup\_{n=1}^\infty (A\_n \cap B)\right)}{\mathbb{P}(B)} \\\\
    &= \frac{\sum\_{n=1}^\infty \mathbb{P}(A\_n \cap B)}{\mathbb{P}(B)} \\\\
    &= \sum\_{n=1}^\infty \frac{\mathbb{P}(A\_n \cap B)}{\mathbb{P}(B)} \\\\
@@ -83,7 +83,7 @@ Este principio se extiende inductivamente a cualquier número finito de eventos.
 **Teorema 2.3 (Regla general de la multiplicación).** *Sean \\(A\_1, A\_2, \dots, A\_n \in \mathcal{F}\\) eventos tales que \\(\mathbb{P}(A\_1 \cap A\_2 \cap \dots \cap A\_{n-1}) > 0\\). Entonces:*
 
 \\[
-\mathbb{P}\left(\bigcap\_{i=1}^n A\_i\right) = \mathbb{P}(A\_1) \mathbb{P}(A\_2 \mid A\_1) \mathbb{P}(A\_3 \mid A\_1 \cap A\_2) \cdots \mathbb{P}\left(A\_n \;\middle|\; \bigcap\_{i=1}^{n-1} A\_i\right).
+\mathbb{P}\left(\bigcap\_{i=1}^n A\_i\right) = \mathbb{P}(A\_1) \mathbb{P}(A\_2 \mid A\_1) \mathbb{P}(A\_3 \mid A\_1 \cap A\_2) \cdots \mathbb{P}\left(A\_n \\;\middle|\\; \bigcap\_{i=1}^{n-1} A\_i\right).
 \\]
 
 *Demostración (por inducción matemática).*
@@ -92,7 +92,7 @@ Este principio se extiende inductivamente a cualquier número finito de eventos.
   Definamos el evento \\(B = \bigcap\_{i=1}^{k-1} A\_i\\). Entonces:
 
   \\[
-  \mathbb{P}\left(\bigcap\_{i=1}^k A\_i\right) = \mathbb{P}(B \cap A\_k) = \mathbb{P}(B) \mathbb{P}(A\_k \mid B) = \mathbb{P}\left(\bigcap\_{i=1}^{k-1} A\_i\right) \mathbb{P}\left(A\_k \;\middle|\; \bigcap\_{i=1}^{k-1} A\_i\right).
+  \mathbb{P}\left(\bigcap\_{i=1}^k A\_i\right) = \mathbb{P}(B \cap A\_k) = \mathbb{P}(B) \mathbb{P}(A\_k \mid B) = \mathbb{P}\left(\bigcap\_{i=1}^{k-1} A\_i\right) \mathbb{P}\left(A\_k \\;\middle|\\; \bigcap\_{i=1}^{k-1} A\_i\right).
   \\]
 
   Sustituyendo la hipótesis de inducción para \\(\mathbb{P}\left(\bigcap\_{i=1}^{k-1} A\_i\right)\\), se obtiene el resultado para \\(k\\) eventos. Por el principio de inducción, la fórmula es válida para todo \\(n \ge 2\\). \\(\blacksquare\\)
@@ -119,7 +119,7 @@ Por la regla de la multiplicación:
 Multiplicando las probabilidades condicionales:
 
 \\[
-\mathbb{P}(R\_1 \cap R\_2 \cap R\_3) = \frac{5}{8} \times \frac{4}{7} \times \frac{3}{6} = \frac{60}{336} = \frac{5}{28} \approx 0.17857 \quad (17.86\%).
+\mathbb{P}(R\_1 \cap R\_2 \cap R\_3) = \frac{5}{8} \times \frac{4}{7} \times \frac{3}{6} = \frac{60}{336} = \frac{5}{28} \approx 0.17857 \quad (17.86\\%).
 \\]
 
 (Nótese que por combinatoria directa mediante Laplace: \\(\frac{\binom{5}{3}}{\binom{8}{3}} = \frac{10}{56} = \frac{5}{28}\\), verificando la consistencia del modelo).

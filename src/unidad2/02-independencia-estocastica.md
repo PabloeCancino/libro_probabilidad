@@ -61,7 +61,7 @@ Sin embargo, para evitar requerir que \\(\mathbb{P}(B) > 0\\) y para que la defi
 
 Para una colección de más de dos eventos, la independencia por pares (dos a dos) **no es suficiente** para garantizar la independencia conjunta (mutua).
 
-**Definición 2.9 (Independencia mutua o colectiva).** Una familia de \\(n\\) eventos \\(A\_1, A\_2, \dots, A\_n \in \mathcal{F}\\) es **mutuamente independiente** si para todo subconjunto de índices \\(\{i\_1, i\_2, \dots, i\_k\} \subseteq \{1, 2, \dots, n\}\\) con \\(2 \le k \le n\\), se satisface:
+**Definición 2.9 (Independencia mutua o colectiva).** Una familia de \\(n\\) eventos \\(A\_1, A\_2, \dots, A\_n \in \mathcal{F}\\) es **mutuamente independiente** si para todo subconjunto de índices \\(\\{i\_1, i\_2, \dots, i\_k\\} \subseteq \\{1, 2, \dots, n\\}\\) con \\(2 \le k \le n\\), se satisface:
 
 \\[
 \mathbb{P}\left(\bigcap\_{j=1}^k A\_{i\_j}\right) = \prod\_{j=1}^k \mathbb{P}(A\_{i\_j}).
@@ -86,13 +86,13 @@ Consideremos un tetraedro regular cuyas cuatro caras están pintadas de la sigui
 Se lanza el tetraedro y se observa la cara que apoya en la mesa. Como las cuatro caras son simétricas y equiprobables:
 
 \\[
-\Omega = \{1, 2, 3, 4\}, \quad \mathbb{P}(\{i\}) = \frac{1}{4}, \ \forall i=1,2,3,4.
+\Omega = \\{1, 2, 3, 4\\}, \quad \mathbb{P}(\\{i\\}) = \frac{1}{4}, \ \forall i=1,2,3,4.
 \\]
 
 Definamos los eventos:
-- \\(E\_R\\): "La cara resultante contiene el color Rojo" \\(= \{1, 4\}\\).
-- \\(E\_V\\): "La cara resultante contiene el color Verde" \\(= \{2, 4\}\\).
-- \\(E\_A\\): "La cara resultante contiene el color Azul" \\(= \{3, 4\}\\).
+- \\(E\_R\\): "La cara resultante contiene el color Rojo" \\(= \\{1, 4\\}\\).
+- \\(E\_V\\): "La cara resultante contiene el color Verde" \\(= \\{2, 4\\}\\).
+- \\(E\_A\\): "La cara resultante contiene el color Azul" \\(= \\{3, 4\\}\\).
 
 Calculamos sus probabilidades marginales:
 
@@ -103,15 +103,15 @@ Calculamos sus probabilidades marginales:
 Analicemos las intersecciones dos a dos:
 
 \\[
-E\_R \cap E\_V = \{4\} \implies \mathbb{P}(E\_R \cap E\_V) = \frac{1}{4} = \frac{1}{2} \times \frac{1}{2} = \mathbb{P}(E\_R)\mathbb{P}(E\_V).
+E\_R \cap E\_V = \\{4\\} \implies \mathbb{P}(E\_R \cap E\_V) = \frac{1}{4} = \frac{1}{2} \times \frac{1}{2} = \mathbb{P}(E\_R)\mathbb{P}(E\_V).
 \\]
 
 \\[
-E\_R \cap E\_A = \{4\} \implies \mathbb{P}(E\_R \cap E\_A) = \frac{1}{4} = \mathbb{P}(E\_R)\mathbb{P}(E\_A).
+E\_R \cap E\_A = \\{4\\} \implies \mathbb{P}(E\_R \cap E\_A) = \frac{1}{4} = \mathbb{P}(E\_R)\mathbb{P}(E\_A).
 \\]
 
 \\[
-E\_V \cap E\_A = \{4\} \implies \mathbb{P}(E\_V \cap E\_A) = \frac{1}{4} = \mathbb{P}(E\_V)\mathbb{P}(E\_A).
+E\_V \cap E\_A = \\{4\\} \implies \mathbb{P}(E\_V \cap E\_A) = \frac{1}{4} = \mathbb{P}(E\_V)\mathbb{P}(E\_A).
 \\]
 
 Por consiguiente, los eventos \\(E\_R, E\_V, E\_A\\) son **independientes dos a dos**.
@@ -119,7 +119,7 @@ Por consiguiente, los eventos \\(E\_R, E\_V, E\_A\\) son **independientes dos a 
 Ahora evaluemos la intersección triple simultánea:
 
 \\[
-E\_R \cap E\_V \cap E\_A = \{4\} \implies \mathbb{P}(E\_R \cap E\_V \cap E\_A) = \frac{1}{4}.
+E\_R \cap E\_V \cap E\_A = \\{4\\} \implies \mathbb{P}(E\_R \cap E\_V \cap E\_A) = \frac{1}{4}.
 \\]
 
 Sin embargo, el producto de las tres probabilidades individuales es:

@@ -8,11 +8,11 @@ Para construir una teoría matemática rigurosa de la probabilidad, es indispens
 
 Los espacios muestrales se clasifican según su cardinalidad:
 1. **Espacios muestrales finitos:** \\(|\Omega| = n < \infty\\).  
-   *Ejemplo:* El lanzamiento de un dado de seis caras: \\(\Omega = \{1, 2, 3, 4, 5, 6\}\\).
+   *Ejemplo:* El lanzamiento de un dado de seis caras: \\(\Omega = \\{1, 2, 3, 4, 5, 6\\}\\).
 2. **Espacios muestrales infinitos numerables:** \\(|\Omega| = \aleph\_0\\) (existe una biyección con \\(\mathbb{N}\\)).  
-   *Ejemplo:* Lanzar una moneda hasta obtener la primera cara: \\(\Omega = \{C, SC, SSC, SSSC, \dots\} \cong \mathbb{N}\\).
+   *Ejemplo:* Lanzar una moneda hasta obtener la primera cara: \\(\Omega = \\{C, SC, SSC, SSSC, \dots\\} \cong \mathbb{N}\\).
 3. **Espacios muestrales continuos (no numerables):** \\(|\Omega| = 2^{\aleph\_0} = \mathfrak{c}\\).  
-   *Ejemplo:* El tiempo de vida útil \\(T\\) de un componente electrónico: \\(\Omega = [0, \infty) \subset \mathbb{R}\\); o las coordenadas \\((x, y)\\) del impacto de un dardo en un círculo unitario: \\(\Omega = \{(x,y) \in \mathbb{R}^2 : x^2 + y^2 \le 1\}\\).
+   *Ejemplo:* El tiempo de vida útil \\(T\\) de un componente electrónico: \\(\Omega = [0, \infty) \subset \mathbb{R}\\); o las coordenadas \\((x, y)\\) del impacto de un dardo en un círculo unitario: \\(\Omega = \\{(x,y) \in \mathbb{R}^2 : x^2 + y^2 \le 1\\}\\).
 
 ---
 
@@ -25,10 +25,10 @@ Un **evento** o suceso es una afirmación o proposición lógica sobre el result
 Sean \\(A, B \subseteq \Omega\\) dos eventos:
 - **Evento seguro (universal):** \\(\Omega\\) (siempre ocurre).
 - **Evento imposible (nulo):** \\(\emptyset\\) (nunca ocurre).
-- **Complemento (negación):** \\(A^c = \Omega \setminus A = \{\omega \in \Omega : \omega \notin A\}\\). Ocurre si y solo si \\(A\\) no ocurre.
-- **Unión (disyunción lógica):** \\(A \cup B = \{\omega \in \Omega : \omega \in A \text{ o } \omega \in B\}\\). Ocurre si al menos uno de los dos eventos ocurre.
-- **Intersección (conjunción lógica):** \\(A \cap B = \{\omega \in \Omega : \omega \in A \text{ y } \omega \in B\}\\). Ocurre si ambos eventos ocurren simultáneamente.
-- **Diferencia relativa:** \\(A \setminus B = A \cap B^c = \{\omega \in \Omega : \omega \in A \text{ y } \omega \notin B\}\\). Ocurre si ocurre \\(A\\) pero no \\(B\\).
+- **Complemento (negación):** \\(A^c = \Omega \setminus A = \\{\omega \in \Omega : \omega \notin A\\}\\). Ocurre si y solo si \\(A\\) no ocurre.
+- **Unión (disyunción lógica):** \\(A \cup B = \\{\omega \in \Omega : \omega \in A \text{ o } \omega \in B\\}\\). Ocurre si al menos uno de los dos eventos ocurre.
+- **Intersección (conjunción lógica):** \\(A \cap B = \\{\omega \in \Omega : \omega \in A \text{ y } \omega \in B\\}\\). Ocurre si ambos eventos ocurren simultáneamente.
+- **Diferencia relativa:** \\(A \setminus B = A \cap B^c = \\{\omega \in \Omega : \omega \in A \text{ y } \omega \notin B\\}\\). Ocurre si ocurre \\(A\\) pero no \\(B\\).
 - **Diferencia simétrica (disyunción exclusiva):** \\(A \mathbin{\Delta} B = (A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (A \cap B)\\).
 - **Eventos mutuamente excluyentes (disjuntos):** \\(A \cap B = \emptyset\\). No pueden ocurrir simultáneamente.
 - **Inclusión (implicación):** \\(A \subseteq B\\). La ocurrencia de \\(A\\) garantiza necesariamente la ocurrencia de \\(B\\).
@@ -81,9 +81,9 @@ El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y lo
 
 ### Ejemplos notables de σ-álgebras
 
-1. **σ-álgebra trivial (mínima):** \\(\mathcal{F}\_{\text{min}} = \{\emptyset, \Omega\}\\).
+1. **σ-álgebra trivial (mínima):** \\(\mathcal{F}\_{\text{min}} = \\{\emptyset, \Omega\\}\\).
 2. **σ-álgebra discreta (máxima):** \\(\mathcal{F}\_{\text{max}} = \mathcal{P}(\Omega)\\).
-3. **σ-álgebra generada por un evento \\(A \subseteq \Omega\\):** \\(\mathcal{F}\_A = \{\emptyset, A, A^c, \Omega\}\\).
+3. **σ-álgebra generada por un evento \\(A \subseteq \Omega\\):** \\(\mathcal{F}\_A = \\{\emptyset, A, A^c, \Omega\\}\\).
 4. **σ-álgebra de una partición finita:** Si \\(\Omega = \bigcup\_{i=1}^k B\_i\\) con \\(B\_i \cap B\_j = \emptyset\\) para \\(i \neq j\\), la σ-álgebra generada por la partición consiste en todas las uniones de elementos de la partición (incluyendo la unión vacía \\(\emptyset\\)), conteniendo exactamente \\(2^k\\) eventos.
 
 ---
@@ -106,7 +106,7 @@ El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y lo
 **Definición 1.16 (σ-álgebra generada).** Sea \\(\mathcal{C} \subseteq \mathcal{P}(\Omega)\\) una clase arbitraria de subconjuntos de \\(\Omega\\). La **σ-álgebra generada por \\(\mathcal{C}\\)**, denotada por \\(\sigma(\mathcal{C})\\), es la menor σ-álgebra sobre \\(\Omega\\) que contiene a \\(\mathcal{C}\\):
 
 \\[
-\sigma(\mathcal{C}) = \bigcap \{\mathcal{G} \subseteq \mathcal{P}(\Omega) : \mathcal{G} \text{ es una } \sigma\text{-álgebra y } \mathcal{C} \subseteq \mathcal{G}\}.
+\sigma(\mathcal{C}) = \bigcap \\{\mathcal{G} \subseteq \mathcal{P}(\Omega) : \mathcal{G} \text{ es una } \sigma\text{-álgebra y } \mathcal{C} \subseteq \mathcal{G}\\}.
 \\]
 
 ### La σ-álgebra de Borel sobre la recta real y espacios euclidianos
@@ -116,16 +116,16 @@ Cuando el espacio muestral es la recta real \\(\mathbb{R}\\), la topología usua
 **Definición 1.17 (σ-álgebra de Borel en ℝ).** La **σ-álgebra de Borel** sobre \\(\mathbb{R}\\), denotada por \\(\mathcal{B}(\mathbb{R})\\) o simplemente \\(\mathcal{B}\\), es la σ-álgebra generada por la clase de todos los conjuntos abiertos de \\(\mathbb{R}\\):
 
 \\[
-\mathcal{B}(\mathbb{R}) = \sigma(\{\text{abiertos de } \mathbb{R}\}).
+\mathcal{B}(\mathbb{R}) = \sigma(\\{\text{abiertos de } \mathbb{R}\\}).
 \\]
 
 A los elementos de \\(\mathcal{B}(\mathbb{R})\\) se les llama **conjuntos borelianos**.
 
 **Proposición 1.18.** *La \\(\sigma\\)-álgebra de Borel \\(\mathcal{B}(\mathbb{R})\\) puede ser generada equivalentemente por cualquiera de las siguientes familias de intervalos:*
-1. \\(\mathcal{C}\_1 = \{(a, b) : a < b, a, b \in \mathbb{R}\}\\) (intervalos abiertos).
-2. \\(\mathcal{C}\_2 = \{[a, b] : a \le b, a, b \in \mathbb{R}\}\\) (intervalos cerrados).
-3. \\(\mathcal{C}\_3 = \{(-\infty, x] : x \in \mathbb{R}\}\\) (rayos izquierdos cerrados).
-4. \\(\mathcal{C}\_4 = \{(-\infty, x) : x \in \mathbb{R}\}\\) (rayos izquierdos abiertos).
+1. \\(\mathcal{C}\_1 = \\{(a, b) : a < b, a, b \in \mathbb{R}\\}\\) (intervalos abiertos).
+2. \\(\mathcal{C}\_2 = \\{[a, b] : a \le b, a, b \in \mathbb{R}\\}\\) (intervalos cerrados).
+3. \\(\mathcal{C}\_3 = \\{(-\infty, x] : x \in \mathbb{R}\\}\\) (rayos izquierdos cerrados).
+4. \\(\mathcal{C}\_4 = \\{(-\infty, x) : x \in \mathbb{R}\\}\\) (rayos izquierdos abiertos).
 
 *Demostración (caso \\(\mathcal{C}\_3\\)).*
 - Todo rayo abierto \\((-\infty, x)\\) se escribe como la unión numerable de rayos cerrados:

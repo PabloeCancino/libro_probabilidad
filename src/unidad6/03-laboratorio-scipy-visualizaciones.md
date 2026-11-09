@@ -49,7 +49,7 @@ print(f"Media: {media:.2f}, Varianza: {varianza:.2f}, Asimetría: {sesgo:.2f}")
 
 ## 6.3.3 Diagnóstico visual y contrastes de bondad de ajuste
 
-Para evaluar si una muestra empírica \\(\{x\_1, \dots, x\_n\}\\) proviene de una distribución teórica postulada, se combinan gráficos de diagnóstico y pruebas formales:
+Para evaluar si una muestra empírica \\(\\{x\_1, \dots, x\_n\\}\\) proviene de una distribución teórica postulada, se combinan gráficos de diagnóstico y pruebas formales:
 
 1. **Histograma de densidad vs. PDF teórica superpuesta.**
 2. **Gráfico Q-Q (Quantile-Quantile Plot):** Grafica los cuantiles empíricos muestrales frente a los cuantiles teóricos. Si los puntos se alinean perfectamente sobre la diagonal de 45 grados, los datos provienen de la distribución postulada.

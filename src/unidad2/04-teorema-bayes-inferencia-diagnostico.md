@@ -4,7 +4,7 @@
 
 Publicado póstumamente en 1763 por Thomas Bayes y reformulado independientemente por Pierre-Simon Laplace en 1774, el **Teorema de Bayes** es la piedra angular del razonamiento condicional inverso: permite actualizar la probabilidad asignada a una hipótesis inicial (*a priori*) a la luz de una nueva evidencia observada (*a posteriori*).
 
-**Teorema 2.17 (Teorema de Bayes).** *Sea \\(\{B\_1, B\_2, \dots, B\_k\}\\) una partición del espacio muestral \\(\Omega\\) con \\(\mathbb{P}(B\_i) > 0\\) para todo \\(i = 1, \dots, k\\). Sea \\(A \in \mathcal{F}\\) un evento con \\(\mathbb{P}(A) > 0\\). Entonces, para cualquier \\(j \in \{1, \dots, k\}\\):*
+**Teorema 2.17 (Teorema de Bayes).** *Sea \\(\\{B\_1, B\_2, \dots, B\_k\\}\\) una partición del espacio muestral \\(\Omega\\) con \\(\mathbb{P}(B\_i) > 0\\) para todo \\(i = 1, \dots, k\\). Sea \\(A \in \mathcal{F}\\) un evento con \\(\mathbb{P}(A) > 0\\). Entonces, para cualquier \\(j \in \\{1, \dots, k\\}\\):*
 
 \\[
 \mathbb{P}(B\_j \mid A) = \frac{\mathbb{P}(B\_j \cap A)}{\mathbb{P}(A)} = \frac{\mathbb{P}(B\_j) \mathbb{P}(A \mid B\_j)}{\sum\_{i=1}^k \mathbb{P}(B\_i) \mathbb{P}(A \mid B\_i)}.
@@ -98,8 +98,8 @@ Consideremos una prueba clínica para detectar una enfermedad \\(E\\).
 
 **Ejemplo 2.18 (El cribado de una enfermedad rara).**  
 Supongamos una enfermedad con una prevalencia de 1 en cada 1\,000 habitantes en la población general (\\(\pi\_0 = 0.001\\)). Se desarrolla un test diagnóstico con alta precisión clínica:
-- Sensibilidad: \\(S\_e = 99\% = 0.99\\).
-- Especificidad: \\(S\_p = 95\% = 0.95\\) (tasa de falsos positivos \\(1 - S\_p = 5\%\\)).
+- Sensibilidad: \\(S\_e = 99\\% = 0.99\\).
+- Especificidad: \\(S\_p = 95\\% = 0.95\\) (tasa de falsos positivos \\(1 - S\_p = 5\\%\\)).
 
 Una persona asintomática seleccionada al azar de la población se realiza el test y obtiene un resultado positivo (\\(T^+\\)). ¿Cuál es la probabilidad real de que padezca la enfermedad?
 
@@ -109,15 +109,15 @@ Aplicando el Teorema de Bayes:
 \\[
 \begin{aligned}
 \mathbb{P}(E \mid T^+) &= \frac{(0.001)(0.99)}{(0.001)(0.99) + (0.999)(0.05)} \\\\
-&= \frac{0.00099}{0.00099 + 0.04995} = \frac{0.00099}{0.05094} \approx 0.01943 \quad (1.94\%).
+&= \frac{0.00099}{0.00099 + 0.04995} = \frac{0.00099}{0.05094} \approx 0.01943 \quad (1.94\\%).
 \end{aligned}
 \\]
 
 > **Conclusión contraintuitiva pero rigurosa:** A pesar de que la prueba tiene un 99% de sensibilidad y 95% de especificidad, una persona que da positivo **solo tiene un 1.94% de probabilidad real de estar enferma**. El 98.06% de los resultados positivos son en realidad falsos positivos.  
 > **Explicación matemática:** En una población de 100\,000 personas:
 > - Hay 100 enfermos; el test detecta a \\(100 \times 0.99 = 99\\) verdaderos positivos.
-> - Hay 99\,900 sanos; el 5% de ellos da falso positivo: \\(99\,900 \times 0.05 = 4\,995\\) falsos positivos.
-> - Total de positivos: \\(99 + 4\,995 = 5\,094\\). De ellos, solo 99 están realmente enfermos: \\(\frac{99}{5\,094} \approx 1.94\%\\).
+> - Hay 99\,900 sanos; el 5% de ellos da falso positivo: \\(99\\,900 \times 0.05 = 4\\,995\\) falsos positivos.
+> - Total de positivos: \\(99 + 4\\,995 = 5\\,094\\). De ellos, solo 99 están realmente enfermos: \\(\frac{99}{5\\,094} \approx 1.94\\%\\).
 
 ### 2. La falacia del fiscal (Prosecutor's Fallacy)
 
@@ -128,7 +128,7 @@ Consiste en confundir la probabilidad condicional de la evidencia dada la inocen
 \\]
 
 En un juicio, si una prueba de ADN tiene una tasa de coincidencia fortuita de 1 en 100\,000 en personas inocentes (\\(\mathbb{P}(M \mid I) = 10^{-5}\\)), el fiscal erróneamente alega que *"la probabilidad de que el acusado sea inocente es de 1 en 100\,000"*.  
-Si la población sospechosa es de 1\,000\,000 de personas, habrá unas 10 personas inocentes con coincidencia genética. La probabilidad a posteriori de inocencia sin otras pruebas incriminatorias es de \\(\frac{10}{11} \approx 90.9\%\\).
+Si la población sospechosa es de 1\,000\,000 de personas, habrá unas 10 personas inocentes con coincidencia genética. La probabilidad a posteriori de inocencia sin otras pruebas incriminatorias es de \\(\frac{10}{11} \approx 90.9\\%\\).
 
 ---
 

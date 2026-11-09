@@ -20,11 +20,11 @@ Modela la probabilidad homogénea en un intervalo continuo acotado \\([a, b]\\).
 - **Esperanza y Varianza:**
 
   \\[
-  \mathbb{E}[X] = \int\_a^b \frac{x}{b-a} \, dx = \frac{b^2 - a^2}{2(b-a)} = \frac{a + b}{2}.
+  \mathbb{E}[X] = \int\_a^b \frac{x}{b-a} \\, dx = \frac{b^2 - a^2}{2(b-a)} = \frac{a + b}{2}.
   \\]
 
   \\[
-  \mathbb{E}[X^2] = \int\_a^b \frac{x^2}{b-a} \, dx = \frac{b^3 - a^3}{3(b-a)} = \frac{a^2 + ab + b^2}{3} \implies \text{Var}(X) = \frac{(b - a)^2}{12}.
+  \mathbb{E}[X^2] = \int\_a^b \frac{x^2}{b-a} \\, dx = \frac{b^3 - a^3}{3(b-a)} = \frac{a^2 + ab + b^2}{3} \implies \text{Var}(X) = \frac{(b - a)^2}{12}.
   \\]
 
 ---
@@ -45,16 +45,16 @@ Es la distribución continua más importante de toda la teoría estadística y p
 **Lema 3.23 (Integral Gaussiana).**
 
 \\[
-\int\_{-\infty}^{\infty} e^{-z^2 / 2} \, dz = \sqrt{2\pi}.
+\int\_{-\infty}^{\infty} e^{-z^2 / 2} \\, dz = \sqrt{2\pi}.
 \\]
 
-*Demostración.* Sea \\(I = \int\_{-\infty}^{\infty} e^{-z^2/2} \, dz\\). Elevando al cuadrado y transformando a coordenadas polares en \\(\mathbb{R}^2\\):
+*Demostración.* Sea \\(I = \int\_{-\infty}^{\infty} e^{-z^2/2} \\, dz\\). Elevando al cuadrado y transformando a coordenadas polares en \\(\mathbb{R}^2\\):
 
 \\[
-I^2 = \int\_{-\infty}^{\infty} \int\_{-\infty}^{\infty} e^{-(x^2 + y^2)/2} \, dx \, dy = \int\_0^{2\pi} d\theta \int\_0^{\infty} r e^{-r^2/2} \, dr = 2\pi [-e^{-r^2/2}]\_0^{\infty} = 2\pi (0 - (-1)) = 2\pi.
+I^2 = \int\_{-\infty}^{\infty} \int\_{-\infty}^{\infty} e^{-(x^2 + y^2)/2} \\, dx \\, dy = \int\_0^{2\pi} d\theta \int\_0^{\infty} r e^{-r^2/2} \\, dr = 2\pi [-e^{-r^2/2}]\_0^{\infty} = 2\pi (0 - (-1)) = 2\pi.
 \\]
 
-Por ende, \\(I = \sqrt{2\pi}\\). Esto demuestra que \\(\int\_{-\infty}^\infty f\_X(x) \, dx = 1\\). \\(\blacksquare\\)
+Por ende, \\(I = \sqrt{2\pi}\\). Esto demuestra que \\(\int\_{-\infty}^\infty f\_X(x) \\, dx = 1\\). \\(\blacksquare\\)
 
 ### La Normal Estándar y la transformación Z
 Si \\(X \sim \mathcal{N}(\mu, \sigma^2)\\), la variable tipificada (estandarizada):
@@ -63,7 +63,7 @@ Si \\(X \sim \mathcal{N}(\mu, \sigma^2)\\), la variable tipificada (estandarizad
 Z = \frac{X - \mu}{\sigma} \sim \mathcal{N}(0, 1).
 \\]
 
-Su PDF se denota por \\(\phi(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}\\) y su CDF por \\(\Phi(z) = \int\_{-\infty}^z \phi(t) \, dt\\).  
+Su PDF se denota por \\(\phi(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}\\) y su CDF por \\(\Phi(z) = \int\_{-\infty}^z \phi(t) \\, dt\\).  
 Por la simetría par de la curva campana respecto a cero:
 
 \\[
@@ -123,7 +123,7 @@ Generaliza la distribución exponencial para modelar el tiempo total de espera h
 - **Definición de la función Gamma de Euler:**
 
   \\[
-  \Gamma(\alpha) = \int\_0^\infty t^{\alpha - 1} e^{-t} \, dt, \quad \text{con } \Gamma(\alpha + 1) = \alpha \Gamma(\alpha), \ \Gamma(n) = (n-1)!, \ \Gamma(1/2) = \sqrt{\pi}.
+  \Gamma(\alpha) = \int\_0^\infty t^{\alpha - 1} e^{-t} \\, dt, \quad \text{con } \Gamma(\alpha + 1) = \alpha \Gamma(\alpha), \ \Gamma(n) = (n-1)!, \ \Gamma(1/2) = \sqrt{\pi}.
   \\]
 
 - **Parámetros:** Forma \\(\alpha > 0\\), tasa \\(\beta > 0\\) (o escala \\(\theta = 1/\beta\\)).
@@ -151,7 +151,7 @@ Generaliza la distribución exponencial para modelar el tiempo total de espera h
 
 Modela variables continuas acotadas en el intervalo unitario \\((0, 1)\\), ampliamente utilizada en estadística bayesiana como distribución a priori conjugada para proporciones binomiales.
 
-- **Función Beta:** \\(B(\alpha, \beta) = \int\_0^1 x^{\alpha - 1} (1 - x)^{\beta - 1} \, dx = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}\\).
+- **Función Beta:** \\(B(\alpha, \beta) = \int\_0^1 x^{\alpha - 1} (1 - x)^{\beta - 1} \\, dx = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}\\).
 - **Parámetros:** Formas \\(\alpha > 0, \ \beta > 0\\).
 - **Soporte:** \\(S\_X = (0, 1)\\).
 - **PDF:**

@@ -4,13 +4,13 @@
 
 | Distribución | Notación y Parámetros | Soporte \\(S\_X\\) | PMF: \\(p\_X(k) = \mathbb{P}(X = k)\\) | Esperanza \\(\mathbb{E}[X]\\) | Varianza \\(\text{Var}(X)\\) | Función Generadora \\(M\_X(t)\\) |
 |---|---|---|---|---|---|---|
-| **Uniforme discreta** | \\(\mathcal{U}\{a, b\}\\), \\(k = b - a + 1\\) | \\(\{a, a+1, \dots, b\}\\) | \\(\dfrac{1}{k}\\) | \\(\dfrac{a + b}{2}\\) | \\(\dfrac{k^2 - 1}{12}\\) | \\(\dfrac{e^{at}(1 - e^{kt})}{k(1 - e^t)}\\) |
-| **Bernoulli** | \\(\text{Bernoulli}(p)\\), \\(p \in [0, 1]\\) | \\(\{0, 1\}\\) | \\(p^k (1 - p)^{1 - k}\\) | \\(p\\) | \\(p(1 - p)\\) | \\((1 - p) + p e^t\\) |
-| **Binomial** | \\(\text{Binomial}(n, p)\\), \\(n \in \mathbb{Z}^+, \ p \in [0,1]\\) | \\(\{0, 1, \dots, n\}\\) | \\(\dbinom{n}{k} p^k (1 - p)^{n - k}\\) | \\(np\\) | \\(np(1 - p)\\) | \\([(1 - p) + p e^t]^n\\) |
-| **Geométrica** | \\(\text{Geométrica}(p)\\), \\(p \in (0, 1]\\) | \\(\{1, 2, 3, \dots\}\\) | \\((1 - p)^{k - 1} p\\) | \\(\dfrac{1}{p}\\) | \\(\dfrac{1 - p}{p^2}\\) | \\(\dfrac{p e^t}{1 - (1 - p)e^t}\\) |
-| **Binomial Negativa** | \\(\text{BN}(r, p)\\), \\(r \in \mathbb{Z}^+, \ p \in (0,1]\\) | \\(\{r, r+1, \dots\}\\) | \\(\dbinom{k - 1}{r - 1} p^r (1 - p)^{k - r}\\) | \\(\dfrac{r}{p}\\) | \\(\dfrac{r(1 - p)}{p^2}\\) | \\(\left[\dfrac{p e^t}{1 - (1 - p)e^t}\right]^r\\) |
-| **Hipergeométrica** | \\(\text{Hiper}(N, K, n)\\) | \\(\{\max(0, n-N+K), \dots, \min(n,K)\}\\) | \\(\dfrac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}\\) | \\(n \dfrac{K}{N}\\) | \\(n \dfrac{K}{N}\left(1 - \dfrac{K}{N}\right)\left(\dfrac{N-n}{N-1}\right)\\) | *(Forma hipergeométrica)* |
-| **Poisson** | \\(\text{Poisson}(\lambda)\\), \\(\lambda > 0\\) | \\(\{0, 1, 2, \dots\}\\) | \\(\dfrac{e^{-\lambda} \lambda^k}{k!}\\) | \\(\lambda\\) | \\(\lambda\\) | \\(\exp(\lambda(e^t - 1))\\) |
+| **Uniforme discreta** | \\(\mathcal{U}\\{a, b\\}\\), \\(k = b - a + 1\\) | \\(\\{a, a+1, \dots, b\\}\\) | \\(\dfrac{1}{k}\\) | \\(\dfrac{a + b}{2}\\) | \\(\dfrac{k^2 - 1}{12}\\) | \\(\dfrac{e^{at}(1 - e^{kt})}{k(1 - e^t)}\\) |
+| **Bernoulli** | \\(\text{Bernoulli}(p)\\), \\(p \in [0, 1]\\) | \\(\\{0, 1\\}\\) | \\(p^k (1 - p)^{1 - k}\\) | \\(p\\) | \\(p(1 - p)\\) | \\((1 - p) + p e^t\\) |
+| **Binomial** | \\(\text{Binomial}(n, p)\\), \\(n \in \mathbb{Z}^+, \ p \in [0,1]\\) | \\(\\{0, 1, \dots, n\\}\\) | \\(\dbinom{n}{k} p^k (1 - p)^{n - k}\\) | \\(np\\) | \\(np(1 - p)\\) | \\([(1 - p) + p e^t]^n\\) |
+| **Geométrica** | \\(\text{Geométrica}(p)\\), \\(p \in (0, 1]\\) | \\(\\{1, 2, 3, \dots\\}\\) | \\((1 - p)^{k - 1} p\\) | \\(\dfrac{1}{p}\\) | \\(\dfrac{1 - p}{p^2}\\) | \\(\dfrac{p e^t}{1 - (1 - p)e^t}\\) |
+| **Binomial Negativa** | \\(\text{BN}(r, p)\\), \\(r \in \mathbb{Z}^+, \ p \in (0,1]\\) | \\(\\{r, r+1, \dots\\}\\) | \\(\dbinom{k - 1}{r - 1} p^r (1 - p)^{k - r}\\) | \\(\dfrac{r}{p}\\) | \\(\dfrac{r(1 - p)}{p^2}\\) | \\(\left[\dfrac{p e^t}{1 - (1 - p)e^t}\right]^r\\) |
+| **Hipergeométrica** | \\(\text{Hiper}(N, K, n)\\) | \\(\\{\max(0, n-N+K), \dots, \min(n,K)\\}\\) | \\(\dfrac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}\\) | \\(n \dfrac{K}{N}\\) | \\(n \dfrac{K}{N}\left(1 - \dfrac{K}{N}\right)\left(\dfrac{N-n}{N-1}\right)\\) | *(Forma hipergeométrica)* |
+| **Poisson** | \\(\text{Poisson}(\lambda)\\), \\(\lambda > 0\\) | \\(\\{0, 1, 2, \dots\\}\\) | \\(\dfrac{e^{-\lambda} \lambda^k}{k!}\\) | \\(\lambda\\) | \\(\lambda\\) | \\(\exp(\lambda(e^t - 1))\\) |
 
 ---
 

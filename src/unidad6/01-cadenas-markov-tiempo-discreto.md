@@ -3,10 +3,10 @@
 ## 6.1.1 Introducción a los procesos estocásticos y la propiedad de Márkov
 
 Un **proceso estocástico** es una familia indexada de variables aleatorias \\((X\_t)\_{t \in T}\\) definidas sobre un espacio de probabilidad común \\((\Omega, \mathcal{F}, \mathbb{P})\\), donde el índice \\(t \in T\\) representa usualmente el tiempo.
-- Si \\(T = \mathbb{N}\_0 = \{0, 1, 2, \dots\}\\), el proceso es a **tiempo discreto**.
+- Si \\(T = \mathbb{N}\_0 = \\{0, 1, 2, \dots\\}\\), el proceso es a **tiempo discreto**.
 - Si \\(T = [0, \infty)\\), el proceso es a **tiempo continuo**.
 
-El conjunto de todos los valores posibles que pueden tomar las variables \\(X\_t\\) se denomina el **espacio de estados** \\(S\\). En esta sección nos enfocaremos en espacios de estados finitos o numerables \\(S = \{1, 2, \dots, N\}\\).
+El conjunto de todos los valores posibles que pueden tomar las variables \\(X\_t\\) se denomina el **espacio de estados** \\(S\\). En esta sección nos enfocaremos en espacios de estados finitos o numerables \\(S = \\{1, 2, \dots, N\\}\\).
 
 **Definición 6.1 (Propiedad de Márkov a tiempo discreto).** Un proceso estocástico a tiempo discreto \\((X\_n)\_{n=0}^\infty\\) con espacio de estados \\(S\\) es una **Cadena de Markov a tiempo discreto (DTMC)** si satisface la **propiedad de pérdida de memoria estocástica (propiedad de Márkov)**: la probabilidad condicional de la transición hacia el estado futuro \\(X\_{n+1}\\) depende únicamente del estado presente actual \\(X\_n\\), siendo completamente independiente de toda la trayectoria histórica pasada:
 
@@ -29,7 +29,7 @@ p\_{ij} = \mathbb{P}(X\_{n+1} = j \mid X\_n = i) = \mathbb{P}(X\_1 = j \mid X\_0
 **Definición 6.2 (Matriz estocástica de transición).** Para una cadena homogénea con \\(N\\) estados, la **matriz de transición en un paso** es la matriz cuadrada \\(\mathbf{P} = (p\_{ij}) \in \mathbb{R}^{N \times N}\\):
 
 \\[
-\mathbf{P} = \begin{pmatrix} p\_{11} & p\_{12} & \dots & p\_{1N} \\ p\_{21} & p\_{22} & \dots & p\_{2N} \\ \vdots & \vdots & \ddots & \vdots \\ p\_{N1} & p\_{N2} & \dots & p\_{NN} \end{pmatrix}.
+\mathbf{P} = \begin{pmatrix} p\_{11} & p\_{12} & \dots & p\_{1N} \\\\ p\_{21} & p\_{22} & \dots & p\_{2N} \\\\ \vdots & \vdots & \ddots & \vdots \\\\ p\_{N1} & p\_{N2} & \dots & p\_{NN} \end{pmatrix}.
 \\]
 
 Toda matriz de transición es una **matriz estocástica por filas**:
@@ -81,7 +81,7 @@ Si el vector de probabilidades iniciales es \\(\boldsymbol{\pi}^{(0)} = (\mathbb
    - El estado \\(j\\) es accesible desde \\(i\\) (\\(i \to j\\)) si existe algún \\(n \ge 0\\) tal que \\(p\_{ij}^{(n)} > 0\\).
    - Dos estados **comunican** (\\(i \leftrightarrow j\\)) si \\(i \to j\\) y \\(j \to i\\). La comunicación es una relación de equivalencia que particiona a \\(S\\) en clases comunicantes disjuntas.
 2. **Irreducibilidad:** Una cadena es **irreducible** si todos sus estados comunican entre sí (hay una única clase que abarca todo \\(S\\)).
-3. **Periodicidad:** El **periodo** de un estado \\(i\\) es \\(d(i) = \text{mcd}\{n \ge 1 : p\_{ii}^{(n)} > 0\}\\). Si \\(d(i) = 1\\), el estado es **aperiódico**.
+3. **Periodicidad:** El **periodo** de un estado \\(i\\) es \\(d(i) = \text{mcd}\\{n \ge 1 : p\_{ii}^{(n)} > 0\\}\\). Si \\(d(i) = 1\\), el estado es **aperiódico**.
 4. **Recurrencia y Transitoriedad:**  
    Sea \\(f\_{ii} = \mathbb{P}(\text{la cadena eventualmente regresa al estado } i \mid X\_0 = i)\\).
    - El estado \\(i\\) es **recurrente** si \\(f\_{ii} = 1\\) (se visita infinitas veces casi seguramente).

@@ -56,7 +56,7 @@ Identificamos los datos proporcionados:
 Por la definición formal de probabilidad condicional (Definición 2.1) sobre el espacio muestral reducido \\(I\\):
 
 \\[
-\mathbb{P}(F \mid I) = \frac{\mathbb{P}(F \cap I)}{\mathbb{P}(I)} = \frac{0.20}{0.60} = \frac{2}{6} = \frac{1}{3} \approx 0.3333 \quad (33.33\%).
+\mathbb{P}(F \mid I) = \frac{\mathbb{P}(F \cap I)}{\mathbb{P}(I)} = \frac{0.20}{0.60} = \frac{2}{6} = \frac{1}{3} \approx 0.3333 \quad (33.33\\%).
 \\]
 
 ### Análisis pedagógico de distractores
@@ -111,7 +111,7 @@ La función de densidad es \\(f\_X(x) = \frac{1}{2} e^{-x/2}\\) para \\(x \ge 0\
 La probabilidad de la cola de supervivencia es:
 
 \\[
-\mathbb{P}(X > 3) = \int\_3^\infty \frac{1}{2} e^{-x/2} \, dx = \left[-e^{-x/2}\right]\_3^\infty = 0 - (-e^{-3/2}) = e^{-3/2} = e^{-1.5} \approx 0.22313.
+\mathbb{P}(X > 3) = \int\_3^\infty \frac{1}{2} e^{-x/2} \\, dx = \left[-e^{-x/2}\right]\_3^\infty = 0 - (-e^{-3/2}) = e^{-3/2} = e^{-1.5} \approx 0.22313.
 \\]
 
 ### Análisis pedagógico de distractores

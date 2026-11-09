@@ -2,7 +2,7 @@
 
 ## 5.2.1 Las cuatro nociones de convergencia
 
-En análisis real ordinario, una sucesión de números reales \\(\{x\_n\}\\) converge a un límite \\(x\\) si la distancia \\(|x\_n - x| \to 0\\). En probabilidad, las variables aleatorias \\(X\_n: \Omega \to \mathbb{R}\\) son funciones medibles sobre un espacio abstracto de medida \\((\Omega, \mathcal{F}, \mathbb{P})\\), lo que da origen a distintos conceptos cualitativos y cuantitativos de aproximación asintótica.
+En análisis real ordinario, una sucesión de números reales \\(\\{x\_n\\}\\) converge a un límite \\(x\\) si la distancia \\(|x\_n - x| \to 0\\). En probabilidad, las variables aleatorias \\(X\_n: \Omega \to \mathbb{R}\\) son funciones medibles sobre un espacio abstracto de medida \\((\Omega, \mathcal{F}, \mathbb{P})\\), lo que da origen a distintos conceptos cualitativos y cuantitativos de aproximación asintótica.
 
 ---
 
@@ -65,7 +65,9 @@ para todo punto \\(x \in \mathbb{R}\\) donde la función de distribución límit
 
 ## 5.2.2 Jerarquía y relaciones de implicación entre modos de convergencia
 
-**Teorema 5.11 (Jerarquía de convergencias estocásticas).**```
+**Teorema 5.11 (Jerarquía de convergencias estocásticas).**
+
+```text
            X_n ──c.s.──> X
                 │
                 ▼

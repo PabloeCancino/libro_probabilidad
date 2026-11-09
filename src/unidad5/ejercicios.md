@@ -38,8 +38,8 @@
 ## Bloque C: Ley de los Grandes Números y Teorema del Límite Central
 
 5. **Diseño de tamaño muestral por Chebyshev:**
-   - Una fábrica produce resistencias cuyo valor nominal es \\(100\,\Omega\\) con desviación estándar \\(\sigma = 5\,\Omega\\).
-   - ¿Cuántas resistencias \\(n\\) deben medirse como mínimo para garantizar con al menos un 95% de confianza que la media muestral \\(\bar{X}\_n\\) no difiera de \\(100\,\Omega\\) en más de \\(0.5\,\Omega\\)?
+   - Una fábrica produce resistencias cuyo valor nominal es \\(100\\,\Omega\\) con desviación estándar \\(\sigma = 5\\,\Omega\\).
+   - ¿Cuántas resistencias \\(n\\) deben medirse como mínimo para garantizar con al menos un 95% de confianza que la media muestral \\(\bar{X}\_n\\) no difiera de \\(100\\,\Omega\\) en más de \\(0.5\\,\Omega\\)?
    - Compare el tamaño muestral obtenido por Chebyshev con el obtenido utilizando el Teorema del Límite Central.
 
 6. **Aproximación Normal a la Binomial con corrección por continuidad:**

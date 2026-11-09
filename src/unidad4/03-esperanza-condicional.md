@@ -14,7 +14,7 @@ La esperanza condicional es una de las herramientas más sofisticadas y útiles 
 2. **Caso continuo:** Para cualquier \\(y\\) con \\(f\_Y(y) > 0\\):
 
    \\[
-   \mathbb{E}[X \mid Y = y] = \int\_{-\infty}^{\infty} x \cdot f\_{X \mid Y}(x \mid y) \, dx = \int\_{-\infty}^{\infty} x \frac{f\_{X,Y}(x, y)}{f\_Y(y)} \, dx.
+   \mathbb{E}[X \mid Y = y] = \int\_{-\infty}^{\infty} x \cdot f\_{X \mid Y}(x \mid y) \\, dx = \int\_{-\infty}^{\infty} x \frac{f\_{X,Y}(x, y)}{f\_Y(y)} \\, dx.
    \\]
 
 Observemos que \\(\mathbb{E}[X \mid Y = y] = g(y)\\) es una función determinista ordinaria del valor \\(y\\).
@@ -43,9 +43,9 @@ Por LOTUS (Teorema 4.2), la esperanza de la variable aleatoria \\(g(Y)\\) es:
 
 \\[
 \begin{aligned}
-\mathbb{E}[\mathbb{E}[X \mid Y]] &= \mathbb{E}[g(Y)] = \int\_{-\infty}^\infty g(y) f\_Y(y) \, dy \\\\
-&= \int\_{-\infty}^\infty \left(\int\_{-\infty}^\infty x \frac{f\_{X,Y}(x, y)}{f\_Y(y)} \, dx\right) f\_Y(y) \, dy \\\\
-&= \int\_{-\infty}^\infty \int\_{-\infty}^\infty x f\_{X,Y}(x, y) \, dx \, dy = \mathbb{E}[X]. \quad \blacksquare
+\mathbb{E}[\mathbb{E}[X \mid Y]] &= \mathbb{E}[g(Y)] = \int\_{-\infty}^\infty g(y) f\_Y(y) \\, dy \\\\
+&= \int\_{-\infty}^\infty \left(\int\_{-\infty}^\infty x \frac{f\_{X,Y}(x, y)}{f\_Y(y)} \\, dx\right) f\_Y(y) \\, dy \\\\
+&= \int\_{-\infty}^\infty \int\_{-\infty}^\infty x f\_{X,Y}(x, y) \\, dx \\, dy = \mathbb{E}[X]. \quad \blacksquare
 \end{aligned}
 \\]
 
@@ -152,7 +152,7 @@ Sea \\(S\_N = \sum\_{i=1}^N X\_i\\) el monto total reclamado (con \\(S\_0 = 0\\)
 1. **Esperanza total:**
 
    \\[
-   \mathbb{E}[S\_N \mid N] = \mathbb{E}\left[\sum\_{i=1}^N X\_i \;\middle|\; N\right] = N \mathbb{E}[X] \implies \mathbb{E}[S\_N] = \mathbb{E}[N \mathbb{E}[X]] = \mathbb{E}[N] \mathbb{E}[X] = \lambda \cdot \frac{1}{\beta}.
+   \mathbb{E}[S\_N \mid N] = \mathbb{E}\left[\sum\_{i=1}^N X\_i \\;\middle|\\; N\right] = N \mathbb{E}[X] \implies \mathbb{E}[S\_N] = \mathbb{E}[N \mathbb{E}[X]] = \mathbb{E}[N] \mathbb{E}[X] = \lambda \cdot \frac{1}{\beta}.
    \\]
 
 2. **Varianza total:**

@@ -10,7 +10,7 @@ Sean \\((A\_n)\_{n=1}^\infty\\) una sucesión infinita de eventos en un espacio 
 El evento *"\\(A\_n\\) ocurre para infinitos índices \\(n\\)"* se define mediante el límite superior de conjuntos:
 
 \\[
-\limsup\_{n \to \infty} A\_n = \{A\_n \text{ infinitas veces (i.v.)}\} = \bigcap\_{n=1}^\infty \bigcup\_{k=n}^\infty A\_k.
+\limsup\_{n \to \infty} A\_n = \\{A\_n \text{ infinitas veces (i.v.)}\\} = \bigcap\_{n=1}^\infty \bigcup\_{k=n}^\infty A\_k.
 \\]
 
 **Teorema A.1 (Primer Lema de Borel-Cantelli).** *Si la serie de probabilidades de los eventos converge:*
@@ -123,7 +123,7 @@ Por la regla del complemento, \\(\mathbb{P}\left(\limsup\_{n \to \infty} A\_n\ri
 1. **(Tonelli):** Si \\(f(x, y) \ge 0\\) es no negativa, entonces las integrales iteradas son iguales (pudiendo ambas ser \\(+\infty\\)):
 
    \\[
-   \int\_{-\infty}^\infty \left(\int\_{-\infty}^\infty f(x, y) \, dy\right) dx = \int\_{-\infty}^\infty \left(\int\_{-\infty}^\infty f(x, y) \, dx\right) dy = \iint\_{\mathbb{R}^2} f(x, y) \, dx \, dy.
+   \int\_{-\infty}^\infty \left(\int\_{-\infty}^\infty f(x, y) \\, dy\right) dx = \int\_{-\infty}^\infty \left(\int\_{-\infty}^\infty f(x, y) \\, dx\right) dy = \iint\_{\mathbb{R}^2} f(x, y) \\, dx \\, dy.
    \\]
 
-2. **(Fubini):** Si \\(\iint\_{\mathbb{R}^2} |f(x, y)| \, dx \, dy < \infty\\), entonces el orden de integración puede intercambiarse libremente dando el mismo valor numérico finito.
+2. **(Fubini):** Si \\(\iint\_{\mathbb{R}^2} |f(x, y)| \\, dx \\, dy < \infty\\), entonces el orden de integración puede intercambiarse libremente dando el mismo valor numérico finito.

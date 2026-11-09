@@ -9,8 +9,8 @@ Presentamos el tratamiento matemático formal de las familias de distribuciones 
 Modela un experimento con \\(k\\) resultados posibles que tienen exactamente la misma probabilidad de ocurrir.
 
 - **Parámetros:** Enteros \\(a, b \in \mathbb{Z}\\) con \\(a \le b\\), donde \\(k = b - a + 1\\).
-- **Notación:** \\(X \sim \mathcal{U}\{a, b\}\\).
-- **Soporte:** \\(S\_X = \{a, a+1, \dots, b\}\\).
+- **Notación:** \\(X \sim \mathcal{U}\\{a, b\\}\\).
+- **Soporte:** \\(S\_X = \\{a, a+1, \dots, b\\}\\).
 - **Función de masa (PMF):**
 
   \\[
@@ -31,11 +31,11 @@ Modela un ensayo dicotómico único con dos resultados posibles: "Éxito" (\\(X=
 
 - **Parámetro:** Probabilidad de éxito \\(p \in [0, 1]\\).
 - **Notación:** \\(X \sim \text{Bernoulli}(p)\\).
-- **Soporte:** \\(S\_X = \{0, 1\}\\).
+- **Soporte:** \\(S\_X = \\{0, 1\\}\\).
 - **Función de masa (PMF):**
 
   \\[
-  p\_X(x) = p^x (1 - p)^{1 - x}, \quad x \in \{0, 1\}.
+  p\_X(x) = p^x (1 - p)^{1 - x}, \quad x \in \\{0, 1\\}.
   \\]
 
 - **Esperanza y Varianza:**
@@ -56,11 +56,11 @@ Modela el número total de éxitos obtenidos en una secuencia de \\(n\\) ensayos
 
 - **Parámetros:** \\(n \in \mathbb{Z}^+\\) (número de ensayos), \\(p \in [0, 1]\\) (probabilidad de éxito).
 - **Notación:** \\(X \sim \text{Binomial}(n, p)\\).
-- **Soporte:** \\(S\_X = \{0, 1, 2, \dots, n\}\\).
+- **Soporte:** \\(S\_X = \\{0, 1, 2, \dots, n\\}\\).
 - **Función de masa (PMF):**
 
   \\[
-  p\_X(k) = \mathbb{P}(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k \in \{0, 1, \dots, n\}.
+  p\_X(k) = \mathbb{P}(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k \in \\{0, 1, \dots, n\\}.
   \\]
 
 **Verificación de la normalización:** Por el Teorema del Binomio de Newton:
@@ -90,11 +90,11 @@ Modela el número de ensayos Bernoulli independientes requeridos hasta observar 
 
 - **Parámetro:** \\(p \in (0, 1]\\).
 - **Notación:** \\(X \sim \text{Geométrica}(p)\\).
-- **Soporte:** \\(S\_X = \{1, 2, 3, \dots\}\\) (versión que cuenta el número de intentos totales).
+- **Soporte:** \\(S\_X = \\{1, 2, 3, \dots\\}\\) (versión que cuenta el número de intentos totales).
 - **Función de masa (PMF):**
 
   \\[
-  p\_X(k) = (1 - p)^{k - 1} p, \quad k \in \{1, 2, 3, \dots\}.
+  p\_X(k) = (1 - p)^{k - 1} p, \quad k \in \\{1, 2, 3, \dots\\}.
   \\]
 
 - **Función de distribución acumulada (CDF):**
@@ -129,7 +129,7 @@ Modela el número de ensayos Bernoulli independientes \\(X\\) necesarios para ac
 
 - **Parámetros:** \\(r \in \mathbb{Z}^+\\) (éxitos requeridos), \\(p \in (0, 1]\\).
 - **Notación:** \\(X \sim \text{BN}(r, p)\\).
-- **Soporte:** \\(S\_X = \{r, r+1, r+2, \dots\}\\).
+- **Soporte:** \\(S\_X = \\{r, r+1, r+2, \dots\\}\\).
 - **Función de masa (PMF):**  
   Para que el \\(r\\)-ésimo éxito ocurra en el intento \\(k\\), debe haber exactamente \\(r-1\\) éxitos en los primeros \\(k-1\\) intentos y un éxito en el intento \\(k\\):
 
@@ -149,9 +149,9 @@ Modela el número de ensayos Bernoulli independientes \\(X\\) necesarios para ac
 
 Modela el número de éxitos \\(k\\) obtenidos en una muestra de tamaño \\(n\\) extraída **sin reemplazo** de una población finita de tamaño \\(N\\) que contiene exactamente \\(K\\) elementos con la característica de éxito.
 
-- **Parámetros:** \\(N \in \mathbb{Z}^+\\) (tamaño poblacional), \\(K \in \{0, 1, \dots, N\}\\) (éxitos en la población), \\(n \in \{1, \dots, N\}\\) (tamaño muestral).
+- **Parámetros:** \\(N \in \mathbb{Z}^+\\) (tamaño poblacional), \\(K \in \\{0, 1, \dots, N\\}\\) (éxitos en la población), \\(n \in \\{1, \dots, N\\}\\) (tamaño muestral).
 - **Notación:** \\(X \sim \text{Hipergeométrica}(N, K, n)\\).
-- **Soporte:** \\(S\_X = \{\max(0, n - (N - K)), \dots, \min(n, K)\}\\).
+- **Soporte:** \\(S\_X = \\{\max(0, n - (N - K)), \dots, \min(n, K)\\}\\).
 - **Función de masa (PMF):**
 
   \\[
@@ -178,7 +178,7 @@ Modela el número de eventos raros que ocurren en un intervalo continuo fijo (ti
 
 - **Parámetro:** Tasa media \\(\lambda > 0\\).
 - **Notación:** \\(X \sim \text{Poisson}(\lambda)\\).
-- **Soporte:** \\(S\_X = \{0, 1, 2, \dots\} = \mathbb{N}\\).
+- **Soporte:** \\(S\_X = \\{0, 1, 2, \dots\\} = \mathbb{N}\\).
 - **Función de masa (PMF):**
 
   \\[

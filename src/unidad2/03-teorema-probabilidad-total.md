@@ -4,18 +4,18 @@
 
 En muchas situaciones experimentales complejas, es difícil calcular la probabilidad de un evento \\(A\\) directamente. Sin embargo, el cálculo se simplifica drásticamente si condicionamos sobre un conjunto de hipótesis o escenarios exhaustivos y mutuamente excluyentes que fragmentan el espacio muestral.
 
-**Definición 2.12 (Partición del espacio muestral).** Una colección finita o numerable de eventos \\(\{B\_1, B\_2, \dots, B\_k, \dots\} \subseteq \mathcal{F}\\) es una **partición** de \\(\Omega\\) si satisface:
+**Definición 2.12 (Partición del espacio muestral).** Una colección finita o numerable de eventos \\(\\{B\_1, B\_2, \dots, B\_k, \dots\\} \subseteq \mathcal{F}\\) es una **partición** de \\(\Omega\\) si satisface:
 1. **Mutuamente excluyentes (disjuntos dos a dos):** \\(B\_i \cap B\_j = \emptyset\\) para todo \\(i \neq j\\).
 2. **Exhaustivos (cubren todo el espacio):** \\(\bigcup\_{i} B\_i = \Omega\\).
 3. **No nulos:** \\(\mathbb{P}(B\_i) > 0\\) para todo \\(i\\).
 
-El ejemplo más elemental de partición para cualquier evento \\(B\\) con \\(0 < \mathbb{P}(B) < 1\\) es el par formado por el evento y su complemento: \\(\{B, B^c\}\\).
+El ejemplo más elemental de partición para cualquier evento \\(B\\) con \\(0 < \mathbb{P}(B) < 1\\) es el par formado por el evento y su complemento: \\(\\{B, B^c\\}\\).
 
 ---
 
 ## 2.3.2 El Teorema de la Probabilidad Total
 
-**Teorema 2.13 (Ley de la Probabilidad Total).** *Sea \\(\{B\_1, B\_2, \dots, B\_k\}\\) una partición finita del espacio muestral \\(\Omega\\) tal que \\(\mathbb{P}(B\_i) > 0\\) para todo \\(i = 1, \dots, k\\). Para cualquier evento \\(A \in \mathcal{F}\\), se tiene:*
+**Teorema 2.13 (Ley de la Probabilidad Total).** *Sea \\(\\{B\_1, B\_2, \dots, B\_k\\}\\) una partición finita del espacio muestral \\(\Omega\\) tal que \\(\mathbb{P}(B\_i) > 0\\) para todo \\(i = 1, \dots, k\\). Para cualquier evento \\(A \in \mathcal{F}\\), se tiene:*
 
 \\[
 \mathbb{P}(A) = \sum\_{i=1}^k \mathbb{P}(A \cap B\_i) = \sum\_{i=1}^k \mathbb{P}(B\_i) \mathbb{P}(A \mid B\_i).
@@ -54,7 +54,7 @@ Aplicando la definición de probabilidad condicional \\(\mathbb{P}(A \cap B\_i) 
 
 ### Versión para particiones numerables infinitas
 
-**Corolario 2.14.** *Si \\(\{B\_n\}\_{n=1}^\infty\\) es una partición numerable de \\(\Omega\\), entonces para todo \\(A \in \mathcal{F}\\):*
+**Corolario 2.14.** *Si \\(\\{B\_n\\}\_{n=1}^\infty\\) es una partición numerable de \\(\Omega\\), entonces para todo \\(A \in \mathcal{F}\\):*
 
 \\[
 \mathbb{P}(A) = \sum\_{n=1}^\infty \mathbb{P}(B\_n) \mathbb{P}(A \mid B\_n).
@@ -75,20 +75,20 @@ Una fábrica de microprocesadores tiene tres líneas de ensamble automatizadas:
 Se selecciona un microprocesador al azar de la producción total. ¿Cuál es la probabilidad global de que esté defectuoso (\\(D\\))?
 
 *Solución:*  
-Las líneas \\(\{B\_1, B\_2, B\_3\}\\) constituyen una partición del espacio muestral:
+Las líneas \\(\\{B\_1, B\_2, B\_3\\}\\) constituyen una partición del espacio muestral:
 Por el Teorema de la Probabilidad Total:
 
 \\[
 \begin{aligned}
 \mathbb{P}(D) &= \mathbb{P}(B\_1)\mathbb{P}(D \mid B\_1) + \mathbb{P}(B\_2)\mathbb{P}(D \mid B\_2) + \mathbb{P}(B\_3)\mathbb{P}(D \mid B\_3) \\\\
 &= (0.50)(0.01) + (0.30)(0.02) + (0.20)(0.05) \\\\
-&= 0.005 + 0.006 + 0.010 = 0.021 \quad (2.1\%).
+&= 0.005 + 0.006 + 0.010 = 0.021 \quad (2.1\\%).
 \end{aligned}
 \\]
 
 **Ejemplo 2.16 (La ruina del jugador en un paso).**  
 En un juego de azar, un participante gana \$1 con probabilidad \\(p\\) y pierde \$1 con probabilidad \\(q = 1 - p\\). Sea \\(u\_k\\) la probabilidad de que el jugador eventualmente alcance una fortuna de \$N antes de arruinarse (llegar a \$0), partiendo de un capital inicial de \\(k\\) (con \\(0 \le k \le N\\)).  
-Condicionando sobre el resultado del primer juego (partición \\(\{G, P\}\\) donde \\(G\\) es ganar y \\(P\\) es perder):
+Condicionando sobre el resultado del primer juego (partición \\(\\{G, P\\}\\) donde \\(G\\) es ganar y \\(P\\) es perder):
 
 \\[
 u\_k = \mathbb{P}(\text{Victoria} \mid G) \mathbb{P}(G) + \mathbb{P}(\text{Victoria} \mid P) \mathbb{P}(P) = p \cdot u\_{k+1} + q \cdot u\_{k-1}.

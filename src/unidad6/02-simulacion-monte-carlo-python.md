@@ -73,13 +73,13 @@ f(x) \le c \cdot g(x), \quad \forall x \in \mathbb{R}.
 Deseamos aproximar el valor de una integral definida multidimensional compleja:
 
 \\[
-I = \int\_D h(\mathbf{x}) \, d\mathbf{x}.
+I = \int\_D h(\mathbf{x}) \\, d\mathbf{x}.
 \\]
 
 Reescribiendo la integral como el valor esperado de una función respecto a una densidad uniforme \\(f(\mathbf{x}) = \frac{1}{\text{Vol}(D)}\\):
 
 \\[
-I = \text{Vol}(D) \int\_D h(\mathbf{x}) \frac{1}{\text{Vol}(D)} \, d\mathbf{x} = \text{Vol}(D) \cdot \mathbb{E}[h(\mathbf{X})], \quad \text{donde } \mathbf{X} \sim \mathcal{U}(D).
+I = \text{Vol}(D) \int\_D h(\mathbf{x}) \frac{1}{\text{Vol}(D)} \\, d\mathbf{x} = \text{Vol}(D) \cdot \mathbb{E}[h(\mathbf{X})], \quad \text{donde } \mathbf{X} \sim \mathcal{U}(D).
 \\]
 
 El **estimador de Monte Carlo** basado en \\(N\\) puntos independientes generados uniformemente en \\(D\\) es:
