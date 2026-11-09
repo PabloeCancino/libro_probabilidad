@@ -54,6 +54,10 @@
 - [6.3 Laboratorio computacional con SciPy y visualización de distribuciones](unidad6/03-laboratorio-scipy-visualizaciones.md)
 - [Ejercicios y proyectos de la Unidad 6](unidad6/ejercicios.md)
 
+# Preparación para el Examen Final
+
+- [Auto-examen semestral](evaluacion/autoexamen-semestral.md)
+
 ---
 
 # Apéndices
