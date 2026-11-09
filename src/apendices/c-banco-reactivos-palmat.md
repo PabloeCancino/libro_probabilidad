@@ -128,7 +128,7 @@ La probabilidad de la cola de supervivencia es:
 **Enunciado institucional:**  
 Dos variables aleatorias continuas \\(X\\) e \\(Y\\) son estocásticamente independientes si y solo si:
 
-- **A) \\(f\_{X,Y}(x, y) = f\_X(x) \cdot f\_Y(y)\\) para todo \\((x, y) \in \mathbb{R}^2\\)** *(Opción Correcta)*
+- **A) \\(f\_{X,Y}(x, y) = f\_X(x) \cdot f\_Y(y)\\) para casi todo \\((x, y) \in \mathbb{R}^2\\)** *(Opción Correcta)*
 - B) \\(\mathbb{E}[XY] = \mathbb{E}[X]\mathbb{E}[Y]\\)
 - C) \\(\text{Cov}(X, Y) = 0\\)
 - D) \\(\mathbb{P}(X > a) = \mathbb{P}(Y > a)\\) para todo \\(a \in \mathbb{R}\\)

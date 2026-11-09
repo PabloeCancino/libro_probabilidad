@@ -118,8 +118,10 @@ Modela el número de ensayos Bernoulli independientes requeridos hasta observar 
 *Demostración.*
 
 \\[
-\mathbb{P}(X > m + n \mid X > m) = \frac{\mathbb{P}(X > m + n \text{ y } X > m)}{\mathbb{P}(X > m)} = \frac{\mathbb{P}(X > m + n)}{\mathbb{P}(X > m)} = \frac{(1 - p)^{m + n}}{(1 - p)^m} = (1 - p)^n = \mathbb{P}(X > n). \quad \blacksquare
+\mathbb{P}(X > m + n \mid X > m) = \frac{\mathbb{P}(X > m + n \text{ y } X > m)}{\mathbb{P}(X > m)} = \frac{\mathbb{P}(X > m + n)}{\mathbb{P}(X > m)} = \frac{(1 - p)^{m + n}}{(1 - p)^m} = (1 - p)^n = \mathbb{P}(X > n).
 \\]
+
+*Unicidad.* Sea \\(X\\) con soporte en \\(\mathbb{Z}^+\\) y \\(\mathbb{P}(X > m) > 0\\) para todo \\(m\\) (para que la condición tenga sentido), y sea \\(G(n) = \mathbb{P}(X > n)\\), con \\(G(0) = 1\\). La falta de memoria equivale a \\(G(m + n) = G(m)\\,G(n)\\) para todos \\(m, n \in \mathbb{Z}^+\\); por inducción, \\(G(n) = q^n\\) con \\(q = G(1)\\). Como \\(G(n) \to 0\\), se tiene \\(0 < q < 1\\). Con \\(p = 1 - q\\) resulta \\(\mathbb{P}(X = n) = G(n - 1) - G(n) = (1 - p)^{n - 1} p\\), es decir, \\(X \sim \text{Geométrica}(p)\\). \\(\blacksquare\\)
 
 ---
 
@@ -168,7 +170,7 @@ Modela el número de éxitos \\(k\\) obtenidos en una muestra de tamaño \\(n\\)
   \text{Var}(X) = n p (1 - p) \left(\frac{N - n}{N - 1}\right).
   \\]
 
-  (El factor \\(\frac{N - n}{N - 1}\\) se denomina **factor de corrección por población finita**; cuando \\(N \to \infty\\), la distribución Hipergeométrica converge a la Binomial).
+  (El factor \\(\frac{N - n}{N - 1}\\) se denomina **factor de corrección por población finita**; cuando \\(N \to \infty\\) con \\(K/N \to p\\) y \\(n\\) fijo, la distribución Hipergeométrica converge a la \\(\text{Binomial}(n, p)\\)).
 
 ---
 
@@ -198,19 +200,20 @@ Modela el número de eventos raros que ocurren en un intervalo continuo fijo (ti
 \\]
 
 *Demostración analítica.*  
-Escribiendo la PMF binomial con \\(p = \frac{\lambda}{n}\\):
+Sea \\(\lambda\_n = n p\_n\\), de modo que \\(p\_n = \lambda\_n / n\\) y \\(\lambda\_n \to \lambda\\). Escribiendo la PMF binomial:
 
 \\[
 \begin{aligned}
-\mathbb{P}(X\_n = k) &= \frac{n(n-1)\cdots(n-k+1)}{k!} \left(\frac{\lambda}{n}\right)^k \left(1 - \frac{\lambda}{n}\right)^{n-k} \\\\
-&= \frac{\lambda^k}{k!} \left[\frac{n(n-1)\cdots(n-k+1)}{n^k}\right] \left(1 - \frac{\lambda}{n}\right)^n \left(1 - \frac{\lambda}{n}\right)^{-k}.
+\mathbb{P}(X\_n = k) &= \frac{n(n-1)\cdots(n-k+1)}{k!} \left(\frac{\lambda\_n}{n}\right)^k \left(1 - \frac{\lambda\_n}{n}\right)^{n-k} \\\\
+&= \frac{\lambda\_n^k}{k!} \left[\frac{n(n-1)\cdots(n-k+1)}{n^k}\right] \left(1 - \frac{\lambda\_n}{n}\right)^n \left(1 - \frac{\lambda\_n}{n}\right)^{-k}.
 \end{aligned}
 \\]
 
 Tomando el límite cuando \\(n \to \infty\\) para \\(k\\) fijo:
+- \\(\lambda\_n^k \to \lambda^k\\).
 - \\(\lim\_{n \to \infty} \frac{n(n-1)\cdots(n-k+1)}{n^k} = 1\\).
-- \\(\lim\_{n \to \infty} \left(1 - \frac{\lambda}{n}\right)^n = e^{-\lambda}\\) (límite clásico de Euler).
-- \\(\lim\_{n \to \infty} \left(1 - \frac{\lambda}{n}\right)^{-k} = 1^{-k} = 1\\).
+- \\(\lim\_{n \to \infty} \left(1 - \frac{\lambda\_n}{n}\right)^n = e^{-\lambda}\\), por el límite clásico \\(\left(1 + a\_n/n\right)^n \to e^{a}\\) si \\(a\_n \to a\\) (aquí \\(a\_n = -\lambda\_n\\)).
+- \\(\lim\_{n \to \infty} \left(1 - \frac{\lambda\_n}{n}\right)^{-k} = 1^{-k} = 1\\), pues \\(\lambda\_n / n \to 0\\).
 
 Multiplicando los límites:
 

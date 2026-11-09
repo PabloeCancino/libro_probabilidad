@@ -151,7 +151,7 @@ Tomando la esperanza y expandiendo por linealidad:
 g(t) = \mathbb{E}[(t U + V)^2] = \mathbb{E}[t^2 U^2 + 2t UV + V^2] = t^2 \mathbb{E}[U^2] + 2t \mathbb{E}[UV] + \mathbb{E}[V^2] \ge 0.
 \\]
 
-Como \\(g(t) = A t^2 + B t + C \ge 0\\) es un polinomio cuadrático en \\(t\\) que nunca toma valores negativos, su discriminante \\(\Delta = B^2 - 4AC\\) debe ser menor o igual a cero:
+Si \\(\mathbb{E}[U^2] = 0\\), entonces \\(U = 0\\) casi seguramente, luego \\(UV = 0\\) casi seguramente y ambos lados de la desigualdad valen cero. Supongamos, pues, \\(A = \mathbb{E}[U^2] > 0\\). Como \\(g(t) = A t^2 + B t + C \ge 0\\) es un polinomio cuadrático en \\(t\\) que nunca toma valores negativos, su discriminante \\(\Delta = B^2 - 4AC\\) debe ser menor o igual a cero:
 
 \\[
 \Delta = (2\mathbb{E}[UV])^2 - 4 \mathbb{E}[U^2] \mathbb{E}[V^2] \le 0 \implies 4(\mathbb{E}[UV])^2 \le 4\mathbb{E}[U^2]\mathbb{E}[V^2],
@@ -176,7 +176,7 @@ lo que concluye la desigualdad de Cauchy-Schwarz. \\(\blacksquare\\)
    \gamma\_1 = \frac{\mu\_3}{\sigma^3} = \frac{\mathbb{E}[(X - \mu)^3]}{\sigma^3}.
    \\]
 
-   - \\(\gamma\_1 = 0\\): Distribución simétrica (como la Normal o Uniforme).
+   - \\(\gamma\_1 = 0\\): Asimetría nula. Toda distribución simétrica con tercer momento finito (como la Normal o la Uniforme) cumple \\(\gamma\_1 = 0\\), pero el recíproco es falso.
    - \\(\gamma\_1 > 0\\): Asimetría positiva (cola larga a la derecha, como la Exponencial).
    - \\(\gamma\_1 < 0\\): Asimetría negativa (cola larga a la izquierda).
 
@@ -186,6 +186,6 @@ lo que concluye la desigualdad de Cauchy-Schwarz. \\(\blacksquare\\)
    \gamma\_2 = \frac{\mu\_4}{\sigma^4} - 3 = \frac{\mathbb{E}[(X - \mu)^4]}{\sigma^4} - 3.
    \\]
 
-   - \\(\gamma\_2 = 0\\): Mesocúrtica (idéntica a la Normal).
+   - \\(\gamma\_2 = 0\\): Mesocúrtica (la misma curtosis que la Normal).
    - \\(\gamma\_2 > 0\\): Leptocúrtica (colas pesadas, pico agudo, como la \\(t\\)-Student y Laplace).
    - \\(\gamma\_2 < 0\\): Platicúrtica (colas ligeras, más aplanada, como la Uniforme).

@@ -31,7 +31,7 @@ Dos personas acuerdan encontrarse en una cafetería entre las 12:00 y las 13:00 
 
 *Solución analítica:*  
 Sean \\(X\\) e \\(Y\\) los tiempos de llegada (en minutos después de las 12:00) de la primera y segunda persona, respectivamente.  
-El espacio muestral es el cuadrado unitario en el plano:
+El espacio muestral es el cuadrado \\([0, 60]^2\\) en el plano:
 
 \\[
 \Omega = \\{(x, y) \in \mathbb{R}^2 : 0 \le x \le 60, \ 0 \le y \le 60\\}, \quad \text{con Área}(\Omega) = 60 \times 60 = 3\\,600.
@@ -66,7 +66,7 @@ Por la fórmula de probabilidad geométrica:
 
 ## 1.4.3 El problema clásico de la aguja de Buffon
 
-Propuesto por Georges-Louis Leclerc, conde de Buffon en 1777, este problema constituye el primer ejemplo documentado de simulación geométrica de Monte Carlo para aproximar constantes matemáticas fundamentales como \\(\pi\\).
+Propuesto por Georges-Louis Leclerc, conde de Buffon (planteado en 1733 y publicado en 1777), este problema constituye el primer ejemplo documentado de simulación geométrica de Monte Carlo para aproximar constantes matemáticas fundamentales como \\(\pi\\).
 
 **Teorema 1.33 (Problema de la aguja de Buffon).** *Se tiene un piso con líneas paralelas separadas por una distancia \\(D\\). Se deja caer al azar una aguja de longitud \\(L\\) con \\(L \le D\\). La probabilidad de que la aguja cruce alguna de las líneas paralelas es:*
 
@@ -145,7 +145,7 @@ Bertrand propuso tres métodos aparentemente legítimos que conducen a tres resp
 
 La aparente paradoja radica en que la frase *"trazar una cuerda al azar"* está **mal definida** hasta que se especifique unívocamente la medida de probabilidad en el espacio de cuerdas. Cada método define un espacio de probabilidad \\((\Omega\_i, \mathcal{F}\_i, \mathbb{P}\_i)\\) distinto con un grupo de simetrías diferente.
 
-Edwin Jaynes (1973) demostró mediante el principio de máxima ignorancia que si se impone invariancia bajo rotaciones y traslaciones en el plano (invariancia euclidiana completa), el único modelo físicamente consistente con el lanzamiento de cuerdas reales es el **Método 2**, cuya probabilidad es \\(1/2\\).
+Edwin Jaynes (1973) demostró mediante el principio de máxima ignorancia que si se impone invariancia bajo rotaciones, cambios de escala y traslaciones en el plano, el único modelo físicamente consistente con el lanzamiento de cuerdas reales es el **Método 2**, cuya probabilidad es \\(1/2\\).
 
 ---
 

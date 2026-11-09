@@ -98,7 +98,7 @@ G\_X(s) = \mathbb{E}[s^X] = \sum\_{k=0}^{\infty} p\_X(k) s^k, \quad |s| \le 1.
 
 ## 4.4.5 Función Característica
 
-Cuando una distribución no posee momentos finitos (como la distribución de Cauchy o Pareto con colas pesadas), la MGF diverge para todo \\(t \neq 0\\). Para garantizar la existencia universal, se utiliza la **función característica** en el plano complejo (la transformada de Fourier de la medida).
+Cuando una distribución tiene colas pesadas (como la de Cauchy, la de Pareto o la \\(t\\) de Student), la MGF no es finita en ningún entorno de \\(0\\); en el caso de Cauchy, diverge para todo \\(t \neq 0\\). Para garantizar la existencia universal, se utiliza la **función característica** en el plano complejo (la transformada de Fourier de la medida).
 
 **Definición 4.28 (Función Característica).** La **función característica** de una variable aleatoria \\(X\\) es la función \\(\varphi\_X : \mathbb{R} \to \mathbb{C}\\) definida por:
 

@@ -43,7 +43,7 @@ Sean \\(A, B \subseteq \Omega\\) dos eventos:
 
 ## 1.2.3 Álgebras y σ-álgebras de eventos
 
-En espacios finitos podemos considerar que *cualquier* subconjunto de \\(\Omega\\) es un evento legítimo, es decir, la familia de eventos es el conjunto potencia \\(\mathcal{P}(\Omega)\\). Sin embargo, cuando \\(\Omega\\) es un espacio continuo (como \\(\mathbb{R}\\) o \\(\mathbb{R}^n\\)), la paradoja de Banach-Tarski y la existencia de conjuntos no medibles de Vitali demuestran que es matemáticamente imposible asignar una medida de probabilidad coherente a *todos* los subconjuntos de \\(\mathcal{P}(\Omega)\\). Por ello, debemos restringir los eventos admisibles a una estructura algebraica adecuada: una **σ-álgebra**.
+En espacios finitos podemos considerar que *cualquier* subconjunto de \\(\Omega\\) es un evento legítimo, es decir, la familia de eventos es el conjunto potencia \\(\mathcal{P}(\Omega)\\). Sin embargo, cuando \\(\Omega\\) es un espacio continuo (como \\(\mathbb{R}\\) o \\(\mathbb{R}^n\\)), la paradoja de Banach-Tarski y la existencia de conjuntos no medibles de Vitali demuestran que es matemáticamente imposible definir sobre *todos* los subconjuntos de \\([0, 1]\\) una medida σ-aditiva invariante por traslaciones que extienda la noción de longitud. Por ello, debemos restringir los eventos admisibles a una estructura algebraica adecuada: una **σ-álgebra**.
 
 **Definición 1.12 (Álgebra de conjuntos).** Sea \\(\Omega\\) un conjunto no vacío. Una familia \\(\mathcal{A} \subseteq \mathcal{P}(\Omega)\\) es un **álgebra** (o campo) sobre \\(\Omega\\) si satisface:
 1. \\(\Omega \in \mathcal{A}\\).
@@ -84,7 +84,7 @@ El par \\((\Omega, \mathcal{F})\\) recibe el nombre de **espacio medible**, y lo
 1. **σ-álgebra trivial (mínima):** \\(\mathcal{F}\_{\text{min}} = \\{\emptyset, \Omega\\}\\).
 2. **σ-álgebra discreta (máxima):** \\(\mathcal{F}\_{\text{max}} = \mathcal{P}(\Omega)\\).
 3. **σ-álgebra generada por un evento \\(A \subseteq \Omega\\):** \\(\mathcal{F}\_A = \\{\emptyset, A, A^c, \Omega\\}\\).
-4. **σ-álgebra de una partición finita:** Si \\(\Omega = \bigcup\_{i=1}^k B\_i\\) con \\(B\_i \cap B\_j = \emptyset\\) para \\(i \neq j\\), la σ-álgebra generada por la partición consiste en todas las uniones de elementos de la partición (incluyendo la unión vacía \\(\emptyset\\)), conteniendo exactamente \\(2^k\\) eventos.
+4. **σ-álgebra de una partición finita:** Si \\(\Omega = \bigcup\_{i=1}^k B\_i\\) con \\(B\_i \cap B\_j = \emptyset\\) para \\(i \neq j\\), la σ-álgebra generada por la partición consiste en todas las uniones de elementos de la partición (incluyendo la unión vacía \\(\emptyset\\)), conteniendo exactamente \\(2^k\\) eventos (si cada \\(B\_i \neq \emptyset\\)).
 
 ---
 
@@ -147,6 +147,6 @@ A los elementos de \\(\mathcal{B}(\mathbb{R})\\) se les llama **conjuntos boreli
   (a, b) = \bigcup\_{n=1}^{\infty} \left(a, b - \frac{1}{n}\right] \in \sigma(\mathcal{C}\_3).
   \\]
 
-- Como todo conjunto abierto en \\(\mathbb{R}\\) es la unión numerable disjunta de intervalos abiertos racionales, todo abierto pertenece a \\(\sigma(\mathcal{C}\_3)\\). En consecuencia, \\(\mathcal{B}(\mathbb{R}) = \sigma(\mathcal{C}\_3)\\). \\(\blacksquare\\)
+- Como todo conjunto abierto en \\(\mathbb{R}\\) es unión numerable de intervalos abiertos con extremos racionales, todo abierto pertenece a \\(\sigma(\mathcal{C}\_3)\\), y por tanto \\(\mathcal{B}(\mathbb{R}) \subseteq \sigma(\mathcal{C}\_3)\\). Recíprocamente, cada rayo \\((-\infty, x]\\) es cerrado y, por ende, boreliano, así que \\(\sigma(\mathcal{C}\_3) \subseteq \mathcal{B}(\mathbb{R})\\). En consecuencia, \\(\mathcal{B}(\mathbb{R}) = \sigma(\mathcal{C}\_3)\\). \\(\blacksquare\\)
 
 Esta propiedad es crucial en probabilidad: garantiza que para definir rigurosamente una variable aleatoria o una función de distribución acumulada \\(F(x) = \mathbb{P}(X \le x) = \mathbb{P}(X \in (-\infty, x])\\), basta con especificar las probabilidades sobre los rayos \\((-\infty, x]\\).

@@ -110,7 +110,7 @@ Es directo verificar que \\(\int\_{-\infty}^\infty f\_{X \mid Y}(x \mid y) \\, d
    F\_{X,Y}(x, y) = F\_X(x) \cdot F\_Y(y).
    \\]
 
-3. En el caso continuo, la densidad conjunta factoriza para todo \\((x, y)\\):
+3. En el caso continuo (si \\((X, Y)\\) tiene densidad conjunta), la densidad conjunta factoriza para casi todo \\((x, y)\\) (respecto a la medida de Lebesgue):
 
    \\[
    f\_{X,Y}(x, y) = f\_X(x) \cdot f\_Y(y).

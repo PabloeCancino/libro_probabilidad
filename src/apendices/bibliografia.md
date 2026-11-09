@@ -31,7 +31,7 @@ Esta bibliografía reúne los textos canónicos y referencias contemporáneas en
 - **Casella, G. & Berger, R. L.** (2002). *Statistical Inference* (2nd ed.). Duxbury Press.  
   *Comentario:* El estándar dorado a nivel de posgrado y licenciatura avanzada para el estudio de transformaciones bivariadas, desigualdades de concentración y propiedades de las familias exponenciales.
 
-- **Feller, W.** (1968). *An Introduction to Probability Theory and Its Applications* (Volúmenes 1 y 2, 3a ed.). John Wiley & Sons.  
+- **Feller, W.** (1968). *An Introduction to Probability Theory and Its Applications* (Vol. 1, 3a ed., 1968; Vol. 2, 2a ed., 1971). John Wiley & Sons.  
   *Comentario:* La obra maestra monumental y clásica de la probabilidad del siglo XX. Imprescindible para el estudio profundo de caminos aleatorios, combinatoria analítica, procesos de renovación y leyes límite.
 
 - **Dudley, R. M.** (2002). *Real Analysis and Probability*. Cambridge University Press.  

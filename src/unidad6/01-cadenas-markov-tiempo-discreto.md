@@ -6,7 +6,7 @@ Un **proceso estocástico** es una familia indexada de variables aleatorias \\((
 - Si \\(T = \mathbb{N}\_0 = \\{0, 1, 2, \dots\\}\\), el proceso es a **tiempo discreto**.
 - Si \\(T = [0, \infty)\\), el proceso es a **tiempo continuo**.
 
-El conjunto de todos los valores posibles que pueden tomar las variables \\(X\_t\\) se denomina el **espacio de estados** \\(S\\). En esta sección nos enfocaremos en espacios de estados finitos o numerables \\(S = \\{1, 2, \dots, N\\}\\).
+El conjunto de todos los valores posibles que pueden tomar las variables \\(X\_t\\) se denomina el **espacio de estados** \\(S\\). En esta sección nos enfocaremos en espacios de estados finitos \\(S = \\{1, 2, \dots, N\\}\\).
 
 **Definición 6.1 (Propiedad de Márkov a tiempo discreto).** Un proceso estocástico a tiempo discreto \\((X\_n)\_{n=0}^\infty\\) con espacio de estados \\(S\\) es una **Cadena de Markov a tiempo discreto (DTMC)** si satisface la **propiedad de pérdida de memoria estocástica (propiedad de Márkov)**: la probabilidad condicional de la transición hacia el estado futuro \\(X\_{n+1}\\) depende únicamente del estado presente actual \\(X\_n\\), siendo completamente independiente de toda la trayectoria histórica pasada:
 

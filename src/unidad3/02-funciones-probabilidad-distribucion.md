@@ -38,7 +38,7 @@ Para una variable aleatoria continua, la probabilidad de cualquier punto individ
 \\]
 
 **Teorema 3.8 (Condiciones necesarias y suficientes para una PDF).** *Una función integrable \\(f: \mathbb{R} \to \mathbb{R}\\) es la PDF de una variable aleatoria continua si y solo si satisface:*
-1. **No negatividad casi en todas partes:** \\(f(x) \ge 0\\) para todo \\(x \in \mathbb{R}\\).
+1. **No negatividad:** \\(f(x) \ge 0\\) para todo \\(x \in \mathbb{R}\\).
 2. **Normalización del área total:**
 
    \\[

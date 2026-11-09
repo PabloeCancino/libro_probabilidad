@@ -111,8 +111,10 @@ Modela el tiempo continuo de espera hasta la ocurrencia del primer evento en un 
 *Demostración.*
 
 \\[
-\mathbb{P}(X > s + t \mid X > s) = \frac{\mathbb{P}(X > s + t)}{\mathbb{P}(X > s)} = \frac{e^{-\lambda(s+t)}}{e^{-\lambda s}} = e^{-\lambda t} = \mathbb{P}(X > t). \quad \blacksquare
+\mathbb{P}(X > s + t \mid X > s) = \frac{\mathbb{P}(X > s + t)}{\mathbb{P}(X > s)} = \frac{e^{-\lambda(s+t)}}{e^{-\lambda s}} = e^{-\lambda t} = \mathbb{P}(X > t).
 \\]
+
+*Unicidad.* Sea \\(G(t) = \mathbb{P}(X > t)\\), que es no creciente, con \\(G(0) = 1\\) (pues \\(X\\) es continua con soporte en \\([0, \infty)\\)) y \\(G(t) > 0\\) para todo \\(t\\) (para que la condición tenga sentido). La propiedad equivale a \\(G(s + t) = G(s)\\,G(t)\\) para \\(s, t > 0\\). Sea \\(q = G(1)\\); como \\(G(n) = q^n \to 0\\), se tiene \\(0 < q < 1\\), y escribimos \\(q = e^{-\lambda}\\) con \\(\lambda > 0\\). De la ecuación, \\(G(1/n)^n = G(1)\\) y \\(G(m/n) = G(1/n)^m\\), así que \\(G(r) = e^{-\lambda r}\\) para todo racional \\(r > 0\\). Si \\(t > 0\\) y \\(r < t < r'\\) con \\(r, r'\\) racionales positivos, la monotonía da \\(e^{-\lambda r'} \le G(t) \le e^{-\lambda r}\\); haciendo \\(r, r' \to t\\) resulta \\(G(t) = e^{-\lambda t}\\), es decir, \\(X \sim \text{Exp}(\lambda)\\). \\(\blacksquare\\)
 
 ---
 
@@ -197,7 +199,7 @@ X = \frac{U / d\_1}{V / d\_2} \sim F(d\_1, d\_2).
 
 ### 4. Distribución de Cauchy
 - **PDF:** \\(f(x) = \frac{1}{\pi (1 + x^2)}\\) para \\(x \in \mathbb{R}\\).
-- **Propiedad patológica fundamental:** Las colas son tan pesadas (\\(\mathcal{O}(1/x^2)\\)) que la integral \\(\int\_{-\infty}^\infty |x| f(x) dx = \infty\\). Por tanto, **la distribución de Cauchy no posee esperanza matemática, ni varianza, ni momentos de ningún orden**.
+- **Propiedad patológica fundamental:** Las colas son tan pesadas (\\(\mathcal{O}(1/x^2)\\)) que la integral \\(\int\_{-\infty}^\infty |x| f(x) dx = \infty\\). Por tanto, **la distribución de Cauchy no posee esperanza matemática, ni varianza, ni momentos de orden \\(p \ge 1\\)** (aunque \\(\mathbb{E}|X|^p < \infty\\) para \\(0 < p < 1\\)).
 
 ### 5. Distribución de Laplace (Doble Exponencial)
 - **PDF:** \\(f(x) = \frac{1}{2b} \exp\left(-\frac{|x - \mu|}{b}\right)\\) para \\(x \in \mathbb{R}\\).

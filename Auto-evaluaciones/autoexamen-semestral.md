@@ -329,7 +329,7 @@ No abras estos bloques hasta haber terminado el examen completo.
 | 12 | A | Por la falta de memoria, $\mathbb{P}(X > 5 \mid X > 3) = \mathbb{P}(X > 2) = e^{-2/4}$. B es $\mathbb{P}(X > 5)$, sin condicionar. |
 | 13 | B | Por LOTUS, $\int_0^2 x^2 \cdot \frac{1}{2}\,dx = \frac{4}{3}$. A es $(\mathbb{E}[X])^2$ y C es $\text{Var}(X)$. |
 | 14 | D | $2^2(4) + (-3)^2(1) + 2(2)(-3)(-1) = 16 + 9 + 12 = 37$. La constante no afecta. A ignora la covarianza y B usa mal su signo. |
-| 15 | B | $\text{Cov}(X, Y) = \mathbb{E}[XY] - \mathbb{E}[X]\,\mathbb{E}[Y]$. No correlación no implica independencia (véase el reactivo 32). C es falsa: con covarianza nula, $\text{Var}(X - Y) = \text{Var}(X) + \text{Var}(Y)$, porque las varianzas siempre se suman. |
+| 15 | B | $\text{Cov}(X, Y) = \mathbb{E}[XY] - \mathbb{E}[X]\,\mathbb{E}[Y]$. No correlación no implica independencia (véase el reactivo 32). C es falsa: con covarianza nula, $\text{Var}(X - Y) = \text{Var}(X) + \text{Var}(Y)$, porque $\text{Var}(-Y) = \text{Var}(Y)$ y la covarianza es nula. |
 | 16 | D | Es la MGF de $\text{Binomial}(n, p)$ con $1 - p = 0.3$: $n = 10$, $p = 0.7$; $np = 7$ y $np(1 - p) = 2.1$. A confunde $p$ con $1 - p$. |
 | 17 | C | Con $k = 2$ desviaciones: $\mathbb{P}(\lvert X - 50 \rvert < 10) \ge 1 - 1/k^2 = 0.75$. B supone normalidad, que no se conoce. |
 | 18 | A | La convergencia casi segura implica la convergencia en probabilidad; las otras tres implicaciones tienen contraejemplos clásicos. |

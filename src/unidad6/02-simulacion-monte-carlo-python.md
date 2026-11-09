@@ -4,7 +4,7 @@
 
 La **simulación estocástica** descansa sobre la capacidad de generar muestras numéricas de cualquier distribución de probabilidad a partir de un generador de números pseudoaleatorios uniformes \\(U \sim \mathcal{U}(0, 1)\\). El método más directo y elegante es el **método de la transformada inversa**.
 
-**Teorema 6.7 (Teorema de la Transformada Inversa).** *Sea \\(F: \mathbb{R} \to [0, 1]\\) una función de distribución acumulada continua y estrictamente creciente con función inversa ordinaria \\(F^{-1}: (0, 1) \to \mathbb{R}\\). Si \\(U \sim \mathcal{U}(0, 1)\\), entonces la variable aleatoria transformada:*
+**Teorema 6.7 (Teorema de la Transformada Inversa).** *Sea \\(F: \mathbb{R} \to [0, 1]\\) una función de distribución acumulada continua y estrictamente creciente en el conjunto \\(\\{x : 0 < F(x) < 1\\}\\), de modo que tiene función inversa ordinaria \\(F^{-1}: (0, 1) \to \mathbb{R}\\) (por ejemplo, la Exponencial). Para una \\(F\\) arbitraria, el mismo resultado vale con la inversa generalizada de la Definición 3.12. Si \\(U \sim \mathcal{U}(0, 1)\\), entonces la variable aleatoria transformada:*
 
 \\[
 X = F^{-1}(U)

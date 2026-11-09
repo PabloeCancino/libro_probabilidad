@@ -26,7 +26,7 @@
 4. **Construcción de independencia condicional:**
    - Proporcione un ejemplo con un espacio muestral finito de tres eventos \\(A, B, C\\) tales que \\(A\\) y \\(B\\) sean condicionalmente independientes dado \\(C\\), pero sean marginalmente dependientes (es decir, \\(A \not\perp B\\)).
 
-5. **El dado de tres caras coloreadas:** Considere el lanzamiento de dos dados equilibrados.
+5. **Dos dados y la paridad de la suma:** Considere el lanzamiento de dos dados equilibrados.
    - Sea \\(A\\): "El primer dado es par".
    - Sea \\(B\\): "El segundo dado es impar".
    - Sea \\(C\\): "La suma de ambos dados es impar".

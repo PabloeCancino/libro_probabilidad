@@ -68,7 +68,7 @@ Por LOTUS (Teorema 4.2), la esperanza de la variable aleatoria \\(g(Y)\\) es:
 
 ## 4.3.3 La Esperanza Condicional como el Mejor Predictor en Media Cuadrática
 
-**Teorema 4.19 (Ortogonalidad y predicción óptima).** *Entre todas las funciones medibles \\(h(Y)\\) con segundo momento finito, la esperanza condicional \\(g(Y) = \mathbb{E}[X \mid Y]\\) es el estimador que minimiza el error cuadrático medio:*
+**Teorema 4.19 (Ortogonalidad y predicción óptima).** *Si \\(\mathbb{E}[X^2] < \infty\\), entre todas las funciones medibles \\(h(Y)\\) con segundo momento finito, la esperanza condicional \\(g(Y) = \mathbb{E}[X \mid Y]\\) es el estimador que minimiza el error cuadrático medio:*
 
 \\[
 \min\_{h} \mathbb{E}[(X - h(Y))^2] = \mathbb{E}[(X - \mathbb{E}[X \mid Y])^2].

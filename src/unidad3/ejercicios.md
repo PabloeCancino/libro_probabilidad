@@ -36,7 +36,7 @@
    - (c) Obtenga la densidad condicional \\(f\_{Y \mid X}(y \mid x)\\) y calcule \\(\mathbb{P}(Y \le 0.5 \mid X = 0.8)\\).
 
 4. **Transformación por el método del Jacobiano:**
-   - Sean \\(X, Y \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(0, 1)\\). Definamos la transformación a coordenadas polares \\(R = \sqrt{X^2 + Y^2}\\) y \\(\Theta = \arctan(Y/X)\\).
+   - Sean \\(X, Y \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(0, 1)\\). Definamos la transformación a coordenadas polares \\(R = \sqrt{X^2 + Y^2}\\) y \\(\Theta\\) el ángulo polar de \\((X, Y)\\) en \\([0, 2\pi)\\), es decir, \\(X = R\cos\Theta\\) e \\(Y = R\sin\Theta\\) (nótese que \\(\arctan(Y/X)\\) solo toma valores en \\((-\pi/2, \pi/2)\\)).
    - Demuestre que \\(R^2 \sim \text{Exp}(1/2) = \chi^2(2)\\) y \\(\Theta \sim \mathcal{U}(0, 2\pi)\\), y que son variables aleatorias independientes (generador de Box-Muller para números normales).
 
 ---

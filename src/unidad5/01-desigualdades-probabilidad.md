@@ -79,7 +79,7 @@ Aplicando la desigualdad de Márkov (Teorema 5.1) a la variable \\(Y\\) con el v
 
 Cuando solo se desea acotar una de las dos colas (por ejemplo, la desviación positiva \\(X - \mu \ge a\\)), la cota de Cantelli es más ajustada que la de Chebyshev.
 
-**Teorema 5.3 (Desigualdad de Cantelli).** *Para cualquier \\(a > 0\\):*
+**Teorema 5.3 (Desigualdad de Cantelli).** *Si \\(X\\) tiene media \\(\mu\\) y varianza finita \\(\sigma^2\\), para cualquier \\(a > 0\\):*
 
 \\[
 \mathbb{P}(X - \mu \ge a) \le \frac{\sigma^2}{\sigma^2 + a^2} = \frac{1}{1 + (a/\sigma)^2}.

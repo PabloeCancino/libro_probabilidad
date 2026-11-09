@@ -151,7 +151,7 @@ CR\_n^r = \binom{n + r - 1}{r} = \binom{n + r - 1}{n - 1}.
 
 ## 1.1.5 La regla clásica de Laplace
 
-Cuando un experimento aleatorio tiene un espacio muestral finito \\(\Omega = \\{\omega\_1, \omega\_2, \dots, \omega\_N\\}\\) y no existe ninguna razón asimétrica para favorecer un resultado elemental sobre otro (*principio de razón suficiente o indiferencia*), todos los eventos elementales son **equiprobables**:
+Cuando un experimento aleatorio tiene un espacio muestral finito \\(\Omega = \\{\omega\_1, \omega\_2, \dots, \omega\_N\\}\\) y no existe ninguna razón asimétrica para favorecer un resultado elemental sobre otro (*principio de razón insuficiente o de indiferencia*), todos los eventos elementales son **equiprobables**:
 
 \\[
 \mathbb{P}(\\{\omega\_i\\}) = \frac{1}{N}, \quad \forall i = 1, \dots, N.

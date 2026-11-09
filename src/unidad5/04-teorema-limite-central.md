@@ -6,7 +6,7 @@ El **Teorema del Límite Central (TLC)** es considerado el resultado cumbre de l
 
 Mientras que la Ley de los Grandes Números nos dice que la masa de \\(\bar{X}\_n\\) colapsa en el punto \\(\mu\\), el Teorema del Límite Central describe la **forma geométrica exacta** de las fluctuaciones estocásticas a escala \\(1/\sqrt{n}\\).
 
-**Teorema 5.19 (Teorema del Límite Central de Lindeberg-Lévy, 1920).** *Sea \\((X\_n)\_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas (i.i.d.) con media común \\(\mathbb{E}[X\_i] = \mu\\) y varianza común finita \\(0 < \text{Var}(X\_i) = \sigma^2 < \infty\\).*  
+**Teorema 5.19 (Teorema del Límite Central de Lindeberg-Lévy; Lindeberg, 1922; Lévy, 1925).** *Sea \\((X\_n)\_{n=1}^\infty\\) una sucesión de variables aleatorias independientes e idénticamente distribuidas (i.i.d.) con media común \\(\mathbb{E}[X\_i] = \mu\\) y varianza común finita \\(0 < \text{Var}(X\_i) = \sigma^2 < \infty\\).*  
 *Definamos la variable estandarizada de la suma \\(S\_n = \sum\_{i=1}^n X\_i\\) (o de la media muestral \\(\bar{X}\_n = S\_n / n\\)):*
 
 \\[
@@ -69,7 +69,7 @@ Tomando el límite cuando \\(n \to \infty\\) para cualquier \\(t \in \mathbb{R}\
 \\]
 
 Observemos que \\(\exp(t^2/2)\\) es precisamente la **función generadora de momentos de la distribución Normal estándar \\(\mathcal{N}(0, 1)\\)**.  
-Por el **Teorema de Continuidad y Unicidad de Lévy-Cramér**, la convergencia de las funciones generadoras implica la convergencia en distribución de las funciones de distribución acumulada:
+Por el **teorema de continuidad para funciones generadoras de momentos** (Curtiss, 1942; es el análogo, para MGF finitas en un entorno de \\(0\\), del teorema de continuidad de Lévy-Cramér para funciones características), la convergencia de las funciones generadoras implica la convergencia en distribución de las funciones de distribución acumulada:
 
 \\[
 Z\_n \xrightarrow{d} \mathcal{N}(0, 1). \quad \blacksquare
@@ -106,7 +106,7 @@ Si \\(X \sim \text{Binomial}(n, p)\\), como \\(X = \sum\_{i=1}^n Y\_i\\) con \\(
 X \approx \mathcal{N}(\mu = np, \ \sigma^2 = np(1-p)).
 \\]
 
-**Corrección por continuidad (de Yates):** Dado que aproximamos una variable discreta entera mediante una densidad continua, la probabilidad puntual \\(\mathbb{P}(X = k)\\) se aproxima por el intervalo continuo \\([k - 0.5, k + 0.5]\\):
+**Corrección por continuidad:** Dado que aproximamos una variable discreta entera mediante una densidad continua, la probabilidad puntual \\(\mathbb{P}(X = k)\\) se aproxima por el intervalo continuo \\([k - 0.5, k + 0.5]\\):
 
 \\[
 \mathbb{P}(a \le X \le b) \approx \mathbb{P}\left(\frac{(a - 0.5) - np}{\sqrt{np(1-p)}} \le Z \le \frac{(b + 0.5) - np}{\sqrt{np(1-p)}}\right).
